@@ -1,0 +1,52 @@
+# humans-metrics
+
+Codebase timeline for [peterdrier/Humans](https://github.com/peterdrier/Humans): one record per day of
+solution-wide and per-assembly stats, reforge structure metrics, and surface-score readings, rendered as a
+static page. Built to watch growth, slop and cleanup over an agent-driven project's life.
+
+Page: `docs/index.html` (GitHub Pages serves `docs/` from `main`).
+
+## Layout
+
+| Path | What |
+|---|---|
+| `data/stats/YYYY-MM-DD.json` | One file per day with a commit on Humans `main`: `commit`, `collector_version`, the solution row, a row per assembly (src and tests), ProjectReference edges. Git and cloc only. |
+| `data/reforge/YYYY-MM-DD.json` | Same day, the reforge producer: `commit`, `reforge_version`, the `reforge snapshot` row (per-assembly rows once reforge emits them). |
+| `data/coverage/YYYY-MM-DD.json` | Reserved: test coverage per day, same keys, once reforge emits it. |
+| `data/surface/<date>-<sha>-reforge<ver>.json` | Slim surface-score reading: totals, points by rule, points by section, service-interface edges. Full JSON stays in a local archive. |
+| `data/seed/reforge-history.csv` | The daily `reforge snapshot` rows carried over from the Humans repo, used until every day has its own snapshot. No reforge version was recorded for these. |
+| `collect/collect.py` | The collector. File-based metrics need only git and cloc; `--reforge` adds the snapshot and needs a building tree. |
+| `site/template.html` + `site/build.py` | The page and the builder that embeds the data. |
+| `.github/workflows/weekly.yml` | Monday job: collect missing days, rebuild, commit, deploy. |
+
+## Every record carries its provenance
+
+One file per producer per day, each naming the commit it measured and the tool version that measured it.
+Redo any range with `--from/--to` (`--reforge-only` for just that producer) and only those files change, so
+the reforge series can be reworked a week at a time when reforge gains columns (per-assembly stats and
+coverage are coming) while the file-based series stands.
+
+## Running it
+
+```bash
+# full history, file-based metrics only (minutes)
+python3 collect/collect.py --repo ../Humans --out data --from 2026-02-04
+
+# one week of reforge snapshots only (each day builds the tree)
+python3 collect/collect.py --repo ../Humans --out data --from 2026-10-20 --to 2026-10-26 --reforge-only
+
+# render
+python3 site/build.py
+```
+
+Day boundaries use the author date of the last commit on `origin/main` that day. `cloc` gives the C# code
+versus comment split per assembly; without it those columns are absent.
+
+## Known gaps
+
+- `entities` reads 0 after the August section split (the `Entities/` directories moved); `dbsets` counts
+  `DbSet<` declarations instead and is the better table count.
+- Pre-split "assemblies" are the four or five layer projects. That is the point: the page shows the
+  layered era as it was.
+- The surface-score readings are three manual runs with two reforge versions. A per-day surface series
+  waits on reforge grouping by assembly.

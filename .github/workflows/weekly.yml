@@ -1,0 +1,63 @@
+name: Weekly collection
+
+on:
+  schedule:
+    - cron: '17 5 * * 1'   # Monday 05:17 UTC
+  workflow_dispatch:
+    inputs:
+      from:
+        description: 'First day to (re)collect, YYYY-MM-DD (default: day after the last record)'
+        required: false
+      reforge:
+        description: 'Also run reforge snapshot (builds the tree per day)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-collection
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Clone Humans (full history)
+        run: git clone --quiet https://github.com/peterdrier/Humans.git ../Humans
+
+      - name: Tools
+        run: sudo apt-get install -y -q cloc
+
+      - name: .NET and reforge
+        if: ${{ inputs.reforge }}
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: ../Humans/global.json
+      - name: Install reforge
+        if: ${{ inputs.reforge }}
+        run: dotnet tool install --global Reforge
+
+      - name: Collect
+        run: |
+          set -euo pipefail
+          ARGS="--repo ../Humans --out data"
+          if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from ${{ inputs.from }}"; fi
+          if [ "${{ inputs.reforge }}" = "true" ]; then ARGS="$ARGS --reforge"; fi
+          python3 collect/collect.py $ARGS
+
+      - name: Build page
+        run: python3 site/build.py
+
+      - name: Commit
+        run: |
+          git config user.name "humans-metrics bot"
+          git config user.email "noreply@github.com"
+          git add data docs
+          if git diff --cached --quiet; then echo "no new days"; exit 0; fi
+          LAST=$(ls data/stats | tail -1 | sed 's/.json//')
+          git commit -m "collect: through $LAST"
+          git push

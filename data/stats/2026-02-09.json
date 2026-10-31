@@ -1,0 +1,163 @@
+{
+ "assemblies": {
+  "Profiles.Application": {
+   "classes": 13,
+   "cs_code": 445,
+   "cs_comment": 580,
+   "cs_lines": 1169,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 22,
+   "interfaces": 12,
+   "is_test": 0,
+   "lines": 1169
+  },
+  "Profiles.Application.Tests": {
+   "classes": 1,
+   "cs_lines": 486,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 2,
+   "files": 1,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 486
+  },
+  "Profiles.Domain": {
+   "classes": 17,
+   "cs_code": 577,
+   "cs_comment": 871,
+   "cs_lines": 1735,
+   "dbsets": 0,
+   "entities": 16,
+   "fan_in": 2,
+   "fan_out": 0,
+   "files": 29,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 1735
+  },
+  "Profiles.Domain.Tests": {
+   "classes": 4,
+   "cs_lines": 467,
+   "dbsets": 0,
+   "entities": 4,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 467
+  },
+  "Profiles.Infrastructure": {
+   "classes": 46,
+   "cs_code": 5124,
+   "cs_comment": 507,
+   "cs_lines": 6638,
+   "dbsets": 15,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 44,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 6638,
+   "migration_lines": 26620
+  },
+  "Profiles.Integration.Tests": {
+   "fan_in": 0,
+   "fan_out": 1,
+   "is_test": 1
+  },
+  "Profiles.Web": {
+   "classes": 79,
+   "controllers": 9,
+   "cs_code": 4612,
+   "cs_comment": 283,
+   "cs_lines": 5650,
+   "cshtml_lines": 5157,
+   "dbsets": 0,
+   "fan_in": 1,
+   "fan_out": 1,
+   "files": 77,
+   "interfaces": 0,
+   "is_test": 0,
+   "js_lines": 38,
+   "lines": 14699,
+   "resx_keys": 573,
+   "resx_lines": 3854,
+   "views": 44
+  }
+ },
+ "collector_version": 1,
+ "commit": "41d703f6b",
+ "date": "2026-02-09",
+ "edges": [
+  [
+   "Profiles.Application",
+   "Profiles.Domain"
+  ],
+  [
+   "Profiles.Application.Tests",
+   "Profiles.Application"
+  ],
+  [
+   "Profiles.Application.Tests",
+   "Profiles.Infrastructure"
+  ],
+  [
+   "Profiles.Domain.Tests",
+   "Profiles.Domain"
+  ],
+  [
+   "Profiles.Infrastructure",
+   "Profiles.Application"
+  ],
+  [
+   "Profiles.Integration.Tests",
+   "Profiles.Web"
+  ],
+  [
+   "Profiles.Web",
+   "Profiles.Infrastructure"
+  ]
+ ],
+ "solution": {
+  "app_classes": 155,
+  "app_controllers": 9,
+  "app_cs_code": 10758,
+  "app_cs_comment": 2241,
+  "app_cs_lines": 15192,
+  "app_cshtml_lines": 5157,
+  "app_dbsets": 15,
+  "app_entities": 16,
+  "app_files": 172,
+  "app_interfaces": 12,
+  "app_js_lines": 38,
+  "app_lines": 24241,
+  "app_resx_keys": 573,
+  "app_resx_lines": 3854,
+  "app_views": 44,
+  "assemblies": 4,
+  "commits": 71,
+  "edges": 7,
+  "md_lines": 5696,
+  "migration_lines": 26620,
+  "test_classes": 5,
+  "test_controllers": 0,
+  "test_cs_code": 0,
+  "test_cs_comment": 0,
+  "test_cs_lines": 953,
+  "test_cshtml_lines": 0,
+  "test_dbsets": 0,
+  "test_entities": 4,
+  "test_files": 5,
+  "test_interfaces": 0,
+  "test_js_lines": 0,
+  "test_lines": 953,
+  "test_projects": 3,
+  "test_resx_keys": 0,
+  "test_resx_lines": 0,
+  "test_views": 0
+ }
+}

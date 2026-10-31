@@ -1,0 +1,43 @@
+# Lane classifier for commits and PRs. First matching rule wins; unmatched
+# work lands in "unclassified" and the page shows that count so these rules
+# get tuned until it is near zero.
+#
+# Credit goes to the PR author, never the merger: Peter is the gate for most
+# PRs, so his merges, approvals and review comments are tracked as a separate
+# "gate" series, not as his work.
+#
+# Fields a rule may match (regex, case-insensitive):
+#   branch   PR head branch (from the PR API; absent in git-only mode)
+#   subject  commit subject / PR title
+#   trailer  any commit trailer line (Co-Authored-By, Claude-Session, ...)
+#   author   PR author login / commit author name
+#
+# Lanes: automation | peter-agent | peter-hand | other-agent | other-hand
+
+peter_logins: [peterdrier, "Peter Drier"]
+
+routines:
+  - name: section-doctor
+    branch: '^section-doctor/'
+    subject: '^(doctor|section-doctor)\b'
+  - name: debt-sweep
+    branch: '^(codex/daily-debt|debt-sweep)/'
+    subject: '^debt\b'
+  - name: freshness-sweep
+    branch: '^freshness/'
+    subject: '^docs: freshness sweep'
+  - name: codex-nightly
+    branch: '^codex/'
+    subject: '^codex\b'
+  - name: dependabot
+    branch: '^dependabot/'
+    author: '^dependabot'
+  - name: logo-round
+    branch: '^logo/'
+    subject: '^logo round'
+  - name: metrics
+    subject: '^(stats|collect):'
+
+agent_trailers:
+  - '^Co-Authored-By: .*(Claude|Codex|Copilot|Gemini)'
+  - '^Claude-Session:'

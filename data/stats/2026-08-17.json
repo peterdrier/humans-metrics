@@ -1,0 +1,4931 @@
+{
+ "assemblies": {
+  "Humans.Agent": {
+   "classes": 78,
+   "controllers": 3,
+   "cs_code": 3275,
+   "cs_comment": 732,
+   "cs_lines": 4526,
+   "cshtml_lines": 746,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 13,
+   "files": 87,
+   "interfaces": 14,
+   "is_test": 0,
+   "js_lines": 224,
+   "lines": 6080,
+   "migration_lines": 520,
+   "resx_keys": 14,
+   "resx_lines": 584,
+   "views": 8
+  },
+  "Humans.Agent.Contracts": {
+   "classes": 1,
+   "cs_code": 49,
+   "cs_comment": 61,
+   "cs_lines": 118,
+   "dbsets": 0,
+   "fan_in": 1,
+   "fan_out": 1,
+   "files": 4,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 118
+  },
+  "Humans.Agent.Tests": {
+   "classes": 31,
+   "cs_lines": 3325,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 8,
+   "files": 17,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3325
+  },
+  "Humans.Analyzers": {
+   "classes": 31,
+   "cs_code": 2738,
+   "cs_comment": 691,
+   "cs_lines": 3965,
+   "dbsets": 2,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 30,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 3965
+  },
+  "Humans.Analyzers.Tests": {
+   "classes": 255,
+   "cs_lines": 5350,
+   "dbsets": 7,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 22,
+   "interfaces": 56,
+   "is_test": 1,
+   "lines": 5350
+  },
+  "Humans.Application": {
+   "cs_code": 0,
+   "cs_comment": 0,
+   "fan_in": 0,
+   "fan_out": 22,
+   "is_test": 0
+  },
+  "Humans.Application.Tests": {
+   "classes": 57,
+   "cs_lines": 8236,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 17,
+   "files": 51,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 8236
+  },
+  "Humans.AuditLog": {
+   "classes": 17,
+   "controllers": 1,
+   "cs_code": 1091,
+   "cs_comment": 369,
+   "cs_lines": 1659,
+   "cshtml_lines": 269,
+   "dbsets": 1,
+   "fan_in": 8,
+   "fan_out": 6,
+   "files": 25,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 1928,
+   "migration_lines": 328,
+   "views": 8
+  },
+  "Humans.AuditLog.Contracts": {
+   "classes": 1,
+   "cs_code": 248,
+   "cs_comment": 71,
+   "cs_lines": 333,
+   "dbsets": 0,
+   "fan_in": 49,
+   "fan_out": 1,
+   "files": 2,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 333
+  },
+  "Humans.AuditLog.Tests": {
+   "classes": 8,
+   "cs_lines": 1341,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 7,
+   "files": 8,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1341
+  },
+  "Humans.Auth": {
+   "classes": 14,
+   "cs_code": 1114,
+   "cs_comment": 386,
+   "cs_lines": 1733,
+   "dbsets": 1,
+   "fan_in": 3,
+   "fan_out": 8,
+   "files": 19,
+   "interfaces": 4,
+   "is_test": 0,
+   "lines": 1733,
+   "migration_lines": 216
+  },
+  "Humans.Auth.Contracts": {
+   "classes": 5,
+   "cs_code": 97,
+   "cs_comment": 118,
+   "cs_lines": 249,
+   "dbsets": 0,
+   "fan_in": 30,
+   "fan_out": 2,
+   "files": 6,
+   "interfaces": 4,
+   "is_test": 0,
+   "lines": 249
+  },
+  "Humans.Auth.Tests": {
+   "classes": 8,
+   "cs_lines": 1387,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 8,
+   "files": 8,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1387
+  },
+  "Humans.Budget": {
+   "classes": 60,
+   "controllers": 2,
+   "cs_code": 3962,
+   "cs_comment": 529,
+   "cs_lines": 5194,
+   "cshtml_lines": 2349,
+   "dbsets": 6,
+   "fan_in": 3,
+   "fan_out": 8,
+   "files": 49,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 8041,
+   "migration_lines": 1043,
+   "resx_keys": 21,
+   "resx_lines": 498,
+   "views": 12
+  },
+  "Humans.Budget.Contracts": {
+   "classes": 11,
+   "cs_code": 135,
+   "cs_comment": 86,
+   "cs_lines": 245,
+   "dbsets": 0,
+   "fan_in": 13,
+   "fan_out": 1,
+   "files": 5,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 245
+  },
+  "Humans.Budget.Tests": {
+   "classes": 4,
+   "cs_lines": 1307,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 7,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1307
+  },
+  "Humans.Calendar": {
+   "classes": 37,
+   "controllers": 2,
+   "cs_code": 1949,
+   "cs_comment": 371,
+   "cs_lines": 2656,
+   "cshtml_lines": 817,
+   "dbsets": 2,
+   "fan_in": 5,
+   "fan_out": 4,
+   "files": 54,
+   "interfaces": 5,
+   "is_test": 0,
+   "lines": 4187,
+   "migration_lines": 430,
+   "resx_keys": 58,
+   "resx_lines": 714,
+   "views": 12
+  },
+  "Humans.Calendar.Tests": {
+   "classes": 10,
+   "cs_lines": 1419,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 6,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1419
+  },
+  "Humans.Campaigns": {
+   "classes": 29,
+   "controllers": 1,
+   "cs_code": 1453,
+   "cs_comment": 220,
+   "cs_lines": 1945,
+   "cshtml_lines": 508,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 8,
+   "files": 24,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 2453,
+   "migration_lines": 491,
+   "views": 7
+  },
+  "Humans.Campaigns.Contracts": {
+   "classes": 5,
+   "cs_code": 56,
+   "cs_comment": 61,
+   "cs_lines": 130,
+   "dbsets": 0,
+   "fan_in": 8,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 130
+  },
+  "Humans.Campaigns.Tests": {
+   "classes": 4,
+   "cs_lines": 920,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 8,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 920
+  },
+  "Humans.Camps": {
+   "classes": 99,
+   "controllers": 4,
+   "cs_code": 6779,
+   "cs_comment": 987,
+   "cs_lines": 8932,
+   "cshtml_lines": 2671,
+   "dbsets": 8,
+   "fan_in": 4,
+   "fan_out": 13,
+   "files": 81,
+   "interfaces": 7,
+   "is_test": 0,
+   "lines": 12772,
+   "migration_lines": 1382,
+   "resx_keys": 112,
+   "resx_lines": 1169,
+   "views": 17
+  },
+  "Humans.Camps.Contracts": {
+   "classes": 12,
+   "cs_code": 328,
+   "cs_comment": 140,
+   "cs_lines": 540,
+   "dbsets": 0,
+   "fan_in": 28,
+   "fan_out": 1,
+   "files": 17,
+   "interfaces": 4,
+   "is_test": 0,
+   "lines": 540
+  },
+  "Humans.Camps.Tests": {
+   "classes": 14,
+   "cs_lines": 5947,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 13,
+   "files": 13,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 5947
+  },
+  "Humans.Cantina": {
+   "classes": 13,
+   "controllers": 1,
+   "cs_code": 842,
+   "cs_comment": 543,
+   "cs_lines": 1517,
+   "cshtml_lines": 451,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 3,
+   "files": 25,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 2436,
+   "resx_keys": 44,
+   "resx_lines": 468,
+   "views": 4
+  },
+  "Humans.Cantina.Tests": {
+   "classes": 5,
+   "cs_lines": 1377,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 4,
+   "files": 5,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1377
+  },
+  "Humans.CityPlanning": {
+   "classes": 31,
+   "controllers": 2,
+   "cs_code": 1604,
+   "cs_comment": 224,
+   "cs_lines": 2120,
+   "cshtml_lines": 907,
+   "dbsets": 3,
+   "fan_in": 3,
+   "fan_out": 6,
+   "files": 59,
+   "interfaces": 1,
+   "is_test": 0,
+   "js_lines": 2559,
+   "lines": 7444,
+   "migration_lines": 396,
+   "resx_keys": 103,
+   "resx_lines": 1858,
+   "views": 9
+  },
+  "Humans.CityPlanning.Contracts": {
+   "classes": 2,
+   "cs_code": 37,
+   "cs_comment": 50,
+   "cs_lines": 97,
+   "dbsets": 0,
+   "fan_in": 11,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 97
+  },
+  "Humans.CityPlanning.Tests": {
+   "classes": 5,
+   "cs_lines": 1076,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 7,
+   "files": 5,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1076
+  },
+  "Humans.Consent": {
+   "classes": 55,
+   "controllers": 3,
+   "cs_code": 2944,
+   "cs_comment": 1019,
+   "cs_lines": 4569,
+   "cshtml_lines": 719,
+   "dbsets": 3,
+   "fan_in": 4,
+   "fan_out": 9,
+   "files": 58,
+   "interfaces": 7,
+   "is_test": 0,
+   "lines": 6137,
+   "migration_lines": 615,
+   "resx_keys": 36,
+   "resx_lines": 849,
+   "views": 10
+  },
+  "Humans.Consent.Contracts": {
+   "classes": 6,
+   "cs_code": 97,
+   "cs_comment": 145,
+   "cs_lines": 273,
+   "dbsets": 0,
+   "fan_in": 17,
+   "fan_out": 1,
+   "files": 8,
+   "interfaces": 6,
+   "is_test": 0,
+   "lines": 273
+  },
+  "Humans.Consent.Tests": {
+   "classes": 11,
+   "cs_lines": 2538,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 9,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2538
+  },
+  "Humans.Containers": {
+   "classes": 28,
+   "controllers": 1,
+   "cs_code": 924,
+   "cs_comment": 107,
+   "cs_lines": 1194,
+   "cshtml_lines": 280,
+   "dbsets": 2,
+   "fan_in": 3,
+   "fan_out": 5,
+   "files": 31,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 2154,
+   "migration_lines": 299,
+   "resx_keys": 29,
+   "resx_lines": 680,
+   "views": 5
+  },
+  "Humans.Containers.Tests": {
+   "classes": 4,
+   "cs_lines": 459,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 6,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 459
+  },
+  "Humans.Debug": {
+   "classes": 23,
+   "controllers": 1,
+   "cs_code": 627,
+   "cs_comment": 81,
+   "cs_lines": 803,
+   "cshtml_lines": 1019,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 2,
+   "files": 19,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 1822,
+   "views": 13
+  },
+  "Humans.Debug.Tests": {
+   "classes": 2,
+   "cs_lines": 105,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 3,
+   "files": 2,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 105
+  },
+  "Humans.Development": {
+   "classes": 14,
+   "controllers": 2,
+   "cs_code": 1276,
+   "cs_comment": 255,
+   "cs_lines": 1733,
+   "cshtml_lines": 94,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 11,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 1827,
+   "views": 3
+  },
+  "Humans.Development.Tests": {
+   "classes": 4,
+   "cs_lines": 578,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 12,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 578
+  },
+  "Humans.Domain.Tests": {
+   "classes": 8,
+   "cs_lines": 427,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 8,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 427
+  },
+  "Humans.EarlyEntry": {
+   "classes": 9,
+   "controllers": 1,
+   "cs_code": 163,
+   "cs_comment": 72,
+   "cs_lines": 269,
+   "cshtml_lines": 47,
+   "dbsets": 0,
+   "fan_in": 8,
+   "fan_out": 2,
+   "files": 12,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 316,
+   "views": 3
+  },
+  "Humans.EarlyEntry.Tests": {
+   "classes": 4,
+   "cs_lines": 336,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 4,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 336
+  },
+  "Humans.Email": {
+   "classes": 25,
+   "controllers": 1,
+   "cs_code": 1712,
+   "cs_comment": 446,
+   "cs_lines": 2457,
+   "cshtml_lines": 324,
+   "dbsets": 1,
+   "fan_in": 2,
+   "fan_out": 7,
+   "files": 37,
+   "interfaces": 5,
+   "is_test": 0,
+   "lines": 5007,
+   "migration_lines": 306,
+   "resx_keys": 70,
+   "resx_lines": 2226,
+   "views": 4
+  },
+  "Humans.Email.Contracts": {
+   "classes": 8,
+   "cs_code": 149,
+   "cs_comment": 180,
+   "cs_lines": 378,
+   "dbsets": 0,
+   "fan_in": 34,
+   "fan_out": 3,
+   "files": 7,
+   "interfaces": 6,
+   "is_test": 0,
+   "lines": 378
+  },
+  "Humans.Email.Tests": {
+   "classes": 9,
+   "cs_lines": 1500,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 13,
+   "files": 8,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1500
+  },
+  "Humans.Events": {
+   "classes": 102,
+   "controllers": 6,
+   "cs_code": 5110,
+   "cs_comment": 886,
+   "cs_lines": 6960,
+   "cshtml_lines": 2207,
+   "dbsets": 7,
+   "fan_in": 2,
+   "fan_out": 9,
+   "files": 77,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 9738,
+   "migration_lines": 1136,
+   "resx_keys": 53,
+   "resx_lines": 571,
+   "views": 19
+  },
+  "Humans.Events.Contracts": {
+   "classes": 2,
+   "cs_code": 76,
+   "cs_comment": 79,
+   "cs_lines": 170,
+   "dbsets": 0,
+   "fan_in": 11,
+   "fan_out": 0,
+   "files": 4,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 170
+  },
+  "Humans.Events.Tests": {
+   "classes": 13,
+   "cs_lines": 2931,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 8,
+   "files": 11,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2931
+  },
+  "Humans.Expenses": {
+   "classes": 41,
+   "controllers": 1,
+   "cs_code": 2850,
+   "cs_comment": 394,
+   "cs_lines": 3703,
+   "cshtml_lines": 1191,
+   "dbsets": 4,
+   "fan_in": 2,
+   "fan_out": 10,
+   "files": 45,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 5446,
+   "migration_lines": 1299,
+   "resx_keys": 31,
+   "resx_lines": 552,
+   "views": 8
+  },
+  "Humans.Expenses.Contracts": {
+   "classes": 5,
+   "cs_code": 128,
+   "cs_comment": 48,
+   "cs_lines": 198,
+   "dbsets": 0,
+   "fan_in": 1,
+   "fan_out": 1,
+   "files": 7,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 198
+  },
+  "Humans.Expenses.Tests": {
+   "classes": 9,
+   "cs_lines": 4197,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 10,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 4197
+  },
+  "Humans.Feedback": {
+   "classes": 27,
+   "controllers": 2,
+   "cs_code": 1344,
+   "cs_comment": 279,
+   "cs_lines": 1850,
+   "cshtml_lines": 410,
+   "dbsets": 2,
+   "fan_in": 3,
+   "fan_out": 7,
+   "files": 31,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 3032,
+   "migration_lines": 483,
+   "resx_keys": 31,
+   "resx_lines": 772,
+   "views": 3
+  },
+  "Humans.Feedback.Tests": {
+   "classes": 5,
+   "cs_lines": 869,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 8,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 869
+  },
+  "Humans.Finance": {
+   "classes": 19,
+   "controllers": 1,
+   "cs_code": 1171,
+   "cs_comment": 274,
+   "cs_lines": 1626,
+   "cshtml_lines": 492,
+   "dbsets": 4,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 26,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 2118,
+   "migration_lines": 1363,
+   "views": 6
+  },
+  "Humans.Finance.Contracts": {
+   "classes": 14,
+   "cs_code": 102,
+   "cs_comment": 66,
+   "cs_lines": 202,
+   "dbsets": 0,
+   "fan_in": 8,
+   "fan_out": 1,
+   "files": 7,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 202
+  },
+  "Humans.Finance.Tests": {
+   "classes": 3,
+   "cs_lines": 1403,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 6,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1403
+  },
+  "Humans.Gate": {
+   "classes": 40,
+   "controllers": 2,
+   "cs_code": 1430,
+   "cs_comment": 664,
+   "cs_lines": 2409,
+   "cshtml_lines": 692,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 8,
+   "files": 40,
+   "interfaces": 3,
+   "is_test": 0,
+   "js_lines": 542,
+   "lines": 3643,
+   "migration_lines": 352,
+   "views": 11
+  },
+  "Humans.Gate.Tests": {
+   "classes": 7,
+   "cs_lines": 1421,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 8,
+   "files": 6,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1421
+  },
+  "Humans.Gdpr": {
+   "classes": 2,
+   "cs_code": 69,
+   "cs_comment": 26,
+   "cs_lines": 105,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 2,
+   "files": 2,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 105
+  },
+  "Humans.Gdpr.Contracts": {
+   "classes": 3,
+   "cs_code": 57,
+   "cs_comment": 91,
+   "cs_lines": 155,
+   "dbsets": 0,
+   "fan_in": 34,
+   "fan_out": 1,
+   "files": 5,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 155
+  },
+  "Humans.Gdpr.Tests": {
+   "classes": 3,
+   "cs_lines": 245,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 4,
+   "files": 2,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 245
+  },
+  "Humans.GoogleIntegration": {
+   "classes": 110,
+   "controllers": 1,
+   "cs_code": 8737,
+   "cs_comment": 1886,
+   "cs_lines": 11947,
+   "cshtml_lines": 1810,
+   "dbsets": 3,
+   "fan_in": 3,
+   "fan_out": 9,
+   "files": 89,
+   "interfaces": 15,
+   "is_test": 0,
+   "lines": 14014,
+   "migration_lines": 533,
+   "resx_keys": 3,
+   "resx_lines": 257,
+   "views": 15
+  },
+  "Humans.GoogleIntegration.Contracts": {
+   "classes": 30,
+   "cs_code": 474,
+   "cs_comment": 651,
+   "cs_lines": 1266,
+   "dbsets": 0,
+   "fan_in": 19,
+   "fan_out": 1,
+   "files": 26,
+   "interfaces": 10,
+   "is_test": 0,
+   "lines": 1266
+  },
+  "Humans.GoogleIntegration.Tests": {
+   "classes": 42,
+   "cs_lines": 6392,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 9,
+   "files": 31,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 6392
+  },
+  "Humans.Governance": {
+   "classes": 50,
+   "controllers": 3,
+   "cs_code": 2607,
+   "cs_comment": 587,
+   "cs_lines": 3693,
+   "cshtml_lines": 1110,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 12,
+   "files": 59,
+   "interfaces": 4,
+   "is_test": 0,
+   "lines": 6842,
+   "migration_lines": 568,
+   "resx_keys": 112,
+   "resx_lines": 2039,
+   "views": 13
+  },
+  "Humans.Governance.Contracts": {
+   "classes": 8,
+   "cs_code": 143,
+   "cs_comment": 199,
+   "cs_lines": 388,
+   "dbsets": 0,
+   "fan_in": 21,
+   "fan_out": 2,
+   "files": 8,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 388
+  },
+  "Humans.Governance.Tests": {
+   "classes": 11,
+   "cs_lines": 2728,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 11,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2728
+  },
+  "Humans.Guide": {
+   "classes": 15,
+   "controllers": 1,
+   "cs_code": 716,
+   "cs_comment": 78,
+   "cs_lines": 918,
+   "cshtml_lines": 95,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 2,
+   "files": 23,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 1013,
+   "views": 6
+  },
+  "Humans.Guide.Tests": {
+   "classes": 10,
+   "cs_lines": 967,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 4,
+   "files": 8,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 967
+  },
+  "Humans.Holded": {
+   "classes": 26,
+   "controllers": 1,
+   "cs_code": 1315,
+   "cs_comment": 296,
+   "cs_lines": 1818,
+   "cshtml_lines": 410,
+   "dbsets": 4,
+   "fan_in": 2,
+   "fan_out": 4,
+   "files": 30,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 2228,
+   "migration_lines": 482,
+   "views": 4
+  },
+  "Humans.Holded.Contracts": {
+   "classes": 17,
+   "cs_code": 196,
+   "cs_comment": 83,
+   "cs_lines": 326,
+   "dbsets": 0,
+   "fan_in": 9,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 326
+  },
+  "Humans.Holded.Tests": {
+   "classes": 12,
+   "cs_lines": 1675,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 5,
+   "files": 8,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1675
+  },
+  "Humans.Integration.Tests": {
+   "classes": 81,
+   "cs_lines": 14917,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 19,
+   "files": 74,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 14917
+  },
+  "Humans.Interfaces": {
+   "classes": 133,
+   "cs_code": 4845,
+   "cs_comment": 2065,
+   "cs_lines": 7996,
+   "cshtml_lines": 1132,
+   "dbsets": 0,
+   "fan_in": 111,
+   "fan_out": 1,
+   "files": 146,
+   "interfaces": 26,
+   "is_test": 0,
+   "lines": 24015,
+   "resx_keys": 1066,
+   "resx_lines": 14887,
+   "views": 14
+  },
+  "Humans.Issues": {
+   "classes": 44,
+   "controllers": 2,
+   "cs_code": 2311,
+   "cs_comment": 301,
+   "cs_lines": 2993,
+   "cshtml_lines": 665,
+   "dbsets": 2,
+   "fan_in": 2,
+   "fan_out": 8,
+   "files": 38,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 5074,
+   "migration_lines": 456,
+   "resx_keys": 78,
+   "resx_lines": 1416,
+   "views": 6
+  },
+  "Humans.Issues.Contracts": {
+   "classes": 0,
+   "cs_code": 20,
+   "cs_comment": 34,
+   "cs_lines": 58,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 58
+  },
+  "Humans.Issues.Tests": {
+   "classes": 9,
+   "cs_lines": 2010,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 8,
+   "files": 7,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2010
+  },
+  "Humans.Mailer": {
+   "classes": 54,
+   "controllers": 1,
+   "cs_code": 2034,
+   "cs_comment": 423,
+   "cs_lines": 2761,
+   "cshtml_lines": 933,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 5,
+   "files": 47,
+   "interfaces": 5,
+   "is_test": 0,
+   "lines": 3694,
+   "views": 8
+  },
+  "Humans.Mailer.Tests": {
+   "classes": 40,
+   "cs_lines": 3653,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 6,
+   "files": 24,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3653
+  },
+  "Humans.Monitor": {
+   "classes": 6,
+   "controllers": 1,
+   "cs_code": 571,
+   "cs_comment": 79,
+   "cs_lines": 738,
+   "cshtml_lines": 95,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 10,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 833,
+   "views": 3
+  },
+  "Humans.Monitor.Tests": {
+   "classes": 3,
+   "cs_lines": 773,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 7,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 773
+  },
+  "Humans.Notifications": {
+   "classes": 30,
+   "controllers": 1,
+   "cs_code": 1686,
+   "cs_comment": 454,
+   "cs_lines": 2488,
+   "cshtml_lines": 437,
+   "dbsets": 2,
+   "fan_in": 2,
+   "fan_out": 10,
+   "files": 35,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 3786,
+   "migration_lines": 331,
+   "resx_keys": 38,
+   "resx_lines": 861,
+   "views": 5
+  },
+  "Humans.Notifications.Contracts": {
+   "classes": 0,
+   "cs_code": 97,
+   "cs_comment": 129,
+   "cs_lines": 270,
+   "dbsets": 0,
+   "fan_in": 31,
+   "fan_out": 1,
+   "files": 7,
+   "interfaces": 4,
+   "is_test": 0,
+   "lines": 270
+  },
+  "Humans.Notifications.Tests": {
+   "classes": 12,
+   "cs_lines": 1920,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 11,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1920
+  },
+  "Humans.Onboarding": {
+   "classes": 24,
+   "controllers": 2,
+   "cs_code": 974,
+   "cs_comment": 223,
+   "cs_lines": 1374,
+   "cshtml_lines": 513,
+   "dbsets": 0,
+   "fan_in": 4,
+   "fan_out": 11,
+   "files": 33,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 2962,
+   "resx_keys": 67,
+   "resx_lines": 1075,
+   "views": 8
+  },
+  "Humans.Onboarding.Contracts": {
+   "classes": 1,
+   "cs_code": 22,
+   "cs_comment": 51,
+   "cs_lines": 78,
+   "dbsets": 0,
+   "fan_in": 12,
+   "fan_out": 0,
+   "files": 3,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 78
+  },
+  "Humans.Onboarding.Tests": {
+   "classes": 9,
+   "cs_lines": 1511,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 11,
+   "files": 8,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1511
+  },
+  "Humans.Scanner": {
+   "classes": 4,
+   "controllers": 1,
+   "cs_code": 137,
+   "cs_comment": 51,
+   "cs_lines": 210,
+   "cshtml_lines": 345,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 9,
+   "files": 19,
+   "interfaces": 0,
+   "is_test": 0,
+   "js_lines": 276,
+   "lines": 1649,
+   "resx_keys": 38,
+   "resx_lines": 818,
+   "views": 6
+  },
+  "Humans.Scanner.Tests": {
+   "classes": 1,
+   "cs_lines": 325,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 7,
+   "files": 1,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 325
+  },
+  "Humans.Search": {
+   "classes": 7,
+   "controllers": 1,
+   "cs_code": 279,
+   "cs_comment": 173,
+   "cs_lines": 493,
+   "cshtml_lines": 182,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 17,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 951,
+   "resx_keys": 12,
+   "resx_lines": 276,
+   "views": 3
+  },
+  "Humans.Search.Tests": {
+   "classes": 3,
+   "cs_lines": 677,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 7,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 677
+  },
+  "Humans.Shifts": {
+   "classes": 188,
+   "controllers": 6,
+   "cs_code": 10716,
+   "cs_comment": 2412,
+   "cs_lines": 15238,
+   "cshtml_lines": 7056,
+   "dbsets": 9,
+   "fan_in": 4,
+   "fan_out": 16,
+   "files": 146,
+   "interfaces": 10,
+   "is_test": 0,
+   "js_lines": 88,
+   "lines": 28331,
+   "migration_lines": 1613,
+   "resx_keys": 328,
+   "resx_lines": 5949,
+   "views": 44
+  },
+  "Humans.Shifts.Contracts": {
+   "classes": 27,
+   "cs_code": 462,
+   "cs_comment": 684,
+   "cs_lines": 1278,
+   "dbsets": 0,
+   "fan_in": 62,
+   "fan_out": 1,
+   "files": 20,
+   "interfaces": 11,
+   "is_test": 0,
+   "lines": 1278
+  },
+  "Humans.Shifts.Tests": {
+   "classes": 58,
+   "cs_lines": 16098,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 15,
+   "files": 53,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 16098
+  },
+  "Humans.Store": {
+   "classes": 59,
+   "controllers": 3,
+   "cs_code": 2576,
+   "cs_comment": 471,
+   "cs_lines": 3464,
+   "cshtml_lines": 1025,
+   "dbsets": 6,
+   "fan_in": 2,
+   "fan_out": 8,
+   "files": 62,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 4886,
+   "migration_lines": 909,
+   "resx_keys": 25,
+   "resx_lines": 397,
+   "views": 8
+  },
+  "Humans.Store.Tests": {
+   "classes": 9,
+   "cs_lines": 3219,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 6,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3219
+  },
+  "Humans.Stripe": {
+   "classes": 8,
+   "cs_code": 586,
+   "cs_comment": 170,
+   "cs_lines": 852,
+   "dbsets": 0,
+   "fan_in": 5,
+   "fan_out": 1,
+   "files": 6,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 852
+  },
+  "Humans.Stripe.Tests": {
+   "classes": 3,
+   "cs_lines": 142,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 3,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 142
+  },
+  "Humans.Surveys": {
+   "classes": 88,
+   "controllers": 3,
+   "cs_code": 3257,
+   "cs_comment": 649,
+   "cs_lines": 4520,
+   "cshtml_lines": 1281,
+   "dbsets": 6,
+   "fan_in": 2,
+   "fan_out": 10,
+   "files": 66,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 6216,
+   "migration_lines": 1007,
+   "resx_keys": 27,
+   "resx_lines": 415,
+   "views": 13
+  },
+  "Humans.Surveys.Contracts": {
+   "classes": 0,
+   "cs_code": 5,
+   "cs_comment": 4,
+   "cs_lines": 10,
+   "dbsets": 0,
+   "fan_in": 1,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 10
+  },
+  "Humans.Surveys.Tests": {
+   "classes": 10,
+   "cs_lines": 2800,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 10,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2800
+  },
+  "Humans.SystemSettings": {
+   "classes": 7,
+   "cs_code": 140,
+   "cs_comment": 33,
+   "cs_lines": 204,
+   "dbsets": 1,
+   "fan_in": 2,
+   "fan_out": 2,
+   "files": 9,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 204,
+   "migration_lines": 139
+  },
+  "Humans.SystemSettings.Contracts": {
+   "classes": 1,
+   "cs_code": 13,
+   "cs_comment": 12,
+   "cs_lines": 29,
+   "dbsets": 0,
+   "fan_in": 7,
+   "fan_out": 1,
+   "files": 2,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 29
+  },
+  "Humans.SystemSettings.Tests": {
+   "classes": 1,
+   "cs_lines": 81,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 3,
+   "files": 1,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 81
+  },
+  "Humans.Teams": {
+   "classes": 102,
+   "controllers": 2,
+   "cs_code": 8625,
+   "cs_comment": 1440,
+   "cs_lines": 11613,
+   "cshtml_lines": 3115,
+   "dbsets": 7,
+   "fan_in": 3,
+   "fan_out": 15,
+   "files": 73,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 17944,
+   "migration_lines": 1606,
+   "resx_keys": 193,
+   "resx_lines": 3216,
+   "views": 24
+  },
+  "Humans.Teams.Contracts": {
+   "classes": 17,
+   "cs_code": 295,
+   "cs_comment": 294,
+   "cs_lines": 668,
+   "dbsets": 0,
+   "fan_in": 53,
+   "fan_out": 2,
+   "files": 14,
+   "interfaces": 5,
+   "is_test": 0,
+   "lines": 668
+  },
+  "Humans.Teams.Tests": {
+   "classes": 19,
+   "cs_lines": 6381,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 18,
+   "files": 18,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 6381
+  },
+  "Humans.Testing": {
+   "classes": 12,
+   "cs_lines": 517,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 517
+  },
+  "Humans.TicketTailor": {
+   "classes": 18,
+   "cs_code": 783,
+   "cs_comment": 108,
+   "cs_lines": 1046,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 3,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 1046
+  },
+  "Humans.TicketTailor.Tests": {
+   "classes": 8,
+   "cs_lines": 1095,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 4,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1095
+  },
+  "Humans.Tickets": {
+   "classes": 113,
+   "controllers": 5,
+   "cs_code": 5495,
+   "cs_comment": 1115,
+   "cs_lines": 7560,
+   "cshtml_lines": 1786,
+   "dbsets": 4,
+   "fan_in": 4,
+   "fan_out": 15,
+   "files": 81,
+   "interfaces": 9,
+   "is_test": 0,
+   "lines": 9799,
+   "migration_lines": 926,
+   "resx_keys": 29,
+   "resx_lines": 453,
+   "views": 18
+  },
+  "Humans.Tickets.Contracts": {
+   "classes": 9,
+   "cs_code": 154,
+   "cs_comment": 156,
+   "cs_lines": 343,
+   "dbsets": 0,
+   "fan_in": 33,
+   "fan_out": 1,
+   "files": 12,
+   "interfaces": 5,
+   "is_test": 0,
+   "lines": 343
+  },
+  "Humans.Tickets.Tests": {
+   "classes": 26,
+   "cs_lines": 5805,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 12,
+   "files": 23,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 5805
+  },
+  "Humans.Tour": {
+   "classes": 2,
+   "controllers": 1,
+   "cs_code": 23,
+   "cs_comment": 8,
+   "cs_lines": 35,
+   "cshtml_lines": 125,
+   "dbsets": 0,
+   "fan_in": 1,
+   "fan_out": 1,
+   "files": 5,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 160,
+   "views": 3
+  },
+  "Humans.Users": {
+   "classes": 127,
+   "controllers": 10,
+   "cs_code": 12784,
+   "cs_comment": 2530,
+   "cs_lines": 17605,
+   "cshtml_lines": 5316,
+   "dbsets": 8,
+   "fan_in": 8,
+   "fan_out": 19,
+   "files": 147,
+   "interfaces": 16,
+   "is_test": 0,
+   "lines": 22921,
+   "migration_lines": 2499,
+   "views": 47
+  },
+  "Humans.Users.Contracts": {
+   "classes": 61,
+   "cs_code": 1590,
+   "cs_comment": 1955,
+   "cs_lines": 4030,
+   "dbsets": 0,
+   "fan_in": 77,
+   "fan_out": 1,
+   "files": 50,
+   "interfaces": 12,
+   "is_test": 0,
+   "lines": 4030
+  },
+  "Humans.Users.Tests": {
+   "classes": 49,
+   "cs_lines": 14261,
+   "dbsets": 0,
+   "entities": 3,
+   "fan_in": 0,
+   "fan_out": 18,
+   "files": 46,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 14261
+  },
+  "Humans.Web": {
+   "classes": 137,
+   "controllers": 12,
+   "cs_code": 5985,
+   "cs_comment": 1351,
+   "cs_lines": 8393,
+   "cshtml_lines": 5942,
+   "dbsets": 1,
+   "fan_in": 4,
+   "fan_out": 59,
+   "files": 152,
+   "interfaces": 3,
+   "is_test": 0,
+   "js_lines": 669,
+   "lines": 15004,
+   "migration_lines": 129,
+   "views": 48
+  },
+  "Humans.Web.Tests": {
+   "classes": 31,
+   "cs_lines": 2604,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 11,
+   "files": 22,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2604
+  }
+ },
+ "collector_version": 1,
+ "commit": "d3bf4010d",
+ "date": "2026-08-17",
+ "edges": [
+  [
+   "Humans.Agent",
+   "Humans.Agent.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Feedback"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Issues.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Agent.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Agent"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Analyzers.Tests",
+   "Humans.Analyzers"
+  ],
+  [
+   "Humans.Application",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.AuditLog",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.AuditLog",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.AuditLog",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.AuditLog",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.AuditLog",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.AuditLog",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.AuditLog.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.AuditLog.Tests",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.AuditLog.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.AuditLog.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.AuditLog.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.AuditLog.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.AuditLog.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.AuditLog.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Auth",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Auth.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Auth.Contracts",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.Auth"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Auth.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Budget.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Budget"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Calendar.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Calendar.Tests",
+   "Humans.Calendar"
+  ],
+  [
+   "Humans.Calendar.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Calendar.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Calendar.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Calendar.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Campaigns.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Campaigns"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.CityPlanning"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Camps",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Camps.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Camps"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Camps.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Cantina",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Cantina",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Cantina",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Cantina.Tests",
+   "Humans.Cantina"
+  ],
+  [
+   "Humans.Cantina.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Cantina.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Cantina.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.CityPlanning.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.CityPlanning"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Consent",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Consent.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Consent"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Consent.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Debug",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Debug",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Debug.Tests",
+   "Humans.Debug"
+  ],
+  [
+   "Humans.Debug.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Debug.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Development",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Development"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Development.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Domain.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.EarlyEntry",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.EarlyEntry",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.EarlyEntry.Tests",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.EarlyEntry.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.EarlyEntry.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.EarlyEntry.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Email",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Email",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Email",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Email",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Email",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.Email",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Email",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Email.Contracts",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Email.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Email.Contracts",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Email"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Email.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Calendar"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Camps"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Events"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Budget"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Expenses.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Expenses.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Expenses"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Feedback"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Finance.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Finance"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Gate"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Gdpr",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Gdpr",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Gdpr.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Gdpr.Tests",
+   "Humans.Gdpr"
+  ],
+  [
+   "Humans.Gdpr.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Gdpr.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Gdpr.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.GoogleIntegration"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.GoogleIntegration.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Consent"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Onboarding"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Governance.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Governance.Contracts",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Governance"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Guide",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Guide",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Guide.Tests",
+   "Humans.Guide"
+  ],
+  [
+   "Humans.Guide.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Guide.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Guide.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Holded.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Holded.Tests",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Holded.Tests",
+   "Humans.Holded"
+  ],
+  [
+   "Humans.Holded.Tests",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Holded.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Holded.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Stripe"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Interfaces",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Issues.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Issues.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Issues"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Mailer",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Mailer",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Mailer",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Mailer",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Mailer",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Mailer.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Mailer.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Mailer.Tests",
+   "Humans.Mailer"
+  ],
+  [
+   "Humans.Mailer.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Mailer.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Mailer.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Monitor",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.Monitor",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Monitor",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Monitor",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Monitor",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.Monitor",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Monitor.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Monitor.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Monitor.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Monitor.Tests",
+   "Humans.Monitor"
+  ],
+  [
+   "Humans.Monitor.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Monitor.Tests",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.Monitor.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Notifications.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Notifications"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Consent"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Onboarding",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Onboarding"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Onboarding.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Calendar"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Tickets"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Scanner"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Search",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Search",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Search",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Search",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Search",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Search",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Search.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Search.Tests",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Search.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Search.Tests",
+   "Humans.Search"
+  ],
+  [
+   "Humans.Search.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Search.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Search.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Calendar"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Onboarding"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Teams"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Shifts",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Shifts.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Shifts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Shifts.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Store",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.Store",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Stripe"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.Store"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Stripe",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Stripe.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Stripe.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Stripe.Tests",
+   "Humans.Stripe"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Surveys.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Surveys.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Surveys"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.SystemSettings.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.SystemSettings.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.SystemSettings.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.SystemSettings.Tests",
+   "Humans.SystemSettings"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Teams",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Teams.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Teams.Contracts",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Auth"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.GoogleIntegration"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Shifts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Teams"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Teams.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.TicketTailor",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.TicketTailor",
+   "Humans.Tickets"
+  ],
+  [
+   "Humans.TicketTailor",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.TicketTailor.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.TicketTailor.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.TicketTailor.Tests",
+   "Humans.TicketTailor"
+  ],
+  [
+   "Humans.TicketTailor.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Stripe"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Tickets",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Tickets.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Tickets"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Tickets.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Tour",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Users",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.Users",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Camps"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Shifts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Users",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Users.Contracts",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Camps.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Users.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Agent"
+  ],
+  [
+   "Humans.Web",
+   "Humans.AuditLog"
+  ],
+  [
+   "Humans.Web",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Auth"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Budget"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Calendar"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Campaigns"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Camps"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Cantina"
+  ],
+  [
+   "Humans.Web",
+   "Humans.CityPlanning"
+  ],
+  [
+   "Humans.Web",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Consent"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Consent.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Debug"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Development"
+  ],
+  [
+   "Humans.Web",
+   "Humans.EarlyEntry"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Email"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Email.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Events"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Expenses"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Feedback"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Finance"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Gate"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Gdpr"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.GoogleIntegration"
+  ],
+  [
+   "Humans.Web",
+   "Humans.GoogleIntegration.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Governance"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Guide"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Holded"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Issues"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Mailer"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Monitor"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Notifications"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Onboarding"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Scanner"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Search"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Shifts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Store"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Stripe"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Surveys"
+  ],
+  [
+   "Humans.Web",
+   "Humans.SystemSettings"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Teams"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Teams.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.TicketTailor"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Tickets"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Tour"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.AuditLog.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Auth.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Gdpr.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Onboarding.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Shifts.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Tickets.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Users"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Users.Contracts"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Web"
+  ]
+ ],
+ "solution": {
+  "app_classes": 2392,
+  "app_controllers": 94,
+  "app_cs_code": 126639,
+  "app_cs_comment": 31906,
+  "app_cs_lines": 181716,
+  "app_cshtml_lines": 49566,
+  "app_dbsets": 111,
+  "app_entities": 0,
+  "app_files": 2370,
+  "app_interfaces": 274,
+  "app_js_lines": 4358,
+  "app_lines": 278640,
+  "app_resx_keys": 2618,
+  "app_resx_lines": 43000,
+  "app_views": 458,
+  "assemblies": 71,
+  "commits": 2196,
+  "edges": 811,
+  "md_lines": 74201,
+  "migration_lines": 21857,
+  "test_classes": 942,
+  "test_controllers": 0,
+  "test_cs_code": 0,
+  "test_cs_comment": 0,
+  "test_cs_lines": 139245,
+  "test_cshtml_lines": 0,
+  "test_dbsets": 7,
+  "test_entities": 3,
+  "test_files": 606,
+  "test_interfaces": 56,
+  "test_js_lines": 0,
+  "test_lines": 139245,
+  "test_projects": 47,
+  "test_resx_keys": 0,
+  "test_resx_lines": 0,
+  "test_views": 0
+ }
+}

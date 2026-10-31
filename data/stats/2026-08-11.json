@@ -1,0 +1,1766 @@
+{
+ "assemblies": {
+  "Humans.Agent": {
+   "classes": 76,
+   "controllers": 3,
+   "cs_code": 3285,
+   "cs_comment": 706,
+   "cs_lines": 4505,
+   "cshtml_lines": 746,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 8,
+   "files": 85,
+   "interfaces": 14,
+   "is_test": 0,
+   "js_lines": 224,
+   "lines": 6059,
+   "migration_lines": 520,
+   "resx_keys": 14,
+   "resx_lines": 584,
+   "views": 8
+  },
+  "Humans.Agent.Contracts": {
+   "classes": 1,
+   "cs_code": 48,
+   "cs_comment": 57,
+   "cs_lines": 113,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 4,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 113
+  },
+  "Humans.Agent.Tests": {
+   "classes": 30,
+   "cs_lines": 3467,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 17,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3467
+  },
+  "Humans.Analyzers": {
+   "classes": 37,
+   "cs_code": 3685,
+   "cs_comment": 853,
+   "cs_lines": 5283,
+   "dbsets": 2,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 34,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 5283
+  },
+  "Humans.Analyzers.Tests": {
+   "classes": 338,
+   "cs_lines": 7194,
+   "dbsets": 10,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 27,
+   "interfaces": 96,
+   "is_test": 1,
+   "lines": 7194
+  },
+  "Humans.Application": {
+   "classes": 598,
+   "cs_code": 32690,
+   "cs_comment": 11405,
+   "cs_lines": 50348,
+   "dbsets": 0,
+   "fan_in": 22,
+   "fan_out": 11,
+   "files": 381,
+   "interfaces": 162,
+   "is_test": 0,
+   "lines": 50348
+  },
+  "Humans.Application.Tests": {
+   "classes": 320,
+   "cs_lines": 71005,
+   "dbsets": 0,
+   "entities": 1,
+   "fan_in": 0,
+   "fan_out": 3,
+   "files": 267,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 71005
+  },
+  "Humans.Budget": {
+   "classes": 59,
+   "controllers": 2,
+   "cs_code": 3934,
+   "cs_comment": 521,
+   "cs_lines": 5155,
+   "cshtml_lines": 2349,
+   "dbsets": 6,
+   "fan_in": 3,
+   "fan_out": 7,
+   "files": 48,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 8002,
+   "migration_lines": 1043,
+   "resx_keys": 21,
+   "resx_lines": 498,
+   "views": 12
+  },
+  "Humans.Budget.Contracts": {
+   "classes": 11,
+   "cs_code": 135,
+   "cs_comment": 86,
+   "cs_lines": 245,
+   "dbsets": 0,
+   "fan_in": 5,
+   "fan_out": 1,
+   "files": 5,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 245
+  },
+  "Humans.Budget.Tests": {
+   "classes": 5,
+   "cs_lines": 1345,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 5,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1345
+  },
+  "Humans.Calendar": {
+   "classes": 32,
+   "controllers": 1,
+   "cs_code": 1796,
+   "cs_comment": 285,
+   "cs_lines": 2395,
+   "cshtml_lines": 766,
+   "dbsets": 2,
+   "fan_in": 2,
+   "fan_out": 5,
+   "files": 47,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 3875,
+   "migration_lines": 430,
+   "resx_keys": 58,
+   "resx_lines": 714,
+   "views": 11
+  },
+  "Humans.Calendar.Tests": {
+   "classes": 7,
+   "cs_lines": 1312,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 7,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1312
+  },
+  "Humans.Campaigns": {
+   "classes": 29,
+   "controllers": 1,
+   "cs_code": 1474,
+   "cs_comment": 224,
+   "cs_lines": 1973,
+   "cshtml_lines": 512,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 24,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 2485,
+   "migration_lines": 491,
+   "views": 7
+  },
+  "Humans.Campaigns.Contracts": {
+   "classes": 5,
+   "cs_code": 57,
+   "cs_comment": 61,
+   "cs_lines": 131,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 2,
+   "files": 3,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 131
+  },
+  "Humans.Campaigns.Tests": {
+   "classes": 3,
+   "cs_lines": 1002,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1002
+  },
+  "Humans.CityPlanning": {
+   "classes": 30,
+   "controllers": 2,
+   "cs_code": 1572,
+   "cs_comment": 214,
+   "cs_lines": 2074,
+   "cshtml_lines": 919,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 7,
+   "files": 58,
+   "interfaces": 1,
+   "is_test": 0,
+   "js_lines": 2559,
+   "lines": 7410,
+   "migration_lines": 396,
+   "resx_keys": 103,
+   "resx_lines": 1858,
+   "views": 9
+  },
+  "Humans.CityPlanning.Contracts": {
+   "classes": 2,
+   "cs_code": 37,
+   "cs_comment": 50,
+   "cs_lines": 97,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 97
+  },
+  "Humans.CityPlanning.Tests": {
+   "classes": 5,
+   "cs_lines": 1188,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 5,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1188
+  },
+  "Humans.Containers": {
+   "classes": 28,
+   "controllers": 1,
+   "cs_code": 926,
+   "cs_comment": 112,
+   "cs_lines": 1202,
+   "cshtml_lines": 280,
+   "dbsets": 2,
+   "fan_in": 3,
+   "fan_out": 6,
+   "files": 31,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 2162,
+   "migration_lines": 299,
+   "resx_keys": 29,
+   "resx_lines": 680,
+   "views": 5
+  },
+  "Humans.Containers.Tests": {
+   "classes": 4,
+   "cs_lines": 550,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 550
+  },
+  "Humans.Domain": {
+   "classes": 72,
+   "cs_code": 2233,
+   "cs_comment": 2221,
+   "cs_lines": 5291,
+   "dbsets": 0,
+   "entities": 46,
+   "fan_in": 23,
+   "fan_out": 1,
+   "files": 119,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 5291
+  },
+  "Humans.Domain.Tests": {
+   "classes": 18,
+   "cs_lines": 1598,
+   "dbsets": 0,
+   "entities": 7,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 18,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1598
+  },
+  "Humans.Events": {
+   "classes": 98,
+   "controllers": 6,
+   "cs_code": 5018,
+   "cs_comment": 852,
+   "cs_lines": 6812,
+   "cshtml_lines": 2108,
+   "dbsets": 7,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 72,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 9491,
+   "migration_lines": 1136,
+   "resx_keys": 53,
+   "resx_lines": 571,
+   "views": 17
+  },
+  "Humans.Events.Contracts": {
+   "classes": 2,
+   "cs_code": 76,
+   "cs_comment": 79,
+   "cs_lines": 170,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 0,
+   "files": 4,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 170
+  },
+  "Humans.Events.Tests": {
+   "classes": 12,
+   "cs_lines": 2823,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2823
+  },
+  "Humans.Expenses": {
+   "classes": 44,
+   "controllers": 1,
+   "cs_code": 2704,
+   "cs_comment": 302,
+   "cs_lines": 3443,
+   "cshtml_lines": 1051,
+   "dbsets": 4,
+   "fan_in": 2,
+   "fan_out": 9,
+   "files": 50,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 5034,
+   "migration_lines": 692,
+   "resx_keys": 29,
+   "resx_lines": 540,
+   "views": 8
+  },
+  "Humans.Expenses.Contracts": {
+   "classes": 0,
+   "cs_code": 5,
+   "cs_comment": 4,
+   "cs_lines": 10,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 10
+  },
+  "Humans.Expenses.Tests": {
+   "classes": 9,
+   "cs_lines": 3640,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3640
+  },
+  "Humans.Feedback": {
+   "classes": 27,
+   "controllers": 2,
+   "cs_code": 1347,
+   "cs_comment": 285,
+   "cs_lines": 1860,
+   "cshtml_lines": 410,
+   "dbsets": 2,
+   "fan_in": 3,
+   "fan_out": 5,
+   "files": 31,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 3042,
+   "migration_lines": 483,
+   "resx_keys": 31,
+   "resx_lines": 772,
+   "views": 3
+  },
+  "Humans.Feedback.Tests": {
+   "classes": 3,
+   "cs_lines": 914,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 914
+  },
+  "Humans.Finance": {
+   "classes": 19,
+   "controllers": 1,
+   "cs_code": 1176,
+   "cs_comment": 285,
+   "cs_lines": 1643,
+   "cshtml_lines": 492,
+   "dbsets": 4,
+   "fan_in": 2,
+   "fan_out": 8,
+   "files": 26,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 2135,
+   "migration_lines": 1363,
+   "views": 6
+  },
+  "Humans.Finance.Contracts": {
+   "classes": 14,
+   "cs_code": 102,
+   "cs_comment": 66,
+   "cs_lines": 202,
+   "dbsets": 0,
+   "fan_in": 5,
+   "fan_out": 1,
+   "files": 7,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 202
+  },
+  "Humans.Finance.Tests": {
+   "classes": 3,
+   "cs_lines": 1524,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1524
+  },
+  "Humans.Gate": {
+   "classes": 38,
+   "controllers": 2,
+   "cs_code": 1356,
+   "cs_comment": 608,
+   "cs_lines": 2269,
+   "cshtml_lines": 692,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 37,
+   "interfaces": 2,
+   "is_test": 0,
+   "js_lines": 542,
+   "lines": 3503,
+   "migration_lines": 352,
+   "views": 11
+  },
+  "Humans.Gate.Contracts": {
+   "classes": 0,
+   "cs_code": 6,
+   "cs_comment": 7,
+   "cs_lines": 15,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 15
+  },
+  "Humans.Gate.Tests": {
+   "classes": 7,
+   "cs_lines": 1538,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 6,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1538
+  },
+  "Humans.Governance": {
+   "classes": 48,
+   "controllers": 3,
+   "cs_code": 2449,
+   "cs_comment": 537,
+   "cs_lines": 3460,
+   "cshtml_lines": 1105,
+   "dbsets": 3,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 56,
+   "interfaces": 4,
+   "is_test": 0,
+   "lines": 6604,
+   "migration_lines": 568,
+   "resx_keys": 112,
+   "resx_lines": 2039,
+   "views": 13
+  },
+  "Humans.Governance.Contracts": {
+   "classes": 7,
+   "cs_code": 126,
+   "cs_comment": 178,
+   "cs_lines": 344,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 2,
+   "files": 6,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 344
+  },
+  "Humans.Governance.Tests": {
+   "classes": 9,
+   "cs_lines": 2851,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2851
+  },
+  "Humans.Holded": {
+   "classes": 21,
+   "controllers": 1,
+   "cs_code": 757,
+   "cs_comment": 199,
+   "cs_lines": 1087,
+   "cshtml_lines": 410,
+   "dbsets": 4,
+   "fan_in": 2,
+   "fan_out": 7,
+   "files": 25,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 1497,
+   "migration_lines": 482,
+   "views": 4
+  },
+  "Humans.Holded.Contracts": {
+   "classes": 1,
+   "cs_code": 13,
+   "cs_comment": 16,
+   "cs_lines": 35,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 1,
+   "files": 2,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 35
+  },
+  "Humans.Holded.Tests": {
+   "classes": 3,
+   "cs_lines": 783,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 783
+  },
+  "Humans.Infrastructure": {
+   "classes": 239,
+   "cs_code": 21774,
+   "cs_comment": 3184,
+   "cs_lines": 28698,
+   "dbsets": 46,
+   "fan_in": 20,
+   "fan_out": 9,
+   "files": 195,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 28698,
+   "migration_lines": 658322
+  },
+  "Humans.Integration.Tests": {
+   "classes": 59,
+   "cs_lines": 10653,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 52,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 10653
+  },
+  "Humans.Interfaces": {
+   "classes": 6,
+   "cs_code": 80,
+   "cs_comment": 238,
+   "cs_lines": 341,
+   "dbsets": 0,
+   "fan_in": 34,
+   "fan_out": 0,
+   "files": 11,
+   "interfaces": 7,
+   "is_test": 0,
+   "lines": 341
+  },
+  "Humans.Issues": {
+   "classes": 43,
+   "controllers": 2,
+   "cs_code": 2287,
+   "cs_comment": 295,
+   "cs_lines": 2960,
+   "cshtml_lines": 665,
+   "dbsets": 2,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 37,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 5041,
+   "migration_lines": 456,
+   "resx_keys": 78,
+   "resx_lines": 1416,
+   "views": 6
+  },
+  "Humans.Issues.Contracts": {
+   "classes": 0,
+   "cs_code": 20,
+   "cs_comment": 34,
+   "cs_lines": 58,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 58
+  },
+  "Humans.Issues.Tests": {
+   "classes": 7,
+   "cs_lines": 2011,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 6,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2011
+  },
+  "Humans.Notifications": {
+   "classes": 29,
+   "controllers": 1,
+   "cs_code": 1657,
+   "cs_comment": 449,
+   "cs_lines": 2450,
+   "cshtml_lines": 437,
+   "dbsets": 2,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 34,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 3748,
+   "migration_lines": 331,
+   "resx_keys": 38,
+   "resx_lines": 861,
+   "views": 5
+  },
+  "Humans.Notifications.Contracts": {
+   "classes": 0,
+   "cs_code": 97,
+   "cs_comment": 129,
+   "cs_lines": 270,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 1,
+   "files": 7,
+   "interfaces": 4,
+   "is_test": 0,
+   "lines": 270
+  },
+  "Humans.Notifications.Tests": {
+   "classes": 10,
+   "cs_lines": 1949,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1949
+  },
+  "Humans.Scanner": {
+   "classes": 4,
+   "controllers": 1,
+   "cs_code": 140,
+   "cs_comment": 59,
+   "cs_lines": 222,
+   "cshtml_lines": 341,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 4,
+   "files": 19,
+   "interfaces": 0,
+   "is_test": 0,
+   "js_lines": 276,
+   "lines": 1657,
+   "resx_keys": 38,
+   "resx_lines": 818,
+   "views": 6
+  },
+  "Humans.Scanner.Tests": {
+   "classes": 1,
+   "cs_lines": 326,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 326
+  },
+  "Humans.Store": {
+   "classes": 59,
+   "controllers": 3,
+   "cs_code": 2564,
+   "cs_comment": 473,
+   "cs_lines": 3455,
+   "cshtml_lines": 1022,
+   "dbsets": 6,
+   "fan_in": 2,
+   "fan_out": 5,
+   "files": 61,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 4874,
+   "migration_lines": 909,
+   "resx_keys": 25,
+   "resx_lines": 397,
+   "views": 8
+  },
+  "Humans.Store.Tests": {
+   "classes": 9,
+   "cs_lines": 3228,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3228
+  },
+  "Humans.Surveys": {
+   "classes": 87,
+   "controllers": 3,
+   "cs_code": 3247,
+   "cs_comment": 643,
+   "cs_lines": 4503,
+   "cshtml_lines": 1281,
+   "dbsets": 6,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 65,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 6199,
+   "migration_lines": 1007,
+   "resx_keys": 27,
+   "resx_lines": 415,
+   "views": 13
+  },
+  "Humans.Surveys.Contracts": {
+   "classes": 0,
+   "cs_code": 5,
+   "cs_comment": 4,
+   "cs_lines": 10,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 10
+  },
+  "Humans.Surveys.Tests": {
+   "classes": 10,
+   "cs_lines": 2926,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2926
+  },
+  "Humans.SystemSettings": {
+   "classes": 7,
+   "cs_code": 142,
+   "cs_comment": 38,
+   "cs_lines": 212,
+   "dbsets": 1,
+   "fan_in": 2,
+   "fan_out": 5,
+   "files": 9,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 212,
+   "migration_lines": 139
+  },
+  "Humans.SystemSettings.Contracts": {
+   "classes": 1,
+   "cs_code": 13,
+   "cs_comment": 12,
+   "cs_lines": 29,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 2,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 29
+  },
+  "Humans.SystemSettings.Tests": {
+   "classes": 1,
+   "cs_lines": 81,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 81
+  },
+  "Humans.Testing": {
+   "classes": 9,
+   "cs_lines": 269,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 7,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 269
+  },
+  "Humans.UI": {
+   "classes": 45,
+   "cs_code": 1564,
+   "cs_comment": 466,
+   "cs_lines": 2342,
+   "cshtml_lines": 1609,
+   "dbsets": 0,
+   "fan_in": 19,
+   "fan_out": 1,
+   "files": 72,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 32413,
+   "resx_keys": 1960,
+   "resx_lines": 28462,
+   "views": 26
+  },
+  "Humans.Web": {
+   "classes": 524,
+   "controllers": 55,
+   "cs_code": 25522,
+   "cs_comment": 3137,
+   "cs_lines": 32814,
+   "cshtml_lines": 31029,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 21,
+   "files": 505,
+   "interfaces": 0,
+   "is_test": 0,
+   "js_lines": 757,
+   "lines": 64600,
+   "views": 246
+  },
+  "Humans.Web.Tests": {
+   "classes": 68,
+   "cs_lines": 9770,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 57,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 9770
+  }
+ },
+ "collector_version": 1,
+ "commit": "fa8b36737",
+ "date": "2026-08-11",
+ "edges": [
+  [
+   "Humans.Agent",
+   "Humans.Agent.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Feedback"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.Issues.Contracts"
+  ],
+  [
+   "Humans.Agent",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Agent.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Agent.Tests",
+   "Humans.Agent"
+  ],
+  [
+   "Humans.Analyzers.Tests",
+   "Humans.Analyzers"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Budget",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Budget.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Budget.Tests",
+   "Humans.Budget"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Calendar",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Calendar.Tests",
+   "Humans.Calendar"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Campaigns.Contracts"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Campaigns",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Campaigns.Contracts",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Campaigns.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Campaigns.Tests",
+   "Humans.Campaigns"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Application"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.CityPlanning",
+   "Humans.UI"
+  ],
+  [
+   "Humans.CityPlanning.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.CityPlanning.Tests",
+   "Humans.CityPlanning"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.CityPlanning.Contracts"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.Domain",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Domain.Tests",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Events",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Events"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Budget"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Expenses.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Expenses.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Expenses"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Feedback",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Feedback.Tests",
+   "Humans.Feedback"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Finance.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Finance"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Gate.Contracts"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Gate",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Gate.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Gate.Tests",
+   "Humans.Gate"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Governance",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Governance.Contracts",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Governance.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Governance.Tests",
+   "Humans.Governance"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Holded.Contracts"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Holded",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Holded.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Holded.Tests",
+   "Humans.Holded"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Agent.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Budget.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Expenses.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Gate.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Governance.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Issues.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Surveys.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.Issues.Contracts"
+  ],
+  [
+   "Humans.Issues",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Issues.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Issues.Tests",
+   "Humans.Issues"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.Notifications.Contracts"
+  ],
+  [
+   "Humans.Notifications",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Notifications.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Notifications.Tests",
+   "Humans.Notifications"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Scanner",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Scanner.Tests",
+   "Humans.Scanner"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Store",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.Store"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Surveys.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Surveys.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Surveys"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Application"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.SystemSettings.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.SystemSettings.Tests",
+   "Humans.SystemSettings"
+  ],
+  [
+   "Humans.UI",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Agent"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Budget"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Calendar"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Campaigns"
+  ],
+  [
+   "Humans.Web",
+   "Humans.CityPlanning"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Events"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Expenses"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Feedback"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Finance"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Gate"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Governance"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Holded"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Issues"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Notifications"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Scanner"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Store"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Surveys"
+  ],
+  [
+   "Humans.Web",
+   "Humans.SystemSettings"
+  ],
+  [
+   "Humans.Web",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Web"
+  ]
+ ],
+ "solution": {
+  "app_classes": 2343,
+  "app_controllers": 91,
+  "app_cs_code": 126119,
+  "app_cs_comment": 29374,
+  "app_cs_lines": 178526,
+  "app_cshtml_lines": 48224,
+  "app_dbsets": 111,
+  "app_entities": 46,
+  "app_files": 2181,
+  "app_interfaces": 248,
+  "app_js_lines": 4358,
+  "app_lines": 271733,
+  "app_resx_keys": 2616,
+  "app_resx_lines": 40625,
+  "app_views": 424,
+  "assemblies": 40,
+  "commits": 2112,
+  "edges": 201,
+  "md_lines": 74628,
+  "migration_lines": 669419,
+  "test_classes": 950,
+  "test_controllers": 0,
+  "test_cs_code": 0,
+  "test_cs_comment": 0,
+  "test_cs_lines": 133947,
+  "test_cshtml_lines": 0,
+  "test_dbsets": 10,
+  "test_entities": 8,
+  "test_files": 548,
+  "test_interfaces": 96,
+  "test_js_lines": 0,
+  "test_lines": 133947,
+  "test_projects": 25,
+  "test_resx_keys": 0,
+  "test_resx_lines": 0,
+  "test_views": 0
+ }
+}

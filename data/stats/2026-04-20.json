@@ -1,0 +1,173 @@
+{
+ "assemblies": {
+  "Humans.Application": {
+   "classes": 194,
+   "cs_code": 3980,
+   "cs_comment": 2473,
+   "cs_lines": 7403,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 124,
+   "interfaces": 63,
+   "is_test": 0,
+   "lines": 7403
+  },
+  "Humans.Application.Tests": {
+   "classes": 69,
+   "cs_lines": 21544,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 3,
+   "files": 64,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 21544
+  },
+  "Humans.Domain": {
+   "classes": 79,
+   "cs_code": 2121,
+   "cs_comment": 2264,
+   "cs_lines": 5278,
+   "dbsets": 0,
+   "entities": 61,
+   "fan_in": 2,
+   "fan_out": 0,
+   "files": 131,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 5278
+  },
+  "Humans.Domain.Tests": {
+   "classes": 9,
+   "cs_lines": 1107,
+   "dbsets": 0,
+   "entities": 6,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1107
+  },
+  "Humans.Infrastructure": {
+   "classes": 185,
+   "cs_code": 27697,
+   "cs_comment": 2067,
+   "cs_lines": 34830,
+   "dbsets": 61,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 161,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 34830,
+   "migration_lines": 250294
+  },
+  "Humans.Integration.Tests": {
+   "classes": 6,
+   "cs_lines": 319,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 6,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 319
+  },
+  "Humans.Web": {
+   "classes": 390,
+   "controllers": 45,
+   "cs_code": 21365,
+   "cs_comment": 1299,
+   "cs_lines": 26160,
+   "cshtml_lines": 27170,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 384,
+   "interfaces": 0,
+   "is_test": 0,
+   "js_lines": 1041,
+   "lines": 64547,
+   "resx_keys": 1298,
+   "resx_lines": 10176,
+   "views": 210
+  }
+ },
+ "collector_version": 1,
+ "commit": "1d84b8682",
+ "date": "2026-04-20",
+ "edges": [
+  [
+   "Humans.Application",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Domain.Tests",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Infrastructure"
+  ]
+ ],
+ "solution": {
+  "app_classes": 848,
+  "app_controllers": 45,
+  "app_cs_code": 55163,
+  "app_cs_comment": 8103,
+  "app_cs_lines": 73671,
+  "app_cshtml_lines": 27170,
+  "app_dbsets": 61,
+  "app_entities": 61,
+  "app_files": 800,
+  "app_interfaces": 63,
+  "app_js_lines": 1041,
+  "app_lines": 112058,
+  "app_resx_keys": 1298,
+  "app_resx_lines": 10176,
+  "app_views": 210,
+  "assemblies": 4,
+  "commits": 953,
+  "edges": 8,
+  "md_lines": 66723,
+  "migration_lines": 250294,
+  "test_classes": 84,
+  "test_controllers": 0,
+  "test_cs_code": 0,
+  "test_cs_comment": 0,
+  "test_cs_lines": 22970,
+  "test_cshtml_lines": 0,
+  "test_dbsets": 0,
+  "test_entities": 6,
+  "test_files": 79,
+  "test_interfaces": 0,
+  "test_js_lines": 0,
+  "test_lines": 22970,
+  "test_projects": 3,
+  "test_resx_keys": 0,
+  "test_resx_lines": 0,
+  "test_views": 0
+ }
+}

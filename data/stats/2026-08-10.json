@@ -1,0 +1,792 @@
+{
+ "assemblies": {
+  "Humans.Analyzers": {
+   "classes": 37,
+   "cs_code": 3685,
+   "cs_comment": 853,
+   "cs_lines": 5283,
+   "dbsets": 2,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 34,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 5283
+  },
+  "Humans.Analyzers.Tests": {
+   "classes": 338,
+   "cs_lines": 7194,
+   "dbsets": 10,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 27,
+   "interfaces": 96,
+   "is_test": 1,
+   "lines": 7194
+  },
+  "Humans.Application": {
+   "classes": 766,
+   "cs_code": 41386,
+   "cs_comment": 13729,
+   "cs_lines": 62958,
+   "dbsets": 0,
+   "fan_in": 10,
+   "fan_out": 5,
+   "files": 485,
+   "interfaces": 207,
+   "is_test": 0,
+   "lines": 62958
+  },
+  "Humans.Application.Tests": {
+   "classes": 393,
+   "cs_lines": 86147,
+   "dbsets": 0,
+   "entities": 1,
+   "fan_in": 0,
+   "fan_out": 3,
+   "files": 328,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 86147
+  },
+  "Humans.Containers": {
+   "classes": 28,
+   "controllers": 1,
+   "cs_code": 926,
+   "cs_comment": 112,
+   "cs_lines": 1202,
+   "cshtml_lines": 278,
+   "dbsets": 2,
+   "fan_in": 2,
+   "fan_out": 5,
+   "files": 31,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 2010,
+   "migration_lines": 299,
+   "resx_keys": 20,
+   "resx_lines": 530,
+   "views": 5
+  },
+  "Humans.Containers.Tests": {
+   "classes": 4,
+   "cs_lines": 550,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 4,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 550
+  },
+  "Humans.Domain": {
+   "classes": 103,
+   "cs_code": 3027,
+   "cs_comment": 2801,
+   "cs_lines": 6978,
+   "dbsets": 0,
+   "entities": 75,
+   "fan_in": 9,
+   "fan_out": 1,
+   "files": 166,
+   "interfaces": 0,
+   "is_test": 0,
+   "lines": 6978
+  },
+  "Humans.Domain.Tests": {
+   "classes": 21,
+   "cs_lines": 1982,
+   "dbsets": 0,
+   "entities": 10,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 21,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1982
+  },
+  "Humans.Events": {
+   "classes": 98,
+   "controllers": 6,
+   "cs_code": 5018,
+   "cs_comment": 852,
+   "cs_lines": 6812,
+   "cshtml_lines": 2108,
+   "dbsets": 7,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 72,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 9491,
+   "migration_lines": 1136,
+   "resx_keys": 53,
+   "resx_lines": 571,
+   "views": 17
+  },
+  "Humans.Events.Contracts": {
+   "classes": 2,
+   "cs_code": 76,
+   "cs_comment": 79,
+   "cs_lines": 170,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 0,
+   "files": 4,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 170
+  },
+  "Humans.Events.Tests": {
+   "classes": 12,
+   "cs_lines": 2823,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2823
+  },
+  "Humans.Expenses": {
+   "classes": 46,
+   "controllers": 1,
+   "cs_code": 2771,
+   "cs_comment": 288,
+   "cs_lines": 3511,
+   "cshtml_lines": 1099,
+   "dbsets": 4,
+   "fan_in": 2,
+   "fan_out": 7,
+   "files": 50,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 5150,
+   "migration_lines": 692,
+   "resx_keys": 29,
+   "resx_lines": 540,
+   "views": 8
+  },
+  "Humans.Expenses.Contracts": {
+   "classes": 0,
+   "cs_code": 5,
+   "cs_comment": 4,
+   "cs_lines": 10,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 10
+  },
+  "Humans.Expenses.Tests": {
+   "classes": 9,
+   "cs_lines": 3695,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3695
+  },
+  "Humans.Finance": {
+   "classes": 21,
+   "controllers": 1,
+   "cs_code": 1320,
+   "cs_comment": 306,
+   "cs_lines": 1834,
+   "cshtml_lines": 410,
+   "dbsets": 5,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 29,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 2244,
+   "migration_lines": 768,
+   "views": 6
+  },
+  "Humans.Finance.Contracts": {
+   "classes": 12,
+   "cs_code": 87,
+   "cs_comment": 60,
+   "cs_lines": 177,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 1,
+   "files": 7,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 177
+  },
+  "Humans.Finance.Tests": {
+   "classes": 3,
+   "cs_lines": 1565,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 3,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 1565
+  },
+  "Humans.Infrastructure": {
+   "classes": 313,
+   "cs_code": 27012,
+   "cs_comment": 3859,
+   "cs_lines": 35580,
+   "dbsets": 75,
+   "fan_in": 9,
+   "fan_out": 3,
+   "files": 268,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 35580,
+   "migration_lines": 659197
+  },
+  "Humans.Integration.Tests": {
+   "classes": 48,
+   "cs_lines": 8354,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 41,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 8354
+  },
+  "Humans.Interfaces": {
+   "classes": 6,
+   "cs_code": 80,
+   "cs_comment": 238,
+   "cs_lines": 341,
+   "dbsets": 0,
+   "fan_in": 13,
+   "fan_out": 0,
+   "files": 11,
+   "interfaces": 7,
+   "is_test": 0,
+   "lines": 341
+  },
+  "Humans.Store": {
+   "classes": 59,
+   "controllers": 3,
+   "cs_code": 2564,
+   "cs_comment": 473,
+   "cs_lines": 3455,
+   "cshtml_lines": 1022,
+   "dbsets": 6,
+   "fan_in": 2,
+   "fan_out": 5,
+   "files": 61,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 4874,
+   "migration_lines": 909,
+   "resx_keys": 25,
+   "resx_lines": 397,
+   "views": 8
+  },
+  "Humans.Store.Tests": {
+   "classes": 9,
+   "cs_lines": 3228,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 9,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 3228
+  },
+  "Humans.Surveys": {
+   "classes": 87,
+   "controllers": 3,
+   "cs_code": 3247,
+   "cs_comment": 643,
+   "cs_lines": 4503,
+   "cshtml_lines": 1281,
+   "dbsets": 6,
+   "fan_in": 2,
+   "fan_out": 6,
+   "files": 65,
+   "interfaces": 3,
+   "is_test": 0,
+   "lines": 6199,
+   "migration_lines": 1007,
+   "resx_keys": 27,
+   "resx_lines": 415,
+   "views": 13
+  },
+  "Humans.Surveys.Contracts": {
+   "classes": 0,
+   "cs_code": 5,
+   "cs_comment": 4,
+   "cs_lines": 10,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 10
+  },
+  "Humans.Surveys.Tests": {
+   "classes": 10,
+   "cs_lines": 2926,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 10,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 2926
+  },
+  "Humans.SystemSettings": {
+   "classes": 7,
+   "cs_code": 142,
+   "cs_comment": 38,
+   "cs_lines": 212,
+   "dbsets": 1,
+   "fan_in": 2,
+   "fan_out": 5,
+   "files": 9,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 212,
+   "migration_lines": 139
+  },
+  "Humans.SystemSettings.Contracts": {
+   "classes": 1,
+   "cs_code": 13,
+   "cs_comment": 12,
+   "cs_lines": 29,
+   "dbsets": 0,
+   "fan_in": 2,
+   "fan_out": 1,
+   "files": 2,
+   "interfaces": 1,
+   "is_test": 0,
+   "lines": 29
+  },
+  "Humans.SystemSettings.Tests": {
+   "classes": 1,
+   "cs_lines": 81,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 1,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 81
+  },
+  "Humans.Testing": {
+   "classes": 8,
+   "cs_lines": 223,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 0,
+   "files": 6,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 223
+  },
+  "Humans.UI": {
+   "classes": 35,
+   "cs_code": 1424,
+   "cs_comment": 362,
+   "cs_lines": 2068,
+   "cshtml_lines": 1325,
+   "dbsets": 0,
+   "fan_in": 7,
+   "fan_out": 1,
+   "files": 59,
+   "interfaces": 2,
+   "is_test": 0,
+   "lines": 38922,
+   "resx_keys": 2462,
+   "resx_lines": 35529,
+   "views": 24
+  },
+  "Humans.Web": {
+   "classes": 679,
+   "controllers": 75,
+   "cs_code": 32300,
+   "cs_comment": 3660,
+   "cs_lines": 41173,
+   "cshtml_lines": 40019,
+   "dbsets": 0,
+   "fan_in": 3,
+   "fan_out": 9,
+   "files": 687,
+   "interfaces": 0,
+   "is_test": 0,
+   "js_lines": 4358,
+   "lines": 85550,
+   "views": 327
+  },
+  "Humans.Web.Tests": {
+   "classes": 70,
+   "cs_lines": 10194,
+   "dbsets": 0,
+   "fan_in": 0,
+   "fan_out": 1,
+   "files": 59,
+   "interfaces": 0,
+   "is_test": 1,
+   "lines": 10194
+  }
+ },
+ "collector_version": 1,
+ "commit": "515267af3",
+ "date": "2026-08-10",
+ "edges": [
+  [
+   "Humans.Analyzers.Tests",
+   "Humans.Analyzers"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Application",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Application",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Application.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Containers",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Containers.Tests",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.Domain",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Domain.Tests",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Events.Contracts"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Events",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Events",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Events.Tests",
+   "Humans.Events"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Expenses.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Expenses",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Expenses.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Expenses.Tests",
+   "Humans.Expenses"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Finance.Contracts"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Finance",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Finance.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Finance.Tests",
+   "Humans.Finance"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Expenses.Contracts"
+  ],
+  [
+   "Humans.Infrastructure",
+   "Humans.Surveys.Contracts"
+  ],
+  [
+   "Humans.Integration.Tests",
+   "Humans.Web"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Store",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Store",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Store.Tests",
+   "Humans.Store"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.Surveys.Contracts"
+  ],
+  [
+   "Humans.Surveys",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Surveys.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.Surveys.Tests",
+   "Humans.Surveys"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Application"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Domain"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.SystemSettings",
+   "Humans.SystemSettings.Contracts"
+  ],
+  [
+   "Humans.SystemSettings.Contracts",
+   "Humans.Interfaces"
+  ],
+  [
+   "Humans.SystemSettings.Tests",
+   "Humans.SystemSettings"
+  ],
+  [
+   "Humans.UI",
+   "Humans.Application"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Containers"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Events"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Expenses"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Finance"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Infrastructure"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Store"
+  ],
+  [
+   "Humans.Web",
+   "Humans.Surveys"
+  ],
+  [
+   "Humans.Web",
+   "Humans.SystemSettings"
+  ],
+  [
+   "Humans.Web",
+   "Humans.UI"
+  ],
+  [
+   "Humans.Web.Tests",
+   "Humans.Web"
+  ]
+ ],
+ "solution": {
+  "app_classes": 2300,
+  "app_controllers": 90,
+  "app_cs_code": 125088,
+  "app_cs_comment": 28373,
+  "app_cs_lines": 176306,
+  "app_cshtml_lines": 47542,
+  "app_dbsets": 108,
+  "app_entities": 75,
+  "app_files": 2042,
+  "app_interfaces": 236,
+  "app_js_lines": 4358,
+  "app_lines": 266188,
+  "app_resx_keys": 2616,
+  "app_resx_lines": 37982,
+  "app_views": 408,
+  "assemblies": 19,
+  "commits": 2101,
+  "edges": 76,
+  "md_lines": 73408,
+  "migration_lines": 664147,
+  "test_classes": 926,
+  "test_controllers": 0,
+  "test_cs_code": 0,
+  "test_cs_comment": 0,
+  "test_cs_lines": 128962,
+  "test_cshtml_lines": 0,
+  "test_dbsets": 10,
+  "test_entities": 11,
+  "test_files": 528,
+  "test_interfaces": 96,
+  "test_js_lines": 0,
+  "test_lines": 128962,
+  "test_projects": 13,
+  "test_resx_keys": 0,
+  "test_resx_lines": 0,
+  "test_views": 0
+ }
+}
