@@ -1,0 +1,55 @@
+{
+ "date": "2026-05-26",
+ "commit": "cfe70a46d",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 5,
+   "files": 30,
+   "added": 829,
+   "deleted": 9836
+  },
+  "peter-agent": {
+   "prs": 7,
+   "files": 140,
+   "added": 22602,
+   "deleted": 328
+  }
+ },
+ "routines": {
+  "dependabot": 4,
+  "freshness-sweep": 1
+ },
+ "models": {
+  "Claude Opus 4.7 (1M context)": 7,
+  "Claude Sonnet 4.6": 1
+ },
+ "authors": 2,
+ "all_commits": 13,
+ "hours": [
+  5,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  4,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "date": "2026-06-03",
+ "commit": "c22dc1570",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 7,
+   "files": 30,
+   "added": 239,
+   "deleted": 6300
+  },
+  "other-agent": {
+   "prs": 2,
+   "files": 45,
+   "added": 9738,
+   "deleted": 44
+  },
+  "other-hand": {
+   "prs": 2,
+   "files": 9,
+   "added": 179,
+   "deleted": 19
+  },
+  "peter-agent": {
+   "prs": 1,
+   "files": 1,
+   "added": 2,
+   "deleted": 2
+  }
+ },
+ "routines": {
+  "dependabot": 6,
+  "freshness-sweep": 1
+ },
+ "models": {
+  "Claude Opus 4.8 (1M context)": 4,
+  "Peter Drier": 1,
+  "Cupcake": 1
+ },
+ "authors": 5,
+ "all_commits": 13,
+ "hours": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  3,
+  6,
+  2,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "date": "2026-09-21",
+ "commit": "2d5440c18",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 3,
+   "files": 23,
+   "added": 608,
+   "deleted": 145
+  },
+  "peter-agent": {
+   "prs": 17,
+   "files": 1102,
+   "added": 21853,
+   "deleted": 10177
+  },
+  "peter-hand": {
+   "prs": 6,
+   "files": 67,
+   "added": 1441,
+   "deleted": 552
+  }
+ },
+ "routines": {
+  "section-doctor": 1,
+  "dependabot": 2
+ },
+ "models": {
+  "Claude": 18
+ },
+ "authors": 2,
+ "all_commits": 27,
+ "hours": [
+  3,
+  5,
+  6,
+  3,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  1,
+  3,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  3,
+  0,
+  0,
+  0
+ ]
+}

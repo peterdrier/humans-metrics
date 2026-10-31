@@ -1,0 +1,51 @@
+{
+ "date": "2026-02-05",
+ "commit": "201aaecb7",
+ "collector_version": 1,
+ "lanes": {
+  "peter-agent": {
+   "prs": 22,
+   "files": 225,
+   "added": 22283,
+   "deleted": 546
+  },
+  "peter-hand": {
+   "prs": 2,
+   "files": 23,
+   "added": 564,
+   "deleted": 143
+  }
+ },
+ "routines": {},
+ "models": {
+  "Claude Opus 4.5": 22
+ },
+ "authors": 1,
+ "all_commits": 24,
+ "hours": [
+  4,
+  3,
+  5,
+  5,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  3,
+  1,
+  0,
+  1,
+  1,
+  0,
+  1,
+  0
+ ]
+}

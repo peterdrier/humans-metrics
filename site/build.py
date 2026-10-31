@@ -5,6 +5,7 @@ The template's data contract (what the page's script reads from `D`):
   statsCols/stats   solution-wide daily rows (data/stats/*.json .solution)
   refCols/ref       reforge snapshot rows (data/reforge/*.json .snapshot, else data/seed/reforge-history.csv)
   modules           per-day module sizes, test LOC, edges and a dependency summary
+  git               per-day lane/routine/model counts (data/git/*.json)
   runs              surface-score headline per archived run (data/surface/*.json)
   surface, byRule,  per-section and per-rule points of the latest surface-score run
   semDeps           service-interface edges of the latest surface-score run
@@ -65,6 +66,12 @@ for d in pick:
             'maxFanIn': max(fi.values(), default=0), 'maxFanInNode': max(fi, key=fi.get, default='')}
     modules.append({'date': d['date'], 'commit': d['commit'], 'loc': dict(loc), 'testLoc': dict(tl), 'deps': {'nodes': nodes, 'edges': edges}, 'depSummary': summ})
 
+# --- git producer (data/git/*.json): lanes per day
+gitd = []
+for p_ in sorted(glob.glob(os.path.join(ROOT, 'data', 'git', '*.json'))):
+    j = json.load(open(p_))
+    gitd.append({k: j[k] for k in ('date', 'lanes', 'routines', 'models', 'authors', 'all_commits')})
+
 # --- surface-score runs (slim per-run files under data/surface/)
 runs, surface, by_rule, sem = [], [], [], None
 for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
@@ -73,7 +80,7 @@ for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
     surface, by_rule, sem = j.get('groups', []), j.get('byRule', []), j.get('semDeps')
 
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
-     'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
+     'git': gitd, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
      'generated': days[-1]['date']}
 tmpl = open(os.path.join(ROOT, 'site', 'template.html')).read()
 out = tmpl.replace('__DATA__', json.dumps(D, separators=(',', ':')))

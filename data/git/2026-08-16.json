@@ -1,0 +1,52 @@
+{
+ "date": "2026-08-16",
+ "commit": "6184b820a",
+ "collector_version": 1,
+ "lanes": {
+  "peter-agent": {
+   "prs": 9,
+   "files": 394,
+   "added": 124728,
+   "deleted": 7373
+  },
+  "peter-hand": {
+   "prs": 3,
+   "files": 25,
+   "added": 346,
+   "deleted": 46
+  }
+ },
+ "routines": {},
+ "models": {
+  "Claude Opus 5": 7,
+  "Claude Fable 5": 2
+ },
+ "authors": 1,
+ "all_commits": 13,
+ "hours": [
+  1,
+  4,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  2,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  3
+ ]
+}

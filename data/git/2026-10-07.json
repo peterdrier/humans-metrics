@@ -1,0 +1,49 @@
+{
+ "date": "2026-10-07",
+ "commit": "a5c17fcdd",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 3,
+   "files": 102,
+   "added": 1291,
+   "deleted": 1114
+  }
+ },
+ "routines": {
+  "debt-sweep": 1,
+  "section-doctor": 2
+ },
+ "models": {
+  "Claude Fable 5.1": 1,
+  "Claude": 2
+ },
+ "authors": 1,
+ "all_commits": 4,
+ "hours": [
+  1,
+  2,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ]
+}

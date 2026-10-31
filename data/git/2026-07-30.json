@@ -1,0 +1,55 @@
+{
+ "date": "2026-07-30",
+ "commit": "21f9a98d7",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 4,
+   "files": 7,
+   "added": 23,
+   "deleted": 23
+  },
+  "peter-agent": {
+   "prs": 5,
+   "files": 19,
+   "added": 61,
+   "deleted": 21
+  }
+ },
+ "routines": {
+  "dependabot": 4
+ },
+ "models": {
+  "Claude Opus 5 (1M context)": 3,
+  "Claude": 1,
+  "Claude Fable 5": 1
+ },
+ "authors": 2,
+ "all_commits": 9,
+ "hours": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  9,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
+ ]
+}

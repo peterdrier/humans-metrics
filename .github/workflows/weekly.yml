@@ -48,6 +48,7 @@ jobs:
           if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from ${{ inputs.from }}"; fi
           if [ "${{ inputs.reforge }}" = "true" ]; then ARGS="$ARGS --reforge"; fi
           python3 collect/collect.py $ARGS
+          python3 collect/gitstats.py --repo ../Humans --out data
 
       - name: Build page
         run: python3 site/build.py

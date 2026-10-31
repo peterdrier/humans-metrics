@@ -1,0 +1,73 @@
+{
+ "date": "2026-05-15",
+ "commit": "fa43f57b5",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 1,
+   "files": 9,
+   "added": 1986,
+   "deleted": 962
+  },
+  "other-agent": {
+   "prs": 1,
+   "files": 118,
+   "added": 12616,
+   "deleted": 782
+  },
+  "other-hand": {
+   "prs": 1,
+   "files": 105,
+   "added": 17100,
+   "deleted": 26
+  },
+  "peter-agent": {
+   "prs": 18,
+   "files": 617,
+   "added": 16749,
+   "deleted": 19946
+  },
+  "peter-hand": {
+   "prs": 4,
+   "files": 883,
+   "added": 3061,
+   "deleted": 3791
+  }
+ },
+ "routines": {
+  "freshness-sweep": 1
+ },
+ "models": {
+  "Claude Opus 4.7 (1M context)": 19,
+  "Claude Sonnet 4.6": 1,
+  "Jokin C": 1
+ },
+ "authors": 3,
+ "all_commits": 28,
+ "hours": [
+  2,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  1,
+  1,
+  1,
+  3,
+  4,
+  4,
+  2,
+  3,
+  2,
+  1
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "date": "2026-05-22",
+ "commit": "873121dcd",
+ "collector_version": 1,
+ "lanes": {
+  "other-hand": {
+   "prs": 1,
+   "files": 16,
+   "added": 1248,
+   "deleted": 9
+  },
+  "peter-agent": {
+   "prs": 6,
+   "files": 102,
+   "added": 2207,
+   "deleted": 1115
+  }
+ },
+ "routines": {},
+ "models": {
+  "Claude Opus 4.7 (1M context)": 6,
+  "Jokin C": 1
+ },
+ "authors": 2,
+ "all_commits": 7,
+ "hours": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  2,
+  4
+ ]
+}

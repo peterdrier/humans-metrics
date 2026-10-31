@@ -1,0 +1,75 @@
+{
+ "date": "2026-04-26",
+ "commit": "3c368f835",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 1,
+   "files": 108,
+   "added": 5867,
+   "deleted": 2103
+  },
+  "other-agent": {
+   "prs": 2,
+   "files": 22,
+   "added": 554,
+   "deleted": 53
+  },
+  "other-hand": {
+   "prs": 4,
+   "files": 25,
+   "added": 714,
+   "deleted": 135
+  },
+  "peter-agent": {
+   "prs": 12,
+   "files": 159,
+   "added": 20346,
+   "deleted": 677
+  },
+  "peter-hand": {
+   "prs": 2,
+   "files": 2,
+   "added": 100,
+   "deleted": 1
+  }
+ },
+ "routines": {
+  "freshness-sweep": 1
+ },
+ "models": {
+  "Claude Opus 4.7 (1M context)": 13,
+  "Lau": 3,
+  "Claude": 1,
+  "Claude Sonnet 4.6": 1,
+  "Peter Drier": 1
+ },
+ "authors": 3,
+ "all_commits": 22,
+ "hours": [
+  1,
+  0,
+  2,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  2,
+  5,
+  2,
+  0,
+  0,
+  6,
+  2,
+  0
+ ]
+}

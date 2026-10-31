@@ -165,6 +165,20 @@ th{color:var(--fg-3);font-weight:500;position:sticky;top:0;background:var(--surf
   <div class="note">Which number to watch: the raw edge count tracks how much wiring exists, density tracks whether the wiring is growing faster than the module count. After a split the raw count rises by construction (more modules) while density should fall; density is the one that says whether boundaries are holding.</div>
 </section>
 
+<section class="block" id="lanes">
+  <h2>Who does the work</h2>
+  <p class="sub">Every non-merge commit on main is one PR (squash merges). Each is credited to its author, never the merger, and sorted into a lane by <code>collect/lanes.yml</code>: <b>automation</b> is scheduled maintenance nobody prompted (section doctor, debt sweep, freshness sweep, codex nightly, dependabot); <b>Peter agent</b> and <b>other agent</b> carry a Claude or Codex trailer; <b>hand</b> has none. Shares are over a rolling 28-day window so a quiet day does not swing to 100%.</p>
+  <div class="grid">
+    <div class="panel tall" style="grid-column:1/-1"><h3>Share of lines changed, by lane</h3><p class="why">Added plus deleted lines, 28-day rolling. The goal is the other-contributor bands growing while Peter's shrink.</p><div class="ph"><canvas id="g-lines"></canvas></div><div class="legend" id="l-lines-lanes"></div></div>
+    <div class="panel tall" style="grid-column:1/-1"><h3>Share of PRs, by lane</h3><p class="why">Same lanes counted in PRs. Where this and the lines chart disagree, a lane is landing many small PRs or a few huge ones.</p><div class="ph"><canvas id="g-prs"></canvas></div><div class="legend" id="l-prs-lanes"></div></div>
+    <div class="panel"><h3>PRs per week</h3><p class="why">Merged PRs per 7-day window, all lanes.</p><div class="ph"><canvas id="g-rate"></canvas></div></div>
+    <div class="panel"><h3>Automation routines</h3><p class="why">PRs per 28-day window per scheduled routine.</p><div class="ph"><canvas id="g-routines"></canvas></div><div class="legend" id="l-routines"></div></div>
+    <div class="panel"><h3>Contributors per week</h3><p class="why">Distinct commit authors in a 7-day window, no names.</p><div class="ph"><canvas id="g-authors"></canvas></div></div>
+    <div class="panel"><h3>Models seen</h3><p class="why">PRs per 28-day window by the model named in the Co-Authored-By trailer, top 6 overall.</p><div class="ph"><canvas id="g-models"></canvas></div><div class="legend" id="l-models"></div></div>
+  </div>
+  <div class="note">Unclassified PRs land in their own band; if that band shows, the rules file needs a line. Peter's reviews, approvals and merges on other people's PRs are effort, not credit, and will get their own series once the PR producer is on.</div>
+</section>
+
 <section class="block" id="surface">
   <h2>Reforge surface score</h2>
   <p class="sub">The newer measurement system. Three archived runs (2026-08-16, 2026-10-21, 2026-10-29). Totals per run are in the first panel; the per-section and per-rule views are the latest run.</p>
@@ -289,7 +303,40 @@ function render(){
   line('d-density', ML, [{label:'Density', data:DS.map(d=>d&&d.density), slot:4}], {yfmt:pct});
   line('d-fanout', ML, [{label:'Avg fan-out', data:DS.map(d=>d&&d.avgFanOut), slot:0},{label:'Max fan-out', data:DS.map(d=>d&&d.maxFanOut), extra:DS.map(d=>d&&d.maxFanOutNode), slot:1}]);
   line('d-fanin', ML, [{label:'Max fan-in', data:DS.map(d=>d&&d.maxFanIn), extra:DS.map(d=>d&&d.maxFanInNode), slot:4}]);
+  renderLanes();
   line('m-gini', ML, [{label:'Gini', data:M.map(m=>gini(sizes(m).map(x=>x[1]))), slot:4}], {y:{max:1}});
+}
+
+function renderLanes(){
+  const G=D.git; if(!G||!G.length) return;
+  const LANES=['automation','peter-agent','peter-hand','other-agent','other-hand','unclassified'];
+  const NAMES={automation:'Automation','peter-agent':'Peter, agent','peter-hand':'Peter, by hand','other-agent':'Others, agent','other-hand':'Others, by hand',unclassified:'Unclassified'};
+  const byDate=Object.fromEntries(G.map(g=>[g.date,g]));
+  const all=S.map(r=>r.date); // every collected day
+  const win=(dates,i,n)=>dates.slice(Math.max(0,i-n+1),i+1).map(d=>byDate[d]).filter(Boolean);
+  const roll=(n,f)=>all.map((d,i)=>{const w=win(all,i,n); const c={}; w.forEach(g=>f(g,c)); return c;});
+  const L28=roll(28,(g,c)=>{for(const [k,v] of Object.entries(g.lanes)){c[k]=c[k]||{prs:0,lines:0}; c[k].prs+=v.prs; c[k].lines+=v.added+v.deleted;}});
+  const idx=all.map((d,i)=>i).filter(i=>inRange(all[i])&&all[i]>='2026-03-03'), L=idx.map(i=>all[i]);
+  const used=LANES.filter(k=>L28.some(c=>c[k]));
+  const t=theme(); const col={automation:t.fg3,'peter-agent':t.s[0],'peter-hand':t.s[0]+'88','other-agent':t.s[1],'other-hand':t.s[1]+'88',unclassified:t.bad};
+  const stack=(id,key,lg)=>{
+    const ds=used.map(k=>({label:NAMES[k], data:idx.map(i=>{const c=L28[i]; const tot=Object.values(c).reduce((a,v)=>a+v[key],0); return tot? (c[k]?c[k][key]:0)/tot : null;}), borderColor:col[k], backgroundColor:col[k], fill:true, borderWidth:1, pointRadius:0, pointHoverRadius:4, tension:0, spanGaps:true}));
+    if(charts[id]) charts[id].destroy();
+    const o=base(t,pct,{}); o.scales.y.stacked=true; o.scales.y.max=1; o.scales.y.type='linear';
+    charts[id]=new Chart(document.getElementById(id),{type:'line',data:{labels:L,datasets:ds},options:o,plugins:[splitBand]});
+    document.getElementById(lg).innerHTML=used.map(k=>`<span><i style="background:${col[k]}"></i>${NAMES[k]}</span>`).join('');
+  };
+  stack('g-lines','lines','l-lines-lanes'); stack('g-prs','prs','l-prs-lanes');
+  const W7=roll(7,(g,c)=>{c.prs=(c.prs||0)+Object.values(g.lanes).reduce((a,v)=>a+v.prs,0); c.authors=Math.max(c.authors||0,g.authors);});
+  line('g-rate', L, [{label:'PRs / 7 days', data:idx.map(i=>W7[i].prs||0), slot:0}]);
+  line('g-authors', L, [{label:'Authors / 7 days', data:idx.map(i=>W7[i].authors||0), slot:1}]);
+  const R28=roll(28,(g,c)=>{for(const [k,v] of Object.entries(g.routines)) c[k]=(c[k]||0)+v;});
+  const rts=[...new Set(R28.flatMap(c=>Object.keys(c)))];
+  line('g-routines', L, rts.map((k,j)=>({label:k, data:idx.map(i=>R28[i][k]||0), slot:j%5})));
+  const M28=roll(28,(g,c)=>{for(const [k,v] of Object.entries(g.models)) c[k]=(c[k]||0)+v;});
+  const mt={}; G.forEach(g=>{for(const [k,v] of Object.entries(g.models)) mt[k]=(mt[k]||0)+v;});
+  const top=Object.entries(mt).sort((a,b)=>b[1]-a[1]).slice(0,6).map(x=>x[0]);
+  line('g-models', L, top.map((k,j)=>({label:k.replace(/^Claude /,''), data:idx.map(i=>M28[i][k]||0), slot:j%5})));
 }
 function addDays(d,n){const x=new Date(d+'T00:00:00Z'); x.setUTCDate(x.getUTCDate()+n); return x.toISOString().slice(0,10);}
 function renderStatic(){

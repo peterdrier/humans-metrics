@@ -1,0 +1,58 @@
+{
+ "date": "2026-05-14",
+ "commit": "b44d275a6",
+ "collector_version": 1,
+ "lanes": {
+  "other-hand": {
+   "prs": 1,
+   "files": 10,
+   "added": 748,
+   "deleted": 19
+  },
+  "peter-agent": {
+   "prs": 11,
+   "files": 156,
+   "added": 10187,
+   "deleted": 460
+  },
+  "peter-hand": {
+   "prs": 1,
+   "files": 4,
+   "added": 411,
+   "deleted": 0
+  }
+ },
+ "routines": {},
+ "models": {
+  "Claude Opus 4.7 (1M context)": 11,
+  "Peter Drier": 1
+ },
+ "authors": 2,
+ "all_commits": 17,
+ "hours": [
+  0,
+  1,
+  2,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  2,
+  0,
+  0,
+  3,
+  1,
+  1,
+  0,
+  1
+ ]
+}

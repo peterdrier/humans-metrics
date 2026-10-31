@@ -1,0 +1,65 @@
+{
+ "date": "2026-06-27",
+ "commit": "89642320f",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 1,
+   "files": 48,
+   "added": 224,
+   "deleted": 2979
+  },
+  "other-agent": {
+   "prs": 3,
+   "files": 13,
+   "added": 1017,
+   "deleted": 92
+  },
+  "other-hand": {
+   "prs": 1,
+   "files": 11,
+   "added": 3,
+   "deleted": 11
+  },
+  "peter-agent": {
+   "prs": 4,
+   "files": 60,
+   "added": 311,
+   "deleted": 153
+  }
+ },
+ "routines": {
+  "freshness-sweep": 1
+ },
+ "models": {
+  "Claude Opus 4.8 (1M context)": 8
+ },
+ "authors": 2,
+ "all_commits": 9,
+ "hours": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  3,
+  2,
+  4,
+  0,
+  0,
+  0,
+  0,
+  0
+ ]
+}

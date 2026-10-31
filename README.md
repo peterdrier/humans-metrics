@@ -11,6 +11,7 @@ Page: `docs/index.html` (GitHub Pages serves `docs/` from `main`).
 | Path | What |
 |---|---|
 | `data/stats/YYYY-MM-DD.json` | One file per day with a commit on Humans `main`: `commit`, `collector_version`, the solution row, a row per assembly (src and tests), ProjectReference edges. Git and cloc only. |
+| `data/git/<date>.json` | `collect/gitstats.py` | Per-lane PRs, files, lines; routines; models; author count; commit hour histogram. Lanes from `collect/lanes.yml`. |
 | `data/reforge/YYYY-MM-DD.json` | Same day, the reforge producer: `commit`, `reforge_version`, the `reforge snapshot` row (per-assembly rows once reforge emits them). |
 | `data/coverage/YYYY-MM-DD.json` | Reserved: test coverage per day, same keys, once reforge emits it. |
 | `data/surface/<date>-<sha>-reforge<ver>.json` | Slim surface-score reading: totals, points by rule, points by section, service-interface edges. Full JSON stays in a local archive. |

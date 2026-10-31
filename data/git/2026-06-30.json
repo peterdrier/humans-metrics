@@ -1,0 +1,61 @@
+{
+ "date": "2026-06-30",
+ "commit": "d122a89f8",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 4,
+   "files": 5,
+   "added": 16,
+   "deleted": 16
+  },
+  "peter-agent": {
+   "prs": 3,
+   "files": 42,
+   "added": 16416,
+   "deleted": 223
+  },
+  "peter-hand": {
+   "prs": 4,
+   "files": 77,
+   "added": 11999,
+   "deleted": 70
+  }
+ },
+ "routines": {
+  "dependabot": 4
+ },
+ "models": {
+  "Claude Opus 4.8 (1M context)": 3,
+  "veryaaron": 2,
+  "Peter Drier": 2
+ },
+ "authors": 2,
+ "all_commits": 18,
+ "hours": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  5,
+  1,
+  0,
+  1,
+  1,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  1,
+  1,
+  0,
+  0,
+  0
+ ]
+}

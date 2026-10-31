@@ -1,0 +1,61 @@
+{
+ "date": "2026-08-18",
+ "commit": "4fed10749",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 4,
+   "files": 216,
+   "added": 4202,
+   "deleted": 5543
+  },
+  "peter-agent": {
+   "prs": 17,
+   "files": 719,
+   "added": 6411,
+   "deleted": 8128
+  },
+  "peter-hand": {
+   "prs": 5,
+   "files": 1190,
+   "added": 1677,
+   "deleted": 3006
+  }
+ },
+ "routines": {
+  "section-doctor": 3,
+  "freshness-sweep": 1
+ },
+ "models": {
+  "Claude Fable 5": 14,
+  "Claude Opus 5": 7
+ },
+ "authors": 1,
+ "all_commits": 26,
+ "hours": [
+  2,
+  5,
+  2,
+  2,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  2,
+  3,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  3,
+  1,
+  2,
+  1
+ ]
+}

@@ -1,0 +1,52 @@
+{
+ "date": "2026-08-07",
+ "commit": "a07f0fb59",
+ "collector_version": 1,
+ "lanes": {
+  "peter-agent": {
+   "prs": 29,
+   "files": 275,
+   "added": 15081,
+   "deleted": 2351
+  },
+  "peter-hand": {
+   "prs": 1,
+   "files": 5,
+   "added": 5,
+   "deleted": 5
+  }
+ },
+ "routines": {},
+ "models": {
+  "Claude Sonnet 5": 2,
+  "Claude Opus 5 (1M context)": 27
+ },
+ "authors": 1,
+ "all_commits": 32,
+ "hours": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  6,
+  0,
+  4,
+  1,
+  9,
+  5,
+  5,
+  0,
+  0
+ ]
+}

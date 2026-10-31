@@ -1,0 +1,55 @@
+{
+ "date": "2026-10-02",
+ "commit": "6ca8dce07",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 2,
+   "files": 33,
+   "added": 580,
+   "deleted": 271
+  },
+  "peter-agent": {
+   "prs": 7,
+   "files": 350,
+   "added": 10653,
+   "deleted": 1067
+  }
+ },
+ "routines": {
+  "section-doctor": 1,
+  "debt-sweep": 1
+ },
+ "models": {
+  "Claude Fable 5.1": 6,
+  "Claude": 3
+ },
+ "authors": 1,
+ "all_commits": 10,
+ "hours": [
+  2,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  3,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  4,
+  0,
+  0,
+  0
+ ]
+}
