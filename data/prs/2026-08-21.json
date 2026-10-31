@@ -1,0 +1,43 @@
+{
+ "date": "2026-08-21",
+ "collector_version": 1,
+ "opened": 9,
+ "lanes": {
+  "other": {
+   "merged": 2,
+   "lines": 2981,
+   "files": 48,
+   "reviews": 6,
+   "changes_requested": 0,
+   "bot_comments": 11,
+   "human_comments": 14,
+   "ttm_hours": [
+    26.0,
+    28.6
+   ]
+  },
+  "peter": {
+   "merged": 2,
+   "lines": 1665,
+   "files": 56,
+   "reviews": 4,
+   "changes_requested": 0,
+   "bot_comments": 12,
+   "human_comments": 5,
+   "closed": 1,
+   "ttm_hours": [
+    0.9,
+    0.8
+   ]
+  }
+ },
+ "gate": {
+  "review_comments": 0,
+  "merges": 0
+ },
+ "bots": {
+  "chatgpt-codex-connector[bot]": 11,
+  "github-actions[bot]": 5,
+  "claude[bot]": 7
+ }
+}

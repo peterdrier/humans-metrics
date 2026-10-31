@@ -1,0 +1,19 @@
+{
+ "date": "2026-06-24",
+ "collector_version": 1,
+ "opened": 6,
+ "lanes": {
+  "other": {
+   "closed": 1,
+   "bot_comments": 1,
+   "human_comments": 1
+  }
+ },
+ "gate": {
+  "review_comments": 0,
+  "merges": 0
+ },
+ "bots": {
+  "github-actions[bot]": 1
+ }
+}

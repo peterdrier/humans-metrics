@@ -1,0 +1,66 @@
+{
+ "date": "2026-10-13",
+ "collector_version": 1,
+ "runs": 56,
+ "conclusions": {
+  "success": 42,
+  "skipped": 10,
+  "failure": 1,
+  "cancelled": 3
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 9,
+  "pull_request": 25,
+  "pull_request_target": 16,
+  "dynamic": 3,
+  "issue_comment": 3
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 9,
+   "failure": 1,
+   "duration_s": 4030
+  },
+  "Label PRs with EF migrations": {
+   "runs": 9,
+   "failure": 0,
+   "duration_s": 85
+  },
+  "PR Surface Report": {
+   "runs": 9,
+   "failure": 0,
+   "duration_s": 1511
+  },
+  "PR Surface Report Comment": {
+   "runs": 9,
+   "failure": 0,
+   "duration_s": 99
+  },
+  "Preview Database": {
+   "runs": 7,
+   "failure": 0,
+   "duration_s": 140
+  },
+  "claude-review": {
+   "runs": 10,
+   "failure": 0,
+   "duration_s": 78
+  },
+  "github_actions in /. - Update #1625501712": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 61
+  },
+  "npm_and_yarn in /tests/e2e - Update #1625501312": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 63
+  },
+  "nuget in /. - Update #1625501925": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 3334
+  }
+ }
+}

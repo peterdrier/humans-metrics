@@ -1,0 +1,19 @@
+{
+ "date": "2026-04-18",
+ "collector_version": 1,
+ "runs": 5,
+ "conclusions": {
+  "success": 5
+ },
+ "reruns": 0,
+ "events": {
+  "pull_request_target": 5
+ },
+ "workflows": {
+  "Label PRs with EF migrations": {
+   "runs": 5,
+   "failure": 0,
+   "duration_s": 43
+  }
+ }
+}

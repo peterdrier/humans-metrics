@@ -9,19 +9,13 @@
    "added": 239,
    "deleted": 6300
   },
-  "other-agent": {
-   "prs": 2,
-   "files": 45,
-   "added": 9738,
-   "deleted": 44
+  "other": {
+   "prs": 4,
+   "files": 54,
+   "added": 9917,
+   "deleted": 63
   },
-  "other-hand": {
-   "prs": 2,
-   "files": 9,
-   "added": 179,
-   "deleted": 19
-  },
-  "peter-agent": {
+  "peter": {
    "prs": 1,
    "files": 1,
    "added": 2,

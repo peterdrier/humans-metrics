@@ -3,17 +3,11 @@
  "commit": "cfbdf3430",
  "collector_version": 1,
  "lanes": {
-  "peter-agent": {
-   "prs": 16,
-   "files": 215,
-   "added": 25475,
-   "deleted": 2395
-  },
-  "peter-hand": {
-   "prs": 2,
-   "files": 8,
-   "added": 259,
-   "deleted": 4
+  "peter": {
+   "prs": 18,
+   "files": 223,
+   "added": 25734,
+   "deleted": 2399
   }
  },
  "routines": {},

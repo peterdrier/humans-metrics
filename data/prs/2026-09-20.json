@@ -1,0 +1,58 @@
+{
+ "date": "2026-09-20",
+ "collector_version": 1,
+ "opened": 17,
+ "lanes": {
+  "automation": {
+   "merged": 10,
+   "lines": 7211,
+   "files": 248,
+   "reviews": 36,
+   "changes_requested": 0,
+   "bot_comments": 80,
+   "human_comments": 43,
+   "ttm_hours": [
+    64.5,
+    65.8,
+    65.4,
+    64.2,
+    63.0,
+    50.9,
+    39.9,
+    13.7,
+    0.2,
+    0.1
+   ]
+  },
+  "peter": {
+   "merged": 12,
+   "lines": 11178,
+   "files": 395,
+   "reviews": 66,
+   "changes_requested": 0,
+   "bot_comments": 111,
+   "human_comments": 84,
+   "ttm_hours": [
+    71.6,
+    0.9,
+    0.0,
+    1.7,
+    4.9,
+    4.4,
+    2.7,
+    0.8,
+    1.3,
+    1.1,
+    1.0,
+    0.5
+   ]
+  }
+ },
+ "gate": {},
+ "bots": {
+  "chatgpt-codex-connector[bot]": 137,
+  "claude[bot]": 29,
+  "github-actions[bot]": 21,
+  "coolify-nuc-humans[bot]": 4
+ }
+}

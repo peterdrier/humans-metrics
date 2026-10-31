@@ -1,0 +1,26 @@
+{
+ "date": "2026-03-30",
+ "collector_version": 1,
+ "runs": 48,
+ "conclusions": {
+  "success": 46,
+  "failure": 2
+ },
+ "reruns": 0,
+ "events": {
+  "push": 14,
+  "pull_request": 34
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 31,
+   "failure": 2,
+   "duration_s": 4428
+  },
+  "Preview Database": {
+   "runs": 17,
+   "failure": 0,
+   "duration_s": 172
+  }
+ }
+}

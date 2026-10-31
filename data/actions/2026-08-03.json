@@ -1,0 +1,77 @@
+{
+ "date": "2026-08-03",
+ "collector_version": 1,
+ "runs": 280,
+ "conclusions": {
+  "success": 211,
+  "skipped": 58,
+  "cancelled": 6,
+  "failure": 5
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 37,
+  "pull_request": 122,
+  "pull_request_target": 52,
+  "push": 38,
+  "issue_comment": 27,
+  "dynamic": 4
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 55,
+   "failure": 3,
+   "duration_s": 15681
+  },
+  "E2E Tests (QA)": {
+   "runs": 19,
+   "failure": 1,
+   "duration_s": 4705
+  },
+  "Label PRs with EF migrations": {
+   "runs": 37,
+   "failure": 0,
+   "duration_s": 366
+  },
+  "PR Surface Report": {
+   "runs": 36,
+   "failure": 1,
+   "duration_s": 26789
+  },
+  "PR Surface Report Comment": {
+   "runs": 37,
+   "failure": 0,
+   "duration_s": 373
+  },
+  "Preview Database": {
+   "runs": 35,
+   "failure": 0,
+   "duration_s": 3645
+  },
+  "claude-review": {
+   "runs": 57,
+   "failure": 0,
+   "duration_s": 627
+  },
+  "github_actions in /. - Update #1502895131": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 72
+  },
+  "npm_and_yarn in /tests/e2e - Update #1502895201": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 74
+  },
+  "nuget in / for Anthropic - Update #1502976405": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 251
+  },
+  "nuget in /. - Update #1502895089": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 3319
+  }
+ }
+}

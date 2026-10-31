@@ -3,23 +3,17 @@
  "commit": "f838e6ccf",
  "collector_version": 1,
  "lanes": {
-  "other-hand": {
+  "other": {
    "prs": 2,
    "files": 48,
    "added": 2881,
    "deleted": 100
   },
-  "peter-agent": {
-   "prs": 6,
-   "files": 159,
-   "added": 4984,
-   "deleted": 1283
-  },
-  "peter-hand": {
-   "prs": 1,
-   "files": 35,
-   "added": 736,
-   "deleted": 137
+  "peter": {
+   "prs": 7,
+   "files": 194,
+   "added": 5720,
+   "deleted": 1420
   }
  },
  "routines": {},

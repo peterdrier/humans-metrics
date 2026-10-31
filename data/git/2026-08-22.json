@@ -3,13 +3,13 @@
  "commit": "9f6aaad92",
  "collector_version": 1,
  "lanes": {
-  "other-hand": {
+  "other": {
    "prs": 3,
    "files": 83,
    "added": 2728,
    "deleted": 388
   },
-  "peter-agent": {
+  "peter": {
    "prs": 2,
    "files": 6,
    "added": 578,

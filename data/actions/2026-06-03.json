@@ -1,0 +1,62 @@
+{
+ "date": "2026-06-03",
+ "collector_version": 1,
+ "runs": 98,
+ "conclusions": {
+  "skipped": 20,
+  "success": 67,
+  "failure": 9,
+  "cancelled": 2
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 13,
+  "pull_request": 35,
+  "pull_request_target": 12,
+  "issue_comment": 11,
+  "push": 26,
+  "dynamic": 1
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 21,
+   "failure": 0,
+   "duration_s": 177243
+  },
+  "E2E Tests (QA)": {
+   "runs": 13,
+   "failure": 9,
+   "duration_s": 7222
+  },
+  "Label PRs with EF migrations": {
+   "runs": 8,
+   "failure": 0,
+   "duration_s": 68
+  },
+  "PR Surface Report": {
+   "runs": 8,
+   "failure": 0,
+   "duration_s": 4299
+  },
+  "PR Surface Report Comment": {
+   "runs": 13,
+   "failure": 0,
+   "duration_s": 119
+  },
+  "Preview Database": {
+   "runs": 15,
+   "failure": 0,
+   "duration_s": 7154
+  },
+  "claude-review": {
+   "runs": 19,
+   "failure": 0,
+   "duration_s": 1009
+  },
+  "nuget in / for Google.Apis.Admin.Directory.directory_v1 - Update #1394843775": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 448
+  }
+ }
+}

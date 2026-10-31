@@ -9,17 +9,11 @@
    "added": 413,
    "deleted": 4557
   },
-  "peter-agent": {
-   "prs": 5,
-   "files": 244,
-   "added": 20595,
-   "deleted": 3777
-  },
-  "peter-hand": {
-   "prs": 3,
-   "files": 140,
-   "added": 1076,
-   "deleted": 884
+  "peter": {
+   "prs": 8,
+   "files": 384,
+   "added": 21671,
+   "deleted": 4661
   }
  },
  "routines": {

@@ -3,7 +3,7 @@
  "commit": "1fd6de6f2",
  "collector_version": 1,
  "lanes": {
-  "peter-agent": {
+  "peter": {
    "prs": 43,
    "files": 140,
    "added": 9157,

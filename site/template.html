@@ -167,7 +167,7 @@ th{color:var(--fg-3);font-weight:500;position:sticky;top:0;background:var(--surf
 
 <section class="block" id="lanes">
   <h2>Who does the work</h2>
-  <p class="sub">Every non-merge commit on main is one PR (squash merges). Each is credited to its author, never the merger, and sorted into a lane by <code>collect/lanes.yml</code>: <b>automation</b> is scheduled maintenance nobody prompted (section doctor, debt sweep, freshness sweep, codex nightly, dependabot); <b>Peter agent</b> and <b>other agent</b> carry a Claude or Codex trailer; <b>hand</b> has none. Shares are over a rolling 28-day window so a quiet day does not swing to 100%.</p>
+  <p class="sub">Every non-merge commit on main is one PR (squash merges). Each is credited to its author, never the merger, and sorted into a lane by <code>collect/lanes.yml</code>: <b>automation</b> is scheduled maintenance nobody prompted (section doctor, debt sweep, freshness sweep, codex nightly, dependabot); the rest is <b>Peter</b> or <b>others</b> by PR author. Shares are over a rolling 28-day window so a quiet day does not swing to 100%.</p>
   <div class="grid">
     <div class="panel tall" style="grid-column:1/-1"><h3>Share of lines changed, by lane</h3><p class="why">Added plus deleted lines, 28-day rolling. The goal is the other-contributor bands growing while Peter's shrink.</p><div class="ph"><canvas id="g-lines"></canvas></div><div class="legend" id="l-lines-lanes"></div></div>
     <div class="panel tall" style="grid-column:1/-1"><h3>Share of PRs, by lane</h3><p class="why">Same lanes counted in PRs. Where this and the lines chart disagree, a lane is landing many small PRs or a few huge ones.</p><div class="ph"><canvas id="g-prs"></canvas></div><div class="legend" id="l-prs-lanes"></div></div>
@@ -176,7 +176,33 @@ th{color:var(--fg-3);font-weight:500;position:sticky;top:0;background:var(--surf
     <div class="panel"><h3>Contributors per week</h3><p class="why">Distinct commit authors in a 7-day window, no names.</p><div class="ph"><canvas id="g-authors"></canvas></div></div>
     <div class="panel"><h3>Models seen</h3><p class="why">PRs per 28-day window by the model named in the Co-Authored-By trailer, top 6 overall.</p><div class="ph"><canvas id="g-models"></canvas></div><div class="legend" id="l-models"></div></div>
   </div>
-  <div class="note">Unclassified PRs land in their own band; if that band shows, the rules file needs a line. Peter's reviews, approvals and merges on other people's PRs are effort, not credit, and will get their own series once the PR producer is on.</div>
+  <div class="note">Peter's reviews, approvals and merges on other people's PRs are effort, not credit, and will get their own series once the PR producer is on.</div>
+</section>
+
+<section class="block" id="flow">
+  <h2>PR flow and the gate</h2>
+  <p class="sub">From the GitHub API. Time to merge is opened-to-merged in hours, median over a rolling 28 days of merged PRs. The gate series counts what Peter did on PRs he did not author: reviews, approvals, review comments and merges. Bot comments are review bots (Codex, Claude review, Gemini, Copilot) plus CI commenters.</p>
+  <div class="grid">
+    <div class="panel"><h3>Opened vs merged</h3><p class="why">PRs per 7-day window.</p><div class="ph"><canvas id="p-flow"></canvas></div><div class="legend" id="l-flow"></div></div>
+    <div class="panel"><h3>Time to merge</h3><p class="why">Median and p90 hours, 28-day rolling, all lanes. Log scale.</p><div class="ph"><canvas id="p-ttm"></canvas></div><div class="legend" id="l-ttm"></div></div>
+    <div class="panel"><h3>Gate: Peter on others' PRs</h3><p class="why">Reviews, approvals and merges per 28 days on PRs by other people.</p><div class="ph"><canvas id="p-gate"></canvas></div><div class="legend" id="l-gate"></div></div>
+    <div class="panel"><h3>Review comments, bot vs human</h3><p class="why">Comments on PRs merged in the 28-day window.</p><div class="ph"><canvas id="p-comments"></canvas></div><div class="legend" id="l-comments"></div></div>
+    <div class="panel"><h3>Comments per merged PR</h3><p class="why">Bot and human comments divided by PRs merged, 28-day rolling.</p><div class="ph"><canvas id="p-cr"></canvas></div><div class="legend" id="l-cr"></div></div>
+    <div class="panel"><h3>Review bots</h3><p class="why">Comments per 28 days by bot login, top 5.</p><div class="ph"><canvas id="p-bots"></canvas></div><div class="legend" id="l-bots"></div></div>
+  </div>
+</section>
+
+<section class="block" id="ci">
+  <h2>CI</h2>
+  <p class="sub">GitHub Actions runs on peterdrier/Humans by the day the run was created. Duration is wall clock from start to completion; billable minutes are not collected (one API call per run).</p>
+  <div class="grid">
+    <div class="panel"><h3>Runs per day</h3><p class="why">Completed runs by conclusion.</p><div class="ph"><canvas id="a-runs"></canvas></div><div class="legend" id="l-runs"></div></div>
+    <div class="panel"><h3>Failure rate</h3><p class="why">Failed plus cancelled over all runs, 7-day rolling.</p><div class="ph"><canvas id="a-fail"></canvas></div></div>
+    <div class="panel"><h3>Compute hours per day</h3><p class="why">Sum of run durations, 7-day rolling. Log scale.</p><div class="ph"><canvas id="a-hours"></canvas></div></div>
+    <div class="panel tall" style="grid-column:1/-1"><h3>Runs by workflow</h3><p class="why">Per 7-day window, top 8 workflows overall.</p><div class="ph"><canvas id="a-wf"></canvas></div><div class="legend" id="l-wf"></div></div>
+    <div class="panel"><h3>Build and Test duration</h3><p class="why">Mean minutes per run of the main build workflow, 7-day rolling.</p><div class="ph"><canvas id="a-build"></canvas></div></div>
+    <div class="panel"><h3>Re-runs</h3><p class="why">Runs with attempt greater than one, per 7 days.</p><div class="ph"><canvas id="a-rerun"></canvas></div></div>
+  </div>
 </section>
 
 <section class="block" id="surface">
@@ -303,14 +329,14 @@ function render(){
   line('d-density', ML, [{label:'Density', data:DS.map(d=>d&&d.density), slot:4}], {yfmt:pct});
   line('d-fanout', ML, [{label:'Avg fan-out', data:DS.map(d=>d&&d.avgFanOut), slot:0},{label:'Max fan-out', data:DS.map(d=>d&&d.maxFanOut), extra:DS.map(d=>d&&d.maxFanOutNode), slot:1}]);
   line('d-fanin', ML, [{label:'Max fan-in', data:DS.map(d=>d&&d.maxFanIn), extra:DS.map(d=>d&&d.maxFanInNode), slot:4}]);
-  renderLanes();
+  renderLanes(); renderFlow(); renderCI();
   line('m-gini', ML, [{label:'Gini', data:M.map(m=>gini(sizes(m).map(x=>x[1]))), slot:4}], {y:{max:1}});
 }
 
 function renderLanes(){
   const G=D.git; if(!G||!G.length) return;
-  const LANES=['automation','peter-agent','peter-hand','other-agent','other-hand','unclassified'];
-  const NAMES={automation:'Automation','peter-agent':'Peter, agent','peter-hand':'Peter, by hand','other-agent':'Others, agent','other-hand':'Others, by hand',unclassified:'Unclassified'};
+  const LANES=['automation','peter','other'];
+  const NAMES={automation:'Automation',peter:'Peter',other:'Others'};
   const byDate=Object.fromEntries(G.map(g=>[g.date,g]));
   const all=S.map(r=>r.date); // every collected day
   const win=(dates,i,n)=>dates.slice(Math.max(0,i-n+1),i+1).map(d=>byDate[d]).filter(Boolean);
@@ -318,7 +344,7 @@ function renderLanes(){
   const L28=roll(28,(g,c)=>{for(const [k,v] of Object.entries(g.lanes)){c[k]=c[k]||{prs:0,lines:0}; c[k].prs+=v.prs; c[k].lines+=v.added+v.deleted;}});
   const idx=all.map((d,i)=>i).filter(i=>inRange(all[i])&&all[i]>='2026-03-03'), L=idx.map(i=>all[i]);
   const used=LANES.filter(k=>L28.some(c=>c[k]));
-  const t=theme(); const col={automation:t.fg3,'peter-agent':t.s[0],'peter-hand':t.s[0]+'88','other-agent':t.s[1],'other-hand':t.s[1]+'88',unclassified:t.bad};
+  const t=theme(); const col={automation:t.fg3,peter:t.s[0],other:t.s[1]};
   const stack=(id,key,lg)=>{
     const ds=used.map(k=>({label:NAMES[k], data:idx.map(i=>{const c=L28[i]; const tot=Object.values(c).reduce((a,v)=>a+v[key],0); return tot? (c[k]?c[k][key]:0)/tot : null;}), borderColor:col[k], backgroundColor:col[k], fill:true, borderWidth:1, pointRadius:0, pointHoverRadius:4, tension:0, spanGaps:true}));
     if(charts[id]) charts[id].destroy();
@@ -337,6 +363,42 @@ function renderLanes(){
   const mt={}; G.forEach(g=>{for(const [k,v] of Object.entries(g.models)) mt[k]=(mt[k]||0)+v;});
   const top=Object.entries(mt).sort((a,b)=>b[1]-a[1]).slice(0,6).map(x=>x[0]);
   line('g-models', L, top.map((k,j)=>({label:k.replace(/^Claude /,''), data:idx.map(i=>M28[i][k]||0), slot:j%5})));
+}
+
+function renderFlow(){
+  const P=D.prs; if(!P||!P.length) return;
+  const by=Object.fromEntries(P.map(p=>[p.date,p])); const all=S.map(r=>r.date);
+  const win=(i,n)=>all.slice(Math.max(0,i-n+1),i+1).map(d=>by[d]).filter(Boolean);
+  const idx=all.map((d,i)=>i).filter(i=>inRange(all[i])&&all[i]>='2026-02-18'), L=idx.map(i=>all[i]);
+  const sumL=(w,f)=>w.reduce((a,p)=>a+Object.values(p.lanes).reduce((b,l)=>b+(f(l)||0),0),0);
+  const q=(arr,p)=>{if(!arr.length) return null; const a=[...arr].sort((x,y)=>x-y); return a[Math.min(a.length-1,Math.floor(p*(a.length-1)))];};
+  line('p-flow', L, [{label:'Opened', data:idx.map(i=>win(i,7).reduce((a,p)=>a+p.opened,0)), slot:1},{label:'Merged', data:idx.map(i=>sumL(win(i,7),l=>l.merged)), slot:0}]);
+  const ttm=i=>win(i,28).flatMap(p=>Object.values(p.lanes).flatMap(l=>l.ttm_hours||[]));
+  line('p-ttm', L, [{label:'Median h', data:idx.map(i=>q(ttm(i),.5)), slot:0},{label:'p90 h', data:idx.map(i=>q(ttm(i),.9)), slot:1}], {log:true});
+  const g=(i,k)=>win(i,28).reduce((a,p)=>a+(p.gate[k]||0),0);
+  line('p-gate', L, [{label:'Reviews', data:idx.map(i=>g(i,'reviews')), slot:0},{label:'Approvals', data:idx.map(i=>g(i,'approvals')), slot:1},{label:'Merges', data:idx.map(i=>g(i,'merges')), slot:4},{label:'Review comments', data:idx.map(i=>g(i,'review_comments')), slot:2}]);
+  line('p-comments', L, [{label:'Bot', data:idx.map(i=>sumL(win(i,28),l=>l.bot_comments)), slot:4},{label:'Human', data:idx.map(i=>sumL(win(i,28),l=>l.human_comments)), slot:0}], {log:true});
+  line('p-cr', L, [{label:'Bot / PR', data:idx.map(i=>{const w=win(i,28); const m=sumL(w,l=>l.merged); return m? sumL(w,l=>l.bot_comments)/m : null;}), slot:4},{label:'Human / PR', data:idx.map(i=>{const w=win(i,28); const m=sumL(w,l=>l.merged); return m? sumL(w,l=>l.human_comments)/m : null;}), slot:0}]);
+  const bt={}; P.forEach(p=>{for(const [k,v] of Object.entries(p.bots)) bt[k]=(bt[k]||0)+v;});
+  const top=Object.entries(bt).sort((a,b)=>b[1]-a[1]).slice(0,5).map(x=>x[0]);
+  line('p-bots', L, top.map((k,j)=>({label:k.replace('[bot]',''), data:idx.map(i=>win(i,28).reduce((a,p)=>a+(p.bots[k]||0),0)), slot:j%5})));
+}
+function renderCI(){
+  const A=D.actions; if(!A||!A.length) return;
+  const by=Object.fromEntries(A.map(p=>[p.date,p])); const all=S.map(r=>r.date);
+  const win=(i,n)=>all.slice(Math.max(0,i-n+1),i+1).map(d=>by[d]).filter(Boolean);
+  const idx=all.map((d,i)=>i).filter(i=>inRange(all[i])), L=idx.map(i=>all[i]);
+  const t=theme();
+  const c=k=>idx.map(i=>(by[all[i]]||{conclusions:{}}).conclusions[k]||0);
+  bars('a-runs', L, [{label:'Success', data:c('success'), colors:t.good, stack:'a'},{label:'Failure', data:c('failure'), colors:t.bad, stack:'a'},{label:'Cancelled', data:c('cancelled'), colors:t.fg3, stack:'a'}], {stacked:true});
+  line('a-fail', L, [{label:'Failure rate', data:idx.map(i=>{const w=win(i,7); const n=w.reduce((a,p)=>a+p.runs,0); return n? w.reduce((a,p)=>a+(p.conclusions.failure||0)+(p.conclusions.cancelled||0),0)/n : null;}), slot:1}], {yfmt:pct});
+  const hrs=p=>Object.values(p.workflows).reduce((a,w)=>a+(w.duration_s||0),0)/3600;
+  line('a-hours', L, [{label:'Compute hours / day', data:idx.map(i=>{const w=win(i,7); return w.length? w.reduce((a,p)=>a+hrs(p),0)/w.length : null;}), slot:4}], {log:true});
+  const wt={}; A.forEach(p=>{for(const [k,v] of Object.entries(p.workflows)) wt[k]=(wt[k]||0)+v.runs;});
+  const top=Object.entries(wt).sort((a,b)=>b[1]-a[1]).slice(0,8).map(x=>x[0]);
+  line('a-wf', L, top.map((k,j)=>({label:k, data:idx.map(i=>win(i,7).reduce((a,p)=>a+((p.workflows[k]||{}).runs||0),0)), slot:j%5})), {log:true});
+  line('a-build', L, [{label:'Build and Test, min', data:idx.map(i=>{const w=win(i,7).map(p=>p.workflows['Build and Test']).filter(Boolean); const n=w.reduce((a,x)=>a+x.runs,0); return n? w.reduce((a,x)=>a+x.duration_s,0)/n/60 : null;}), slot:0}]);
+  line('a-rerun', L, [{label:'Re-runs / 7 days', data:idx.map(i=>win(i,7).reduce((a,p)=>a+p.reruns,0)), slot:1}]);
 }
 function addDays(d,n){const x=new Date(d+'T00:00:00Z'); x.setUTCDate(x.getUTCDate()+n); return x.toISOString().slice(0,10);}
 function renderStatic(){

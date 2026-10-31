@@ -1,0 +1,55 @@
+{
+ "date": "2026-09-29",
+ "collector_version": 1,
+ "runs": 57,
+ "conclusions": {
+  "success": 37,
+  "skipped": 18,
+  "cancelled": 2
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 8,
+  "pull_request": 23,
+  "pull_request_target": 12,
+  "issue_comment": 13,
+  "dynamic": 1
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 8,
+   "failure": 0,
+   "duration_s": 3074
+  },
+  "Graph Update: pip in /tools/agent-spike #1598734068": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 49
+  },
+  "Label PRs with EF migrations": {
+   "runs": 8,
+   "failure": 0,
+   "duration_s": 73
+  },
+  "PR Surface Report": {
+   "runs": 8,
+   "failure": 0,
+   "duration_s": 1392
+  },
+  "PR Surface Report Comment": {
+   "runs": 8,
+   "failure": 0,
+   "duration_s": 72
+  },
+  "Preview Database": {
+   "runs": 4,
+   "failure": 0,
+   "duration_s": 58
+  },
+  "claude-review": {
+   "runs": 20,
+   "failure": 0,
+   "duration_s": 314
+  }
+ }
+}

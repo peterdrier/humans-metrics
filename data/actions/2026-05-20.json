@@ -1,0 +1,55 @@
+{
+ "date": "2026-05-20",
+ "collector_version": 1,
+ "runs": 192,
+ "conclusions": {
+  "skipped": 46,
+  "success": 127,
+  "failure": 19
+ },
+ "reruns": 0,
+ "events": {
+  "issue_comment": 32,
+  "pull_request": 76,
+  "pull_request_target": 40,
+  "push": 42,
+  "dynamic": 2
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 48,
+   "failure": 3,
+   "duration_s": 11129
+  },
+  "E2E Tests (QA)": {
+   "runs": 21,
+   "failure": 15,
+   "duration_s": 5928
+  },
+  "Label PRs with EF migrations": {
+   "runs": 26,
+   "failure": 0,
+   "duration_s": 259
+  },
+  "Preview Database": {
+   "runs": 35,
+   "failure": 1,
+   "duration_s": 57558
+  },
+  "claude-review": {
+   "runs": 60,
+   "failure": 0,
+   "duration_s": 4836
+  },
+  "npm_and_yarn in /tests/e2e for @playwright/test - Update #1376323696": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 48
+  },
+  "nuget in / for Ical.Net - Update #1376324063": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 442
+  }
+ }
+}

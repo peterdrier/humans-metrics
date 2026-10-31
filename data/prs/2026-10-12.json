@@ -1,0 +1,36 @@
+{
+ "date": "2026-10-12",
+ "collector_version": 1,
+ "opened": 3,
+ "lanes": {
+  "automation": {
+   "merged": 1,
+   "lines": 4,
+   "files": 1,
+   "bot_comments": 4,
+   "ttm_hours": [
+    54.9
+   ]
+  },
+  "peter": {
+   "merged": 3,
+   "lines": 1803,
+   "files": 57,
+   "bot_comments": 26,
+   "reviews": 15,
+   "changes_requested": 0,
+   "human_comments": 15,
+   "ttm_hours": [
+    51.1,
+    29.9,
+    6.5
+   ]
+  }
+ },
+ "gate": {},
+ "bots": {
+  "chatgpt-codex-connector[bot]": 21,
+  "github-actions[bot]": 8,
+  "coolify-nuc-humans[bot]": 1
+ }
+}

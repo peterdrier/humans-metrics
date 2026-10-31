@@ -1,0 +1,82 @@
+{
+ "date": "2026-08-10",
+ "collector_version": 1,
+ "runs": 399,
+ "conclusions": {
+  "skipped": 87,
+  "cancelled": 18,
+  "failure": 11,
+  "success": 283
+ },
+ "reruns": 1,
+ "events": {
+  "workflow_run": 53,
+  "pull_request": 178,
+  "pull_request_target": 74,
+  "push": 48,
+  "issue_comment": 41,
+  "dynamic": 5
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 77,
+   "failure": 11,
+   "duration_s": 26954
+  },
+  "E2E Tests (QA)": {
+   "runs": 24,
+   "failure": 0,
+   "duration_s": 5815
+  },
+  "Label PRs with EF migrations": {
+   "runs": 52,
+   "failure": 0,
+   "duration_s": 578
+  },
+  "PR Surface Report": {
+   "runs": 53,
+   "failure": 0,
+   "duration_s": 42133
+  },
+  "PR Surface Report Comment": {
+   "runs": 53,
+   "failure": 0,
+   "duration_s": 484
+  },
+  "Preview Database": {
+   "runs": 52,
+   "failure": 0,
+   "duration_s": 213821
+  },
+  "claude-review": {
+   "runs": 83,
+   "failure": 0,
+   "duration_s": 2455
+  },
+  "github_actions in /. - Update #1517986086": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 81
+  },
+  "npm_and_yarn in /tests/e2e - Update #1517986079": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 57
+  },
+  "nuget in / for Microsoft.AspNetCore.DataProtection.Extensions - Update #1518061097": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 451
+  },
+  "nuget in / for OpenTelemetry.Exporter.OpenTelemetryProtocol - Update #1518134157": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 464
+  },
+  "nuget in /. - Update #1517986084": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 3313
+  }
+ }
+}

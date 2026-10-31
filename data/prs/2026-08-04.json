@@ -1,0 +1,24 @@
+{
+ "date": "2026-08-04",
+ "collector_version": 1,
+ "opened": 2,
+ "lanes": {
+  "peter": {
+   "merged": 1,
+   "lines": 3049,
+   "files": 41,
+   "reviews": 115,
+   "changes_requested": 0,
+   "bot_comments": 124,
+   "human_comments": 118,
+   "ttm_hours": [
+    42.4
+   ]
+  }
+ },
+ "gate": {},
+ "bots": {
+  "chatgpt-codex-connector[bot]": 123,
+  "github-actions[bot]": 1
+ }
+}

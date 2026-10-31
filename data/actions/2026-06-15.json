@@ -1,0 +1,83 @@
+{
+ "date": "2026-06-15",
+ "collector_version": 1,
+ "runs": 295,
+ "conclusions": {
+  "success": 204,
+  "skipped": 58,
+  "failure": 25,
+  "cancelled": 8
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 40,
+  "issue_comment": 32,
+  "pull_request": 137,
+  "pull_request_target": 53,
+  "push": 28,
+  "dynamic": 4,
+  "schedule": 1
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 54,
+   "failure": 7,
+   "duration_s": 416343
+  },
+  "E2E Tests (QA)": {
+   "runs": 14,
+   "failure": 11,
+   "duration_s": 5993
+  },
+  "Label PRs with EF migrations": {
+   "runs": 36,
+   "failure": 0,
+   "duration_s": 384
+  },
+  "Localization coverage sweep": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 223
+  },
+  "PR Surface Report": {
+   "runs": 40,
+   "failure": 1,
+   "duration_s": 28803
+  },
+  "PR Surface Report Comment": {
+   "runs": 40,
+   "failure": 0,
+   "duration_s": 454
+  },
+  "Preview Database": {
+   "runs": 40,
+   "failure": 0,
+   "duration_s": 2698
+  },
+  "claude-review": {
+   "runs": 66,
+   "failure": 6,
+   "duration_s": 3653
+  },
+  "github_actions in /. - Update #1413950743": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 36
+  },
+  "npm_and_yarn in /tests/e2e - Update #1413950682": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 50
+  },
+  "nuget in / for Google.Apis.Admin.Directory.directory_v1 - Update #1414256957": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 530
+  },
+  "nuget in /. - Update #1413950716": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 2775
+  }
+ }
+}

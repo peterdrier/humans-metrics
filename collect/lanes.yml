@@ -12,7 +12,7 @@
 #   trailer  any commit trailer line (Co-Authored-By, Claude-Session, ...)
 #   author   PR author login / commit author name
 #
-# Lanes: automation | peter-agent | peter-hand | other-agent | other-hand
+# Lanes: automation | peter | other
 
 peter_logins: [peterdrier, "Peter Drier"]
 
@@ -38,6 +38,3 @@ routines:
   - name: metrics
     subject: '^(stats|collect):'
 
-agent_trailers:
-  - '^Co-Authored-By: .*(Claude|Codex|Copilot|Gemini)'
-  - '^Claude-Session:'

@@ -1,0 +1,20 @@
+{
+ "date": "2026-07-04",
+ "collector_version": 1,
+ "opened": 0,
+ "lanes": {
+  "other": {
+   "merged": 1,
+   "lines": 3,
+   "files": 1,
+   "ttm_hours": [
+    11.2
+   ]
+  }
+ },
+ "gate": {
+  "review_comments": 0,
+  "merges": 1
+ },
+ "bots": {}
+}

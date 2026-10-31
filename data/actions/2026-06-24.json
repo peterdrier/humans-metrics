@@ -1,0 +1,50 @@
+{
+ "date": "2026-06-24",
+ "collector_version": 1,
+ "runs": 50,
+ "conclusions": {
+  "success": 36,
+  "failure": 1,
+  "skipped": 12,
+  "cancelled": 1
+ },
+ "reruns": 1,
+ "events": {
+  "workflow_run": 7,
+  "pull_request": 25,
+  "pull_request_target": 12,
+  "issue_comment": 6
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 6,
+   "failure": 1,
+   "duration_s": 87610
+  },
+  "Label PRs with EF migrations": {
+   "runs": 6,
+   "failure": 0,
+   "duration_s": 49
+  },
+  "PR Surface Report": {
+   "runs": 6,
+   "failure": 0,
+   "duration_s": 4810
+  },
+  "PR Surface Report Comment": {
+   "runs": 7,
+   "failure": 0,
+   "duration_s": 78
+  },
+  "Preview Database": {
+   "runs": 7,
+   "failure": 0,
+   "duration_s": 94
+  },
+  "claude-review": {
+   "runs": 18,
+   "failure": 0,
+   "duration_s": 1541
+  }
+ }
+}

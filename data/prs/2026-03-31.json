@@ -1,0 +1,38 @@
+{
+ "date": "2026-03-31",
+ "collector_version": 1,
+ "opened": 11,
+ "lanes": {
+  "other": {
+   "closed": 1,
+   "human_comments": 1
+  },
+  "peter": {
+   "merged": 11,
+   "lines": 22469,
+   "files": 137,
+   "bot_comments": 12,
+   "ttm_hours": [
+    2.0,
+    0.5,
+    0.1,
+    16.4,
+    6.8,
+    1.4,
+    3.9,
+    8.4,
+    0.8,
+    1.3,
+    1.5
+   ]
+  }
+ },
+ "gate": {
+  "review_comments": 1,
+  "merges": 0
+ },
+ "bots": {
+  "chatgpt-codex-connector[bot]": 11,
+  "coolify-nuc-humans[bot]": 1
+ }
+}

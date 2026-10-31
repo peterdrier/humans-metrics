@@ -9,23 +9,17 @@
    "added": 1,
    "deleted": 1
   },
-  "other-agent": {
+  "other": {
    "prs": 2,
    "files": 31,
    "added": 2550,
    "deleted": 594
   },
-  "peter-agent": {
-   "prs": 13,
-   "files": 106,
-   "added": 2934,
-   "deleted": 422
-  },
-  "peter-hand": {
-   "prs": 1,
-   "files": 2,
-   "added": 58,
-   "deleted": 17
+  "peter": {
+   "prs": 14,
+   "files": 108,
+   "added": 2992,
+   "deleted": 439
   }
  },
  "routines": {

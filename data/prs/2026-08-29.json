@@ -1,0 +1,27 @@
+{
+ "date": "2026-08-29",
+ "collector_version": 1,
+ "opened": 1,
+ "lanes": {
+  "other": {
+   "merged": 1,
+   "lines": 3130,
+   "files": 48,
+   "reviews": 2,
+   "changes_requested": 0,
+   "bot_comments": 4,
+   "human_comments": 2,
+   "ttm_hours": [
+    27.4
+   ]
+  }
+ },
+ "gate": {
+  "review_comments": 0,
+  "merges": 0
+ },
+ "bots": {
+  "claude[bot]": 3,
+  "github-actions[bot]": 1
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "date": "2026-09-09",
+ "collector_version": 1,
+ "runs": 279,
+ "conclusions": {
+  "success": 180,
+  "skipped": 71,
+  "cancelled": 20,
+  "failure": 8
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 50,
+  "issue_comment": 36,
+  "pull_request": 117,
+  "pull_request_target": 55,
+  "push": 20,
+  "dynamic": 1
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 54,
+   "failure": 0,
+   "duration_s": 388684
+  },
+  "E2E Tests (QA)": {
+   "runs": 10,
+   "failure": 0,
+   "duration_s": 1787
+  },
+  "Label PRs with EF migrations": {
+   "runs": 45,
+   "failure": 0,
+   "duration_s": 384
+  },
+  "PR Surface Report": {
+   "runs": 50,
+   "failure": 1,
+   "duration_s": 5109
+  },
+  "PR Surface Report Comment": {
+   "runs": 50,
+   "failure": 0,
+   "duration_s": 390
+  },
+  "Preview Database": {
+   "runs": 13,
+   "failure": 7,
+   "duration_s": 556
+  },
+  "claude-review": {
+   "runs": 56,
+   "failure": 0,
+   "duration_s": 1540
+  },
+  "nuget in / for Google.Apis.Drive.v3 - Update #1567044490": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 1247
+  }
+ }
+}

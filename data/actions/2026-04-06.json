@@ -1,0 +1,31 @@
+{
+ "date": "2026-04-06",
+ "collector_version": 1,
+ "runs": 36,
+ "conclusions": {
+  "success": 31,
+  "failure": 5
+ },
+ "reruns": 2,
+ "events": {
+  "pull_request": 32,
+  "push": 4
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 22,
+   "failure": 3,
+   "duration_s": 3551
+  },
+  "E2E Tests (QA)": {
+   "runs": 2,
+   "failure": 2,
+   "duration_s": 1917
+  },
+  "Preview Database": {
+   "runs": 12,
+   "failure": 0,
+   "duration_s": 3100
+  }
+ }
+}

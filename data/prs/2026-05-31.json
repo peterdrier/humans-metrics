@@ -1,0 +1,32 @@
+{
+ "date": "2026-05-31",
+ "collector_version": 1,
+ "opened": 0,
+ "lanes": {
+  "automation": {
+   "merged": 1,
+   "lines": 7407,
+   "files": 41,
+   "bot_comments": 1,
+   "ttm_hours": [
+    7.0
+   ]
+  },
+  "peter": {
+   "merged": 3,
+   "lines": 126,
+   "files": 12,
+   "bot_comments": 7,
+   "ttm_hours": [
+    10.1,
+    10.0,
+    9.9
+   ]
+  }
+ },
+ "gate": {},
+ "bots": {
+  "claude[bot]": 4,
+  "github-actions[bot]": 4
+ }
+}

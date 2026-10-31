@@ -1,0 +1,24 @@
+{
+ "date": "2026-03-26",
+ "collector_version": 1,
+ "opened": 6,
+ "lanes": {
+  "peter": {
+   "merged": 4,
+   "lines": 337,
+   "files": 20,
+   "bot_comments": 6,
+   "ttm_hours": [
+    0.1,
+    0.7,
+    0.0,
+    4.6
+   ]
+  }
+ },
+ "gate": {},
+ "bots": {
+  "chatgpt-codex-connector[bot]": 4,
+  "coolify-nuc-humans[bot]": 2
+ }
+}

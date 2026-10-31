@@ -1,0 +1,32 @@
+{
+ "date": "2026-05-06",
+ "collector_version": 1,
+ "runs": 36,
+ "conclusions": {
+  "success": 20,
+  "skipped": 10,
+  "failure": 6
+ },
+ "reruns": 0,
+ "events": {
+  "pull_request_target": 20,
+  "pull_request": 16
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 8,
+   "failure": 6,
+   "duration_s": 1862
+  },
+  "Claude PR Review": {
+   "runs": 18,
+   "failure": 0,
+   "duration_s": 3991
+  },
+  "Label PRs with EF migrations": {
+   "runs": 10,
+   "failure": 0,
+   "duration_s": 118
+  }
+ }
+}

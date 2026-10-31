@@ -1,0 +1,35 @@
+{
+ "date": "2026-05-09",
+ "collector_version": 1,
+ "opened": 13,
+ "lanes": {
+  "peter": {
+   "closed": 1,
+   "reviews": 61,
+   "changes_requested": 0,
+   "bot_comments": 94,
+   "human_comments": 70,
+   "merged": 10,
+   "lines": 5875,
+   "files": 162,
+   "ttm_hours": [
+    12.4,
+    10.3,
+    11.7,
+    0.4,
+    12.1,
+    9.9,
+    4.0,
+    0.1,
+    10.4,
+    7.0
+   ]
+  }
+ },
+ "gate": {},
+ "bots": {
+  "chatgpt-codex-connector[bot]": 12,
+  "claude[bot]": 81,
+  "github-actions[bot]": 1
+ }
+}

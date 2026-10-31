@@ -3,8 +3,7 @@
 
 Units are the non-merge commits on main: with squash merges each one is a
 PR (merge commits are production promotions and carry no work of their own). Each merged commit is classified into a lane by collect/lanes.yml
-(automation | peter-agent | peter-hand | other-agent | other-hand |
-unclassified); credit goes to the author, never the merger.
+(automation | peter | other); credit goes to the author, never the merger.
 
 Record: {date, commit, collector_version, lanes: {lane: {prs, files, added,
 deleted}}, routines: {name: prs}, models: {model: prs}, authors (distinct
@@ -25,7 +24,6 @@ def load_rules():
     for rt in r['routines']:
         for k in ('branch', 'subject', 'author'):
             if k in rt: rt[k] = re.compile(rt[k], re.I)
-    r['agent_trailers'] = [re.compile(p, re.I) for p in r['agent_trailers']]
     r['peter'] = set(r['peter_logins'])
     return r
 
@@ -37,9 +35,7 @@ def classify(rules, subject, author, trailers, branch=None):
            ('subject' in rt and rt['subject'].search(subject)) or \
            ('author' in rt and rt['author'].search(author)):
             return 'automation', rt['name']
-    agent = any(p.search(t) for t in trailers for p in rules['agent_trailers'])
-    who = 'peter' if author in rules['peter'] else 'other'
-    return f"{who}-{'agent' if agent else 'hand'}", None
+    return ('peter' if author in rules['peter'] else 'other'), None
 
 def merged_commits(repo, ref, d_from, d_to):
     """Non-merge commits by author date, with numstat."""

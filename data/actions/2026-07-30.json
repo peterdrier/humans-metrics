@@ -1,0 +1,103 @@
+{
+ "date": "2026-07-30",
+ "collector_version": 1,
+ "runs": 156,
+ "conclusions": {
+  "success": 104,
+  "skipped": 40,
+  "failure": 8,
+  "cancelled": 4
+ },
+ "reruns": 1,
+ "events": {
+  "workflow_run": 17,
+  "issue_comment": 32,
+  "pull_request": 57,
+  "pull_request_target": 23,
+  "push": 18,
+  "dynamic": 8,
+  "workflow_dispatch": 1
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 26,
+   "failure": 1,
+   "duration_s": 351307
+  },
+  "E2E Tests (QA)": {
+   "runs": 9,
+   "failure": 5,
+   "duration_s": 7525
+  },
+  "Label PRs with EF migrations": {
+   "runs": 17,
+   "failure": 0,
+   "duration_s": 244
+  },
+  "Localization coverage sweep": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 178
+  },
+  "PR Surface Report": {
+   "runs": 17,
+   "failure": 2,
+   "duration_s": 12118
+  },
+  "PR Surface Report Comment": {
+   "runs": 17,
+   "failure": 0,
+   "duration_s": 182
+  },
+  "Preview Database": {
+   "runs": 17,
+   "failure": 0,
+   "duration_s": 6873
+  },
+  "claude-review": {
+   "runs": 44,
+   "failure": 0,
+   "duration_s": 586
+  },
+  "github_actions in / for actions/setup-dotnet - Update #1495083673": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 34
+  },
+  "github_actions in / for actions/setup-node - Update #1495083663": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 37
+  },
+  "npm_and_yarn in /tests/e2e for @playwright/test - Update #1495083766": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 56
+  },
+  "nuget in / for Anthropic - Update #1495083683": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 494
+  },
+  "nuget in / for AwesomeAssertions - Update #1495083702": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 457
+  },
+  "nuget in / for Hangfire.Core - Update #1495083735": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 562
+  },
+  "nuget in / for Magick.NET-Q8-AnyCPU - Update #1495077286": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 221
+  },
+  "nuget in / for Meziantou.Analyzer - Update #1495083748": {
+   "runs": 1,
+   "failure": 0,
+   "duration_s": 583
+  }
+ }
+}

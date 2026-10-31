@@ -9,13 +9,13 @@
    "added": 5,
    "deleted": 5
   },
-  "other-agent": {
+  "other": {
    "prs": 1,
    "files": 2,
    "added": 2,
    "deleted": 2
   },
-  "peter-agent": {
+  "peter": {
    "prs": 3,
    "files": 61,
    "added": 8990,

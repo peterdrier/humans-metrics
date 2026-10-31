@@ -1,0 +1,50 @@
+{
+ "date": "2026-05-31",
+ "collector_version": 1,
+ "runs": 36,
+ "conclusions": {
+  "success": 24,
+  "skipped": 9,
+  "failure": 3
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 7,
+  "issue_comment": 5,
+  "pull_request_target": 4,
+  "pull_request": 12,
+  "push": 8
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 4,
+   "failure": 0,
+   "duration_s": 947
+  },
+  "E2E Tests (QA)": {
+   "runs": 4,
+   "failure": 3,
+   "duration_s": 1988
+  },
+  "PR Surface Report": {
+   "runs": 4,
+   "failure": 0,
+   "duration_s": 2858
+  },
+  "PR Surface Report Comment": {
+   "runs": 7,
+   "failure": 0,
+   "duration_s": 72
+  },
+  "Preview Database": {
+   "runs": 4,
+   "failure": 0,
+   "duration_s": 1656
+  },
+  "claude-review": {
+   "runs": 13,
+   "failure": 0,
+   "duration_s": 953
+  }
+ }
+}

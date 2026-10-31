@@ -1,0 +1,17 @@
+{
+ "date": "2026-03-28",
+ "collector_version": 1,
+ "opened": 8,
+ "lanes": {
+  "peter": {
+   "closed": 1,
+   "bot_comments": 2,
+   "human_comments": 1
+  }
+ },
+ "gate": {},
+ "bots": {
+  "chatgpt-codex-connector[bot]": 1,
+  "coolify-nuc-humans[bot]": 1
+ }
+}

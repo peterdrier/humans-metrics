@@ -1,0 +1,40 @@
+{
+ "date": "2026-09-02",
+ "collector_version": 1,
+ "opened": 4,
+ "lanes": {
+  "automation": {
+   "merged": 4,
+   "lines": 8,
+   "files": 4,
+   "bot_comments": 8,
+   "ttm_hours": [
+    48.9,
+    48.9,
+    48.5,
+    48.5
+   ]
+  },
+  "other": {
+   "merged": 1,
+   "lines": 431,
+   "files": 20,
+   "reviews": 1,
+   "changes_requested": 0,
+   "bot_comments": 3,
+   "human_comments": 1,
+   "ttm_hours": [
+    1.0
+   ]
+  }
+ },
+ "gate": {
+  "review_comments": 0,
+  "merges": 4
+ },
+ "bots": {
+  "dependabot[bot]": 4,
+  "github-actions[bot]": 5,
+  "claude[bot]": 2
+ }
+}

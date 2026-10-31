@@ -1,0 +1,29 @@
+{
+ "date": "2026-09-11",
+ "collector_version": 1,
+ "opened": 3,
+ "lanes": {
+  "automation": {
+   "merged": 4,
+   "lines": 5968,
+   "files": 147,
+   "reviews": 55,
+   "changes_requested": 0,
+   "bot_comments": 73,
+   "human_comments": 65,
+   "ttm_hours": [
+    244.1,
+    198.5,
+    143.0,
+    127.3
+   ]
+  }
+ },
+ "gate": {},
+ "bots": {
+  "chatgpt-codex-connector[bot]": 58,
+  "claude[bot]": 7,
+  "coolify-nuc-humans[bot]": 4,
+  "github-actions[bot]": 4
+ }
+}

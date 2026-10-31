@@ -9,29 +9,17 @@
    "added": 5867,
    "deleted": 2103
   },
-  "other-agent": {
-   "prs": 2,
-   "files": 22,
-   "added": 554,
-   "deleted": 53
+  "other": {
+   "prs": 6,
+   "files": 47,
+   "added": 1268,
+   "deleted": 188
   },
-  "other-hand": {
-   "prs": 4,
-   "files": 25,
-   "added": 714,
-   "deleted": 135
-  },
-  "peter-agent": {
-   "prs": 12,
-   "files": 159,
-   "added": 20346,
-   "deleted": 677
-  },
-  "peter-hand": {
-   "prs": 2,
-   "files": 2,
-   "added": 100,
-   "deleted": 1
+  "peter": {
+   "prs": 14,
+   "files": 161,
+   "added": 20446,
+   "deleted": 678
   }
  },
  "routines": {
