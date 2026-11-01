@@ -92,7 +92,8 @@ for d in reforge_days:
     secs = {}
     for r in d['rows']:
         secs[r['section']] = {k: r.get(v) for k, v in SEC_KEYS.items()}
-    sec_days.append({'date': d['date'], 'testSeconds': (d.get('tests') or {}).get('seconds'), 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'config': d.get('config_hash'),
+    sol_row = next((r for r in d['rows'] if r.get('section') == '(solution)'), {})
+    sec_days.append({'date': d['date'], 'testSeconds': (d.get('tests') or {}).get('seconds'), 'tokSrc': sol_row.get('tokensProdSource'), 'sdk': d.get('sdk_override', False), 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'config': d.get('config_hash'),
                      'build': d.get('build'), 'tests': (d.get('tests') or {}).get('exit'), 'seconds': d.get('seconds'),
                      'total': (d.get('surface') or {}).get('total'), 'edges': len(d.get('edges') or []),
                      'byRule': (d.get('surface') or {}).get('byRule'), 'sections': secs})

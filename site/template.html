@@ -221,6 +221,7 @@ th{color:var(--fg-3);font-weight:500;position:sticky;top:0;background:var(--surf
     <div class="panel xtall"><h3>Test ratio by assembly, latest day</h3><p class="why">Test tokens over production tokens.</p><div class="ph"><canvas id="as-today-ratio"></canvas></div></div>
   </div>
   <div class="grid">
+    <div class="panel"><h3>Measurement provenance</h3><p class="why">Reforge version used for each day, stepped. Hover for the config hash, token source (exact or estimate) and whether the SDK pin was overridden. A step here explains a step anywhere above.</p><div class="ph"><canvas id="as-prov"></canvas></div></div>
     <div class="panel"><h3>Collection cost per day</h3><p class="why">Wall-clock seconds to measure one day, by step: build, tests, reforge snapshot, reforge surface-score, and the file-based stats collector. Grows with the tree, so this is the price of every column above. Log scale.</p><div class="ph"><canvas id="as-cost"></canvas></div><div class="legend" id="l-as-cost"></div></div>
   </div>
   <div class="note" id="as-failed"></div>
@@ -446,6 +447,8 @@ function renderAssembly(){
   bars('as-today-cov', byCov.map(x=>x[0]), [{label:'Coverage %', data:byCov.map(x=>x[1].cov??0), colors:byCov.map(x=>x[1].cov==null?t.fg3:t.s[2])}], {horizontal:true});
   const byRatio=[...secs].sort((a,b)=>(b[1].testRatio||0)-(a[1].testRatio||0));
   bars('as-today-ratio', byRatio.map(x=>x[0]), [{label:'Test / prod tokens', data:byRatio.map(x=>x[1].testRatio), colors:t.s[1]}], {horizontal:true});
+  const vers=[...new Set(Dd.map(d=>d.version||'?'))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
+  line('as-prov', L, [{label:'Reforge', data:days.map(d=>vers.indexOf(d.version||'?')), extra:days.map(d=>`${d.version||'?'}  config ${d.config||'?'}  tokens ${d.tokSrc||'?'}${d.sdk?'  sdk override':''}`), slot:4, stepped:true}], {yfmt:v=>vers[Math.round(v)]??'', y:{min:-0.5, max:vers.length-0.5, ticks:{stepSize:1}}});
   const sc=Object.fromEntries((D.statsSeconds||[]).filter(x=>x[1]!=null));
   line('as-cost', L, [{label:'Build', data:days.map(d=>d.seconds?.build??null), slot:0},{label:'Tests', data:days.map(d=>d.testSeconds??null), slot:1},{label:'Snapshot', data:days.map(d=>d.seconds?.snapshot??null), slot:2},{label:'Surface-score', data:days.map(d=>d.seconds?.surface??null), slot:4},{label:'Stats collector', data:days.map(d=>sc[d.date]??null), slot:3}], {log:true});
   const f=D.secFailed||[]; document.getElementById('as-failed').textContent = f.length? `Days without a row: ${f.map(x=>`${x.date} (${x.build})`).join(', ')}` : 'Every attempted day produced rows.';
