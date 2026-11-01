@@ -37,8 +37,9 @@ about 15 min per day in October, mostly build and tests.
 Before any bulk fill on a version no record has seen, rescore a few days that
 already have records with `--redo` (coverage and tokens reused), check that
 `surface`, `edges` and `byRule` are still populated, run `python3 site/build.py`,
-and push. Then rescore the rest of the history as time permits; the page's
-provenance chart shows which days lag.
+and push. Rescoring the rest of the history is Peter's call, never a session's:
+the page's provenance chart shows which days lag, and a session rescores only
+the range it was told to.
 
 ## Rescoring a range after a reforge release
 
