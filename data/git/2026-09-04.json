@@ -3,6 +3,12 @@
  "commit": "e6e769928",
  "collector_version": 1,
  "lanes": {
+  "automation": {
+   "prs": 4,
+   "files": 4,
+   "added": 4,
+   "deleted": 4
+  },
   "other": {
    "prs": 2,
    "files": 38,
@@ -10,10 +16,12 @@
    "deleted": 242
   }
  },
- "routines": {},
+ "routines": {
+  "dependabot": 4
+ },
  "models": {},
- "authors": 1,
- "all_commits": 2,
+ "authors": 2,
+ "all_commits": 6,
  "hours": [
   0,
   0,
@@ -30,9 +38,9 @@
   0,
   0,
   0,
+  1,
+  5,
   0,
-  0,
-  2,
   0,
   0,
   0,

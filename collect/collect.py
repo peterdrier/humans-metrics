@@ -23,11 +23,12 @@ CODE_EXT = ('.cs', '.cshtml', '.resx', '.js')
 NEUTRAL_RESX = re.compile(r'\.[a-z]{2}(-[A-Za-z]{2,4})?\.resx$')
 
 def git(repo, *args, **kw):
+    kw.setdefault('env', {**os.environ, 'TZ': 'UTC'})   # day keys are UTC days
     return subprocess.run(['git', '-C', repo, *args], capture_output=True, text=True, check=True, **kw).stdout
 
 def day_commits(repo, ref, d_from, d_to):
-    """Last commit of each day on ref, by author date, within the range."""
-    out = git(repo, 'log', ref, '--format=%H %ad', '--date=short', f'--since={d_from}T00:00:00', f'--until={d_to}T23:59:59')
+    """Last commit of each UTC day on ref, by committer date, within the range."""
+    out = git(repo, 'log', ref, '--format=%H %cd', '--date=format-local:%Y-%m-%d', f'--since={d_from}T00:00:00Z', f'--until={d_to}T23:59:59Z')
     last = {}
     for line in out.splitlines():
         sha, d = line.split()

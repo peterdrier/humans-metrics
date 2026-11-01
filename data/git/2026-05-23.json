@@ -1,25 +1,23 @@
 {
  "date": "2026-05-23",
- "commit": "d9a5ab336",
+ "commit": "8f99633cf",
  "collector_version": 1,
  "lanes": {
   "peter": {
-   "prs": 23,
-   "files": 374,
-   "added": 10020,
-   "deleted": 1013
+   "prs": 29,
+   "files": 438,
+   "added": 9629,
+   "deleted": 1433
   }
  },
  "routines": {},
  "models": {
-  "Claude Opus 4.7 (1M context)": 17,
-  "Claude Sonnet 4.6": 2
+  "Claude Sonnet 4.6": 3,
+  "Claude Opus 4.7 (1M context)": 17
  },
  "authors": 1,
- "all_commits": 24,
+ "all_commits": 29,
  "hours": [
-  4,
-  0,
   0,
   0,
   0,
@@ -41,6 +39,8 @@
   0,
   2,
   1,
-  9
+  9,
+  8,
+  2
  ]
 }

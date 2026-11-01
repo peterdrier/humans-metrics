@@ -10,38 +10,28 @@
    "deleted": 103
   },
   "peter": {
-   "prs": 4,
-   "files": 1113,
-   "added": 14028,
-   "deleted": 4836
+   "prs": 3,
+   "files": 802,
+   "added": 9638,
+   "deleted": 3036
   }
  },
  "routines": {
   "section-doctor": 1
  },
  "models": {
-  "Claude": 4,
+  "Claude": 3,
   "Claude Fable 5.1": 1
  },
  "authors": 1,
- "all_commits": 5,
+ "all_commits": 4,
  "hours": [
-  1,
   0,
   0,
   0,
   0,
   0,
   0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  1,
-  0,
-  1,
   0,
   0,
   0,
@@ -49,6 +39,16 @@
   0,
   1,
   0,
-  1
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  1,
+  0,
+  0
  ]
 }

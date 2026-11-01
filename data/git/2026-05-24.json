@@ -1,6 +1,6 @@
 {
  "date": "2026-05-24",
- "commit": "760256346",
+ "commit": "0373de3eb",
  "collector_version": 1,
  "lanes": {
   "other": {
@@ -10,22 +10,20 @@
    "deleted": 26
   },
   "peter": {
-   "prs": 17,
-   "files": 209,
-   "added": 3928,
-   "deleted": 4858
+   "prs": 11,
+   "files": 183,
+   "added": 4199,
+   "deleted": 5543
   }
  },
  "routines": {},
  "models": {
-  "Claude Opus 4.7 (1M context)": 7,
+  "Claude Opus 4.7 (1M context)": 5,
   "Claude Sonnet 4.6": 5
  },
  "authors": 2,
- "all_commits": 19,
+ "all_commits": 13,
  "hours": [
-  8,
-  2,
   0,
   1,
   0,
@@ -47,6 +45,8 @@
   0,
   2,
   0,
+  1,
+  3,
   1
  ]
 }

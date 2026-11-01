@@ -4,10 +4,10 @@
  "collector_version": 1,
  "lanes": {
   "automation": {
-   "prs": 3,
-   "files": 130,
-   "added": 1579,
-   "deleted": 3006
+   "prs": 1,
+   "files": 1,
+   "added": 4,
+   "deleted": 1
   },
   "other": {
    "prs": 1,
@@ -16,25 +16,22 @@
    "deleted": 0
   },
   "peter": {
-   "prs": 4,
-   "files": 146,
-   "added": 4232,
-   "deleted": 690
+   "prs": 3,
+   "files": 144,
+   "added": 4230,
+   "deleted": 688
   }
  },
  "routines": {
-  "section-doctor": 2,
-  "freshness-sweep": 1
+  "section-doctor": 1
  },
  "models": {
-  "Claude": 6,
+  "Claude": 4,
   "Claude Fable 5.1": 1
  },
  "authors": 2,
- "all_commits": 9,
+ "all_commits": 6,
  "hours": [
-  2,
-  1,
   1,
   0,
   0,
@@ -52,6 +49,8 @@
   0,
   1,
   1,
+  0,
+  0,
   0,
   1,
   0,

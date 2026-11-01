@@ -25,10 +25,8 @@
   "Claude Opus 5": 2
  },
  "authors": 2,
- "all_commits": 20,
+ "all_commits": 19,
  "hours": [
-  0,
-  0,
   0,
   0,
   0,
@@ -50,6 +48,8 @@
   0,
   0,
   1,
-  2
+  2,
+  0,
+  0
  ]
 }

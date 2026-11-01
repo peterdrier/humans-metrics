@@ -16,10 +16,10 @@
    "deleted": 2
   },
   "peter": {
-   "prs": 17,
-   "files": 3174,
-   "added": 23688,
-   "deleted": 51379
+   "prs": 12,
+   "files": 3050,
+   "added": 17764,
+   "deleted": 51261
   }
  },
  "routines": {
@@ -27,17 +27,14 @@
   "section-doctor": 1
  },
  "models": {
-  "Claude Fable 5.1": 2,
-  "Claude": 17,
+  "Claude": 14,
   "Claude Opus 5.5 (1M context)": 2
  },
  "authors": 2,
- "all_commits": 22,
+ "all_commits": 16,
  "hours": [
-  5,
-  2,
   1,
-  0,
+  2,
   0,
   0,
   0,
@@ -57,6 +54,8 @@
   0,
   3,
   0,
-  1
+  1,
+  0,
+  0
  ]
 }

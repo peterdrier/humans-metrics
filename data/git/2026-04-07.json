@@ -1,6 +1,6 @@
 {
  "date": "2026-04-07",
- "commit": "b6aff0b2c",
+ "commit": "4e67b4ae3",
  "collector_version": 1,
  "lanes": {
   "other": {
@@ -10,23 +10,21 @@
    "deleted": 2
   },
   "peter": {
-   "prs": 20,
-   "files": 186,
-   "added": 13289,
-   "deleted": 542
+   "prs": 21,
+   "files": 187,
+   "added": 13294,
+   "deleted": 550
   }
  },
  "routines": {},
  "models": {
-  "Claude Opus 4.6 (1M context)": 18,
+  "Claude Opus 4.6 (1M context)": 19,
   "swombat": 2,
   "Peter Drier": 1
  },
  "authors": 2,
- "all_commits": 24,
+ "all_commits": 26,
  "hours": [
-  0,
-  0,
   4,
   2,
   7,
@@ -48,6 +46,8 @@
   2,
   3,
   0,
-  2
+  2,
+  1,
+  0
  ]
 }

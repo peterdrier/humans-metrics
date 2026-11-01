@@ -8,7 +8,7 @@ PR (merge commits are production promotions and carry no work of their own). Eac
 Record: {date, commit, collector_version, lanes: {lane: {prs, files, added,
 deleted}}, routines: {name: prs}, models: {model: prs}, authors (distinct
 author count on merged commits), all_commits (every commit of the day, not
-just first-parent), hours: [24 counts by author hour, UTC]}.
+just first-parent), hours: [24 counts by committer hour, UTC]}.
 """
 import argparse, collections, datetime as dt, json, os, re, subprocess, sys
 import yaml
@@ -17,7 +17,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 VERSION = 1
 
 def git(repo, *args):
-    return subprocess.run(['git', '-C', repo, *args], capture_output=True, text=True, check=True).stdout
+    return subprocess.run(['git', '-C', repo, *args], capture_output=True, text=True, check=True, env={**os.environ, 'TZ': 'UTC'}).stdout
 
 def load_rules():
     r = yaml.safe_load(open(os.path.join(HERE, 'lanes.yml')))
@@ -38,10 +38,10 @@ def classify(rules, subject, author, trailers, branch=None):
     return ('peter' if author in rules['peter'] else 'other'), None
 
 def merged_commits(repo, ref, d_from, d_to):
-    """Non-merge commits by author date, with numstat."""
+    """Non-merge commits by committer date (UTC day), with numstat."""
     out = git(repo, 'log', ref, '--no-merges', '--reverse', '--numstat',
-              f'--since={d_from}T00:00:00', f'--until={d_to}T23:59:59',
-              '--format=%x1e%H%x1f%ad%x1f%an%x1f%s%x1f%(trailers:only,unfold)', '--date=format:%Y-%m-%d %H')
+              f'--since={d_from}T00:00:00Z', f'--until={d_to}T23:59:59Z',
+              '--format=%x1e%H%x1f%cd%x1f%an%x1f%s%x1f%(trailers:only,unfold)', '--date=format-local:%Y-%m-%d %H')
     for chunk in out.split('\x1e')[1:]:
         head, _, stat = chunk.partition('\n')
         h, ad, an, subj, trailers = head.split('\x1f')
@@ -56,8 +56,8 @@ def merged_commits(repo, ref, d_from, d_to):
                    files=files, added=added, deleted=deleted)
 
 def all_commit_days(repo, ref, d_from, d_to):
-    out = git(repo, 'log', ref, f'--since={d_from}T00:00:00', f'--until={d_to}T23:59:59',
-              '--format=%ad', '--date=short')
+    out = git(repo, 'log', ref, f'--since={d_from}T00:00:00Z', f'--until={d_to}T23:59:59Z',
+              '--format=%cd', '--date=format-local:%Y-%m-%d')
     return collections.Counter(out.split())
 
 def main():
@@ -67,7 +67,7 @@ def main():
     ap.add_argument('--from', dest='d_from'); ap.add_argument('--to', dest='d_to')
     a = ap.parse_args()
     outdir = os.path.join(a.out, 'git'); os.makedirs(outdir, exist_ok=True)
-    d_to = a.d_to or git(a.repo, 'log', '-1', '--format=%ad', '--date=short', a.ref).strip()
+    d_to = a.d_to or git(a.repo, 'log', '-1', '--format=%cd', '--date=format-local:%Y-%m-%d', a.ref).strip()
     if not a.d_from:
         have = sorted(f[:-5] for f in os.listdir(outdir) if f.endswith('.json'))
         a.d_from = (dt.date.fromisoformat(have[-1]) + dt.timedelta(days=1)).isoformat() if have else '2026-02-04'

@@ -10,10 +10,10 @@
    "deleted": 145
   },
   "peter": {
-   "prs": 23,
-   "files": 1169,
-   "added": 23294,
-   "deleted": 10729
+   "prs": 15,
+   "files": 877,
+   "added": 16655,
+   "deleted": 9243
   }
  },
  "routines": {
@@ -21,13 +21,11 @@
   "dependabot": 2
  },
  "models": {
-  "Claude": 18
+  "Claude": 10
  },
  "authors": 2,
- "all_commits": 27,
+ "all_commits": 19,
  "hours": [
-  3,
-  5,
   6,
   3,
   0,
@@ -47,6 +45,8 @@
   0,
   0,
   3,
+  0,
+  0,
   0,
   0,
   0

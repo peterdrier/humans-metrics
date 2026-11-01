@@ -1,24 +1,22 @@
 {
  "date": "2026-04-30",
- "commit": "d98681c10",
+ "commit": "ffeacccb3",
  "collector_version": 1,
  "lanes": {
   "peter": {
-   "prs": 7,
-   "files": 131,
-   "added": 12547,
-   "deleted": 2128
+   "prs": 4,
+   "files": 92,
+   "added": 11083,
+   "deleted": 989
   }
  },
  "routines": {},
  "models": {
-  "Claude Opus 4.7 (1M context)": 6
+  "Claude Opus 4.7 (1M context)": 4
  },
  "authors": 1,
- "all_commits": 9,
+ "all_commits": 5,
  "hours": [
-  1,
-  2,
   0,
   0,
   0,
@@ -32,6 +30,8 @@
   2,
   0,
   2,
+  0,
+  0,
   0,
   0,
   0,

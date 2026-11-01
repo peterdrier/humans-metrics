@@ -4,18 +4,18 @@
  "collector_version": 1,
  "lanes": {
   "peter": {
-   "prs": 22,
-   "files": 242,
-   "added": 13260,
-   "deleted": 4341
+   "prs": 24,
+   "files": 256,
+   "added": 17031,
+   "deleted": 4358
   }
  },
  "routines": {},
  "models": {
-  "Claude Opus 4.6 (1M context)": 15
+  "Claude Opus 4.6 (1M context)": 17
  },
  "authors": 1,
- "all_commits": 22,
+ "all_commits": 24,
  "hours": [
   0,
   0,
@@ -29,15 +29,15 @@
   0,
   0,
   0,
-  5,
-  5,
+  10,
   3,
+  1,
   0,
-  0,
-  4,
-  0,
-  3,
   2,
+  3,
+  1,
+  3,
+  1,
   0,
   0,
   0

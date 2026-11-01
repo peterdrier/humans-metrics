@@ -3,30 +3,20 @@
  "commit": "f3f0a4b4b",
  "collector_version": 1,
  "lanes": {
-  "automation": {
-   "prs": 1,
-   "files": 36,
-   "added": 191,
-   "deleted": 20109
-  },
   "peter": {
-   "prs": 6,
-   "files": 262,
-   "added": 3954,
-   "deleted": 1578
+   "prs": 4,
+   "files": 213,
+   "added": 3039,
+   "deleted": 900
   }
  },
- "routines": {
-  "freshness-sweep": 1
- },
+ "routines": {},
  "models": {
-  "Claude Opus 4.8 (1M context)": 7
+  "Claude Opus 4.8 (1M context)": 4
  },
  "authors": 1,
- "all_commits": 8,
+ "all_commits": 5,
  "hours": [
-  2,
-  1,
   0,
   0,
   0,
@@ -43,6 +33,8 @@
   1,
   2,
   1,
+  0,
+  0,
   0,
   0,
   0,

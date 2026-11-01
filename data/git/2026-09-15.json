@@ -16,27 +16,27 @@
    "deleted": 0
   },
   "peter": {
-   "prs": 4,
-   "files": 250,
-   "added": 21004,
-   "deleted": 815
+   "prs": 2,
+   "files": 202,
+   "added": 19715,
+   "deleted": 353
   }
  },
  "routines": {
   "section-doctor": 4
  },
  "models": {
-  "Claude": 5,
-  "Claude Fable 5.1": 2,
-  "Claude Opus 5": 2
+  "Claude": 4,
+  "Claude Opus 5": 2,
+  "Claude Fable 5.1": 1
  },
  "authors": 2,
- "all_commits": 9,
+ "all_commits": 7,
  "hours": [
-  1,
   2,
-  1,
   5,
+  0,
+  0,
   0,
   0,
   0,

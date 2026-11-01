@@ -4,31 +4,29 @@
  "collector_version": 1,
  "lanes": {
   "automation": {
-   "prs": 5,
-   "files": 30,
-   "added": 829,
-   "deleted": 9836
+   "prs": 2,
+   "files": 27,
+   "added": 826,
+   "deleted": 9833
   },
   "peter": {
-   "prs": 7,
-   "files": 140,
-   "added": 22602,
-   "deleted": 328
+   "prs": 5,
+   "files": 63,
+   "added": 10425,
+   "deleted": 203
   }
  },
  "routines": {
-  "dependabot": 4,
+  "dependabot": 1,
   "freshness-sweep": 1
  },
  "models": {
-  "Claude Opus 4.7 (1M context)": 7,
+  "Claude Opus 4.7 (1M context)": 5,
   "Claude Sonnet 4.6": 1
  },
  "authors": 2,
- "all_commits": 13,
+ "all_commits": 7,
  "hours": [
-  5,
-  0,
   1,
   0,
   0,
@@ -50,6 +48,8 @@
   0,
   0,
   0,
-  1
+  1,
+  0,
+  0
  ]
 }

@@ -1,23 +1,14 @@
 {
  "date": "2026-09-25",
- "commit": "45a3a8d7a",
+ "commit": null,
  "collector_version": 1,
- "lanes": {
-  "peter": {
-   "prs": 1,
-   "files": 169,
-   "added": 1108,
-   "deleted": 1361
-  }
- },
+ "lanes": {},
  "routines": {},
- "models": {
-  "Claude": 1
- },
- "authors": 1,
- "all_commits": 2,
+ "models": {},
+ "authors": 0,
+ "all_commits": 1,
  "hours": [
-  1,
+  0,
   0,
   0,
   0,

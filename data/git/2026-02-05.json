@@ -4,20 +4,19 @@
  "collector_version": 1,
  "lanes": {
   "peter": {
-   "prs": 24,
-   "files": 248,
-   "added": 22847,
-   "deleted": 689
+   "prs": 20,
+   "files": 235,
+   "added": 21657,
+   "deleted": 576
   }
  },
  "routines": {},
  "models": {
-  "Claude Opus 4.5": 22
+  "Claude Opus 4.5": 19
  },
  "authors": 1,
- "all_commits": 24,
+ "all_commits": 20,
  "hours": [
-  4,
   3,
   5,
   5,
@@ -40,6 +39,7 @@
   1,
   0,
   1,
+  0,
   0
  ]
 }

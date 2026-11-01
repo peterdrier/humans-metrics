@@ -4,30 +4,29 @@
  "collector_version": 1,
  "lanes": {
   "automation": {
-   "prs": 6,
-   "files": 102,
-   "added": 1804,
-   "deleted": 920
+   "prs": 1,
+   "files": 22,
+   "added": 430,
+   "deleted": 256
   },
   "peter": {
-   "prs": 9,
-   "files": 424,
-   "added": 4161,
-   "deleted": 3262
+   "prs": 6,
+   "files": 392,
+   "added": 3818,
+   "deleted": 2014
   }
  },
  "routines": {
-  "section-doctor": 6
+  "section-doctor": 1
  },
  "models": {
-  "Claude": 14,
-  "Claude Opus 5.5": 1
+  "Claude": 7
  },
  "authors": 1,
- "all_commits": 15,
+ "all_commits": 7,
  "hours": [
-  8,
   7,
+  0,
   0,
   0,
   0,

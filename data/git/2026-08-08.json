@@ -10,23 +10,21 @@
    "deleted": 4782
   },
   "peter": {
-   "prs": 15,
-   "files": 690,
-   "added": 28980,
-   "deleted": 3126
+   "prs": 11,
+   "files": 654,
+   "added": 10499,
+   "deleted": 2736
   }
  },
  "routines": {
   "freshness-sweep": 1
  },
  "models": {
-  "Claude Opus 5 (1M context)": 16
+  "Claude Opus 5 (1M context)": 12
  },
  "authors": 1,
- "all_commits": 19,
+ "all_commits": 13,
  "hours": [
-  3,
-  1,
   3,
   0,
   0,
@@ -42,6 +40,8 @@
   1,
   5,
   2,
+  0,
+  0,
   0,
   0,
   0,

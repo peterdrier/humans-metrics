@@ -1,26 +1,24 @@
 {
  "date": "2026-06-11",
- "commit": "4ae0d0474",
+ "commit": "485bca30e",
  "collector_version": 1,
  "lanes": {
   "peter": {
-   "prs": 43,
-   "files": 656,
-   "added": 33881,
-   "deleted": 8586
+   "prs": 39,
+   "files": 644,
+   "added": 33485,
+   "deleted": 8538
   }
  },
  "routines": {},
  "models": {
-  "Claude Fable 5": 27,
-  "Claude Sonnet 4.6": 2,
+  "Claude Fable 5": 24,
+  "Claude Sonnet 4.6": 1,
   "Claude Opus 4.8 (1M context)": 1
  },
  "authors": 1,
- "all_commits": 43,
+ "all_commits": 40,
  "hours": [
-  5,
-  0,
   0,
   0,
   0,
@@ -42,6 +40,8 @@
   2,
   1,
   0,
-  1
+  1,
+  1,
+  0
  ]
 }

@@ -10,10 +10,10 @@
    "deleted": 271
   },
   "peter": {
-   "prs": 7,
-   "files": 350,
-   "added": 10653,
-   "deleted": 1067
+   "prs": 5,
+   "files": 275,
+   "added": 5848,
+   "deleted": 1005
   }
  },
  "routines": {
@@ -21,14 +21,12 @@
   "debt-sweep": 1
  },
  "models": {
-  "Claude Fable 5.1": 6,
-  "Claude": 3
+  "Claude": 3,
+  "Claude Fable 5.1": 4
  },
  "authors": 1,
- "all_commits": 10,
+ "all_commits": 7,
  "hours": [
-  2,
-  0,
   0,
   0,
   0,
@@ -48,6 +46,8 @@
   0,
   0,
   4,
+  0,
+  0,
   0,
   0,
   0

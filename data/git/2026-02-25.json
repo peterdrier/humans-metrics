@@ -1,14 +1,8 @@
 {
  "date": "2026-02-25",
- "commit": "c6266182a",
+ "commit": "d4ecd64c6",
  "collector_version": 1,
  "lanes": {
-  "other": {
-   "prs": 5,
-   "files": 17,
-   "added": 506,
-   "deleted": 208
-  },
   "peter": {
    "prs": 4,
    "files": 17,
@@ -20,8 +14,8 @@
  "models": {
   "Claude Opus 4.6": 4
  },
- "authors": 2,
- "all_commits": 10,
+ "authors": 1,
+ "all_commits": 5,
  "hours": [
   0,
   0,
@@ -35,8 +29,6 @@
   0,
   0,
   0,
-  2,
-  3,
   0,
   0,
   0,
@@ -46,6 +38,8 @@
   0,
   0,
   0,
-  4
+  0,
+  4,
+  0
  ]
 }

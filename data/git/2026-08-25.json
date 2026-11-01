@@ -4,10 +4,10 @@
  "collector_version": 1,
  "lanes": {
   "automation": {
-   "prs": 7,
-   "files": 256,
-   "added": 3052,
-   "deleted": 4107
+   "prs": 4,
+   "files": 136,
+   "added": 2103,
+   "deleted": 1126
   },
   "other": {
    "prs": 2,
@@ -23,20 +23,17 @@
   }
  },
  "routines": {
-  "section-doctor": 5,
-  "freshness-sweep": 2
+  "freshness-sweep": 1,
+  "section-doctor": 3
  },
  "models": {
-  "Claude": 4,
-  "Claude Fable 5": 14,
-  "Claude Opus 5 (1M context)": 1,
+  "Claude": 3,
+  "Claude Fable 5": 13,
   "Claude Opus 5": 1
  },
  "authors": 2,
- "all_commits": 25,
+ "all_commits": 21,
  "hours": [
-  2,
-  1,
   1,
   1,
   0,
@@ -54,6 +51,8 @@
   2,
   0,
   6,
+  0,
+  0,
   0,
   0,
   0,

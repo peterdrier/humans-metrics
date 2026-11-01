@@ -16,24 +16,22 @@
    "deleted": 654
   },
   "peter": {
-   "prs": 14,
-   "files": 96,
-   "added": 1929,
-   "deleted": 722
+   "prs": 10,
+   "files": 84,
+   "added": 1419,
+   "deleted": 687
   }
  },
  "routines": {
   "dependabot": 7
  },
  "models": {
-  "Claude Opus 4.7 (1M context)": 13,
+  "Claude Opus 4.7 (1M context)": 10,
   "Jokin C": 2
  },
  "authors": 3,
- "all_commits": 28,
+ "all_commits": 21,
  "hours": [
-  3,
-  1,
   0,
   0,
   0,
@@ -55,6 +53,8 @@
   0,
   2,
   2,
+  0,
+  0,
   0
  ]
 }

@@ -10,10 +10,10 @@
    "deleted": 91
   },
   "peter": {
-   "prs": 10,
-   "files": 164,
-   "added": 24179,
-   "deleted": 403
+   "prs": 8,
+   "files": 151,
+   "added": 23945,
+   "deleted": 386
   }
  },
  "routines": {
@@ -21,14 +21,12 @@
   "dependabot": 5
  },
  "models": {
-  "Claude Opus 4.8 (1M context)": 10,
+  "Claude Opus 4.8 (1M context)": 8,
   "Claude": 1
  },
  "authors": 2,
- "all_commits": 18,
+ "all_commits": 14,
  "hours": [
-  0,
-  2,
   0,
   0,
   0,
@@ -50,6 +48,8 @@
   6,
   0,
   0,
-  2
+  2,
+  0,
+  0
  ]
 }

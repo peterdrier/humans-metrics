@@ -1,33 +1,33 @@
 {
  "date": "2026-10-20",
- "commit": "72c62847c",
+ "commit": "921ab25c0",
  "collector_version": 1,
  "lanes": {
   "automation": {
-   "prs": 8,
-   "files": 68,
-   "added": 778,
-   "deleted": 518
+   "prs": 10,
+   "files": 112,
+   "added": 1874,
+   "deleted": 698
   },
   "peter": {
-   "prs": 5,
-   "files": 506,
-   "added": 17299,
-   "deleted": 4836
+   "prs": 7,
+   "files": 525,
+   "added": 17462,
+   "deleted": 4884
   }
  },
  "routines": {
   "dependabot": 6,
-  "section-doctor": 2
+  "section-doctor": 2,
+  "debt-sweep": 2
  },
  "models": {
-  "Claude": 7
+  "Claude": 10,
+  "Claude Opus 5.5": 1
  },
  "authors": 2,
- "all_commits": 13,
+ "all_commits": 19,
  "hours": [
-  0,
-  0,
   0,
   0,
   0,
@@ -49,6 +49,8 @@
   0,
   0,
   2,
-  6
+  6,
+  4,
+  0
  ]
 }

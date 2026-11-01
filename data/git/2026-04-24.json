@@ -10,22 +10,20 @@
    "deleted": 12
   },
   "peter": {
-   "prs": 8,
-   "files": 64,
-   "added": 3699,
-   "deleted": 1935
+   "prs": 5,
+   "files": 34,
+   "added": 2338,
+   "deleted": 1314
   }
  },
  "routines": {},
  "models": {
-  "Claude Opus 4.7 (1M context)": 6,
+  "Claude Opus 4.7 (1M context)": 3,
   "Claude Sonnet 4.6": 1
  },
  "authors": 2,
- "all_commits": 10,
+ "all_commits": 6,
  "hours": [
-  0,
-  3,
   3,
   0,
   0,
@@ -45,6 +43,8 @@
   0,
   0,
   2,
+  0,
+  0,
   0,
   0,
   0

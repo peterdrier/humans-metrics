@@ -1,27 +1,29 @@
 {
  "date": "2026-09-02",
- "commit": "63f85b334",
+ "commit": "c9ff489f1",
  "collector_version": 1,
  "lanes": {
   "automation": {
-   "prs": 8,
-   "files": 8,
-   "added": 8,
-   "deleted": 8
+   "prs": 4,
+   "files": 4,
+   "added": 4,
+   "deleted": 4
   },
   "other": {
-   "prs": 5,
-   "files": 187,
-   "added": 4327,
-   "deleted": 3960
+   "prs": 6,
+   "files": 189,
+   "added": 4332,
+   "deleted": 3963
   }
  },
  "routines": {
-  "dependabot": 8
+  "dependabot": 4
  },
- "models": {},
- "authors": 3,
- "all_commits": 16,
+ "models": {
+  "Claude Fable 5": 1
+ },
+ "authors": 4,
+ "all_commits": 13,
  "hours": [
   0,
   0,
@@ -31,16 +33,16 @@
   0,
   0,
   0,
-  0,
-  0,
-  11,
+  4,
   0,
   0,
   0,
   0,
-  2,
+  1,
+  1,
   0,
   0,
+  4,
   0,
   0,
   0,

@@ -1,6 +1,6 @@
 {
  "date": "2026-05-11",
- "commit": "4bb18dfab",
+ "commit": "760d98f22",
  "collector_version": 1,
  "lanes": {
   "other": {
@@ -10,10 +10,10 @@
    "deleted": 3
   },
   "peter": {
-   "prs": 14,
-   "files": 342,
-   "added": 17297,
-   "deleted": 6706
+   "prs": 13,
+   "files": 384,
+   "added": 34595,
+   "deleted": 4712
   }
  },
  "routines": {},
@@ -21,11 +21,9 @@
   "Claude Opus 4.7 (1M context)": 9
  },
  "authors": 2,
- "all_commits": 16,
+ "all_commits": 15,
  "hours": [
   0,
-  2,
-  0,
   3,
   0,
   0,
@@ -46,6 +44,8 @@
   1,
   0,
   0,
+  0,
+  1,
   0
  ]
 }

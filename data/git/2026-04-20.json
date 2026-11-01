@@ -1,22 +1,22 @@
 {
  "date": "2026-04-20",
- "commit": "1d84b8682",
+ "commit": "01f9e1ea7",
  "collector_version": 1,
  "lanes": {
   "peter": {
-   "prs": 5,
-   "files": 33,
-   "added": 5173,
+   "prs": 6,
+   "files": 86,
+   "added": 8229,
    "deleted": 9
   }
  },
  "routines": {},
  "models": {
   "Peter Drier": 1,
-  "Claude Opus 4.7 (1M context)": 4
+  "Claude Opus 4.7 (1M context)": 5
  },
  "authors": 1,
- "all_commits": 5,
+ "all_commits": 6,
  "hours": [
   0,
   0,
@@ -31,8 +31,6 @@
   0,
   0,
   0,
-  0,
-  0,
   1,
   1,
   1,
@@ -41,6 +39,8 @@
   1,
   0,
   0,
+  0,
+  1,
   0
  ]
 }

@@ -1,13 +1,13 @@
 {
  "date": "2026-05-25",
- "commit": "81267612e",
+ "commit": "68b05169d",
  "collector_version": 1,
  "lanes": {
   "automation": {
-   "prs": 1,
-   "files": 24,
-   "added": 874,
-   "deleted": 7737
+   "prs": 4,
+   "files": 27,
+   "added": 877,
+   "deleted": 7740
   },
   "other": {
    "prs": 2,
@@ -16,24 +16,23 @@
    "deleted": 304
   },
   "peter": {
-   "prs": 28,
-   "files": 466,
-   "added": 10819,
-   "deleted": 7875
+   "prs": 26,
+   "files": 475,
+   "added": 21788,
+   "deleted": 6888
   }
  },
  "routines": {
-  "freshness-sweep": 1
+  "freshness-sweep": 1,
+  "dependabot": 3
  },
  "models": {
-  "Claude Sonnet 4.6": 2,
-  "Claude Opus 4.7 (1M context)": 23
+  "Claude Opus 4.7 (1M context)": 23,
+  "Claude Sonnet 4.6": 1
  },
- "authors": 2,
- "all_commits": 31,
+ "authors": 3,
+ "all_commits": 33,
  "hours": [
-  3,
-  1,
   5,
   1,
   2,
@@ -55,6 +54,8 @@
   0,
   1,
   1,
-  1
+  1,
+  5,
+  0
  ]
 }

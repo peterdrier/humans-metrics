@@ -1,6 +1,6 @@
 {
  "date": "2026-05-28",
- "commit": "ccd20541b",
+ "commit": "0428e4fdd",
  "collector_version": 1,
  "lanes": {
   "automation": {
@@ -10,44 +10,44 @@
    "deleted": 10106
   },
   "peter": {
-   "prs": 12,
-   "files": 102,
-   "added": 12013,
-   "deleted": 795
+   "prs": 11,
+   "files": 146,
+   "added": 12529,
+   "deleted": 2596
   }
  },
  "routines": {
   "freshness-sweep": 1
  },
  "models": {
-  "Claude Opus 4.7 (1M context)": 8,
-  "Claude Opus 4.8 (1M context)": 1
+  "Claude Opus 4.7 (1M context)": 7,
+  "Claude Opus 4.8 (1M context)": 2
  },
  "authors": 1,
  "all_commits": 14,
  "hours": [
+  3,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  0,
+  1,
+  0,
+  0,
+  0,
+  3,
   0,
   2,
-  3,
   0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  0,
-  1,
-  0,
-  1,
-  0,
-  0,
-  0,
-  3,
-  1,
   2,
   0
  ]

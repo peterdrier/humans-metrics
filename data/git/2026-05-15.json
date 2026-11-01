@@ -1,6 +1,6 @@
 {
  "date": "2026-05-15",
- "commit": "fa43f57b5",
+ "commit": "f7e3809c5",
  "collector_version": 1,
  "lanes": {
   "automation": {
@@ -16,25 +16,23 @@
    "deleted": 808
   },
   "peter": {
-   "prs": 22,
-   "files": 1500,
-   "added": 19810,
-   "deleted": 23737
+   "prs": 23,
+   "files": 1609,
+   "added": 20275,
+   "deleted": 23892
   }
  },
  "routines": {
   "freshness-sweep": 1
  },
  "models": {
-  "Claude Opus 4.7 (1M context)": 19,
   "Claude Sonnet 4.6": 1,
+  "Claude Opus 4.7 (1M context)": 20,
   "Jokin C": 1
  },
  "authors": 3,
  "all_commits": 28,
  "hours": [
-  2,
-  0,
   0,
   0,
   0,
@@ -56,6 +54,8 @@
   2,
   3,
   2,
-  1
+  1,
+  0,
+  3
  ]
 }
