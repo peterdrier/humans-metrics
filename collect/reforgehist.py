@@ -56,7 +56,8 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
         gj = os.path.join(tree, 'global.json')
         if os.path.exists(gj):   # early trees pin an exact SDK patch with no rollForward; measure with the installed SDK
             os.remove(gj); rec['sdk_override'] = True
-        p, s = run(['dotnet', 'build', sln, '-c', 'Release', '-v', 'quiet', '-nologo', '-p:NuGetAudit=false', '-p:RunAnalyzers=false'], tree, env)   # audit and analyzers are CI gates on today's clock, not part of the measurement; rec['seconds']['build'] = s
+        p, s = run(['dotnet', 'build', sln, '-c', 'Release', '-v', 'quiet', '-nologo', '-p:NuGetAudit=false', '-p:RunAnalyzers=false'], tree, env)   # audit and analyzers are CI gates on today's clock, not part of the measurement
+        rec['seconds']['build'] = s; rec['seconds']['build'] = s
         if p.returncode: rec['build'] = 'failed'; rec['build_error'] = (p.stdout + p.stderr)[-2000:]; return rec
         rec['build'] = 'ok'
         cov = None
