@@ -74,8 +74,10 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key):
         p, s = run([reforge, 'surface-score', '--solution', sln, '--format', 'json'], tree, env); rec['seconds']['surface'] = s
         if p.returncode: rec['surface_error'] = p.stderr[-2000:]; return rec
         j = json.loads(p.stdout)
-        rec['surface'] = dict(total=j.get('total'), surface=j.get('surfaceTotal', j.get('surface')), internal=j.get('implementationShapeTotal', j.get('internal')),
-                              byRule=j.get('byRule'), groups=[{k: g.get(k) for k in ('name', 'surface', 'internal', 'total')} for g in j.get('groups', [])])
+        rec['surface'] = dict(total=j.get('total'), surface=j.get('surfaceTotal'), internal=j.get('implementationShapeTotal'), testTotal=j.get('testTotal'),
+                              byRule=j.get('byRule'),
+                              groups=[dict(name=g.get('name'), surface=g.get('surfaceTotal'), internal=g.get('implementationShapeTotal'), total=g.get('total'),
+                                           census=g.get('surface'), tests=g.get('tests')) for g in j.get('groups', [])])
         rec['edges'] = j.get('edges')
         return rec
     finally:
@@ -102,7 +104,7 @@ def main():
         t = time.time()
         rec = collect_day(a.repo, days[d], d, outdir, a.reforge, not a.no_tests, key)
         rec['seconds']['total'] = round(time.time() - t)
-        json.dump(rec, open(path, 'w'), indent=1)
+        json.dump(rec, open(path, 'w'), separators=(',', ':'))
         print(f"{d} {days[d][:9]} build={rec.get('build')} rows={len(rec.get('rows', []))} tests={rec.get('tests', {}).get('exit')} {rec['seconds']}", file=sys.stderr, flush=True)
 
 if __name__ == '__main__':

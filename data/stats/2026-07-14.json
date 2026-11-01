@@ -1,228 +1,228 @@
 {
- "assemblies": {
-  "Humans.Analyzers": {
-   "classes": 34,
-   "cs_code": 3400,
-   "cs_comment": 552,
-   "cs_lines": 4647,
-   "dbsets": 2,
-   "fan_in": 0,
-   "fan_out": 0,
-   "files": 32,
-   "interfaces": 0,
-   "is_test": 0,
-   "lines": 4647
-  },
-  "Humans.Analyzers.Tests": {
-   "classes": 294,
-   "cs_lines": 6495,
-   "dbsets": 9,
-   "fan_in": 0,
-   "fan_out": 0,
-   "files": 26,
-   "interfaces": 93,
-   "is_test": 1,
-   "lines": 6495
-  },
-  "Humans.Application": {
-   "classes": 871,
-   "cs_code": 46759,
-   "cs_comment": 14617,
-   "cs_lines": 70173,
-   "dbsets": 0,
-   "fan_in": 2,
-   "fan_out": 1,
-   "files": 545,
-   "interfaces": 231,
-   "is_test": 0,
-   "lines": 70173
-  },
-  "Humans.Application.Tests": {
-   "classes": 421,
-   "cs_lines": 92979,
-   "dbsets": 0,
-   "entities": 1,
-   "fan_in": 0,
-   "fan_out": 3,
-   "files": 356,
-   "interfaces": 0,
-   "is_test": 1,
-   "lines": 92979
-  },
-  "Humans.Domain": {
-   "classes": 139,
-   "cs_code": 3825,
-   "cs_comment": 3283,
-   "cs_lines": 8502,
-   "dbsets": 0,
-   "entities": 107,
-   "fan_in": 2,
-   "fan_out": 0,
-   "files": 224,
-   "interfaces": 0,
-   "is_test": 0,
-   "lines": 8502
-  },
-  "Humans.Domain.Tests": {
-   "classes": 23,
-   "cs_lines": 2251,
-   "dbsets": 0,
-   "entities": 12,
-   "fan_in": 0,
-   "fan_out": 1,
-   "files": 23,
-   "interfaces": 0,
-   "is_test": 1,
-   "lines": 2251
-  },
-  "Humans.Infrastructure": {
-   "classes": 317,
-   "cs_code": 29026,
-   "cs_comment": 3313,
-   "cs_lines": 37320,
-   "dbsets": 104,
-   "fan_in": 2,
-   "fan_out": 1,
-   "files": 272,
-   "interfaces": 1,
-   "is_test": 0,
-   "lines": 37320,
-   "migration_lines": 552207
-  },
-  "Humans.Integration.Tests": {
-   "classes": 40,
-   "cs_lines": 7007,
-   "dbsets": 0,
-   "fan_in": 0,
-   "fan_out": 1,
-   "files": 33,
-   "interfaces": 0,
-   "is_test": 1,
-   "lines": 7007
-  },
-  "Humans.Testing": {
-   "classes": 5,
-   "cs_lines": 163,
-   "dbsets": 0,
-   "fan_in": 0,
-   "fan_out": 0,
-   "files": 4,
-   "interfaces": 0,
-   "is_test": 1,
-   "lines": 163
-  },
-  "Humans.Web": {
-   "classes": 854,
-   "controllers": 89,
-   "cs_code": 39888,
-   "cs_comment": 4128,
-   "cs_lines": 50572,
-   "cshtml_lines": 47352,
-   "dbsets": 0,
-   "fan_in": 3,
-   "fan_out": 1,
-   "files": 845,
-   "interfaces": 2,
-   "is_test": 0,
-   "js_lines": 4338,
-   "lines": 138607,
-   "resx_keys": 2625,
-   "resx_lines": 36345,
-   "views": 400
-  },
-  "Humans.Web.Tests": {
-   "classes": 65,
-   "cs_lines": 9821,
-   "dbsets": 0,
-   "fan_in": 0,
-   "fan_out": 1,
-   "files": 58,
-   "interfaces": 0,
-   "is_test": 1,
-   "lines": 9821
-  }
- },
- "collector_version": 1,
- "commit": "08bec6755",
- "date": "2026-07-14",
- "edges": [
-  [
-   "Humans.Analyzers.Tests",
-   "Humans.Analyzers"
-  ],
-  [
-   "Humans.Application",
-   "Humans.Domain"
-  ],
-  [
-   "Humans.Application.Tests",
-   "Humans.Application"
-  ],
-  [
-   "Humans.Application.Tests",
-   "Humans.Infrastructure"
-  ],
-  [
-   "Humans.Application.Tests",
-   "Humans.Web"
-  ],
-  [
-   "Humans.Domain.Tests",
-   "Humans.Domain"
-  ],
-  [
-   "Humans.Infrastructure",
-   "Humans.Application"
-  ],
-  [
-   "Humans.Integration.Tests",
-   "Humans.Web"
-  ],
-  [
-   "Humans.Web",
-   "Humans.Infrastructure"
-  ],
-  [
-   "Humans.Web.Tests",
-   "Humans.Web"
-  ]
- ],
- "solution": {
-  "app_classes": 2215,
-  "app_controllers": 89,
-  "app_cs_code": 122898,
-  "app_cs_comment": 25893,
-  "app_cs_lines": 171214,
-  "app_cshtml_lines": 47352,
-  "app_dbsets": 106,
-  "app_entities": 107,
-  "app_files": 1918,
-  "app_interfaces": 234,
-  "app_js_lines": 4338,
-  "app_lines": 259249,
-  "app_resx_keys": 2625,
-  "app_resx_lines": 36345,
-  "app_views": 400,
-  "assemblies": 5,
-  "commits": 1937,
-  "edges": 9,
-  "md_lines": 81836,
-  "migration_lines": 552207,
-  "test_classes": 848,
-  "test_controllers": 0,
-  "test_cs_code": 0,
-  "test_cs_comment": 0,
-  "test_cs_lines": 118716,
-  "test_cshtml_lines": 0,
-  "test_dbsets": 9,
-  "test_entities": 13,
-  "test_files": 500,
-  "test_interfaces": 93,
-  "test_js_lines": 0,
-  "test_lines": 118716,
-  "test_projects": 6,
-  "test_resx_keys": 0,
-  "test_resx_lines": 0,
-  "test_views": 0
- }
+"assemblies":{
+"Humans.Analyzers":{
+"classes":34,
+"cs_code":3400,
+"cs_comment":552,
+"cs_lines":4647,
+"dbsets":2,
+"fan_in":0,
+"fan_out":0,
+"files":32,
+"interfaces":0,
+"is_test":0,
+"lines":4647
+},
+"Humans.Analyzers.Tests":{
+"classes":294,
+"cs_lines":6495,
+"dbsets":9,
+"fan_in":0,
+"fan_out":0,
+"files":26,
+"interfaces":93,
+"is_test":1,
+"lines":6495
+},
+"Humans.Application":{
+"classes":871,
+"cs_code":46759,
+"cs_comment":14617,
+"cs_lines":70173,
+"dbsets":0,
+"fan_in":2,
+"fan_out":1,
+"files":545,
+"interfaces":231,
+"is_test":0,
+"lines":70173
+},
+"Humans.Application.Tests":{
+"classes":421,
+"cs_lines":92979,
+"dbsets":0,
+"entities":1,
+"fan_in":0,
+"fan_out":3,
+"files":356,
+"interfaces":0,
+"is_test":1,
+"lines":92979
+},
+"Humans.Domain":{
+"classes":139,
+"cs_code":3825,
+"cs_comment":3283,
+"cs_lines":8502,
+"dbsets":0,
+"entities":107,
+"fan_in":2,
+"fan_out":0,
+"files":224,
+"interfaces":0,
+"is_test":0,
+"lines":8502
+},
+"Humans.Domain.Tests":{
+"classes":23,
+"cs_lines":2251,
+"dbsets":0,
+"entities":12,
+"fan_in":0,
+"fan_out":1,
+"files":23,
+"interfaces":0,
+"is_test":1,
+"lines":2251
+},
+"Humans.Infrastructure":{
+"classes":317,
+"cs_code":29026,
+"cs_comment":3313,
+"cs_lines":37320,
+"dbsets":104,
+"fan_in":2,
+"fan_out":1,
+"files":272,
+"interfaces":1,
+"is_test":0,
+"lines":37320,
+"migration_lines":552207
+},
+"Humans.Integration.Tests":{
+"classes":40,
+"cs_lines":7007,
+"dbsets":0,
+"fan_in":0,
+"fan_out":1,
+"files":33,
+"interfaces":0,
+"is_test":1,
+"lines":7007
+},
+"Humans.Testing":{
+"classes":5,
+"cs_lines":163,
+"dbsets":0,
+"fan_in":0,
+"fan_out":0,
+"files":4,
+"interfaces":0,
+"is_test":1,
+"lines":163
+},
+"Humans.Web":{
+"classes":854,
+"controllers":89,
+"cs_code":39888,
+"cs_comment":4128,
+"cs_lines":50572,
+"cshtml_lines":47352,
+"dbsets":0,
+"fan_in":3,
+"fan_out":1,
+"files":845,
+"interfaces":2,
+"is_test":0,
+"js_lines":4338,
+"lines":138607,
+"resx_keys":2625,
+"resx_lines":36345,
+"views":400
+},
+"Humans.Web.Tests":{
+"classes":65,
+"cs_lines":9821,
+"dbsets":0,
+"fan_in":0,
+"fan_out":1,
+"files":58,
+"interfaces":0,
+"is_test":1,
+"lines":9821
+}
+},
+"collector_version":1,
+"commit":"08bec6755",
+"date":"2026-07-14",
+"edges":[
+[
+"Humans.Analyzers.Tests",
+"Humans.Analyzers"
+],
+[
+"Humans.Application",
+"Humans.Domain"
+],
+[
+"Humans.Application.Tests",
+"Humans.Application"
+],
+[
+"Humans.Application.Tests",
+"Humans.Infrastructure"
+],
+[
+"Humans.Application.Tests",
+"Humans.Web"
+],
+[
+"Humans.Domain.Tests",
+"Humans.Domain"
+],
+[
+"Humans.Infrastructure",
+"Humans.Application"
+],
+[
+"Humans.Integration.Tests",
+"Humans.Web"
+],
+[
+"Humans.Web",
+"Humans.Infrastructure"
+],
+[
+"Humans.Web.Tests",
+"Humans.Web"
+]
+],
+"solution":{
+"app_classes":2215,
+"app_controllers":89,
+"app_cs_code":122898,
+"app_cs_comment":25893,
+"app_cs_lines":171214,
+"app_cshtml_lines":47352,
+"app_dbsets":106,
+"app_entities":107,
+"app_files":1918,
+"app_interfaces":234,
+"app_js_lines":4338,
+"app_lines":259249,
+"app_resx_keys":2625,
+"app_resx_lines":36345,
+"app_views":400,
+"assemblies":5,
+"commits":1937,
+"edges":9,
+"md_lines":81836,
+"migration_lines":552207,
+"test_classes":848,
+"test_controllers":0,
+"test_cs_code":0,
+"test_cs_comment":0,
+"test_cs_lines":118716,
+"test_cshtml_lines":0,
+"test_dbsets":9,
+"test_entities":13,
+"test_files":500,
+"test_interfaces":93,
+"test_js_lines":0,
+"test_lines":118716,
+"test_projects":6,
+"test_resx_keys":0,
+"test_resx_lines":0,
+"test_views":0
+}
 }
