@@ -13,8 +13,9 @@ Per day, in order; a step that fails marks the record and stops the day:
   3. snapshot   reforge snapshot --by-assembly --format json --coverage <merged>
                 with --count-tokens when ANTHROPIC_API_KEY is set, sharing the
                 token cache at data/reforge/token-cache.txt
-  4. surface    reforge surface-score --format json, kept slim: totals, byRule,
-                per-section totals and the section edges
+  4. surface    reforge surface-score --format json, kept slim: solution totals,
+                byRule and the section edges, the only figures the by-assembly
+                rows lack (this pass goes away once snapshot emits them)
 
 The whole history scores under reforge's default config: any
 reforge.surface-score.json in the tree is removed before the run, so
@@ -88,9 +89,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
         if p.returncode: rec['surface_error'] = p.stderr[-2000:]; return rec
         j = json.loads(p.stdout)
         rec['surface'] = dict(total=j.get('total'), surface=j.get('surfaceTotal'), internal=j.get('implementationShapeTotal'), testTotal=j.get('testTotal'),
-                              byRule=j.get('byRule'),
-                              groups=[dict(name=g.get('name'), surface=g.get('surfaceTotal'), internal=g.get('implementationShapeTotal'), total=g.get('total'),
-                                           census=g.get('surface'), tests=g.get('tests')) for g in j.get('groups', [])])
+                              byRule=j.get('byRule'))   # per-section figures live in the by-assembly rows; this pass only adds totals, byRule and edges
         rec['edges'] = j.get('edges')
         return rec
     finally:
