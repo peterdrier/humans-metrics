@@ -92,7 +92,7 @@ for d in reforge_days:
     secs = {}
     for r in d['rows']:
         secs[r['section']] = {k: r.get(v) for k, v in SEC_KEYS.items()}
-    sec_days.append({'date': d['date'], 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'config': d.get('config_hash'),
+    sec_days.append({'date': d['date'], 'testSeconds': (d.get('tests') or {}).get('seconds'), 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'config': d.get('config_hash'),
                      'build': d.get('build'), 'tests': (d.get('tests') or {}).get('exit'), 'seconds': d.get('seconds'),
                      'total': (d.get('surface') or {}).get('total'), 'edges': len(d.get('edges') or []),
                      'byRule': (d.get('surface') or {}).get('byRule'), 'sections': secs})
@@ -107,7 +107,7 @@ for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
     surface, by_rule, sem = j.get('groups', []), j.get('byRule', []), j.get('semDeps')
 
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
-     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'secFailed': sec_failed, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
+     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
      'generated': days[-1]['date']}
 tmpl = open(os.path.join(ROOT, 'site', 'template.html')).read()
 out = tmpl.replace('__DATA__', json.dumps(D, separators=(',', ':')))

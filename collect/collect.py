@@ -15,7 +15,7 @@ nothing else, so a series can be redone a week at a time (say, with a newer refo
 Every file names the commit and tool version it was measured with. File-based metrics (lines, files, edges,
 resx keys, cloc comment split) need no build; only the reforge producer does.
 """
-import argparse, csv, datetime as dt, json, os, re, shutil, subprocess, sys, tempfile, collections
+import argparse, csv, datetime as dt, json, os, re, shutil, subprocess, sys, tempfile, time, collections
 
 COLLECTOR_VERSION = 1
 
@@ -189,8 +189,9 @@ def main():
     for i, (d, sha) in enumerate(days.items(), 1):
         note = ''
         if not a.reforge_only:
+            t0 = time.time()
             sol, A, E = collect_day(a.repo, sha, cloc)
-            rec = {'date': d, 'commit': sha[:9], 'collector_version': COLLECTOR_VERSION,
+            rec = {'date': d, 'commit': sha[:9], 'collector_version': COLLECTOR_VERSION, 'seconds': round(time.time() - t0),
                    'solution': dict(sol), 'assemblies': {k: dict(v) for k, v in sorted(A.items())}, 'edges': sorted(E)}
             write(os.path.join(stats_dir, f'{d}.json'), rec)
             note += f' assemblies={len(A)} edges={len(E)}'

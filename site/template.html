@@ -220,6 +220,9 @@ th{color:var(--fg-3);font-weight:500;position:sticky;top:0;background:var(--surf
     <div class="panel xtall"><h3>Coverage by assembly, latest day</h3><p class="why">Line coverage per assembly, sorted. Grey is unmeasured.</p><div class="ph"><canvas id="as-today-cov"></canvas></div></div>
     <div class="panel xtall"><h3>Test ratio by assembly, latest day</h3><p class="why">Test tokens over production tokens.</p><div class="ph"><canvas id="as-today-ratio"></canvas></div></div>
   </div>
+  <div class="grid">
+    <div class="panel"><h3>Collection cost per day</h3><p class="why">Wall-clock seconds to measure one day, by step: build, tests, reforge snapshot, reforge surface-score, and the file-based stats collector. Grows with the tree, so this is the price of every column above. Log scale.</p><div class="ph"><canvas id="as-cost"></canvas></div><div class="legend" id="l-as-cost"></div></div>
+  </div>
   <div class="note" id="as-failed"></div>
 </section>
 
@@ -424,7 +427,7 @@ function renderAssembly(){
   const Dd=D.secDays; if(!Dd||!Dd.length) return;
   const names=[...new Set(Dd.flatMap(d=>Object.keys(d.sections)))].sort((a,b)=>a==='(solution)'?-1:b==='(solution)'?1:a.localeCompare(b));
   const sel=document.getElementById('as-pick');
-  if(!sel.options.length){ names.forEach(n=>{const o=document.createElement('option'); o.value=o.textContent=n; sel.appendChild(o);}); sel.value=asPick||'(solution)'; sel.addEventListener('change',()=>{asPick=sel.value; renderAssembly();}); }
+  if(!sel.options.length){ names.forEach(n=>{const o=document.createElement('option'); o.value=o.textContent=n; sel.appendChild(o);}); const h=new URLSearchParams(location.hash.replace(/^#/,'')).get('assembly'); sel.value=asPick||(h&&names.includes(h)?h:'(solution)'); sel.addEventListener('change',()=>{asPick=sel.value; history.replaceState(null,'','#assembly='+encodeURIComponent(asPick)); renderAssembly();}); }
   const pick=sel.value||'(solution)';
   const days=Dd.filter(d=>inRange(d.date)), L=days.map(d=>d.date), g=k=>days.map(d=>(d.sections[pick]||{})[k]??null);
   const last=Dd[Dd.length-1];
@@ -443,6 +446,8 @@ function renderAssembly(){
   bars('as-today-cov', byCov.map(x=>x[0]), [{label:'Coverage %', data:byCov.map(x=>x[1].cov??0), colors:byCov.map(x=>x[1].cov==null?t.fg3:t.s[2])}], {horizontal:true});
   const byRatio=[...secs].sort((a,b)=>(b[1].testRatio||0)-(a[1].testRatio||0));
   bars('as-today-ratio', byRatio.map(x=>x[0]), [{label:'Test / prod tokens', data:byRatio.map(x=>x[1].testRatio), colors:t.s[1]}], {horizontal:true});
+  const sc=Object.fromEntries((D.statsSeconds||[]).filter(x=>x[1]!=null));
+  line('as-cost', L, [{label:'Build', data:days.map(d=>d.seconds?.build??null), slot:0},{label:'Tests', data:days.map(d=>d.testSeconds??null), slot:1},{label:'Snapshot', data:days.map(d=>d.seconds?.snapshot??null), slot:2},{label:'Surface-score', data:days.map(d=>d.seconds?.surface??null), slot:4},{label:'Stats collector', data:days.map(d=>sc[d.date]??null), slot:3}], {log:true});
   const f=D.secFailed||[]; document.getElementById('as-failed').textContent = f.length? `Days without a row: ${f.map(x=>`${x.date} (${x.build})`).join(', ')}` : 'Every attempted day produced rows.';
 }
 function addDays(d,n){const x=new Date(d+'T00:00:00Z'); x.setUTCDate(x.getUTCDate()+n); return x.toISOString().slice(0,10);}
