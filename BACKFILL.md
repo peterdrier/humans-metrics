@@ -3,7 +3,7 @@
 One session per date range, newest first, any number in parallel. Each session:
 
 ```bash
-git clone https://github.com/peterdrier/Humans ../Humans          # full history (not shallow)
+ls ../Humans || git clone https://github.com/peterdrier/Humans ../Humans   # the Humans Stats project checks it out; full history, not shallow
 dotnet tool update --global Reforge                                # latest; every record names the version it was scored with
 dotnet tool install --global dotnet-coverage
 export PATH="$HOME/.dotnet/tools:$PATH"                            # ANTHROPIC_API_KEY comes from the environment
