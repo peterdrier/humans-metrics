@@ -77,6 +77,28 @@ for p_ in sorted(glob.glob(os.path.join(ROOT, 'data', 'git', '*.json'))):
 prs = [json.load(open(p_)) for p_ in sorted(glob.glob(os.path.join(ROOT, 'data', 'prs', '20*.json')))]
 acts = [json.load(open(p_)) for p_ in sorted(glob.glob(os.path.join(ROOT, 'data', 'actions', '*.json')))]
 
+# --- reforge 0.31 day records (collect/reforgehist.py): per-section rows, totals, edges
+SEC_KEYS = {'loc': 'locProd', 'files': 'files', 'classes': 'classes', 'ifaces': 'interfaces', 'methods': 'methods',
+            'cog': 'cognitiveAvg', 'cogMax': 'cognitiveMax', 'maxClass': 'maxClassLoc',
+            'expTypes': 'exportedTypes', 'expRead': 'exportedReadMethods', 'expWrite': 'exportedWriteMethods',
+            'expUnused': 'exportedMethodsUnusedExternally', 'intTypes': 'internalTypes',
+            'tokens': 'tokensProd', 'tokSrc': 'tokensProdSource', 'score': 'scoreTotal', 'surf': 'scoreSurface', 'impl': 'scoreImplementation',
+            'sizeCharge': 'sectionSizeCharge', 'classCharge': 'classSizeCharge',
+            'testScore': 'testScore', 'testLoc': 'testLoc', 'testMethods': 'testMethods', 'testTokens': 'tokensTests', 'testRatio': 'testTokenRatio',
+            'covLines': 'coverageTotal', 'cov': 'coveragePercent'}
+sec_days = []
+for d in reforge_days:
+    if not d.get('rows'): continue
+    secs = {}
+    for r in d['rows']:
+        secs[r['section']] = {k: r.get(v) for k, v in SEC_KEYS.items()}
+    sec_days.append({'date': d['date'], 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'config': d.get('config_hash'),
+                     'build': d.get('build'), 'tests': (d.get('tests') or {}).get('exit'), 'seconds': d.get('seconds'),
+                     'total': (d.get('surface') or {}).get('total'), 'edges': len(d.get('edges') or []),
+                     'byRule': (d.get('surface') or {}).get('byRule'), 'sections': secs})
+sec_failed = [{'date': d['date'], 'commit': d['commit'][:9], 'build': d.get('build'), 'err': (d.get('build_error') or d.get('snapshot_error') or d.get('surface_error') or '')[-300:]}
+              for d in reforge_days if not d.get('rows')]
+
 # --- surface-score runs (slim per-run files under data/surface/)
 runs, surface, by_rule, sem = [], [], [], None
 for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
@@ -85,10 +107,10 @@ for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
     surface, by_rule, sem = j.get('groups', []), j.get('byRule', []), j.get('semDeps')
 
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
-     'git': gitd, 'prs': prs, 'actions': acts, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
+     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'secFailed': sec_failed, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
      'generated': days[-1]['date']}
 tmpl = open(os.path.join(ROOT, 'site', 'template.html')).read()
 out = tmpl.replace('__DATA__', json.dumps(D, separators=(',', ':')))
 os.makedirs(os.path.join(ROOT, 'docs'), exist_ok=True)
 open(os.path.join(ROOT, 'docs', 'index.html'), 'w').write(out)
-print(f'docs/index.html: {len(out)//1024} KB, {len(stats)} days, {len(ref)} snapshot rows, {len(modules)} module checkpoints, {len(runs)} surface runs')
+print(f'docs/index.html: {len(out)//1024} KB, {len(stats)} days, {len(ref)} snapshot rows, {len(modules)} module checkpoints, {len(runs)} surface runs, {len(sec_days)} per-assembly days')

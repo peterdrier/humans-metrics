@@ -205,6 +205,24 @@ th{color:var(--fg-3);font-weight:500;position:sticky;top:0;background:var(--surf
   </div>
 </section>
 
+<section class="block" id="assembly">
+  <h2>Per assembly (reforge 0.31)</h2>
+  <p class="sub">One row per assembly per day from <code>reforge snapshot --by-assembly</code>, scored under reforge's default config over the whole history (config hash <span id="as-config"></span>). Each day builds the tree, runs the unit tests with coverage, then scores. Days that did not build are listed at the end and have no row.</p>
+  <p class="sub"><label>Assembly <select id="as-pick"></select></label> <span id="as-meta"></span></p>
+  <div class="grid">
+    <div class="panel"><h3>Score</h3><p class="why">Surface (blue) and implementation (orange) score of the chosen assembly; solution total when (solution) is picked.</p><div class="ph"><canvas id="as-score"></canvas></div><div class="legend" id="l-as-score"></div></div>
+    <div class="panel"><h3>Size</h3><p class="why">Production lines and test lines. Log scale.</p><div class="ph"><canvas id="as-size"></canvas></div><div class="legend" id="l-as-size"></div></div>
+    <div class="panel"><h3>Coverage</h3><p class="why">Line coverage from the unit suite, integration tests excluded.</p><div class="ph"><canvas id="as-cov"></canvas></div></div>
+    <div class="panel"><h3>Exported surface</h3><p class="why">Exported read and write methods, and exported methods nothing else uses.</p><div class="ph"><canvas id="as-exp"></canvas></div><div class="legend" id="l-as-exp"></div></div>
+    <div class="panel"><h3>Tokens</h3><p class="why">Claude tokens of production and test files, exact where counted, estimated otherwise. Log scale.</p><div class="ph"><canvas id="as-tok"></canvas></div><div class="legend" id="l-as-tok"></div></div>
+    <div class="panel"><h3>Complexity</h3><p class="why">Average and max cognitive complexity per method.</p><div class="ph"><canvas id="as-cog"></canvas></div><div class="legend" id="l-as-cog"></div></div>
+    <div class="panel xtall"><h3>Score by assembly, latest day</h3><p class="why">Total score per assembly, sorted.</p><div class="ph"><canvas id="as-today-score"></canvas></div></div>
+    <div class="panel xtall"><h3>Coverage by assembly, latest day</h3><p class="why">Line coverage per assembly, sorted. Grey is unmeasured.</p><div class="ph"><canvas id="as-today-cov"></canvas></div></div>
+    <div class="panel xtall"><h3>Test ratio by assembly, latest day</h3><p class="why">Test tokens over production tokens.</p><div class="ph"><canvas id="as-today-ratio"></canvas></div></div>
+  </div>
+  <div class="note" id="as-failed"></div>
+</section>
+
 <section class="block" id="surface">
   <h2>Reforge surface score</h2>
   <p class="sub">The newer measurement system. Three archived runs (2026-08-16, 2026-10-21, 2026-10-29). Totals per run are in the first panel; the per-section and per-rule views are the latest run.</p>
@@ -329,7 +347,7 @@ function render(){
   line('d-density', ML, [{label:'Density', data:DS.map(d=>d&&d.density), slot:4}], {yfmt:pct});
   line('d-fanout', ML, [{label:'Avg fan-out', data:DS.map(d=>d&&d.avgFanOut), slot:0},{label:'Max fan-out', data:DS.map(d=>d&&d.maxFanOut), extra:DS.map(d=>d&&d.maxFanOutNode), slot:1}]);
   line('d-fanin', ML, [{label:'Max fan-in', data:DS.map(d=>d&&d.maxFanIn), extra:DS.map(d=>d&&d.maxFanInNode), slot:4}]);
-  renderLanes(); renderFlow(); renderCI();
+  renderLanes(); renderFlow(); renderCI(); renderAssembly();
   line('m-gini', ML, [{label:'Gini', data:M.map(m=>gini(sizes(m).map(x=>x[1]))), slot:4}], {y:{max:1}});
 }
 
@@ -399,6 +417,33 @@ function renderCI(){
   line('a-wf', L, top.map((k,j)=>({label:k, data:idx.map(i=>win(i,7).reduce((a,p)=>a+((p.workflows[k]||{}).runs||0),0)), slot:j%5})), {log:true});
   line('a-build', L, [{label:'Build and Test, min', data:idx.map(i=>{const w=win(i,7).map(p=>p.workflows['Build and Test']).filter(Boolean); const n=w.reduce((a,x)=>a+x.runs,0); return n? w.reduce((a,x)=>a+x.duration_s,0)/n/60 : null;}), slot:0}]);
   line('a-rerun', L, [{label:'Re-runs / 7 days', data:idx.map(i=>win(i,7).reduce((a,p)=>a+p.reruns,0)), slot:1}]);
+}
+
+let asPick=null;
+function renderAssembly(){
+  const Dd=D.secDays; if(!Dd||!Dd.length) return;
+  const names=[...new Set(Dd.flatMap(d=>Object.keys(d.sections)))].sort((a,b)=>a==='(solution)'?-1:b==='(solution)'?1:a.localeCompare(b));
+  const sel=document.getElementById('as-pick');
+  if(!sel.options.length){ names.forEach(n=>{const o=document.createElement('option'); o.value=o.textContent=n; sel.appendChild(o);}); sel.value=asPick||'(solution)'; sel.addEventListener('change',()=>{asPick=sel.value; renderAssembly();}); }
+  const pick=sel.value||'(solution)';
+  const days=Dd.filter(d=>inRange(d.date)), L=days.map(d=>d.date), g=k=>days.map(d=>(d.sections[pick]||{})[k]??null);
+  const last=Dd[Dd.length-1];
+  document.getElementById('as-config').textContent=last.config||'?';
+  document.getElementById('as-meta').textContent=`${Dd.length} days scored, latest ${last.date} at ${last.commit}, reforge ${last.version}, run ${last.seconds?.total||'?'} s`;
+  line('as-score', L, [{label:'Surface', data:g('surf'), slot:0},{label:'Implementation', data:g('impl'), slot:1},{label:'Total', data:g('score'), slot:4}]);
+  line('as-size', L, [{label:'Production lines', data:g('loc'), slot:0},{label:'Test lines', data:g('testLoc'), slot:1}], {log:true});
+  line('as-cov', L, [{label:'Coverage %', data:g('cov'), slot:2}], {y:{max:100}});
+  line('as-exp', L, [{label:'Exported read', data:g('expRead'), slot:0},{label:'Exported write', data:g('expWrite'), slot:1},{label:'Unused externally', data:g('expUnused'), slot:4}]);
+  line('as-tok', L, [{label:'Production tokens', data:g('tokens'), slot:0},{label:'Test tokens', data:g('testTokens'), slot:1}], {log:true});
+  line('as-cog', L, [{label:'Avg cognitive', data:g('cog'), slot:0},{label:'Max cognitive', data:g('cogMax'), slot:1}], {log:true});
+  const t=theme(); const secs=Object.entries(last.sections).filter(([n])=>n!=='(solution)');
+  const byScore=[...secs].sort((a,b)=>(b[1].score||0)-(a[1].score||0));
+  bars('as-today-score', byScore.map(x=>x[0]), [{label:'Score', data:byScore.map(x=>x[1].score), colors:t.s[0]}], {horizontal:true});
+  const byCov=[...secs].sort((a,b)=>(b[1].cov??-1)-(a[1].cov??-1));
+  bars('as-today-cov', byCov.map(x=>x[0]), [{label:'Coverage %', data:byCov.map(x=>x[1].cov??0), colors:byCov.map(x=>x[1].cov==null?t.fg3:t.s[2])}], {horizontal:true});
+  const byRatio=[...secs].sort((a,b)=>(b[1].testRatio||0)-(a[1].testRatio||0));
+  bars('as-today-ratio', byRatio.map(x=>x[0]), [{label:'Test / prod tokens', data:byRatio.map(x=>x[1].testRatio), colors:t.s[1]}], {horizontal:true});
+  const f=D.secFailed||[]; document.getElementById('as-failed').textContent = f.length? `Days without a row: ${f.map(x=>`${x.date} (${x.build})`).join(', ')}` : 'Every attempted day produced rows.';
 }
 function addDays(d,n){const x=new Date(d+'T00:00:00Z'); x.setUTCDate(x.getUTCDate()+n); return x.toISOString().slice(0,10);}
 function renderStatic(){

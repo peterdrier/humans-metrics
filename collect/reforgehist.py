@@ -15,7 +15,8 @@ Per day, in order; a step that fails marks the record and stops the day:
 
 The whole history scores under reforge's default config: any
 reforge.surface-score.json in the tree is removed before the run, so
-config_hash is constant across the series.
+config_hash is constant across the series. global.json is removed too so
+the installed SDK builds every tree (recorded as sdk_override).
 
 Record: {date, commit, collector_version, reforge_version, config_hash, build,
 tests: {exit, failed, seconds}, rows: [by-assembly rows], surface: {total,
@@ -47,7 +48,10 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key):
         for f in glob.glob(os.path.join(tree, '**', 'reforge.surface-score.json'), recursive=True): os.remove(f)
         sln = solution_in(tree)
         if not sln: rec['build'] = 'no solution'; return rec
-        p, s = run(['dotnet', 'build', sln, '-c', 'Release', '-v', 'quiet', '-nologo'], tree, env); rec['seconds']['build'] = s
+        gj = os.path.join(tree, 'global.json')
+        if os.path.exists(gj):   # early trees pin an exact SDK patch with no rollForward; measure with the installed SDK
+            os.remove(gj); rec['sdk_override'] = True
+        p, s = run(['dotnet', 'build', sln, '-c', 'Release', '-v', 'quiet', '-nologo', '-p:NuGetAudit=false'], tree, env); rec['seconds']['build'] = s
         if p.returncode: rec['build'] = 'failed'; rec['build_error'] = (p.stdout + p.stderr)[-2000:]; return rec
         rec['build'] = 'ok'
         cov = None
