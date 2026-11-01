@@ -4,16 +4,21 @@ One session per date range, newest first, any number in parallel. Each session:
 
 ```bash
 ls ../Humans || git clone https://github.com/peterdrier/Humans ../Humans   # the Humans Stats project checks it out; full history, not shallow
-dotnet tool update --global Reforge                                # latest; every record names the version it was scored with
 dotnet tool install --global dotnet-coverage
-export PATH="$HOME/.dotnet/tools:$PATH"                            # ANTHROPIC_API_KEY comes from the environment
-python3 collect/reforgehist.py --repo ../Humans --out data --from 2026-09-01 --to 2026-09-30 --reforge "$HOME/.dotnet/tools/reforge"
+export PATH="$PATH:$HOME/.dotnet/tools"                            # for dotnet-coverage; appended so PATH reforge wins
+ANTHROPIC_API_KEY="$REFORGE_ANTHROPIC_API_KEY" \
+  python3 collect/reforgehist.py --repo ../Humans --out data --from 2026-09-01 --to 2026-09-30
 ```
 
-Always the latest reforge: a release exists because something should be
-measured differently, and the version in each record says which days still
-need a rescore. Pass `--reforge` with the full path: some containers ship an
-older `reforge` in `/usr/local/bin` that wins on PATH.
+Use the `reforge` on PATH: the cloud environment installs the latest release
+at `/usr/local/bin/reforge`, so there is no install step. A release exists
+because something should be measured differently, and every record names the
+version it was scored with (`reforge --version` shows it up front), so the
+page shows which days still need a rescore.
+
+The cloud runner strips `ANTHROPIC_API_KEY` from sessions; the environment
+carries it as `REFORGE_ANTHROPIC_API_KEY`, mapped only for the reforge command
+as above. Never print it.
 
 The driver walks the range newest first, skips days that already have a record,
 and per day: builds (installed SDK, NuGet audit and analyzers off, recorded),
