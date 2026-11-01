@@ -14,6 +14,7 @@ Page: `docs/index.html` (GitHub Pages serves `docs/` from `main`).
 | `data/git/<date>.json` | `collect/gitstats.py` | Per-lane PRs, files, lines; routines; models; author count; commit hour histogram. Lanes from `collect/lanes.yml`. |
 | `data/prs/<date>.json` | `collect/prstats.py` | PRs opened; per lane merged, closed, lines, time-to-merge; bot vs human comments; gate series (Peter on others' PRs). Raw per-PR facts cached in `data/prs/raw.jsonl`, cursor in `cursor.json`. |
 | `data/actions/<date>.json` | `collect/actionstats.py` | Workflow runs by conclusion, event, workflow; wall-clock duration; re-runs. |
+| `data/coverage/YYYY-MM-DD.json` | `collect/coverage.py` via the reforge driver: unit-test line coverage per assembly and class as covered/uncovered line ranges, computed once per Humans commit and reused by every rescore (`--retest` recomputes). |
 | `data/reforge/YYYY-MM-DD.json` | `collect/reforgehist.py`: build, unit tests with coverage, `reforge snapshot --by-assembly` rows (default config, exact tokens when a key is present) and a slim `surface-score` (totals, by rule, by section, edges). `token-cache.txt` beside them is the shared exact-token cache. |
 | `data/surface/<date>-<sha>-reforge<ver>.json` | Slim surface-score reading: totals, points by rule, points by section, service-interface edges. Full JSON stays in a local archive. |
 | `data/seed/reforge-history.csv` | The daily `reforge snapshot` rows carried over from the Humans repo, used until every day has its own snapshot. No reforge version was recorded for these. |

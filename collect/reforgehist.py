@@ -6,7 +6,10 @@ Per day, in order; a step that fails marks the record and stops the day:
   1. build      dotnet build -c Release (a tree that does not build is not usable)
   2. tests      dotnet test under dotnet-coverage (one Cobertura file, no package
                 reference needed, so early trees are covered too), integration
-                suite excluded; failing tests are recorded, not fatal
+                suite excluded; failing tests are recorded, not fatal. The report
+                is reduced to data/coverage/<date>.json (collect/coverage.py) and
+                reused by every later rescore unless --retest is passed, since
+                coverage depends on the Humans commit, not on reforge
   3. snapshot   reforge snapshot --by-assembly --format json --coverage <merged>
                 with --count-tokens when ANTHROPIC_API_KEY is set, sharing the
                 token cache at data/reforge/token-cache.txt
@@ -25,6 +28,7 @@ surface, internal, byRule, groups}, edges: [{from, to, count}], seconds: {...}}
 import argparse, datetime as dt, glob, json, os, shutil, subprocess, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from collect import day_commits, git
+import coverage as covmod
 
 VERSION = 1
 
@@ -37,7 +41,7 @@ def solution_in(tree):
     s = glob.glob(os.path.join(tree, '*.slnx')) or glob.glob(os.path.join(tree, '*.sln'))
     return s[0] if s else None
 
-def collect_day(repo, commit, date, outdir, reforge, tests, key):
+def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
     tree = f'/tmp/rf-{date}'
     if os.path.exists(tree): git(repo, 'worktree', 'remove', '--force', tree)
     git(repo, 'worktree', 'add', '--detach', tree, commit)
@@ -55,12 +59,22 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key):
         if p.returncode: rec['build'] = 'failed'; rec['build_error'] = (p.stdout + p.stderr)[-2000:]; return rec
         rec['build'] = 'ok'
         cov = None
-        if tests:
+        covdir = os.path.join(os.path.dirname(outdir), 'coverage'); os.makedirs(covdir, exist_ok=True)
+        covj = os.path.join(covdir, f'{date}.json')
+        if tests and os.path.exists(covj) and not retest:
+            doc = json.load(open(covj)); rec['tests'] = {**doc['tests'], 'reused': True}
+            cov = os.path.join(tree, 'coverage.cobertura.xml'); covmod.materialize(doc, cov)
+        elif tests:
             covf = os.path.join(tree, 'coverage.cobertura.xml')
             inner = f'dotnet test {sln} --no-build -c Release -v quiet --blame-hang-timeout 5m --filter FullyQualifiedName!~Humans.Integration.Tests'
             p, s = run(['dotnet-coverage', 'collect', '-f', 'cobertura', '-o', covf, inner], tree, env)
             rec['tests'] = dict(exit=p.returncode, seconds=s, summary=next((l.strip() for l in p.stdout.splitlines() if l.startswith('Passed!') or l.startswith('Failed!')), None))
-            if os.path.exists(covf): cov = covf
+            if os.path.exists(covf):
+                cov = covf
+                doc = dict(date=date, commit=commit, tool='dotnet-coverage', tests=rec['tests'],
+                           assemblies=covmod.reduce(covf, keep=lambda n: n.startswith(('Humans', 'Profiles')) and '.Tests' not in n))
+                json.dump(doc, open(covj, 'w'), separators=(',', ':'))
+                rec['tests']['covered'], rec['tests']['lines'] = covmod.totals(doc)
             else: rec['tests']['error'] = (p.stdout + p.stderr)[-1000:]
         cmd = [reforge, 'snapshot', '--solution', sln, '--by-assembly', '--format', 'json']
         if cov: cmd += ['--coverage', cov]
@@ -89,7 +103,7 @@ def main():
     ap.add_argument('--days', nargs='*', help='explicit days instead of a range')
     ap.add_argument('--forward', action='store_true', help='oldest first (default newest first)')
     ap.add_argument('--redo', action='store_true', help='recollect days that already have a record')
-    ap.add_argument('--no-tests', action='store_true'); ap.add_argument('--reforge', default='reforge')
+    ap.add_argument('--no-tests', action='store_true'); ap.add_argument('--retest', action='store_true', help='rerun tests even when data/coverage has the day'); ap.add_argument('--reforge', default='reforge')
     a = ap.parse_args()
     outdir = os.path.join(a.out, 'reforge'); os.makedirs(outdir, exist_ok=True)
     d_to = a.d_to or (dt.date.today() - dt.timedelta(days=1)).isoformat()
@@ -101,7 +115,7 @@ def main():
         path = os.path.join(outdir, f'{d}.json')
         if os.path.exists(path) and not a.redo: continue
         t = time.time()
-        rec = collect_day(a.repo, days[d], d, outdir, a.reforge, not a.no_tests, key)
+        rec = collect_day(a.repo, days[d], d, outdir, a.reforge, not a.no_tests, key, a.retest)
         rec['seconds']['total'] = round(time.time() - t)
         json.dump(rec, open(path, 'w'), separators=(',', ':'))
         print(f"{d} {days[d][:9]} build={rec.get('build')} rows={len(rec.get('rows', []))} tests={rec.get('tests', {}).get('exit')} {rec['seconds']}", file=sys.stderr, flush=True)
