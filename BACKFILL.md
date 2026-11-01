@@ -4,16 +4,16 @@ One session per date range, newest first, any number in parallel. Each session:
 
 ```bash
 git clone https://github.com/peterdrier/Humans ../Humans          # full history (not shallow)
-dotnet tool install --global Reforge --version 0.32.0              # pin; the rows record it
+dotnet tool update --global Reforge                                # latest; every record names the version it was scored with
 dotnet tool install --global dotnet-coverage
 export PATH="$HOME/.dotnet/tools:$PATH"                            # ANTHROPIC_API_KEY comes from the environment
 python3 collect/reforgehist.py --repo ../Humans --out data --from 2026-09-01 --to 2026-09-30 --reforge "$HOME/.dotnet/tools/reforge"
 ```
 
-Keep the pin even though the .Net cloud environment preinstalls the latest
-reforge: parallel sessions started on different days would otherwise score the
-same wave on different versions. Pass `--reforge` with the full path: some
-containers also ship an older `reforge` in `/usr/local/bin` that wins on PATH.
+Always the latest reforge: a release exists because something should be
+measured differently, and the version in each record says which days still
+need a rescore. Pass `--reforge` with the full path: some containers ship an
+older `reforge` in `/usr/local/bin` that wins on PATH.
 
 The driver walks the range newest first, skips days that already have a record,
 and per day: builds (installed SDK, NuGet audit and analyzers off, recorded),
@@ -34,11 +34,11 @@ about 15 min per day in October, mostly build and tests.
 
 ## First session on a new reforge version
 
-Before any bulk fill, rescore the days that already have records with `--redo`
-(coverage and tokens reused), check that `surface`, `edges` and `byRule` are
-still populated in the new records, run `python3 site/build.py`, and push. The
-four seed days are 2026-02-12, 2026-08-07, 2026-08-10 and 2026-10-31; they were
-last scored on 0.31.1.
+Before any bulk fill on a version no record has seen, rescore a few days that
+already have records with `--redo` (coverage and tokens reused), check that
+`surface`, `edges` and `byRule` are still populated, run `python3 site/build.py`,
+and push. Then rescore the rest of the history as time permits; the page's
+provenance chart shows which days lag.
 
 ## Rescoring a range after a reforge release
 
