@@ -48,7 +48,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
     git(repo, 'worktree', 'add', '--detach', tree, commit)
     rec = dict(date=date, commit=commit, collector_version=VERSION, seconds={})
     env = {**os.environ, 'DOTNET_CLI_TELEMETRY_OPTOUT': '1', 'DOTNET_NOLOGO': '1',
-           'REFORGE_TOKEN_CACHE': os.path.join(outdir, 'token-cache.txt')}
+           'REFORGE_TOKEN_CACHE': os.path.abspath(os.path.join(outdir, 'token-cache.txt'))}
     try:
         for f in glob.glob(os.path.join(tree, '**', 'reforge.surface-score.json'), recursive=True): os.remove(f)
         sln = solution_in(tree)
@@ -56,7 +56,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
         gj = os.path.join(tree, 'global.json')
         if os.path.exists(gj):   # early trees pin an exact SDK patch with no rollForward; measure with the installed SDK
             os.remove(gj); rec['sdk_override'] = True
-        p, s = run(['dotnet', 'build', sln, '-c', 'Release', '-v', 'quiet', '-nologo', '-p:NuGetAudit=false', '-p:RunAnalyzers=false']   # audit and analyzers are CI gates on today's clock, not part of the measurement, tree, env); rec['seconds']['build'] = s
+        p, s = run(['dotnet', 'build', sln, '-c', 'Release', '-v', 'quiet', '-nologo', '-p:NuGetAudit=false', '-p:RunAnalyzers=false'], tree, env)   # audit and analyzers are CI gates on today's clock, not part of the measurement; rec['seconds']['build'] = s
         if p.returncode: rec['build'] = 'failed'; rec['build_error'] = (p.stdout + p.stderr)[-2000:]; return rec
         rec['build'] = 'ok'
         cov = None
