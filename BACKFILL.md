@@ -10,8 +10,10 @@ export PATH="$HOME/.dotnet/tools:$PATH"                            # ANTHROPIC_A
 python3 collect/reforgehist.py --repo ../Humans --out data --from 2026-09-01 --to 2026-09-30 --reforge "$HOME/.dotnet/tools/reforge"
 ```
 
-Pass `--reforge` with the full path: cloud containers ship an older `reforge`
-in `/usr/local/bin` that wins on PATH.
+Keep the pin even though the .Net cloud environment preinstalls the latest
+reforge: parallel sessions started on different days would otherwise score the
+same wave on different versions. Pass `--reforge` with the full path: some
+containers also ship an older `reforge` in `/usr/local/bin` that wins on PATH.
 
 The driver walks the range newest first, skips days that already have a record,
 and per day: builds (installed SDK, NuGet audit and analyzers off, recorded),
