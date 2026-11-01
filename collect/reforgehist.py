@@ -7,9 +7,11 @@ Per day, in order; a step that fails marks the record and stops the day:
   2. tests      dotnet test under dotnet-coverage (one Cobertura file, no package
                 reference needed, so early trees are covered too), integration
                 suite excluded; failing tests are recorded, not fatal. The report
-                is reduced to data/coverage/<date>.json (collect/coverage.py) and
-                reused by every later rescore unless --retest is passed, since
-                coverage depends on the Humans commit, not on reforge
+                is reduced to data/coverage/<date>.json (collect/coverage.py,
+                generated code dropped) and that reduced report is what reforge
+                scores, on this run and on every later rescore (reused unless
+                --retest is passed: coverage depends on the Humans commit, not
+                on reforge)
   3. snapshot   reforge snapshot --by-assembly --format json --coverage <merged>
                 with --count-tokens when ANTHROPIC_API_KEY is set, sharing the
                 token cache at data/reforge/token-cache.txt
@@ -23,10 +25,10 @@ config_hash is constant across the series. global.json is removed too so
 the installed SDK builds every tree (recorded as sdk_override).
 
 Record: {date, commit, collector_version, reforge_version, config_hash, build,
-tests: {exit, failed, seconds}, rows: [by-assembly rows], surface: {total,
+tests: {exit, seconds, passed, failed, skipped, covered, lines}, rows: [by-assembly rows], surface: {total,
 surface, internal, byRule, groups}, edges: [{from, to, count}], seconds: {...}}
 """
-import argparse, datetime as dt, glob, json, os, shutil, subprocess, sys, time
+import argparse, collections, datetime as dt, glob, json, os, re, shutil, subprocess, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from collect import day_commits, git
 import coverage as covmod
@@ -70,13 +72,16 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
             covf = os.path.join(tree, 'coverage.cobertura.xml')
             inner = f'dotnet test {sln} --no-build -c Release -v quiet --blame-hang-timeout 5m --filter FullyQualifiedName!~Humans.Integration.Tests'
             p, s = run(['dotnet-coverage', 'collect', '-f', 'cobertura', '-o', covf, inner], tree, env)
-            rec['tests'] = dict(exit=p.returncode, seconds=s, summary=next((l.strip() for l in p.stdout.splitlines() if l.startswith('Passed!') or l.startswith('Failed!')), None))
+            tot = collections.Counter()
+            for l in p.stdout.splitlines():   # one Passed!/Failed! line per test assembly
+                for k, v in re.findall(r'(Failed|Passed|Skipped):\s+(\d+)', l): tot[k.lower()] += int(v)
+            rec['tests'] = dict(exit=p.returncode, seconds=s, **tot)
             if os.path.exists(covf):
-                cov = covf
                 doc = dict(date=date, commit=commit, tool='dotnet-coverage', format=2, tests=rec['tests'],
                            assemblies=covmod.reduce(covf, keep=lambda n: n.startswith(('Humans', 'Profiles')) and '.Tests' not in n))
-                json.dump(doc, open(covj, 'w'), separators=(',', ':'))
                 rec['tests']['covered'], rec['tests']['lines'] = covmod.totals(doc)
+                json.dump(doc, open(covj, 'w'), separators=(',', ':'))
+                cov = os.path.join(tree, 'coverage.reduced.xml'); covmod.materialize(doc, cov)   # score the same reduced report a rescore will reuse
             else: rec['tests']['error'] = (p.stdout + p.stderr)[-1000:]
         cmd = [reforge, 'snapshot', '--solution', sln, '--by-assembly', '--format', 'json']
         if cov: cmd += ['--coverage', cov]
