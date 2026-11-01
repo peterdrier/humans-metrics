@@ -8,13 +8,10 @@ on:
       from:
         description: 'First day to (re)collect, YYYY-MM-DD (default: day after the last record)'
         required: false
-      reforge:
-        description: 'Also run reforge snapshot (builds the tree per day)'
-        type: boolean
-        default: false
 
 permissions:
   contents: write
+  id-token: write   # OIDC, exchanged for a spend-capped Anthropic token (exact token counts)
 
 concurrency:
   group: weekly-collection
@@ -32,14 +29,43 @@ jobs:
       - name: Tools
         run: sudo apt-get install -y -q cloc
 
-      - name: .NET and reforge
-        if: ${{ inputs.reforge }}
+      - name: .NET
         uses: actions/setup-dotnet@v4
         with:
           global-json-file: ../Humans/global.json
-      - name: Install reforge
-        if: ${{ inputs.reforge }}
-        run: dotnet tool install --global Reforge
+      - name: Install reforge and dotnet-coverage
+        run: |
+          dotnet tool install --global Reforge --version ${{ vars.REFORGE_VERSION || '0.31.0' }}
+          dotnet tool install --global dotnet-coverage
+
+      - name: Fetch GitHub OIDC token
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const token = await core.getIDToken('https://api.anthropic.com');
+            core.setSecret(token);
+            core.exportVariable('JWT', token);
+      - name: Exchange for an Anthropic access token
+        run: |
+          set -euo pipefail
+          RESP=$(curl -sS https://api.anthropic.com/v1/oauth/token \
+            -H "content-type: application/json" \
+            --data @- <<JSON
+          {
+            "grant_type": "urn:ietf:params:oauth:grant-type:jwt-bearer",
+            "assertion": "$JWT",
+            "federation_rule_id": "fdrl_01Kmh1ecpq4ZWWcaVGKZWupt",
+            "organization_id": "e424877b-343d-4f95-b2e8-b2323c1dea15",
+            "service_account_id": "svac_011WneCr5ocod9kpZYjt6U5z",
+            "workspace_id": "wrkspc_01MPUXHWxrSg7iYRa9wKMPSx"
+          }
+          JSON
+          )
+          echo "$RESP" | jq 'with_entries(if (.key | test("token$")) then .value = "<redacted>" else . end)'
+          KEY=$(echo "$RESP" | jq -r '.access_token // empty')
+          if [ -z "$KEY" ]; then echo "no access token in response; tokens will be estimated"; exit 0; fi
+          echo "::add-mask::$KEY"
+          echo "ANTHROPIC_API_KEY=$KEY" >> "$GITHUB_ENV"
 
       - name: Collect
         env:
@@ -48,11 +74,12 @@ jobs:
           set -euo pipefail
           ARGS="--repo ../Humans --out data"
           if [ -n "${{ inputs.from }}" ]; then ARGS="$ARGS --from ${{ inputs.from }}"; fi
-          if [ "${{ inputs.reforge }}" = "true" ]; then ARGS="$ARGS --reforge"; fi
           python3 collect/collect.py $ARGS
           python3 collect/gitstats.py --repo ../Humans --out data
           python3 collect/prstats.py --repo ../Humans --out data
           python3 collect/actionstats.py --out data
+          export PATH="$HOME/.dotnet/tools:$PATH"
+          python3 collect/reforgehist.py --repo ../Humans --out data --forward
 
       - name: Build page
         run: python3 site/build.py
