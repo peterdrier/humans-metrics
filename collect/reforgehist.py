@@ -73,7 +73,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
             rec['tests'] = dict(exit=p.returncode, seconds=s, summary=next((l.strip() for l in p.stdout.splitlines() if l.startswith('Passed!') or l.startswith('Failed!')), None))
             if os.path.exists(covf):
                 cov = covf
-                doc = dict(date=date, commit=commit, tool='dotnet-coverage', tests=rec['tests'],
+                doc = dict(date=date, commit=commit, tool='dotnet-coverage', format=2, tests=rec['tests'],
                            assemblies=covmod.reduce(covf, keep=lambda n: n.startswith(('Humans', 'Profiles')) and '.Tests' not in n))
                 json.dump(doc, open(covj, 'w'), separators=(',', ':'))
                 rec['tests']['covered'], rec['tests']['lines'] = covmod.totals(doc)
