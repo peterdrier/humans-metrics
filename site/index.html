@@ -148,7 +148,7 @@
 </section>
 
 <section class="block" id="assembly">
-  <h2>Per assembly (reforge 0.31)</h2>
+  <h2>Per assembly (reforge)</h2>
   <p class="sub">One row per assembly per day from <code>reforge snapshot --by-assembly</code>, scored under reforge's default config over the whole history (config hash <span id="as-config"></span>). Each day builds the tree, runs the unit tests with coverage, then scores. Days that did not build are listed at the end and have no row.</p>
   <p class="sub"><label>Assembly <select id="as-pick"></select></label> <span id="as-meta"></span></p>
   <div class="grid">
@@ -163,7 +163,7 @@
     <div class="panel xtall"><h3>Test ratio by assembly, latest day</h3><p class="why">Test tokens over production tokens.</p><div class="ph"><canvas id="as-today-ratio"></canvas></div></div>
   </div>
   <div class="grid">
-    <div class="panel"><h3>Measurement provenance</h3><p class="why">Reforge version used for each day, stepped. Hover for the config hash, token source (exact or estimate) and whether the SDK pin was overridden. A step here explains a step anywhere above.</p><div class="ph"><canvas id="as-prov"></canvas></div></div>
+    <div class="panel"><h3>Measurement provenance</h3><p class="why">Reforge version used for each day, stepped, with the date ranges per version below. Hover for the config hash, token source (exact or estimate) and whether the SDK pin was overridden. A step here explains a step anywhere above.</p><div class="ph"><canvas id="as-prov"></canvas></div><div class="tbl" id="as-versions"></div></div>
     <div class="panel"><h3>Collection cost per day</h3><p class="why">Wall-clock seconds to measure one day, by step: build, tests, reforge snapshot, reforge surface-score, and the file-based stats collector. Grows with the tree, so this is the price of every column above. Log scale.</p><div class="ph"><canvas id="as-cost"></canvas></div><div class="legend" id="l-as-cost"></div></div>
   </div>
   <div class="note" id="as-failed"></div>

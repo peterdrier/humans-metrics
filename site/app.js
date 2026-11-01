@@ -194,7 +194,11 @@ function renderAssembly(){
   const byRatio=[...secs].sort((a,b)=>(b[1].testRatio||0)-(a[1].testRatio||0));
   bars('as-today-ratio', byRatio.map(x=>x[0]), [{label:'Test / prod tokens', data:byRatio.map(x=>x[1].testRatio), colors:t.s[1]}], {horizontal:true});
   const vers=[...new Set(Dd.map(d=>d.version||'?'))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}));
-  line('as-prov', L, [{label:'Reforge', data:days.map(d=>vers.indexOf(d.version||'?')), extra:days.map(d=>`${d.version||'?'}  config ${d.config||'?'}  tokens ${d.tokSrc||'?'}${d.sdk?'  sdk override':''}`), slot:4, stepped:true}], {yfmt:v=>vers[Math.round(v)]??'', y:{min:-0.5, max:vers.length-0.5, ticks:{stepSize:1}}});
+  line('as-prov', L, [{label:'Reforge', data:days.map(d=>vers.indexOf(d.version||'?')), extra:days.map(d=>`${d.version||'?'}  config ${d.config||'?'}  tokens ${d.tokSrc||'?'}${d.sdk?'  sdk override':''}`), slot:4, stepped:true}], {yfmt:v=>vers[Math.round(v)]??'', y:{min:-0.5, max:vers.length-0.5, ticks:{stepSize:1, color:t.fg3, callback:v=>Number.isInteger(v)?vers[v]:''}}});
+  // Version runs over every collected day, so gaps (not yet rescored) show as their own rows.
+  const verOf=Object.fromEntries([...(D.secFailed||[]),...Dd].map(d=>[d.date,(d.version||'?')+(d.build==='failed'?' (build failed)':'')]));
+  const vr=[]; for(const date of [...new Set([...D.stats.map(r=>r[0]),...Object.keys(verOf)])].sort()){ const v=verOf[date]||'not scored per day yet'; const r=vr[vr.length-1]; if(r&&r.v===v){r.to=date;r.n++;} else vr.push({v,from:date,to:date,n:1}); }
+  document.getElementById('as-versions').innerHTML='<table><thead><tr><th>Reforge</th><th>From</th><th>To</th><th>Days</th></tr></thead><tbody>'+vr.map(r=>`<tr><td>${r.v}</td><td>${r.from}</td><td>${r.to}</td><td>${r.n}</td></tr>`).join('')+'</tbody></table>';
   const sc=Object.fromEntries((D.statsSeconds||[]).filter(x=>x[1]!=null));
   line('as-cost', L, [{label:'Build', data:days.map(d=>d.seconds?.build??null), slot:0},{label:'Tests', data:days.map(d=>d.testSeconds??null), slot:1},{label:'Snapshot', data:days.map(d=>d.seconds?.snapshot??null), slot:2},{label:'Surface-score', data:days.map(d=>d.seconds?.surface??null), slot:4},{label:'Stats collector', data:days.map(d=>sc[d.date]??null), slot:3}], {log:true});
   const f=D.secFailed||[]; document.getElementById('as-failed').textContent = f.length? `Days without a row: ${f.map(x=>`${x.date} (${x.build})`).join(', ')}` : 'Every attempted day produced rows.';

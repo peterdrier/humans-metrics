@@ -97,7 +97,7 @@ for d in reforge_days:
                      'build': d.get('build'), 'tests': (d.get('tests') or {}).get('exit'), 'seconds': d.get('seconds'),
                      'total': (d.get('surface') or {}).get('total'), 'edges': len(d.get('edges') or []),
                      'byRule': (d.get('surface') or {}).get('byRule'), 'sections': secs})
-sec_failed = [{'date': d['date'], 'commit': d['commit'][:9], 'build': d.get('build'), 'err': (d.get('build_error') or d.get('snapshot_error') or d.get('surface_error') or '')[-300:]}
+sec_failed = [{'date': d['date'], 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'build': d.get('build'), 'err': (d.get('build_error') or d.get('snapshot_error') or d.get('surface_error') or '')[-300:]}
               for d in reforge_days if not d.get('rows')]
 
 # --- surface-score runs (slim per-run files under data/surface/)
