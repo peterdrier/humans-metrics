@@ -433,7 +433,9 @@ function renderAssembly(){
   const days=Dd.filter(d=>inRange(d.date)), L=days.map(d=>d.date), g=k=>days.map(d=>(d.sections[pick]||{})[k]??null);
   const last=Dd[Dd.length-1];
   document.getElementById('as-config').textContent=last.config||'?';
-  document.getElementById('as-meta').textContent=`${Dd.length} days scored, latest ${last.date} at ${last.commit}, reforge ${last.version}, run ${last.seconds?.total||'?'} s`;
+  const newest=[...new Set(Dd.map(d=>d.version||'?'))].sort((a,b)=>a.localeCompare(b,undefined,{numeric:true})).pop();
+  const stale=Dd.filter(d=>(d.version||'?')!==newest||d.tokSrc==='estimate').length;
+  document.getElementById('as-meta').textContent=`${Dd.length} days scored, latest ${last.date} at ${last.commit}, reforge ${last.version}, run ${last.seconds?.total||'?'} s. ${stale? stale+' day(s) on an older reforge or estimated tokens, due for a rerun.' : 'Every day is on the newest reforge with exact tokens.'}`;
   line('as-score', L, [{label:'Surface', data:g('surf'), slot:0},{label:'Implementation', data:g('impl'), slot:1},{label:'Total', data:g('score'), slot:4}]);
   line('as-size', L, [{label:'Production lines', data:g('loc'), slot:0},{label:'Test lines', data:g('testLoc'), slot:1}], {log:true});
   line('as-cov', L, [{label:'Coverage %', data:g('cov'), slot:2}], {y:{max:100}});
