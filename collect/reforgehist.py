@@ -4,9 +4,9 @@ worktree at the last commit of that day on origin/main.
 
 Per day, in order; a step that fails marks the record and stops the day:
   1. build      dotnet build -c Release (a tree that does not build is not usable)
-  2. tests      dotnet test --collect "XPlat Code Coverage", integration suite excluded,
-                merged into one Cobertura file with reportgenerator; failing tests
-                are recorded, not fatal
+  2. tests      dotnet test under dotnet-coverage (one Cobertura file, no package
+                reference needed, so early trees are covered too), integration
+                suite excluded; failing tests are recorded, not fatal
   3. snapshot   reforge snapshot --by-assembly --format json --coverage <merged>
                 with --count-tokens when ANTHROPIC_API_KEY is set, sharing the
                 token cache at data/reforge/token-cache.txt
@@ -56,17 +56,12 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key):
         rec['build'] = 'ok'
         cov = None
         if tests:
-            tr = os.path.join(tree, 'TestResults'); shutil.rmtree(tr, ignore_errors=True)
-            p, s = run(['dotnet', 'test', sln, '--no-build', '-c', 'Release', '-v', 'quiet', '--blame-hang-timeout', '5m',
-                        '--filter', 'FullyQualifiedName!~Humans.Integration.Tests', '--collect:XPlat Code Coverage',
-                        '--results-directory', tr], tree, env)
-            reports = glob.glob(os.path.join(tr, '**', 'coverage.cobertura.xml'), recursive=True)
-            rec['tests'] = dict(exit=p.returncode, reports=len(reports), seconds=s)
-            if reports:
-                p2, s2 = run(['reportgenerator', f'-reports:{";".join(reports)}', f'-targetdir:{tr}/merged', '-reporttypes:Cobertura'], tree, env)
-                merged = os.path.join(tr, 'merged', 'Cobertura.xml')
-                if p2.returncode == 0 and os.path.exists(merged): cov = merged
-                else: rec['tests']['merge_error'] = (p2.stdout + p2.stderr)[-1000:]
+            covf = os.path.join(tree, 'coverage.cobertura.xml')
+            inner = f'dotnet test {sln} --no-build -c Release -v quiet --blame-hang-timeout 5m --filter FullyQualifiedName!~Humans.Integration.Tests'
+            p, s = run(['dotnet-coverage', 'collect', '-f', 'cobertura', '-o', covf, inner], tree, env)
+            rec['tests'] = dict(exit=p.returncode, seconds=s, summary=next((l.strip() for l in p.stdout.splitlines() if l.startswith('Passed!') or l.startswith('Failed!')), None))
+            if os.path.exists(covf): cov = covf
+            else: rec['tests']['error'] = (p.stdout + p.stderr)[-1000:]
         cmd = [reforge, 'snapshot', '--solution', sln, '--by-assembly', '--format', 'json']
         if cov: cmd += ['--coverage', cov]
         if key: cmd += ['--count-tokens']
