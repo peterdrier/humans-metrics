@@ -35,7 +35,7 @@ jobs:
           global-json-file: ../Humans/global.json
       - name: Install reforge and dotnet-coverage
         run: |
-          dotnet tool install --global Reforge --version ${{ vars.REFORGE_VERSION || '0.31.0' }}
+          dotnet tool install --global Reforge --version ${{ vars.REFORGE_VERSION || '0.32.0' }}
           dotnet tool install --global dotnet-coverage
 
       - name: Fetch GitHub OIDC token
