@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Render docs/index.html from data/: the page template plus one embedded JSON blob.
+"""Render the site into docs/: copy site/{index.html,style.css,app.js} and write one docs/data/<key>.json per dataset.
 
-The template's data contract (what the page's script reads from `D`):
+The data contract (what app.js reads into `D`; its KEYS list must match):
   statsCols/stats   solution-wide daily rows (data/stats/*.json .solution)
   refCols/ref       reforge snapshot rows (data/reforge/*.json .snapshot, else data/seed/reforge-history.csv)
   modules           per-day module sizes, test LOC, edges and a dependency summary
@@ -11,7 +11,7 @@ The template's data contract (what the page's script reads from `D`):
   surface, byRule,  per-section and per-rule points of the latest surface-score run
   semDeps           service-interface edges of the latest surface-score run
 """
-import csv, glob, json, os, re, collections
+import csv, glob, json, os, re, shutil, collections
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 days = [json.load(open(p)) for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'stats', '*.json')))]
 if not days: raise SystemExit('no data/stats/*.json')
@@ -112,14 +112,17 @@ D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, '
      'generated': days[-1]['date']}
 def dump(v, ind=''):
     # Diff-friendly JSON: a container stays on one line when short, else one child per line, so a new day is a new line.
-    flat = json.dumps(v, separators=(',', ':'))
+    flat = json.dumps(v, separators=(', ', ': '))
     if len(flat) <= 160 or not isinstance(v, (list, dict)) or not v: return flat
-    sub = ind + ' '
+    sub = ind + '  '
     if isinstance(v, list): items = [dump(x, sub) for x in v]
-    else: items = [json.dumps(k) + ':' + dump(x, sub) for k, x in v.items()]
+    else: items = [json.dumps(k) + ': ' + dump(x, sub) for k, x in v.items()]
     return ('[' if isinstance(v, list) else '{') + '\n' + ',\n'.join(sub + i for i in items) + '\n' + ind + (']' if isinstance(v, list) else '}')
-tmpl = open(os.path.join(ROOT, 'site', 'template.html')).read()
-out = tmpl.replace('__DATA__', dump(D))
-os.makedirs(os.path.join(ROOT, 'docs'), exist_ok=True)
-open(os.path.join(ROOT, 'docs', 'index.html'), 'w').write(out)
-print(f'docs/index.html: {len(out)//1024} KB, {len(stats)} days, {len(ref)} snapshot rows, {len(modules)} module checkpoints, {len(runs)} surface runs, {len(sec_days)} per-assembly days')
+DOCS = os.path.join(ROOT, 'docs')
+os.makedirs(os.path.join(DOCS, 'data'), exist_ok=True)
+for f in ('index.html', 'style.css', 'app.js'):
+    shutil.copyfile(os.path.join(ROOT, 'site', f), os.path.join(DOCS, f))
+for k, v in D.items():
+    open(os.path.join(DOCS, 'data', f'{k}.json'), 'w').write(dump(v) + '\n')
+size = sum(os.path.getsize(os.path.join(DOCS, 'data', f'{k}.json')) for k in D)
+print(f'docs/data: {len(D)} files, {size//1024} KB, {len(stats)} days, {len(ref)} snapshot rows, {len(modules)} module checkpoints, {len(runs)} surface runs, {len(sec_days)} per-assembly days')

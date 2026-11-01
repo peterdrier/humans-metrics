@@ -1,0 +1,1649 @@
+[
+  {
+    "date": "2026-02-04",
+    "lanes": {"peter": {"prs": 16, "files": 183, "added": 14690, "deleted": 511}},
+    "routines": {},
+    "models": {"Claude Opus 4.5": 15},
+    "authors": 1,
+    "all_commits": 16
+  },
+  {
+    "date": "2026-02-05",
+    "lanes": {"peter": {"prs": 20, "files": 235, "added": 21657, "deleted": 576}},
+    "routines": {},
+    "models": {"Claude Opus 4.5": 19},
+    "authors": 1,
+    "all_commits": 20
+  },
+  {
+    "date": "2026-02-06",
+    "lanes": {"peter": {"prs": 20, "files": 93, "added": 11567, "deleted": 308}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 20},
+    "authors": 1,
+    "all_commits": 20
+  },
+  {
+    "date": "2026-02-07",
+    "lanes": {"peter": {"prs": 4, "files": 46, "added": 2987, "deleted": 237}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 4},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-02-08",
+    "lanes": {"peter": {"prs": 3, "files": 105, "added": 8087, "deleted": 1174}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 3},
+    "authors": 1,
+    "all_commits": 3
+  },
+  {
+    "date": "2026-02-09",
+    "lanes": {"peter": {"prs": 10, "files": 82, "added": 4825, "deleted": 2339}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 8},
+    "authors": 1,
+    "all_commits": 10
+  },
+  {
+    "date": "2026-02-10",
+    "lanes": {"peter": {"prs": 15, "files": 429, "added": 9145, "deleted": 25636}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 15},
+    "authors": 1,
+    "all_commits": 15
+  },
+  {
+    "date": "2026-02-11",
+    "lanes": {"peter": {"prs": 4, "files": 24, "added": 260, "deleted": 391}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 4},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-02-12",
+    "lanes": {"peter": {"prs": 14, "files": 162, "added": 4962, "deleted": 7759}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 14},
+    "authors": 1,
+    "all_commits": 14
+  },
+  {
+    "date": "2026-02-13",
+    "lanes": {"peter": {"prs": 3, "files": 31, "added": 1835, "deleted": 95}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 3},
+    "authors": 1,
+    "all_commits": 3
+  },
+  {
+    "date": "2026-02-15",
+    "lanes": {"peter": {"prs": 26, "files": 155, "added": 8465, "deleted": 1114}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 14},
+    "authors": 1,
+    "all_commits": 26
+  },
+  {
+    "date": "2026-02-16",
+    "lanes": {"peter": {"prs": 11, "files": 32, "added": 2615, "deleted": 190}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 11},
+    "authors": 1,
+    "all_commits": 11
+  },
+  {
+    "date": "2026-02-17",
+    "lanes": {"peter": {"prs": 6, "files": 41, "added": 3903, "deleted": 236}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 6},
+    "authors": 1,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-02-18",
+    "lanes": {"peter": {"prs": 24, "files": 255, "added": 12200, "deleted": 1521}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 23},
+    "authors": 1,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-02-19",
+    "lanes": {"peter": {"prs": 6, "files": 67, "added": 7952, "deleted": 410}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 6},
+    "authors": 1,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-02-20",
+    "lanes": {"peter": {"prs": 5, "files": 65, "added": 534, "deleted": 378}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 5},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-02-21",
+    "lanes": {"peter": {"prs": 7, "files": 67, "added": 5108, "deleted": 987}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 7},
+    "authors": 1,
+    "all_commits": 8
+  },
+  {
+    "date": "2026-02-23",
+    "lanes": {"peter": {"prs": 7, "files": 52, "added": 681, "deleted": 179}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 6},
+    "authors": 1,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-02-24",
+    "lanes": {"peter": {"prs": 2, "files": 40, "added": 285, "deleted": 106}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 2},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-02-25",
+    "lanes": {"peter": {"prs": 4, "files": 17, "added": 119, "deleted": 49}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 4},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-02-26",
+    "lanes": {"other": {"prs": 5, "files": 17, "added": 506, "deleted": 208}, "peter": {"prs": 11, "files": 15, "added": 265, "deleted": 213}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 11},
+    "authors": 2,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-02-27",
+    "lanes": {"peter": {"prs": 1, "files": 1, "added": 16, "deleted": 0}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 1},
+    "authors": 1,
+    "all_commits": 1
+  },
+  {
+    "date": "2026-03-05",
+    "lanes": {"peter": {"prs": 12, "files": 93, "added": 2778, "deleted": 1774}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 12},
+    "authors": 1,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-03-06",
+    "lanes": {"peter": {"prs": 2, "files": 2, "added": 2, "deleted": 2}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 2},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-03-07",
+    "lanes": {"peter": {"prs": 2, "files": 2, "added": 5, "deleted": 5}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 2},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-03-08",
+    "lanes": {"peter": {"prs": 9, "files": 40, "added": 5469, "deleted": 116}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 9},
+    "authors": 1,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-03-09",
+    "lanes": {"peter": {"prs": 28, "files": 130, "added": 8784, "deleted": 1606}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 28},
+    "authors": 1,
+    "all_commits": 29
+  },
+  {
+    "date": "2026-03-10",
+    "lanes": {"peter": {"prs": 24, "files": 116, "added": 2885, "deleted": 1700}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 23},
+    "authors": 1,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-03-11",
+    "lanes": {"peter": {"prs": 22, "files": 64, "added": 9253, "deleted": 221}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 19, "Claude Sonnet 4.6": 3},
+    "authors": 1,
+    "all_commits": 22
+  },
+  {
+    "date": "2026-03-12",
+    "lanes": {"peter": {"prs": 9, "files": 46, "added": 1231, "deleted": 229}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 9},
+    "authors": 1,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-03-13",
+    "lanes": {"peter": {"prs": 9, "files": 25, "added": 600, "deleted": 180}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 9},
+    "authors": 1,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-03-14",
+    "lanes": {"peter": {"prs": 76, "files": 291, "added": 33456, "deleted": 3773}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 27, "Claude Opus 4.6 (1M context)": 20, "Claude Sonnet 4.6": 12},
+    "authors": 1,
+    "all_commits": 76
+  },
+  {
+    "date": "2026-03-15",
+    "lanes": {"peter": {"prs": 57, "files": 158, "added": 12722, "deleted": 1122}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 34, "Claude Sonnet 4.6": 9},
+    "authors": 1,
+    "all_commits": 57
+  },
+  {
+    "date": "2026-03-16",
+    "lanes": {"peter": {"prs": 58, "files": 198, "added": 10398, "deleted": 3136}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 58},
+    "authors": 1,
+    "all_commits": 58
+  },
+  {
+    "date": "2026-03-17",
+    "lanes": {"peter": {"prs": 1, "files": 90, "added": 20266, "deleted": 179}},
+    "routines": {},
+    "models": {},
+    "authors": 1,
+    "all_commits": 1
+  },
+  {
+    "date": "2026-03-18",
+    "lanes": {"peter": {"prs": 1, "files": 73, "added": 11538, "deleted": 406}},
+    "routines": {},
+    "models": {},
+    "authors": 1,
+    "all_commits": 1
+  },
+  {
+    "date": "2026-03-19",
+    "lanes": {"peter": {"prs": 14, "files": 307, "added": 28656, "deleted": 4502}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 14},
+    "authors": 1,
+    "all_commits": 15
+  },
+  {
+    "date": "2026-03-20",
+    "lanes": {"peter": {"prs": 1, "files": 1, "added": 108, "deleted": 0}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 1},
+    "authors": 1,
+    "all_commits": 1
+  },
+  {
+    "date": "2026-03-21",
+    "lanes": {"peter": {"prs": 3, "files": 51, "added": 3251, "deleted": 1343}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 3},
+    "authors": 1,
+    "all_commits": 3
+  },
+  {
+    "date": "2026-03-22",
+    "lanes": {"peter": {"prs": 24, "files": 256, "added": 17031, "deleted": 4358}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 17},
+    "authors": 1,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-03-23",
+    "lanes": {"peter": {"prs": 10, "files": 212, "added": 14525, "deleted": 1091}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 10},
+    "authors": 1,
+    "all_commits": 11
+  },
+  {
+    "date": "2026-03-24",
+    "lanes": {"peter": {"prs": 2, "files": 73, "added": 10871, "deleted": 758}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 1, "Aaron Ross": 1},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-03-25",
+    "lanes": {"peter": {"prs": 7, "files": 137, "added": 22197, "deleted": 261}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 7},
+    "authors": 1,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-03-26",
+    "lanes": {"peter": {"prs": 9, "files": 30, "added": 268, "deleted": 109}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 9},
+    "authors": 1,
+    "all_commits": 10
+  },
+  {
+    "date": "2026-03-27",
+    "lanes": {"peter": {"prs": 21, "files": 196, "added": 19352, "deleted": 321}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 10},
+    "authors": 1,
+    "all_commits": 23
+  },
+  {
+    "date": "2026-03-28",
+    "lanes": {"peter": {"prs": 3, "files": 15, "added": 313, "deleted": 7}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 3},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-03-29",
+    "lanes": {"peter": {"prs": 20, "files": 96, "added": 5818, "deleted": 394}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 20},
+    "authors": 1,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-03-30",
+    "lanes": {"peter": {"prs": 33, "files": 178, "added": 10693, "deleted": 1452}},
+    "routines": {},
+    "models": {"Claude Opus 4.6": 11, "Claude Opus 4.6 (1M context)": 19, "Claude Sonnet 4.6": 2},
+    "authors": 1,
+    "all_commits": 34
+  },
+  {
+    "date": "2026-03-31",
+    "lanes": {"peter": {"prs": 16, "files": 149, "added": 22427, "deleted": 756}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 13},
+    "authors": 1,
+    "all_commits": 18
+  },
+  {
+    "date": "2026-04-01",
+    "lanes": {"peter": {"prs": 17, "files": 234, "added": 26568, "deleted": 2432}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 15},
+    "authors": 1,
+    "all_commits": 21
+  },
+  {
+    "date": "2026-04-02",
+    "lanes": {"peter": {"prs": 10, "files": 60, "added": 6708, "deleted": 268}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 9},
+    "authors": 1,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-04-04",
+    "lanes": {"peter": {"prs": 33, "files": 357, "added": 31809, "deleted": 3445}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 31},
+    "authors": 1,
+    "all_commits": 34
+  },
+  {
+    "date": "2026-04-05",
+    "lanes": {"peter": {"prs": 14, "files": 164, "added": 1784, "deleted": 402}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 14},
+    "authors": 1,
+    "all_commits": 15
+  },
+  {
+    "date": "2026-04-06",
+    "lanes": {"peter": {"prs": 3, "files": 67, "added": 12086, "deleted": 20}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 3},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-04-07",
+    "lanes": {"other": {"prs": 1, "files": 3, "added": 76, "deleted": 2}, "peter": {"prs": 21, "files": 187, "added": 13294, "deleted": 550}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 19, "swombat": 2, "Peter Drier": 1},
+    "authors": 2,
+    "all_commits": 26
+  },
+  {
+    "date": "2026-04-08",
+    "lanes": {"peter": {"prs": 21, "files": 164, "added": 9331, "deleted": 632}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 21},
+    "authors": 1,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-04-09",
+    "lanes": {"other": {"prs": 3, "files": 22, "added": 616, "deleted": 317}, "peter": {"prs": 6, "files": 72, "added": 1686, "deleted": 647}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 7, "Claude Sonnet 4.6": 1, "Imanol Uriarte": 1},
+    "authors": 4,
+    "all_commits": 10
+  },
+  {
+    "date": "2026-04-10",
+    "lanes": {"other": {"prs": 1, "files": 15, "added": 83, "deleted": 50}, "peter": {"prs": 24, "files": 248, "added": 12137, "deleted": 1472}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 24, "Claude Sonnet 4.6": 1},
+    "authors": 2,
+    "all_commits": 28
+  },
+  {
+    "date": "2026-04-13",
+    "lanes": {"peter": {"prs": 16, "files": 175, "added": 14514, "deleted": 3537}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 12},
+    "authors": 1,
+    "all_commits": 17
+  },
+  {
+    "date": "2026-04-14",
+    "lanes": {"peter": {"prs": 6, "files": 48, "added": 6138, "deleted": 777}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 6},
+    "authors": 1,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-04-15",
+    "lanes": {"peter": {"prs": 18, "files": 177, "added": 11206, "deleted": 2800}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 18},
+    "authors": 1,
+    "all_commits": 20
+  },
+  {
+    "date": "2026-04-16",
+    "lanes": {"peter": {"prs": 3, "files": 17, "added": 972, "deleted": 20}},
+    "routines": {},
+    "models": {"Claude Opus 4.6 (1M context)": 2, "Claude Opus 4.7 (1M context)": 1},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-04-20",
+    "lanes": {"peter": {"prs": 6, "files": 86, "added": 8229, "deleted": 9}},
+    "routines": {},
+    "models": {"Peter Drier": 1, "Claude Opus 4.7 (1M context)": 5},
+    "authors": 1,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-04-21",
+    "lanes": {"other": {"prs": 3, "files": 41, "added": 4272, "deleted": 69}, "peter": {"prs": 12, "files": 197, "added": 26333, "deleted": 4926}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 9, "Claude Opus 4.6 (1M context)": 1, "Peter Drier": 1, "Laura Gonz\u00e1lez Gimeno": 1, "Lau": 2},
+    "authors": 4,
+    "all_commits": 17
+  },
+  {
+    "date": "2026-04-22",
+    "lanes": {"peter": {"prs": 36, "files": 458, "added": 29619, "deleted": 10790}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 29},
+    "authors": 1,
+    "all_commits": 36
+  },
+  {
+    "date": "2026-04-23",
+    "lanes": {"peter": {"prs": 32, "files": 886, "added": 22381, "deleted": 10910}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 19, "Claude Sonnet 4.6": 1},
+    "authors": 1,
+    "all_commits": 33
+  },
+  {
+    "date": "2026-04-24",
+    "lanes": {"other": {"prs": 1, "files": 1, "added": 12, "deleted": 12}, "peter": {"prs": 5, "files": 34, "added": 2338, "deleted": 1314}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 3, "Claude Sonnet 4.6": 1},
+    "authors": 2,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-04-25",
+    "lanes": {"other": {"prs": 2, "files": 33, "added": 2269, "deleted": 138}, "peter": {"prs": 17, "files": 318, "added": 14483, "deleted": 1865}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 16, "Claude Sonnet 4.6": 1},
+    "authors": 3,
+    "all_commits": 19
+  },
+  {
+    "date": "2026-04-26",
+    "lanes": {
+      "automation": {"prs": 1, "files": 108, "added": 5867, "deleted": 2103},
+      "other": {"prs": 7, "files": 48, "added": 1304, "deleted": 188},
+      "peter": {"prs": 15, "files": 163, "added": 23104, "deleted": 677}
+    },
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.7 (1M context)": 15, "Lau": 4, "Claude": 1, "Claude Sonnet 4.6": 1, "Peter Drier": 1},
+    "authors": 3,
+    "all_commits": 24
+  },
+  {"date": "2026-04-27", "lanes": {"other": {"prs": 1, "files": 1, "added": 1, "deleted": 1}}, "routines": {}, "models": {}, "authors": 1, "all_commits": 3},
+  {
+    "date": "2026-04-28",
+    "lanes": {"other": {"prs": 1, "files": 1, "added": 4, "deleted": 2}, "peter": {"prs": 1, "files": 6, "added": 37, "deleted": 16}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 1},
+    "authors": 2,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-04-29",
+    "lanes": {"other": {"prs": 3, "files": 29, "added": 632, "deleted": 200}, "peter": {"prs": 18, "files": 269, "added": 11246, "deleted": 5131}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 14, "Lau": 3, "Claude Sonnet 4.6": 1},
+    "authors": 2,
+    "all_commits": 23
+  },
+  {
+    "date": "2026-04-30",
+    "lanes": {"peter": {"prs": 4, "files": 92, "added": 11083, "deleted": 989}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 4},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-05-01",
+    "lanes": {"peter": {"prs": 6, "files": 64, "added": 6829, "deleted": 901}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 4},
+    "authors": 1,
+    "all_commits": 11
+  },
+  {
+    "date": "2026-05-02",
+    "lanes": {"other": {"prs": 1, "files": 8, "added": 120, "deleted": 15}, "peter": {"prs": 11, "files": 309, "added": 27726, "deleted": 1092}},
+    "routines": {},
+    "models": {"Peter Drier": 1, "Claude Opus 4.7 (1M context)": 6},
+    "authors": 2,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-05-03",
+    "lanes": {"other": {"prs": 2, "files": 29, "added": 693, "deleted": 260}, "peter": {"prs": 10, "files": 153, "added": 10325, "deleted": 68}},
+    "routines": {},
+    "models": {"Claude Sonnet 4.6": 1, "Peter Drier": 1, "Claude Opus 4.7 (1M context)": 1, "Lau": 1},
+    "authors": 3,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-05-04",
+    "lanes": {"other": {"prs": 1, "files": 9, "added": 210, "deleted": 26}, "peter": {"prs": 16, "files": 256, "added": 29100, "deleted": 455}},
+    "routines": {},
+    "models": {"Peter Drier": 1, "Claude Opus 4.7 (1M context)": 8},
+    "authors": 2,
+    "all_commits": 18
+  },
+  {
+    "date": "2026-05-05",
+    "lanes": {"other": {"prs": 2, "files": 39, "added": 8944, "deleted": 287}, "peter": {"prs": 20, "files": 258, "added": 12629, "deleted": 2556}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 13, "Peter Drier": 1},
+    "authors": 2,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-05-08",
+    "lanes": {"peter": {"prs": 19, "files": 204, "added": 10153, "deleted": 3652}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 10, "swombat": 2},
+    "authors": 1,
+    "all_commits": 20
+  },
+  {
+    "date": "2026-05-09",
+    "lanes": {"peter": {"prs": 11, "files": 164, "added": 4428, "deleted": 1481}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 10},
+    "authors": 1,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-05-10",
+    "lanes": {"peter": {"prs": 9, "files": 295, "added": 17418, "deleted": 2872}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 2},
+    "authors": 1,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-05-11",
+    "lanes": {"other": {"prs": 1, "files": 46, "added": 13459, "deleted": 3}, "peter": {"prs": 13, "files": 384, "added": 34595, "deleted": 4712}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 9},
+    "authors": 2,
+    "all_commits": 15
+  },
+  {
+    "date": "2026-05-12",
+    "lanes": {"other": {"prs": 2, "files": 30, "added": 1377, "deleted": 31}, "peter": {"prs": 23, "files": 486, "added": 30167, "deleted": 4325}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 19},
+    "authors": 2,
+    "all_commits": 25
+  },
+  {
+    "date": "2026-05-13",
+    "lanes": {"peter": {"prs": 25, "files": 173, "added": 9692, "deleted": 775}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 12, "claude[bot]": 4},
+    "authors": 1,
+    "all_commits": 30
+  },
+  {
+    "date": "2026-05-14",
+    "lanes": {"other": {"prs": 1, "files": 10, "added": 748, "deleted": 19}, "peter": {"prs": 13, "files": 174, "added": 10895, "deleted": 898}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 12, "Peter Drier": 1},
+    "authors": 2,
+    "all_commits": 17
+  },
+  {
+    "date": "2026-05-15",
+    "lanes": {
+      "automation": {"prs": 1, "files": 9, "added": 1986, "deleted": 962},
+      "other": {"prs": 2, "files": 223, "added": 29716, "deleted": 808},
+      "peter": {"prs": 23, "files": 1609, "added": 20275, "deleted": 23892}
+    },
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Sonnet 4.6": 1, "Claude Opus 4.7 (1M context)": 20, "Jokin C": 1},
+    "authors": 3,
+    "all_commits": 28
+  },
+  {
+    "date": "2026-05-16",
+    "lanes": {"other": {"prs": 4, "files": 24, "added": 1245, "deleted": 43}, "peter": {"prs": 31, "files": 444, "added": 38889, "deleted": 13043}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 29, "Claude Opus 4.7": 1, "Peter Drier": 1},
+    "authors": 3,
+    "all_commits": 36
+  },
+  {
+    "date": "2026-05-17",
+    "lanes": {"peter": {"prs": 28, "files": 503, "added": 17161, "deleted": 7394}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 19},
+    "authors": 1,
+    "all_commits": 30
+  },
+  {
+    "date": "2026-05-18",
+    "lanes": {"other": {"prs": 1, "files": 5, "added": 253, "deleted": 17}, "peter": {"prs": 24, "files": 902, "added": 19314, "deleted": 15388}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 22},
+    "authors": 2,
+    "all_commits": 26
+  },
+  {
+    "date": "2026-05-19",
+    "lanes": {"other": {"prs": 1, "files": 16, "added": 6586, "deleted": 22}, "peter": {"prs": 23, "files": 221, "added": 15929, "deleted": 3566}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 18, "Jokin C": 1},
+    "authors": 2,
+    "all_commits": 27
+  },
+  {
+    "date": "2026-05-20",
+    "lanes": {
+      "automation": {"prs": 7, "files": 11, "added": 26, "deleted": 26},
+      "other": {"prs": 2, "files": 47, "added": 7663, "deleted": 654},
+      "peter": {"prs": 10, "files": 84, "added": 1419, "deleted": 687}
+    },
+    "routines": {"dependabot": 7},
+    "models": {"Claude Opus 4.7 (1M context)": 10, "Jokin C": 2},
+    "authors": 3,
+    "all_commits": 21
+  },
+  {
+    "date": "2026-05-22",
+    "lanes": {"other": {"prs": 1, "files": 16, "added": 1248, "deleted": 9}, "peter": {"prs": 10, "files": 132, "added": 3535, "deleted": 1122}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 10, "Jokin C": 1},
+    "authors": 2,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-05-23",
+    "lanes": {"peter": {"prs": 29, "files": 438, "added": 9629, "deleted": 1433}},
+    "routines": {},
+    "models": {"Claude Sonnet 4.6": 3, "Claude Opus 4.7 (1M context)": 17},
+    "authors": 1,
+    "all_commits": 29
+  },
+  {
+    "date": "2026-05-24",
+    "lanes": {"other": {"prs": 1, "files": 38, "added": 5184, "deleted": 26}, "peter": {"prs": 11, "files": 183, "added": 4199, "deleted": 5543}},
+    "routines": {},
+    "models": {"Claude Opus 4.7 (1M context)": 5, "Claude Sonnet 4.6": 5},
+    "authors": 2,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-05-25",
+    "lanes": {
+      "automation": {"prs": 4, "files": 27, "added": 877, "deleted": 7740},
+      "other": {"prs": 2, "files": 111, "added": 16382, "deleted": 304},
+      "peter": {"prs": 26, "files": 475, "added": 21788, "deleted": 6888}
+    },
+    "routines": {"freshness-sweep": 1, "dependabot": 3},
+    "models": {"Claude Opus 4.7 (1M context)": 23, "Claude Sonnet 4.6": 1},
+    "authors": 3,
+    "all_commits": 33
+  },
+  {
+    "date": "2026-05-26",
+    "lanes": {"automation": {"prs": 2, "files": 27, "added": 826, "deleted": 9833}, "peter": {"prs": 5, "files": 63, "added": 10425, "deleted": 203}},
+    "routines": {"dependabot": 1, "freshness-sweep": 1},
+    "models": {"Claude Opus 4.7 (1M context)": 5, "Claude Sonnet 4.6": 1},
+    "authors": 2,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-05-27",
+    "lanes": {
+      "automation": {"prs": 1, "files": 18, "added": 129, "deleted": 6213},
+      "other": {"prs": 1, "files": 27, "added": 1869, "deleted": 184},
+      "peter": {"prs": 21, "files": 281, "added": 6704, "deleted": 2282}
+    },
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Code": 1, "Claude Opus 4.7 (1M context)": 13},
+    "authors": 2,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-05-28",
+    "lanes": {"automation": {"prs": 1, "files": 21, "added": 284, "deleted": 10106}, "peter": {"prs": 11, "files": 146, "added": 12529, "deleted": 2596}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.7 (1M context)": 7, "Claude Opus 4.8 (1M context)": 2},
+    "authors": 1,
+    "all_commits": 14
+  },
+  {"date": "2026-05-29", "lanes": {"peter": {"prs": 1, "files": 1, "added": 130, "deleted": 21}}, "routines": {}, "models": {}, "authors": 1, "all_commits": 1},
+  {
+    "date": "2026-05-30",
+    "lanes": {
+      "automation": {"prs": 1, "files": 29, "added": 175, "deleted": 7200},
+      "other": {"prs": 1, "files": 6, "added": 137, "deleted": 14},
+      "peter": {"prs": 20, "files": 270, "added": 4599, "deleted": 6192}
+    },
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 15, "Cupcake": 1},
+    "authors": 2,
+    "all_commits": 23
+  },
+  {
+    "date": "2026-05-31",
+    "lanes": {"automation": {"prs": 1, "files": 41, "added": 198, "deleted": 7209}, "peter": {"prs": 3, "files": 12, "added": 40, "deleted": 86}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 1},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-06-01",
+    "lanes": {"peter": {"prs": 5, "files": 93, "added": 699, "deleted": 1063}},
+    "routines": {},
+    "models": {"Claude Opus 4.8 (1M context)": 3, "Peter Drier": 1},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-06-03",
+    "lanes": {
+      "automation": {"prs": 7, "files": 30, "added": 239, "deleted": 6300},
+      "other": {"prs": 4, "files": 54, "added": 9917, "deleted": 63},
+      "peter": {"prs": 1, "files": 1, "added": 2, "deleted": 2}
+    },
+    "routines": {"dependabot": 6, "freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 4, "Peter Drier": 1, "Cupcake": 1},
+    "authors": 5,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-06-04",
+    "lanes": {
+      "automation": {"prs": 2, "files": 37, "added": 192, "deleted": 20110},
+      "other": {"prs": 2, "files": 31, "added": 2550, "deleted": 594},
+      "peter": {"prs": 16, "files": 157, "added": 3907, "deleted": 1117}
+    },
+    "routines": {"dependabot": 1, "freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 18, "Peter Drier": 1},
+    "authors": 3,
+    "all_commits": 23
+  },
+  {
+    "date": "2026-06-05",
+    "lanes": {"peter": {"prs": 4, "files": 213, "added": 3039, "deleted": 900}},
+    "routines": {},
+    "models": {"Claude Opus 4.8 (1M context)": 4},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-06-06",
+    "lanes": {"automation": {"prs": 1, "files": 21, "added": 357, "deleted": 2154}, "peter": {"prs": 7, "files": 401, "added": 14304, "deleted": 5076}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 6},
+    "authors": 1,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-06-07",
+    "lanes": {"automation": {"prs": 1, "files": 36, "added": 413, "deleted": 4557}, "peter": {"prs": 5, "files": 60, "added": 9496, "deleted": 226}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 4, "github-actions[bot]": 1},
+    "authors": 1,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-06-08",
+    "lanes": {
+      "automation": {"prs": 5, "files": 5, "added": 5, "deleted": 5},
+      "other": {"prs": 1, "files": 2, "added": 2, "deleted": 2},
+      "peter": {"prs": 3, "files": 61, "added": 8990, "deleted": 111}
+    },
+    "routines": {"dependabot": 5},
+    "models": {"Claude Opus 4.8 (1M context)": 3, "Claude Opus 4.8": 1},
+    "authors": 3,
+    "all_commits": 11
+  },
+  {
+    "date": "2026-06-09",
+    "lanes": {"automation": {"prs": 1, "files": 35, "added": 418, "deleted": 5698}, "peter": {"prs": 13, "files": 434, "added": 8850, "deleted": 3575}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 6, "Claude Fable 5": 6},
+    "authors": 1,
+    "all_commits": 14
+  },
+  {
+    "date": "2026-06-10",
+    "lanes": {
+      "automation": {"prs": 1, "files": 47, "added": 447, "deleted": 1905},
+      "other": {"prs": 1, "files": 17, "added": 1085, "deleted": 14},
+      "peter": {"prs": 14, "files": 259, "added": 25016, "deleted": 3196}
+    },
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Fable 5": 12, "Claude Opus 4.8 (1M context)": 2, "Claude": 1, "Claude Sonnet 4.6": 1},
+    "authors": 2,
+    "all_commits": 17
+  },
+  {
+    "date": "2026-06-11",
+    "lanes": {"peter": {"prs": 39, "files": 644, "added": 33485, "deleted": 8538}},
+    "routines": {},
+    "models": {"Claude Fable 5": 24, "Claude Sonnet 4.6": 1, "Claude Opus 4.8 (1M context)": 1},
+    "authors": 1,
+    "all_commits": 40
+  },
+  {
+    "date": "2026-06-12",
+    "lanes": {"automation": {"prs": 2, "files": 63, "added": 598, "deleted": 4227}, "peter": {"prs": 7, "files": 97, "added": 6185, "deleted": 824}},
+    "routines": {"freshness-sweep": 1, "debt-sweep": 1},
+    "models": {"Claude Fable 5": 9},
+    "authors": 1,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-06-13",
+    "lanes": {"automation": {"prs": 1, "files": 26, "added": 236, "deleted": 4055}, "peter": {"prs": 9, "files": 90, "added": 2326, "deleted": 564}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Fable 5": 7, "Claude Opus 4.8 (1M context)": 3},
+    "authors": 1,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-06-14",
+    "lanes": {"automation": {"prs": 3, "files": 48, "added": 504, "deleted": 4885}, "peter": {"prs": 8, "files": 56, "added": 2791, "deleted": 661}},
+    "routines": {"debt-sweep": 2, "freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 11},
+    "authors": 1,
+    "all_commits": 14
+  },
+  {
+    "date": "2026-06-15",
+    "lanes": {"automation": {"prs": 6, "files": 18, "added": 155, "deleted": 91}, "peter": {"prs": 8, "files": 151, "added": 23945, "deleted": 386}},
+    "routines": {"freshness-sweep": 1, "dependabot": 5},
+    "models": {"Claude Opus 4.8 (1M context)": 8, "Claude": 1},
+    "authors": 2,
+    "all_commits": 14
+  },
+  {
+    "date": "2026-06-16",
+    "lanes": {"other": {"prs": 1, "files": 24, "added": 226, "deleted": 21}, "peter": {"prs": 3, "files": 69, "added": 8132, "deleted": 2006}},
+    "routines": {},
+    "models": {"Claude Opus 4.8 (1M context)": 4},
+    "authors": 2,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-06-17",
+    "lanes": {"other": {"prs": 1, "files": 6, "added": 693, "deleted": 30}},
+    "routines": {},
+    "models": {"Claude Opus 4.8 (1M context)": 1},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-06-23",
+    "lanes": {
+      "automation": {"prs": 6, "files": 10, "added": 13, "deleted": 13},
+      "other": {"prs": 2, "files": 18, "added": 221, "deleted": 29},
+      "peter": {"prs": 5, "files": 17, "added": 235, "deleted": 160}
+    },
+    "routines": {"dependabot": 6},
+    "models": {"Claude Opus 4.8 (1M context)": 5, "Claude": 1, "Peter Drier": 1},
+    "authors": 4,
+    "all_commits": 14
+  },
+  {
+    "date": "2026-06-27",
+    "lanes": {
+      "automation": {"prs": 1, "files": 48, "added": 224, "deleted": 2979},
+      "other": {"prs": 4, "files": 24, "added": 1020, "deleted": 103},
+      "peter": {"prs": 4, "files": 60, "added": 311, "deleted": 153}
+    },
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 4.8 (1M context)": 8},
+    "authors": 2,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-06-30",
+    "lanes": {"automation": {"prs": 4, "files": 5, "added": 16, "deleted": 16}, "peter": {"prs": 7, "files": 119, "added": 28415, "deleted": 293}},
+    "routines": {"dependabot": 4},
+    "models": {"Claude Opus 4.8 (1M context)": 3, "veryaaron": 2, "Peter Drier": 2},
+    "authors": 2,
+    "all_commits": 18
+  },
+  {
+    "date": "2026-07-01",
+    "lanes": {"other": {"prs": 4, "files": 29, "added": 7663, "deleted": 158}, "peter": {"prs": 4, "files": 21, "added": 126, "deleted": 204}},
+    "routines": {},
+    "models": {"Claude Opus 4.8": 4, "Claude Opus 4.8 (1M context)": 2, "Claude Fable 5": 2},
+    "authors": 2,
+    "all_commits": 11
+  },
+  {
+    "date": "2026-07-02",
+    "lanes": {"other": {"prs": 1, "files": 9, "added": 314, "deleted": 67}, "peter": {"prs": 4, "files": 30, "added": 903, "deleted": 37}},
+    "routines": {},
+    "models": {"Claude Fable 5": 5},
+    "authors": 2,
+    "all_commits": 8
+  },
+  {
+    "date": "2026-07-03",
+    "lanes": {"peter": {"prs": 1, "files": 4, "added": 62, "deleted": 2}},
+    "routines": {},
+    "models": {"Claude Fable 5": 1},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-07-04",
+    "lanes": {"other": {"prs": 1, "files": 1, "added": 2, "deleted": 1}},
+    "routines": {},
+    "models": {"Josh Peaker": 1},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-07-13",
+    "lanes": {"automation": {"prs": 5, "files": 6, "added": 373, "deleted": 12}, "peter": {"prs": 1, "files": 1, "added": 1, "deleted": 1}},
+    "routines": {"dependabot": 5},
+    "models": {"Claude": 1},
+    "authors": 2,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-07-14",
+    "lanes": {"automation": {"prs": 1, "files": 73, "added": 811, "deleted": 5038}, "peter": {"prs": 6, "files": 31, "added": 8492, "deleted": 45}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Fable 5": 7},
+    "authors": 1,
+    "all_commits": 8
+  },
+  {
+    "date": "2026-07-15",
+    "lanes": {"peter": {"prs": 12, "files": 37, "added": 967, "deleted": 133}},
+    "routines": {},
+    "models": {"Claude Fable 5": 12},
+    "authors": 1,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-07-30",
+    "lanes": {"automation": {"prs": 4, "files": 7, "added": 23, "deleted": 23}, "peter": {"prs": 5, "files": 19, "added": 61, "deleted": 21}},
+    "routines": {"dependabot": 4},
+    "models": {"Claude Opus 5 (1M context)": 3, "Claude": 1, "Claude Fable 5": 1},
+    "authors": 2,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-07-31",
+    "lanes": {"peter": {"prs": 2, "files": 13, "added": 296, "deleted": 49}},
+    "routines": {},
+    "models": {"Claude Opus 5 (1M context)": 1},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-08-02",
+    "lanes": {"peter": {"prs": 24, "files": 221, "added": 62649, "deleted": 2137}},
+    "routines": {},
+    "models": {"Claude Opus 5 (1M context)": 2, "Claude Fable 5": 19},
+    "authors": 1,
+    "all_commits": 27
+  },
+  {
+    "date": "2026-08-03",
+    "lanes": {"automation": {"prs": 10, "files": 67, "added": 443, "deleted": 4880}, "peter": {"prs": 9, "files": 102, "added": 3106, "deleted": 2176}},
+    "routines": {"dependabot": 9, "freshness-sweep": 1},
+    "models": {"Claude Fable 5": 8, "Claude Opus 5": 2},
+    "authors": 2,
+    "all_commits": 19
+  },
+  {
+    "date": "2026-08-04",
+    "lanes": {"peter": {"prs": 1, "files": 41, "added": 3003, "deleted": 46}},
+    "routines": {},
+    "models": {"Claude Fable 5": 1},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-08-05",
+    "lanes": {"automation": {"prs": 1, "files": 39, "added": 254, "deleted": 4734}, "peter": {"prs": 11, "files": 187, "added": 2058, "deleted": 1267}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 5 (1M context)": 8, "Claude Sonnet 5": 1},
+    "authors": 1,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-08-07",
+    "lanes": {"peter": {"prs": 34, "files": 316, "added": 33567, "deleted": 2746}},
+    "routines": {},
+    "models": {"Claude Sonnet 5": 2, "Claude Opus 5 (1M context)": 31},
+    "authors": 1,
+    "all_commits": 38
+  },
+  {
+    "date": "2026-08-08",
+    "lanes": {"automation": {"prs": 1, "files": 92, "added": 388, "deleted": 4782}, "peter": {"prs": 11, "files": 654, "added": 10499, "deleted": 2736}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Opus 5 (1M context)": 12},
+    "authors": 1,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-08-09",
+    "lanes": {"peter": {"prs": 7, "files": 413, "added": 29250, "deleted": 5605}},
+    "routines": {},
+    "models": {"Claude Opus 5 (1M context)": 7},
+    "authors": 1,
+    "all_commits": 8
+  },
+  {
+    "date": "2026-08-10",
+    "lanes": {"automation": {"prs": 10, "files": 83, "added": 639, "deleted": 3558}, "peter": {"prs": 13, "files": 688, "added": 18598, "deleted": 4978}},
+    "routines": {"dependabot": 9, "freshness-sweep": 1},
+    "models": {"Claude Opus 5 (1M context)": 7, "Claude Opus 5": 1, "Claude": 1, "Claude Fable 5": 3},
+    "authors": 2,
+    "all_commits": 24
+  },
+  {
+    "date": "2026-08-11",
+    "lanes": {"peter": {"prs": 6, "files": 930, "added": 26552, "deleted": 12414}},
+    "routines": {},
+    "models": {"Claude Fable 5": 3, "Claude Opus 5": 3},
+    "authors": 1,
+    "all_commits": 8
+  },
+  {
+    "date": "2026-08-12",
+    "lanes": {"automation": {"prs": 1, "files": 92, "added": 1113, "deleted": 3987}, "peter": {"prs": 3, "files": 706, "added": 17103, "deleted": 7929}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Fable 5": 1, "Claude Opus 5": 3},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-08-13",
+    "lanes": {"automation": {"prs": 1, "files": 92, "added": 1111, "deleted": 5022}, "peter": {"prs": 18, "files": 2193, "added": 31798, "deleted": 670759}},
+    "routines": {"freshness-sweep": 1},
+    "models": {"Claude Fable 5": 8, "Claude Opus 5": 7},
+    "authors": 1,
+    "all_commits": 20
+  },
+  {
+    "date": "2026-08-14",
+    "lanes": {"peter": {"prs": 12, "files": 1063, "added": 7021, "deleted": 2323}},
+    "routines": {},
+    "models": {"Claude Fable 5": 2, "Claude Opus 5": 9},
+    "authors": 1,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-08-15",
+    "lanes": {"peter": {"prs": 22, "files": 1412, "added": 4644, "deleted": 4186}},
+    "routines": {},
+    "models": {"Claude Opus 5": 20},
+    "authors": 1,
+    "all_commits": 22
+  },
+  {
+    "date": "2026-08-16",
+    "lanes": {"peter": {"prs": 12, "files": 414, "added": 124416, "deleted": 6683}},
+    "routines": {},
+    "models": {"Claude Opus 5": 3, "Claude Fable 5": 7},
+    "authors": 1,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-08-17",
+    "lanes": {"automation": {"prs": 4, "files": 53, "added": 775, "deleted": 144}, "peter": {"prs": 15, "files": 1068, "added": 3745, "deleted": 3146}},
+    "routines": {"dependabot": 2, "section-doctor": 2},
+    "models": {"Claude Fable 5": 16, "Claude Opus 5": 1},
+    "authors": 2,
+    "all_commits": 19
+  },
+  {
+    "date": "2026-08-18",
+    "lanes": {"automation": {"prs": 2, "files": 165, "added": 3430, "deleted": 5402}, "peter": {"prs": 19, "files": 1781, "added": 9616, "deleted": 10161}},
+    "routines": {"freshness-sweep": 1, "section-doctor": 1},
+    "models": {"Claude Fable 5": 9, "Claude Opus 5": 7},
+    "authors": 1,
+    "all_commits": 21
+  },
+  {
+    "date": "2026-08-19",
+    "lanes": {"peter": {"prs": 24, "files": 1562, "added": 9867, "deleted": 4510}},
+    "routines": {},
+    "models": {"Claude Fable 5": 2, "Claude Opus 5": 19},
+    "authors": 1,
+    "all_commits": 25
+  },
+  {
+    "date": "2026-08-20",
+    "lanes": {"peter": {"prs": 31, "files": 978, "added": 25062, "deleted": 16144}},
+    "routines": {},
+    "models": {"Claude Fable 5": 2, "Claude Opus 5": 2, "Claude Opus 5 (1M context)": 22, "Peter Drier": 1, "Claude": 1},
+    "authors": 1,
+    "all_commits": 33
+  },
+  {
+    "date": "2026-08-21",
+    "lanes": {"other": {"prs": 2, "files": 48, "added": 2881, "deleted": 100}, "peter": {"prs": 2, "files": 56, "added": 1522, "deleted": 143}},
+    "routines": {},
+    "models": {"Claude Opus 5 (1M context)": 1},
+    "authors": 2,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-08-22",
+    "lanes": {"other": {"prs": 3, "files": 83, "added": 2728, "deleted": 388}, "peter": {"prs": 2, "files": 6, "added": 578, "deleted": 100}},
+    "routines": {},
+    "models": {"Claude Fable 5": 1, "Claude": 1},
+    "authors": 2,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-08-23",
+    "lanes": {
+      "automation": {"prs": 3, "files": 84, "added": 3331, "deleted": 1290},
+      "other": {"prs": 1, "files": 29, "added": 1730, "deleted": 73},
+      "peter": {"prs": 20, "files": 333, "added": 10243, "deleted": 1792}
+    },
+    "routines": {"section-doctor": 3},
+    "models": {"Claude Opus 5": 10, "Claude": 5, "Claude Fable 5": 8},
+    "authors": 2,
+    "all_commits": 27
+  },
+  {
+    "date": "2026-08-24",
+    "lanes": {
+      "automation": {"prs": 10, "files": 161, "added": 2286, "deleted": 3291},
+      "other": {"prs": 1, "files": 17, "added": 846, "deleted": 144},
+      "peter": {"prs": 8, "files": 131, "added": 1472, "deleted": 1724}
+    },
+    "routines": {"section-doctor": 5, "dependabot": 4, "freshness-sweep": 1},
+    "models": {"Claude Fable 5": 5, "Claude Opus 5": 1, "Claude": 5, "Claude Sonnet 5": 1, "Claude Opus 5 (1M context)": 1},
+    "authors": 3,
+    "all_commits": 22
+  },
+  {
+    "date": "2026-08-25",
+    "lanes": {
+      "automation": {"prs": 4, "files": 136, "added": 2103, "deleted": 1126},
+      "other": {"prs": 2, "files": 11, "added": 412, "deleted": 107},
+      "peter": {"prs": 13, "files": 378, "added": 8560, "deleted": 6499}
+    },
+    "routines": {"freshness-sweep": 1, "section-doctor": 3},
+    "models": {"Claude": 3, "Claude Fable 5": 13, "Claude Opus 5": 1},
+    "authors": 2,
+    "all_commits": 21
+  },
+  {
+    "date": "2026-08-26",
+    "lanes": {
+      "automation": {"prs": 4, "files": 114, "added": 2949, "deleted": 813},
+      "other": {"prs": 1, "files": 4, "added": 39, "deleted": 5},
+      "peter": {"prs": 9, "files": 167, "added": 3830, "deleted": 982}
+    },
+    "routines": {"section-doctor": 4},
+    "models": {"Claude Fable 5": 8, "Claude": 5},
+    "authors": 2,
+    "all_commits": 17
+  },
+  {
+    "date": "2026-08-27",
+    "lanes": {"automation": {"prs": 1, "files": 21, "added": 729, "deleted": 122}, "peter": {"prs": 7, "files": 88, "added": 1379, "deleted": 268}},
+    "routines": {"section-doctor": 1},
+    "models": {"Claude Fable 5": 1, "Claude": 6, "Claude Opus 5": 1},
+    "authors": 1,
+    "all_commits": 8
+  },
+  {
+    "date": "2026-08-28",
+    "lanes": {
+      "automation": {"prs": 5, "files": 159, "added": 3297, "deleted": 870},
+      "other": {"prs": 1, "files": 2, "added": 5, "deleted": 3},
+      "peter": {"prs": 11, "files": 162, "added": 2994, "deleted": 431}
+    },
+    "routines": {"section-doctor": 5},
+    "models": {"Claude": 14, "Claude Fable 5": 3},
+    "authors": 2,
+    "all_commits": 18
+  },
+  {"date": "2026-08-29", "lanes": {"other": {"prs": 1, "files": 48, "added": 3064, "deleted": 66}}, "routines": {}, "models": {}, "authors": 1, "all_commits": 1},
+  {
+    "date": "2026-08-30",
+    "lanes": {"automation": {"prs": 12, "files": 47, "added": 678, "deleted": 298}, "other": {"prs": 1, "files": 3, "added": 11, "deleted": 3}},
+    "routines": {"section-doctor": 12},
+    "models": {"Claude Fable 5": 13},
+    "authors": 1,
+    "all_commits": 13
+  },
+  {"date": "2026-09-01", "lanes": {"other": {"prs": 1, "files": 14, "added": 233, "deleted": 22}}, "routines": {}, "models": {}, "authors": 1, "all_commits": 1},
+  {
+    "date": "2026-09-02",
+    "lanes": {"automation": {"prs": 4, "files": 4, "added": 4, "deleted": 4}, "other": {"prs": 6, "files": 189, "added": 4332, "deleted": 3963}},
+    "routines": {"dependabot": 4},
+    "models": {"Claude Fable 5": 1},
+    "authors": 4,
+    "all_commits": 13
+  },
+  {
+    "date": "2026-09-04",
+    "lanes": {"automation": {"prs": 4, "files": 4, "added": 4, "deleted": 4}, "other": {"prs": 2, "files": 38, "added": 960, "deleted": 242}},
+    "routines": {"dependabot": 4},
+    "models": {},
+    "authors": 2,
+    "all_commits": 6
+  },
+  {"date": "2026-09-05", "lanes": {"other": {"prs": 1, "files": 1, "added": 3, "deleted": 3}}, "routines": {}, "models": {}, "authors": 1, "all_commits": 2},
+  {
+    "date": "2026-09-09",
+    "lanes": {
+      "automation": {"prs": 7, "files": 47, "added": 816, "deleted": 196},
+      "other": {"prs": 1, "files": 2, "added": 11, "deleted": 0},
+      "peter": {"prs": 2, "files": 134, "added": 9029, "deleted": 149}
+    },
+    "routines": {"section-doctor": 3, "dependabot": 4},
+    "models": {"Claude": 5, "Claude Fable 5": 1},
+    "authors": 3,
+    "all_commits": 10
+  },
+  {
+    "date": "2026-09-10",
+    "lanes": {"automation": {"prs": 18, "files": 540, "added": 13916, "deleted": 5768}, "peter": {"prs": 6, "files": 49, "added": 1527, "deleted": 370}},
+    "routines": {"section-doctor": 15, "dependabot": 3},
+    "models": {"Claude": 20, "Claude Fable 5.1": 1},
+    "authors": 2,
+    "all_commits": 25
+  },
+  {
+    "date": "2026-09-11",
+    "lanes": {"automation": {"prs": 4, "files": 147, "added": 3585, "deleted": 2383}},
+    "routines": {"section-doctor": 4},
+    "models": {"Claude": 4},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-09-13",
+    "lanes": {"automation": {"prs": 1, "files": 11, "added": 280, "deleted": 91}, "peter": {"prs": 1, "files": 1, "added": 1, "deleted": 1}},
+    "routines": {"section-doctor": 1},
+    "models": {"Claude": 2},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-09-14",
+    "lanes": {"automation": {"prs": 22, "files": 724, "added": 13548, "deleted": 8800}, "peter": {"prs": 8, "files": 406, "added": 15882, "deleted": 1521}},
+    "routines": {"section-doctor": 17, "dependabot": 5},
+    "models": {"Claude Fable 5.1": 6, "Claude": 19},
+    "authors": 2,
+    "all_commits": 30
+  },
+  {
+    "date": "2026-09-15",
+    "lanes": {
+      "automation": {"prs": 4, "files": 93, "added": 3294, "deleted": 2052},
+      "other": {"prs": 1, "files": 2, "added": 18, "deleted": 0},
+      "peter": {"prs": 2, "files": 202, "added": 19715, "deleted": 353}
+    },
+    "routines": {"section-doctor": 4},
+    "models": {"Claude": 4, "Claude Opus 5": 2, "Claude Fable 5.1": 1},
+    "authors": 2,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-09-17",
+    "lanes": {"automation": {"prs": 2, "files": 61, "added": 1720, "deleted": 752}, "peter": {"prs": 14, "files": 259, "added": 6497, "deleted": 1144}},
+    "routines": {"section-doctor": 2},
+    "models": {"Claude Opus 5": 1, "Claude Fable 5.1": 3, "Claude": 7},
+    "authors": 1,
+    "all_commits": 17
+  },
+  {
+    "date": "2026-09-18",
+    "lanes": {"other": {"prs": 1, "files": 1, "added": 2, "deleted": 1}, "peter": {"prs": 5, "files": 160, "added": 3664, "deleted": 682}},
+    "routines": {},
+    "models": {"Claude": 5, "Claude Opus 5": 1},
+    "authors": 2,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-09-20",
+    "lanes": {"automation": {"prs": 5, "files": 106, "added": 2631, "deleted": 878}, "peter": {"prs": 17, "files": 537, "added": 12312, "deleted": 2568}},
+    "routines": {"section-doctor": 5},
+    "models": {"Claude": 19, "Claude Fable 5.1": 1, "Claude Opus 5": 1},
+    "authors": 1,
+    "all_commits": 22
+  },
+  {
+    "date": "2026-09-21",
+    "lanes": {"automation": {"prs": 3, "files": 23, "added": 608, "deleted": 145}, "peter": {"prs": 15, "files": 877, "added": 16655, "deleted": 9243}},
+    "routines": {"section-doctor": 1, "dependabot": 2},
+    "models": {"Claude": 10},
+    "authors": 2,
+    "all_commits": 19
+  },
+  {
+    "date": "2026-09-22",
+    "lanes": {"automation": {"prs": 3, "files": 130, "added": 1576, "deleted": 3006}, "peter": {"prs": 15, "files": 228, "added": 2916, "deleted": 1520}},
+    "routines": {"dependabot": 1, "section-doctor": 1, "freshness-sweep": 1},
+    "models": {"Claude": 12, "Claude Fable 5.1": 1, "Claude Opus 5.5 (1M context)": 1},
+    "authors": 2,
+    "all_commits": 18
+  },
+  {
+    "date": "2026-09-23",
+    "lanes": {
+      "automation": {"prs": 1, "files": 1, "added": 4, "deleted": 1},
+      "other": {"prs": 1, "files": 1, "added": 6, "deleted": 0},
+      "peter": {"prs": 3, "files": 144, "added": 4230, "deleted": 688}
+    },
+    "routines": {"section-doctor": 1},
+    "models": {"Claude": 4, "Claude Fable 5.1": 1},
+    "authors": 2,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-09-24",
+    "lanes": {"automation": {"prs": 2, "files": 28, "added": 680, "deleted": 415}, "peter": {"prs": 4, "files": 397, "added": 4615, "deleted": 2074}},
+    "routines": {"section-doctor": 2},
+    "models": {"Claude": 6},
+    "authors": 1,
+    "all_commits": 6
+  },
+  {"date": "2026-09-25", "lanes": {}, "routines": {}, "models": {}, "authors": 0, "all_commits": 1},
+  {
+    "date": "2026-09-26",
+    "lanes": {"automation": {"prs": 1, "files": 43, "added": 622, "deleted": 165}, "peter": {"prs": 1, "files": 93, "added": 306, "deleted": 841}},
+    "routines": {"section-doctor": 1},
+    "models": {"Claude": 2},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-09-27",
+    "lanes": {"automation": {"prs": 1, "files": 24, "added": 592, "deleted": 247}, "peter": {"prs": 1, "files": 56, "added": 704, "deleted": 237}},
+    "routines": {"section-doctor": 1},
+    "models": {"Claude": 2},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-09-28",
+    "lanes": {"automation": {"prs": 7, "files": 44, "added": 821, "deleted": 394}, "peter": {"prs": 12, "files": 274, "added": 6261, "deleted": 1058}},
+    "routines": {"section-doctor": 2, "dependabot": 5},
+    "models": {"Claude": 5, "Claude Opus 5.5": 1, "Claude Fable 5.1": 8},
+    "authors": 2,
+    "all_commits": 20
+  },
+  {
+    "date": "2026-09-30",
+    "lanes": {"automation": {"prs": 2, "files": 53, "added": 848, "deleted": 579}, "peter": {"prs": 9, "files": 304, "added": 6183, "deleted": 2054}},
+    "routines": {"section-doctor": 2},
+    "models": {"Claude": 5, "Claude Fable 5.1": 4},
+    "authors": 1,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-10-01",
+    "lanes": {"automation": {"prs": 1, "files": 37, "added": 611, "deleted": 345}, "peter": {"prs": 8, "files": 222, "added": 7507, "deleted": 465}},
+    "routines": {"section-doctor": 1},
+    "models": {"Claude": 2, "Claude Opus 5.5": 1, "Claude Fable 5.1": 6},
+    "authors": 1,
+    "all_commits": 10
+  },
+  {
+    "date": "2026-10-02",
+    "lanes": {"automation": {"prs": 2, "files": 33, "added": 580, "deleted": 271}, "peter": {"prs": 5, "files": 275, "added": 5848, "deleted": 1005}},
+    "routines": {"section-doctor": 1, "debt-sweep": 1},
+    "models": {"Claude": 3, "Claude Fable 5.1": 4},
+    "authors": 1,
+    "all_commits": 7
+  },
+  {
+    "date": "2026-10-03",
+    "lanes": {"peter": {"prs": 2, "files": 599, "added": 11851, "deleted": 2748}},
+    "routines": {},
+    "models": {"Claude": 2},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-10-04",
+    "lanes": {"automation": {"prs": 1, "files": 20, "added": 333, "deleted": 103}, "peter": {"prs": 3, "files": 802, "added": 9638, "deleted": 3036}},
+    "routines": {"section-doctor": 1},
+    "models": {"Claude": 3, "Claude Fable 5.1": 1},
+    "authors": 1,
+    "all_commits": 4
+  },
+  {
+    "date": "2026-10-05",
+    "lanes": {"peter": {"prs": 2, "files": 202, "added": 3729, "deleted": 688}},
+    "routines": {},
+    "models": {"Claude": 2},
+    "authors": 1,
+    "all_commits": 2
+  },
+  {
+    "date": "2026-10-06",
+    "lanes": {"automation": {"prs": 8, "files": 119, "added": 1546, "deleted": 1202}, "peter": {"prs": 1, "files": 177, "added": 711, "deleted": 343}},
+    "routines": {"dependabot": 4, "section-doctor": 3, "debt-sweep": 1},
+    "models": {"Claude": 4, "Claude Fable 5.1": 1},
+    "authors": 2,
+    "all_commits": 10
+  },
+  {
+    "date": "2026-10-09",
+    "lanes": {"peter": {"prs": 1, "files": 1, "added": 423, "deleted": 0}},
+    "routines": {},
+    "models": {"Claude": 1},
+    "authors": 1,
+    "all_commits": 1
+  },
+  {
+    "date": "2026-10-10",
+    "lanes": {"automation": {"prs": 3, "files": 50, "added": 907, "deleted": 338}, "peter": {"prs": 5, "files": 693, "added": 15792, "deleted": 8338}},
+    "routines": {"section-doctor": 3},
+    "models": {"Claude": 4, "Claude Fable 5.1": 3, "Claude Opus 5.5": 1},
+    "authors": 1,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-10-11",
+    "lanes": {"peter": {"prs": 1, "files": 168, "added": 3617, "deleted": 1368}},
+    "routines": {},
+    "models": {"Claude": 1},
+    "authors": 1,
+    "all_commits": 1
+  },
+  {
+    "date": "2026-10-12",
+    "lanes": {"automation": {"prs": 1, "files": 1, "added": 4, "deleted": 0}, "peter": {"prs": 3, "files": 57, "added": 1686, "deleted": 117}},
+    "routines": {"debt-sweep": 1},
+    "models": {"Claude Fable 5.1": 2, "Claude Opus 5.5": 1, "Claude": 1},
+    "authors": 1,
+    "all_commits": 5
+  },
+  {
+    "date": "2026-10-15",
+    "lanes": {"automation": {"prs": 7, "files": 30, "added": 339, "deleted": 224}, "peter": {"prs": 2, "files": 11, "added": 163, "deleted": 103}},
+    "routines": {"dependabot": 6, "section-doctor": 1},
+    "models": {"Claude Fable 5.1": 2, "Claude": 1},
+    "authors": 2,
+    "all_commits": 9
+  },
+  {
+    "date": "2026-10-16",
+    "lanes": {"automation": {"prs": 7, "files": 182, "added": 2655, "deleted": 1268}, "peter": {"prs": 13, "files": 271, "added": 8956, "deleted": 2529}},
+    "routines": {"section-doctor": 7},
+    "models": {"Claude": 11, "Claude Opus 5.5": 1, "Claude Haiku 5.5": 1, "Claude Fable 5.1": 7},
+    "authors": 1,
+    "all_commits": 21
+  },
+  {
+    "date": "2026-10-17",
+    "lanes": {
+      "automation": {"prs": 1, "files": 42, "added": 571, "deleted": 284},
+      "other": {"prs": 1, "files": 3, "added": 36, "deleted": 0},
+      "peter": {"prs": 19, "files": 2135, "added": 22521, "deleted": 7938}
+    },
+    "routines": {"section-doctor": 1},
+    "models": {"Claude Fable 5.1": 2, "Claude": 18},
+    "authors": 2,
+    "all_commits": 23
+  },
+  {
+    "date": "2026-10-18",
+    "lanes": {"automation": {"prs": 2, "files": 196, "added": 1656, "deleted": 4196}, "peter": {"prs": 6, "files": 378, "added": 8575, "deleted": 1964}},
+    "routines": {"section-doctor": 1, "freshness-sweep": 1},
+    "models": {"Claude": 7},
+    "authors": 1,
+    "all_commits": 10
+  },
+  {
+    "date": "2026-10-20",
+    "lanes": {"automation": {"prs": 10, "files": 112, "added": 1874, "deleted": 698}, "peter": {"prs": 7, "files": 525, "added": 17462, "deleted": 4884}},
+    "routines": {"dependabot": 6, "section-doctor": 2, "debt-sweep": 2},
+    "models": {"Claude": 10, "Claude Opus 5.5": 1},
+    "authors": 2,
+    "all_commits": 19
+  },
+  {
+    "date": "2026-10-21",
+    "lanes": {"automation": {"prs": 29, "files": 1684, "added": 13135, "deleted": 13765}, "peter": {"prs": 33, "files": 1739, "added": 187018, "deleted": 53917}},
+    "routines": {"debt-sweep": 25, "section-doctor": 3, "freshness-sweep": 1},
+    "models": {"Claude": 60, "Claude Fable 5.1": 2},
+    "authors": 1,
+    "all_commits": 63
+  },
+  {
+    "date": "2026-10-22",
+    "lanes": {
+      "automation": {"prs": 2, "files": 50, "added": 574, "deleted": 320},
+      "other": {"prs": 2, "files": 2, "added": 2, "deleted": 2},
+      "peter": {"prs": 12, "files": 3050, "added": 17764, "deleted": 51261}
+    },
+    "routines": {"debt-sweep": 1, "section-doctor": 1},
+    "models": {"Claude": 14, "Claude Opus 5.5 (1M context)": 2},
+    "authors": 2,
+    "all_commits": 16
+  },
+  {"date": "2026-10-23", "lanes": {"peter": {"prs": 1, "files": 13, "added": 75, "deleted": 38}}, "routines": {}, "models": {}, "authors": 1, "all_commits": 1},
+  {
+    "date": "2026-10-26",
+    "lanes": {"automation": {"prs": 4, "files": 4, "added": 4, "deleted": 4}, "peter": {"prs": 2, "files": 183, "added": 2025, "deleted": 708}},
+    "routines": {"dependabot": 4},
+    "models": {"Claude": 1},
+    "authors": 2,
+    "all_commits": 6
+  },
+  {
+    "date": "2026-10-27",
+    "lanes": {"automation": {"prs": 2, "files": 3, "added": 52, "deleted": 28}, "peter": {"prs": 6, "files": 441, "added": 5932, "deleted": 3795}},
+    "routines": {"dependabot": 1, "section-doctor": 1},
+    "models": {"Claude": 7},
+    "authors": 2,
+    "all_commits": 8
+  },
+  {
+    "date": "2026-10-28",
+    "lanes": {"automation": {"prs": 7, "files": 113, "added": 1831, "deleted": 878}, "peter": {"prs": 5, "files": 176, "added": 2370, "deleted": 2114}},
+    "routines": {"section-doctor": 7},
+    "models": {"Claude": 10, "Claude Opus 5.5": 1},
+    "authors": 1,
+    "all_commits": 12
+  },
+  {
+    "date": "2026-10-29",
+    "lanes": {"automation": {"prs": 1, "files": 22, "added": 430, "deleted": 256}, "peter": {"prs": 6, "files": 392, "added": 3818, "deleted": 2014}},
+    "routines": {"section-doctor": 1},
+    "models": {"Claude": 7},
+    "authors": 1,
+    "all_commits": 7
+  }
+]

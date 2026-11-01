@@ -61,6 +61,6 @@ page lists these days. Fix the driver if it is a tooling issue of today's clock
 
 ## After the backfill
 
-`python3 site/build.py` regenerates `docs/index.html`; the weekly job does this
+`python3 site/build.py` regenerates `docs/` (page files plus `docs/data/*.json`); the weekly job does this
 on Mondays and scores new days forward. The `data/seed/reforge-history.csv`
 series and the three `data/surface/` runs retire once every day has a record.

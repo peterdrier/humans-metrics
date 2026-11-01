@@ -1,0 +1,2965 @@
+[
+  {
+    "date": "2026-03-18",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {"peter": {"merged": 3, "lines": 0, "files": 0, "closed": 1, "human_comments": 1, "ttm_hours": [0.4, 5.4, 0.2]}},
+    "gate": {},
+    "bots": {}
+  },
+  {
+    "date": "2026-03-19",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {"peter": {"merged": 7, "lines": 4537, "files": 42, "ttm_hours": [6.3, 0.5, 0.2, 1.1, 1.6, 3.1, 0.6]}},
+    "gate": {},
+    "bots": {}
+  },
+  {"date": "2026-03-20", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-03-21",
+    "collector_version": 1,
+    "opened": 10,
+    "lanes": {"peter": {"merged": 3, "lines": 4594, "files": 51, "bot_comments": 2, "ttm_hours": [6.3, 0.6, 0.9]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 2}
+  },
+  {
+    "date": "2026-03-22",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {"peter": {"merged": 10, "lines": 12602, "files": 144, "bot_comments": 3, "ttm_hours": [64.2, 25.4, 25.3, 26.4, 25.3, 28.2, 24.7, 24.5, 0.7, 0.6]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 3}
+  },
+  {
+    "date": "2026-03-23",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "peter": {
+        "merged": 6,
+        "lines": 13854,
+        "files": 122,
+        "bot_comments": 10,
+        "reviews": 1,
+        "changes_requested": 0,
+        "human_comments": 1,
+        "ttm_hours": [4.0, 1.8, 0.9, 0.8, 0.5, 1.1]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 10}
+  },
+  {
+    "date": "2026-03-24",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {"peter": {"merged": 2, "lines": 11629, "files": 73, "bot_comments": 2, "ttm_hours": [1.4, 0.4]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 2}
+  },
+  {
+    "date": "2026-03-25",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {"peter": {"closed": 1, "bot_comments": 6, "human_comments": 2, "merged": 6, "lines": 22439, "files": 136, "ttm_hours": [3.2, 1.3, 1.1, 0.9, 1.0, 1.1]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 6}
+  },
+  {
+    "date": "2026-03-26",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {"peter": {"merged": 4, "lines": 337, "files": 20, "bot_comments": 6, "ttm_hours": [0.1, 0.7, 0.0, 4.6]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-03-27",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "peter": {"closed": 4, "human_comments": 4, "merged": 8, "lines": 18333, "files": 166, "bot_comments": 11, "ttm_hours": [27.7, 27.6, 0.1, 1.1, 1.4, 0.6, 1.1, 0.1]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 11}
+  },
+  {
+    "date": "2026-03-28",
+    "collector_version": 1,
+    "opened": 8,
+    "lanes": {"peter": {"closed": 1, "bot_comments": 2, "human_comments": 1}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 1, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-03-29",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {"peter": {"merged": 11, "lines": 3177, "files": 79, "bot_comments": 13, "ttm_hours": [23.9, 24.7, 25.0, 25.0, 26.5, 26.0, 25.0, 0.4, 0.4, 0.0, 0.6]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 13}
+  },
+  {
+    "date": "2026-03-30",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {"peter": {"merged": 8, "lines": 9508, "files": 70, "bot_comments": 8, "ttm_hours": [0.8, 0.7, 0.6, 0.6, 0.5, 0.5, 0.6, 0.4]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 8}
+  },
+  {
+    "date": "2026-03-31",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {
+      "other": {"closed": 1, "human_comments": 1},
+      "peter": {"merged": 11, "lines": 22469, "files": 137, "bot_comments": 12, "ttm_hours": [2.0, 0.5, 0.1, 16.4, 6.8, 1.4, 3.9, 8.4, 0.8, 1.3, 1.5]}
+    },
+    "gate": {"review_comments": 1, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 11, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-04-01",
+    "collector_version": 1,
+    "opened": 16,
+    "lanes": {
+      "peter": {
+        "merged": 14,
+        "lines": 28587,
+        "files": 226,
+        "bot_comments": 15,
+        "closed": 1,
+        "ttm_hours": [9.5, 9.4, 9.3, 7.7, 0.3, 7.5, 0.9, 0.9, 1.9, 1.2, 0.2, 1.2, 0.2, 0.1]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 15}
+  },
+  {
+    "date": "2026-04-02",
+    "collector_version": 1,
+    "opened": 8,
+    "lanes": {"peter": {"merged": 7, "lines": 6929, "files": 54, "bot_comments": 7, "ttm_hours": [19.4, 5.8, 5.0, 0.6, 1.6, 1.7, 0.3]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 7}
+  },
+  {
+    "date": "2026-04-03",
+    "collector_version": 1,
+    "opened": 15,
+    "lanes": {
+      "peter": {
+        "merged": 15,
+        "lines": 0,
+        "files": 0,
+        "bot_comments": 15,
+        "closed": 1,
+        "ttm_hours": [20.9, 23.2, 0.7, 1.5, 2.0, 1.0, 1.7, 4.4, 1.7, 1.6, 2.5, 2.6, 3.8, 1.3, 0.9]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 15}
+  },
+  {
+    "date": "2026-04-04",
+    "collector_version": 1,
+    "opened": 10,
+    "lanes": {"peter": {"merged": 6, "lines": 0, "files": 0, "bot_comments": 6, "ttm_hours": [3.9, 0.4, 1.5, 0.2, 0.1, 0.1]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 6}
+  },
+  {
+    "date": "2026-04-05",
+    "collector_version": 1,
+    "opened": 10,
+    "lanes": {
+      "peter": {
+        "merged": 13,
+        "lines": 2133,
+        "files": 162,
+        "bot_comments": 15,
+        "human_comments": 1,
+        "ttm_hours": [34.1, 34.1, 35.1, 33.9, 1.8, 1.7, 1.7, 0.2, 1.5, 0.1, 0.2, 0.4, 0.2]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 14, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-04-06",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {"other": {"closed": 1, "human_comments": 3}, "peter": {"merged": 2, "lines": 12104, "files": 66, "bot_comments": 3, "ttm_hours": [2.6, 0.2]}},
+    "gate": {"review_comments": 3, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 3}
+  },
+  {
+    "date": "2026-04-07",
+    "collector_version": 1,
+    "opened": 10,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 959, "files": 18, "bot_comments": 3, "human_comments": 3, "closed": 1, "ttm_hours": [34.2, 8.0, 0.0]},
+      "peter": {
+        "merged": 16,
+        "lines": 12608,
+        "files": 169,
+        "bot_comments": 17,
+        "human_comments": 1,
+        "ttm_hours": [10.8, 11.0, 11.7, 11.4, 11.4, 11.2, 6.2, 0.1, 0.2, 2.1, 2.1, 2.1, 2.5, 2.6, 0.6, 0.5]
+      }
+    },
+    "gate": {"review_comments": 1, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 19, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-04-08",
+    "collector_version": 1,
+    "opened": 20,
+    "lanes": {
+      "peter": {
+        "merged": 18,
+        "lines": 9925,
+        "files": 156,
+        "bot_comments": 19,
+        "ttm_hours": [8.5, 8.5, 8.5, 8.3, 8.6, 0.6, 0.8, 2.5, 0.8, 1.2, 1.0, 1.8, 2.0, 0.5, 5.0, 5.0, 4.8, 4.7]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 17, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-04-09",
+    "collector_version": 1,
+    "opened": 16,
+    "lanes": {
+      "other": {"merged": 3, "lines": 933, "files": 22, "reviews": 3, "changes_requested": 0, "human_comments": 7, "ttm_hours": [1.8, 0.3, 5.8]},
+      "peter": {"merged": 4, "lines": 2256, "files": 70, "bot_comments": 3, "ttm_hours": [25.8, 0.2, 0.2, 5.3]}
+    },
+    "gate": {"review_comments": 4, "merges": 3, "reviews": 2, "approvals": 0, "changes_requested": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 3}
+  },
+  {
+    "date": "2026-04-10",
+    "collector_version": 1,
+    "opened": 15,
+    "lanes": {
+      "other": {"merged": 1, "lines": 133, "files": 15, "human_comments": 2, "ttm_hours": [11.1]},
+      "peter": {
+        "merged": 18,
+        "lines": 12703,
+        "files": 217,
+        "bot_comments": 14,
+        "human_comments": 40,
+        "reviews": 7,
+        "changes_requested": 0,
+        "closed": 1,
+        "ttm_hours": [6.3, 7.7, 25.7, 8.1, 24.9, 22.9, 17.4, 17.3, 17.0, 21.3, 11.1, 6.5, 6.1, 6.9, 6.4, 4.5, 3.9, 0.0]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 14}
+  },
+  {"date": "2026-04-11", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-04-13",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "peter": {
+        "merged": 7,
+        "lines": 9416,
+        "files": 95,
+        "reviews": 8,
+        "changes_requested": 0,
+        "bot_comments": 8,
+        "human_comments": 8,
+        "ttm_hours": [73.1, 44.9, 0.3, 1.3, 2.0, 1.9, 1.9]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 8}
+  },
+  {
+    "date": "2026-04-14",
+    "collector_version": 1,
+    "opened": 1,
+    "lanes": {"other": {"closed": 1, "human_comments": 2}, "peter": {"merged": 1, "lines": 5270, "files": 23, "human_comments": 2, "ttm_hours": [5.6]}},
+    "gate": {"review_comments": 2, "merges": 0},
+    "bots": {}
+  },
+  {
+    "date": "2026-04-15",
+    "collector_version": 1,
+    "opened": 8,
+    "lanes": {
+      "peter": {
+        "merged": 6,
+        "lines": 11697,
+        "files": 120,
+        "bot_comments": 5,
+        "human_comments": 7,
+        "closed": 1,
+        "reviews": 2,
+        "changes_requested": 0,
+        "ttm_hours": [154.8, 106.4, 10.5, 5.6, 1.0, 0.7]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 3, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-04-16",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {"peter": {"merged": 2, "lines": 687, "files": 16, "bot_comments": 1, "ttm_hours": [22.4, 21.7]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 1}
+  },
+  {"date": "2026-04-17", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-04-20",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {"peter": {"merged": 1, "lines": 3056, "files": 53, "bot_comments": 2, "human_comments": 1, "ttm_hours": [1.3]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 2}
+  },
+  {
+    "date": "2026-04-21",
+    "collector_version": 1,
+    "opened": 32,
+    "lanes": {
+      "other": {"merged": 3, "lines": 4341, "files": 41, "human_comments": 6, "closed": 1, "ttm_hours": [268.5, 6.9, 2.0]},
+      "peter": {
+        "merged": 7,
+        "lines": 27745,
+        "files": 190,
+        "reviews": 6,
+        "changes_requested": 0,
+        "bot_comments": 8,
+        "human_comments": 12,
+        "closed": 1,
+        "ttm_hours": [119.5, 19.7, 10.2, 1.6, 2.6, 0.2, 1.9]
+      }
+    },
+    "gate": {"review_comments": 5, "merges": 3},
+    "bots": {"chatgpt-codex-connector[bot]": 8}
+  },
+  {
+    "date": "2026-04-22",
+    "collector_version": 1,
+    "opened": 20,
+    "lanes": {
+      "peter": {
+        "merged": 32,
+        "lines": 40045,
+        "files": 448,
+        "reviews": 40,
+        "changes_requested": 0,
+        "bot_comments": 85,
+        "human_comments": 84,
+        "ttm_hours": [
+          9.1,
+          9.9,
+          10.2,
+          10.2,
+          9.1,
+          9.0,
+          8.5,
+          10.1,
+          8.4,
+          12.7,
+          12.6,
+          16.6,
+          21.8,
+          16.9,
+          17.2,
+          17.3,
+          17.5,
+          20.7,
+          17.1,
+          17.2,
+          16.9,
+          20.4,
+          17.7,
+          7.9,
+          20.9,
+          20.4,
+          19.3,
+          16.4,
+          20.3,
+          16.2,
+          19.7,
+          0.4
+        ]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 67, "coolify-nuc-humans[bot]": 18}
+  },
+  {
+    "date": "2026-04-23",
+    "collector_version": 1,
+    "opened": 15,
+    "lanes": {
+      "peter": {
+        "merged": 18,
+        "lines": 30927,
+        "files": 312,
+        "reviews": 35,
+        "changes_requested": 0,
+        "bot_comments": 48,
+        "human_comments": 61,
+        "ttm_hours": [35.9, 33.2, 32.3, 8.8, 0.0, 0.1, 0.1, 0.4, 2.5, 2.5, 2.4, 2.3, 0.4, 0.7, 0.5, 1.0, 0.7, 2.0]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 43, "coolify-nuc-humans[bot]": 5}
+  },
+  {
+    "date": "2026-04-24",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "other": {"merged": 1, "lines": 24, "files": 1, "ttm_hours": [8.0]},
+      "peter": {"merged": 5, "lines": 3652, "files": 34, "bot_comments": 7, "closed": 2, "human_comments": 3, "ttm_hours": [0.7, 0.7, 0.7, 1.4, 0.1]}
+    },
+    "gate": {"review_comments": 0, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 7}
+  },
+  {
+    "date": "2026-04-25",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "other": {"merged": 2, "lines": 2407, "files": 33, "human_comments": 4, "ttm_hours": [25.4, 2.6]},
+      "peter": {
+        "merged": 13,
+        "lines": 16270,
+        "files": 307,
+        "bot_comments": 21,
+        "human_comments": 11,
+        "reviews": 7,
+        "changes_requested": 0,
+        "ttm_hours": [250.0, 105.6, 92.6, 33.8, 39.8, 20.0, 1.2, 0.1, 0.1, 0.2, 1.1, 0.3, 2.1]
+      }
+    },
+    "gate": {"review_comments": 4, "merges": 2},
+    "bots": {"chatgpt-codex-connector[bot]": 15, "claude[bot]": 6}
+  },
+  {
+    "date": "2026-04-26",
+    "collector_version": 1,
+    "opened": 13,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 7970, "files": 108, "reviews": 22, "changes_requested": 0, "bot_comments": 43, "human_comments": 23, "ttm_hours": [17.7]},
+      "other": {"merged": 7, "lines": 1492, "files": 48, "human_comments": 19, "closed": 2, "ttm_hours": [92.5, 16.7, 16.7, 15.7, 9.9, 7.1, 0.9]},
+      "peter": {
+        "closed": 4,
+        "bot_comments": 135,
+        "human_comments": 49,
+        "merged": 12,
+        "lines": 23767,
+        "files": 160,
+        "reviews": 31,
+        "changes_requested": 0,
+        "ttm_hours": [112.3, 117.1, 113.0, 116.6, 62.5, 68.1, 22.1, 20.3, 0.1, 0.0, 1.7, 0.1]
+      }
+    },
+    "gate": {"review_comments": 16, "merges": 7},
+    "bots": {"chatgpt-codex-connector[bot]": 12, "claude[bot]": 165, "coolify-nuc-humans[bot]": 1}
+  },
+  {"date": "2026-04-27", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-04-28",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "other": {"merged": 1, "lines": 6, "files": 1, "ttm_hours": [26.5]},
+      "peter": {"merged": 1, "lines": 53, "files": 6, "reviews": 10, "changes_requested": 0, "bot_comments": 14, "human_comments": 14, "ttm_hours": [0.8]}
+    },
+    "gate": {"review_comments": 0, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "claude[bot]": 10}
+  },
+  {
+    "date": "2026-04-29",
+    "collector_version": 1,
+    "opened": 12,
+    "lanes": {
+      "other": {"merged": 3, "lines": 832, "files": 29, "human_comments": 6, "ttm_hours": [60.9, 60.1, 11.6]},
+      "peter": {
+        "merged": 12,
+        "lines": 16006,
+        "files": 247,
+        "reviews": 91,
+        "changes_requested": 0,
+        "bot_comments": 128,
+        "human_comments": 94,
+        "ttm_hours": [129.6, 62.1, 61.9, 21.5, 0.5, 0.9, 10.2, 8.6, 4.9, 0.5, 1.1, 0.8]
+      }
+    },
+    "gate": {"review_comments": 6, "merges": 3},
+    "bots": {"claude[bot]": 117, "chatgpt-codex-connector[bot]": 11}
+  },
+  {
+    "date": "2026-04-30",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "other": {"merged": 1, "lines": 0, "files": 0, "bot_comments": 33, "human_comments": 1, "ttm_hours": [2.9]},
+      "peter": {
+        "merged": 3,
+        "lines": 11665,
+        "files": 91,
+        "reviews": 16,
+        "changes_requested": 0,
+        "bot_comments": 40,
+        "human_comments": 18,
+        "closed": 2,
+        "ttm_hours": [11.1, 11.6, 0.2]
+      }
+    },
+    "gate": {"review_comments": 1, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 11, "claude[bot]": 61, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-05-01",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "peter": {"merged": 3, "lines": 7043, "files": 54, "reviews": 61, "changes_requested": 0, "bot_comments": 91, "human_comments": 63, "ttm_hours": [26.7, 24.4, 0.2]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 5, "claude[bot]": 86}
+  },
+  {
+    "date": "2026-05-02",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "other": {"merged": 1, "lines": 135, "files": 8, "human_comments": 3, "ttm_hours": [17.1]},
+      "peter": {
+        "closed": 2,
+        "bot_comments": 136,
+        "human_comments": 52,
+        "merged": 7,
+        "lines": 28674,
+        "files": 303,
+        "reviews": 43,
+        "changes_requested": 0,
+        "ttm_hours": [74.9, 21.8, 18.7, 0.1, 0.4, 1.7, 0.9]
+      }
+    },
+    "gate": {"review_comments": 3, "merges": 1},
+    "bots": {"claude[bot]": 123, "chatgpt-codex-connector[bot]": 11, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-05-03",
+    "collector_version": 1,
+    "opened": 13,
+    "lanes": {
+      "other": {"merged": 2, "lines": 953, "files": 29, "human_comments": 3, "ttm_hours": [100.6, 8.5]},
+      "peter": {
+        "merged": 9,
+        "lines": 10304,
+        "files": 149,
+        "reviews": 7,
+        "changes_requested": 0,
+        "bot_comments": 23,
+        "human_comments": 11,
+        "closed": 1,
+        "ttm_hours": [17.9, 0.0, 0.0, 0.5, 0.1, 0.9, 0.1, 0.9, 0.6]
+      }
+    },
+    "gate": {"review_comments": 3, "merges": 2},
+    "bots": {"chatgpt-codex-connector[bot]": 7, "claude[bot]": 14, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-05-04",
+    "collector_version": 1,
+    "opened": 18,
+    "lanes": {
+      "other": {"merged": 1, "lines": 236, "files": 9, "human_comments": 2, "ttm_hours": [16.7]},
+      "peter": {
+        "merged": 15,
+        "lines": 29547,
+        "files": 255,
+        "reviews": 26,
+        "changes_requested": 0,
+        "bot_comments": 85,
+        "human_comments": 56,
+        "closed": 1,
+        "ttm_hours": [303.5, 113.8, 43.1, 17.5, 1.2, 0.6, 0.3, 0.1, 0.1, 0.1, 0.1, 0.3, 1.9, 1.3, 0.1]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 12, "claude[bot]": 69, "coolify-nuc-humans[bot]": 4}
+  },
+  {
+    "date": "2026-05-05",
+    "collector_version": 1,
+    "opened": 25,
+    "lanes": {
+      "other": {"merged": 2, "lines": 9231, "files": 39, "human_comments": 6, "bot_comments": 1, "ttm_hours": [39.9, 10.5]},
+      "peter": {
+        "merged": 20,
+        "lines": 15185,
+        "files": 258,
+        "bot_comments": 88,
+        "human_comments": 48,
+        "reviews": 17,
+        "changes_requested": 0,
+        "ttm_hours": [16.1, 17.2, 18.5, 18.1, 18.1, 21.6, 17.7, 1.7, 0.3, 1.0, 0.3, 0.7, 1.2, 0.5, 1.3, 0.2, 0.7, 0.5, 0.1, 0.4]
+      }
+    },
+    "gate": {"review_comments": 6, "merges": 2},
+    "bots": {"claude[bot]": 70, "chatgpt-codex-connector[bot]": 14, "coolify-nuc-humans[bot]": 2, "github-actions[bot]": 3}
+  },
+  {
+    "date": "2026-05-08",
+    "collector_version": 1,
+    "opened": 12,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 389, "files": 14, "bot_comments": 6, "human_comments": 6, "ttm_hours": [1.0, 2.1]},
+      "peter": {
+        "merged": 16,
+        "lines": 13412,
+        "files": 189,
+        "bot_comments": 74,
+        "human_comments": 47,
+        "closed": 1,
+        "reviews": 22,
+        "changes_requested": 0,
+        "ttm_hours": [67.9, 67.8, 68.9, 70.2, 70.0, 69.7, 72.2, 5.3, 0.2, 0.1, 0.0, 0.1, 3.1, 2.6, 3.0, 0.6]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 74, "chatgpt-codex-connector[bot]": 4, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-05-09",
+    "collector_version": 1,
+    "opened": 13,
+    "lanes": {
+      "peter": {
+        "closed": 1,
+        "reviews": 61,
+        "changes_requested": 0,
+        "bot_comments": 94,
+        "human_comments": 70,
+        "merged": 10,
+        "lines": 5875,
+        "files": 162,
+        "ttm_hours": [12.4, 10.3, 11.7, 0.4, 12.1, 9.9, 4.0, 0.1, 10.4, 7.0]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 12, "claude[bot]": 81, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-05-10",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 72, "files": 2, "bot_comments": 6, "ttm_hours": [0.0]},
+      "peter": {
+        "closed": 1,
+        "reviews": 59,
+        "changes_requested": 0,
+        "bot_comments": 130,
+        "human_comments": 73,
+        "merged": 7,
+        "lines": 20182,
+        "files": 291,
+        "ttm_hours": [31.3, 1.2, 5.0, 10.0, 2.4, 3.9, 0.1]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 124, "chatgpt-codex-connector[bot]": 10, "github-actions[bot]": 1, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-05-11",
+    "collector_version": 1,
+    "opened": 15,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 814, "files": 22, "reviews": 3, "changes_requested": 0, "bot_comments": 11, "human_comments": 4, "ttm_hours": [5.4]},
+      "other": {"merged": 1, "lines": 13462, "files": 46, "reviews": 2, "changes_requested": 0, "bot_comments": 2, "human_comments": 6, "ttm_hours": [36.0]},
+      "peter": {
+        "merged": 12,
+        "lines": 38493,
+        "files": 362,
+        "reviews": 121,
+        "changes_requested": 0,
+        "bot_comments": 194,
+        "human_comments": 126,
+        "closed": 2,
+        "ttm_hours": [36.8, 14.0, 2.7, 1.3, 11.1, 9.0, 8.1, 8.3, 1.2, 10.5, 0.3, 0.2]
+      }
+    },
+    "gate": {"reviews": 2, "approvals": 0, "changes_requested": 0, "review_comments": 6, "merges": 1},
+    "bots": {"github-actions[bot]": 2, "chatgpt-codex-connector[bot]": 19, "claude[bot]": 184, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-05-12",
+    "collector_version": 1,
+    "opened": 20,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 2050, "files": 68, "reviews": 6, "changes_requested": 0, "bot_comments": 24, "human_comments": 7, "ttm_hours": [27.8]},
+      "other": {"merged": 2, "lines": 1408, "files": 30, "reviews": 1, "changes_requested": 0, "bot_comments": 5, "human_comments": 6, "ttm_hours": [5.0, 0.8]},
+      "peter": {
+        "closed": 2,
+        "bot_comments": 205,
+        "merged": 21,
+        "lines": 32390,
+        "files": 417,
+        "reviews": 83,
+        "changes_requested": 0,
+        "human_comments": 98,
+        "ttm_hours": [49.0, 34.6, 33.9, 15.0, 0.1, 10.0, 2.8, 1.0, 0.3, 1.3, 5.7, 1.1, 1.4, 1.3, 0.2, 0.3, 0.1, 1.1, 0.3, 0.3, 0.1]
+      }
+    },
+    "gate": {"reviews": 1, "approvals": 0, "changes_requested": 0, "review_comments": 5, "merges": 2},
+    "bots": {"coolify-nuc-humans[bot]": 6, "chatgpt-codex-connector[bot]": 22, "claude[bot]": 204, "github-actions[bot]": 2}
+  },
+  {
+    "date": "2026-05-13",
+    "collector_version": 1,
+    "opened": 26,
+    "lanes": {
+      "other": {"closed": 1, "bot_comments": 38, "human_comments": 1},
+      "peter": {
+        "closed": 1,
+        "reviews": 63,
+        "changes_requested": 0,
+        "bot_comments": 176,
+        "human_comments": 65,
+        "merged": 24,
+        "lines": 10190,
+        "files": 164,
+        "ttm_hours": [26.3, 8.2, 0.1, 0.7, 2.1, 6.6, 0.4, 0.2, 3.0, 1.5, 1.7, 1.5, 2.7, 2.9, 1.5, 1.5, 1.8, 1.4, 1.6, 1.2, 2.0, 1.6, 0.6, 0.1]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"claude[bot]": 193, "chatgpt-codex-connector[bot]": 14, "coolify-nuc-humans[bot]": 7}
+  },
+  {
+    "date": "2026-05-14",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 767, "files": 10, "bot_comments": 3, "human_comments": 4, "ttm_hours": [18.1]},
+      "peter": {
+        "merged": 11,
+        "lines": 11752,
+        "files": 172,
+        "reviews": 27,
+        "changes_requested": 0,
+        "bot_comments": 47,
+        "human_comments": 31,
+        "ttm_hours": [0.9, 14.2, 0.4, 0.1, 2.4, 2.1, 0.6, 0.3, 2.9, 0.1, 0.4]
+      }
+    },
+    "gate": {"review_comments": 3, "merges": 1},
+    "bots": {"claude[bot]": 39, "chatgpt-codex-connector[bot]": 9, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-05-15",
+    "collector_version": 1,
+    "opened": 21,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 2948, "files": 9, "ttm_hours": [0.1]},
+      "other": {"merged": 2, "lines": 30524, "files": 223, "reviews": 60, "changes_requested": 0, "bot_comments": 70, "human_comments": 71, "ttm_hours": [302.9, 42.3]},
+      "peter": {
+        "merged": 20,
+        "lines": 40289,
+        "files": 832,
+        "reviews": 22,
+        "changes_requested": 0,
+        "bot_comments": 44,
+        "human_comments": 39,
+        "ttm_hours": [13.9, 15.0, 3.1, 1.5, 1.0, 0.1, 0.3, 0.1, 1.2, 0.2, 0.3, 0.6, 0.8, 2.0, 4.4, 0.1, 1.5, 0.1, 1.1, 1.1]
+      }
+    },
+    "gate": {"reviews": 60, "approvals": 0, "changes_requested": 0, "review_comments": 69, "merges": 2},
+    "bots": {"chatgpt-codex-connector[bot]": 16, "github-actions[bot]": 48, "claude[bot]": 40, "coolify-nuc-humans[bot]": 10}
+  },
+  {
+    "date": "2026-05-16",
+    "collector_version": 1,
+    "opened": 40,
+    "lanes": {
+      "other": {"merged": 4, "lines": 1288, "files": 24, "bot_comments": 9, "reviews": 2, "changes_requested": 0, "human_comments": 8, "ttm_hours": [0.4, 1.9, 1.3, 0.5]},
+      "peter": {
+        "merged": 29,
+        "lines": 51625,
+        "files": 442,
+        "reviews": 59,
+        "changes_requested": 0,
+        "bot_comments": 101,
+        "human_comments": 55,
+        "closed": 1,
+        "ttm_hours": [0.3, 0.9, 0.3, 9.4, 12.9, 12.8, 13.1, 12.8, 14.2, 14.7, 12.9, 12.7, 13.9, 2.1, 0.8, 0.1, 0.0, 0.6, 1.2, 3.9, 0.7, 5.7, 0.7, 0.4, 0.1, 0.6, 1.1, 1.1, 1.2]
+      }
+    },
+    "gate": {"review_comments": 8, "merges": 4, "reviews": 2, "approvals": 0, "changes_requested": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 21, "claude[bot]": 76, "coolify-nuc-humans[bot]": 5, "github-actions[bot]": 8}
+  },
+  {
+    "date": "2026-05-17",
+    "collector_version": 1,
+    "opened": 29,
+    "lanes": {
+      "peter": {
+        "merged": 27,
+        "lines": 24543,
+        "files": 502,
+        "bot_comments": 144,
+        "reviews": 66,
+        "changes_requested": 0,
+        "human_comments": 68,
+        "closed": 1,
+        "ttm_hours": [11.2, 12.4, 12.1, 12.4, 12.1, 13.8, 13.1, 11.9, 13.5, 14.1, 0.2, 0.4, 0.5, 0.7, 0.4, 1.0, 0.3, 0.4, 2.6, 0.4, 0.9, 2.5, 0.4, 0.3, 0.0, 0.7, 0.5]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 124, "chatgpt-codex-connector[bot]": 14, "coolify-nuc-humans[bot]": 6}
+  },
+  {
+    "date": "2026-05-18",
+    "collector_version": 1,
+    "opened": 19,
+    "lanes": {
+      "other": {"merged": 1, "lines": 270, "files": 5, "human_comments": 2, "ttm_hours": [2.8]},
+      "peter": {
+        "merged": 20,
+        "lines": 15130,
+        "files": 541,
+        "reviews": 36,
+        "changes_requested": 0,
+        "bot_comments": 55,
+        "human_comments": 42,
+        "ttm_hours": [14.3, 12.6, 14.1, 14.3, 13.1, 13.1, 12.9, 2.3, 1.5, 0.3, 1.9, 0.4, 1.8, 1.4, 1.3, 0.9, 0.9, 0.6, 0.3, 0.4]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 13, "claude[bot]": 41, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-05-19",
+    "collector_version": 1,
+    "opened": 27,
+    "lanes": {
+      "other": {"closed": 1, "human_comments": 3, "merged": 1, "lines": 6608, "files": 16, "bot_comments": 1, "ttm_hours": [3.9]},
+      "peter": {
+        "merged": 21,
+        "lines": 19481,
+        "files": 218,
+        "reviews": 19,
+        "changes_requested": 0,
+        "bot_comments": 40,
+        "human_comments": 27,
+        "ttm_hours": [28.7, 19.5, 16.6, 18.7, 6.6, 4.3, 1.3, 4.5, 0.8, 3.7, 3.8, 2.6, 0.1, 0.9, 0.7, 0.1, 0.4, 0.4, 0.4, 0.1, 0.2]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 15, "coolify-nuc-humans[bot]": 1, "claude[bot]": 24, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-05-20",
+    "collector_version": 1,
+    "opened": 14,
+    "lanes": {
+      "automation": {"merged": 7, "lines": 52, "files": 11, "bot_comments": 7, "ttm_hours": [10.9, 11.0, 10.9, 10.8, 10.9, 10.9, 11.8]},
+      "other": {"merged": 2, "lines": 8317, "files": 47, "reviews": 6, "changes_requested": 0, "bot_comments": 8, "human_comments": 9, "ttm_hours": [5.2, 5.5]},
+      "peter": {
+        "merged": 10,
+        "lines": 2106,
+        "files": 84,
+        "bot_comments": 13,
+        "reviews": 2,
+        "changes_requested": 0,
+        "human_comments": 2,
+        "ttm_hours": [10.1, 0.2, 0.1, 0.1, 0.3, 0.1, 0.7, 0.3, 0.7, 0.5]
+      }
+    },
+    "gate": {"review_comments": 9, "merges": 9, "reviews": 6, "approvals": 0, "changes_requested": 0},
+    "bots": {"dependabot[bot]": 7, "claude[bot]": 16, "chatgpt-codex-connector[bot]": 2, "github-actions[bot]": 3}
+  },
+  {"date": "2026-05-21", "collector_version": 1, "opened": 2, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-05-22",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "other": {"merged": 1, "lines": 1257, "files": 16, "reviews": 5, "changes_requested": 0, "bot_comments": 6, "human_comments": 6, "ttm_hours": [33.1]},
+      "peter": {
+        "merged": 9,
+        "lines": 4653,
+        "files": 131,
+        "reviews": 12,
+        "changes_requested": 0,
+        "bot_comments": 25,
+        "human_comments": 15,
+        "ttm_hours": [71.3, 49.5, 48.3, 32.0, 0.3, 0.6, 1.8, 0.6, 0.1]
+      }
+    },
+    "gate": {"reviews": 5, "approvals": 0, "changes_requested": 0, "review_comments": 6, "merges": 1},
+    "bots": {"claude[bot]": 19, "chatgpt-codex-connector[bot]": 4, "github-actions[bot]": 6, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-05-23",
+    "collector_version": 1,
+    "opened": 31,
+    "lanes": {
+      "other": {"closed": 1, "human_comments": 1},
+      "peter": {
+        "merged": 28,
+        "lines": 10869,
+        "files": 349,
+        "bot_comments": 69,
+        "human_comments": 28,
+        "reviews": 21,
+        "changes_requested": 0,
+        "closed": 3,
+        "ttm_hours": [13.7, 13.4, 0.2, 0.4, 8.3, 5.3, 0.1, 0.1, 0.1, 4.9, 6.6, 6.6, 7.5, 6.5, 8.4, 6.5, 5.8, 2.0, 3.0, 0.6, 1.1, 0.3, 0.7, 0.3, 0.0, 0.6, 0.3, 0.2]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"claude[bot]": 43, "chatgpt-codex-connector[bot]": 13, "coolify-nuc-humans[bot]": 7, "github-actions[bot]": 6}
+  },
+  {
+    "date": "2026-05-24",
+    "collector_version": 1,
+    "opened": 18,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 2037, "files": 57, "reviews": 4, "changes_requested": 0, "bot_comments": 6, "human_comments": 5, "ttm_hours": [22.9]},
+      "other": {"merged": 1, "lines": 5210, "files": 38, "bot_comments": 2, "human_comments": 2, "ttm_hours": [10.1]},
+      "peter": {
+        "merged": 10,
+        "lines": 7705,
+        "files": 126,
+        "reviews": 9,
+        "changes_requested": 0,
+        "bot_comments": 30,
+        "human_comments": 14,
+        "closed": 1,
+        "ttm_hours": [3.0, 12.0, 11.9, 20.7, 20.7, 11.8, 11.7, 8.1, 0.6, 0.5]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 6, "github-actions[bot]": 13, "claude[bot]": 18, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-05-25",
+    "collector_version": 1,
+    "opened": 30,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 8617, "files": 27, "bot_comments": 8, "ttm_hours": [0.6, 0.1, 0.2, 0.1]},
+      "other": {"closed": 2, "bot_comments": 15, "human_comments": 7, "merged": 2, "lines": 16686, "files": 111, "reviews": 2, "changes_requested": 0, "ttm_hours": [2.0, 6.3]},
+      "peter": {
+        "merged": 23,
+        "lines": 28436,
+        "files": 456,
+        "reviews": 26,
+        "changes_requested": 0,
+        "bot_comments": 76,
+        "human_comments": 30,
+        "closed": 1,
+        "ttm_hours": [23.7, 23.2, 1.2, 11.6, 11.5, 11.3, 11.3, 11.4, 10.8, 12.8, 10.8, 11.3, 11.3, 10.8, 0.1, 11.2, 11.2, 11.2, 1.7, 3.5, 2.5, 3.1, 1.2]
+      }
+    },
+    "gate": {"review_comments": 4, "merges": 5, "reviews": 2, "approvals": 0, "changes_requested": 0},
+    "bots": {"coolify-nuc-humans[bot]": 3, "chatgpt-codex-connector[bot]": 10, "github-actions[bot]": 42, "claude[bot]": 41, "dependabot[bot]": 3}
+  },
+  {
+    "date": "2026-05-26",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 10659, "files": 27, "bot_comments": 5, "ttm_hours": [12.4, 0.2]},
+      "peter": {"merged": 4, "lines": 10523, "files": 62, "reviews": 7, "changes_requested": 0, "bot_comments": 14, "human_comments": 7, "ttm_hours": [11.3, 11.2, 10.9, 0.1]}
+    },
+    "gate": {"review_comments": 0, "merges": 1},
+    "bots": {"dependabot[bot]": 1, "github-actions[bot]": 6, "claude[bot]": 10, "chatgpt-codex-connector[bot]": 2}
+  },
+  {
+    "date": "2026-05-27",
+    "collector_version": 1,
+    "opened": 23,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 6342, "files": 18, "bot_comments": 1, "ttm_hours": [1.1]},
+      "other": {"merged": 1, "lines": 2053, "files": 27, "bot_comments": 4, "human_comments": 1, "ttm_hours": [9.1]},
+      "peter": {
+        "merged": 19,
+        "lines": 8978,
+        "files": 278,
+        "reviews": 16,
+        "changes_requested": 0,
+        "bot_comments": 60,
+        "human_comments": 22,
+        "ttm_hours": [12.9, 9.9, 6.8, 6.5, 0.1, 0.1, 1.6, 0.0, 1.5, 3.4, 0.3, 0.1, 1.4, 1.5, 0.3, 3.0, 0.7, 0.9, 0.7]
+      }
+    },
+    "gate": {"review_comments": 1, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 9, "claude[bot]": 33, "github-actions[bot]": 21, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-05-28",
+    "collector_version": 1,
+    "opened": 10,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 10390, "files": 21, "reviews": 1, "changes_requested": 0, "bot_comments": 2, "human_comments": 1, "ttm_hours": [16.7]},
+      "peter": {
+        "merged": 8,
+        "lines": 14768,
+        "files": 137,
+        "reviews": 11,
+        "changes_requested": 0,
+        "bot_comments": 28,
+        "human_comments": 13,
+        "ttm_hours": [2.9, 2.3, 8.8, 1.9, 0.5, 2.5, 0.8, 0.0]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 15, "github-actions[bot]": 9, "chatgpt-codex-connector[bot]": 5, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-05-29",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {"peter": {"merged": 1, "lines": 151, "files": 1, "bot_comments": 2, "ttm_hours": [0.1]}},
+    "gate": {},
+    "bots": {"github-actions[bot]": 1, "claude[bot]": 1}
+  },
+  {
+    "date": "2026-05-30",
+    "collector_version": 1,
+    "opened": 18,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 7375, "files": 29, "bot_comments": 1, "ttm_hours": [36.2]},
+      "other": {"merged": 1, "lines": 151, "files": 6, "bot_comments": 1, "human_comments": 2, "ttm_hours": [19.9]},
+      "peter": {
+        "merged": 18,
+        "lines": 10644,
+        "files": 266,
+        "bot_comments": 45,
+        "human_comments": 15,
+        "reviews": 14,
+        "changes_requested": 0,
+        "ttm_hours": [57.5, 38.7, 25.9, 21.3, 21.2, 21.1, 21.2, 21.5, 21.0, 20.8, 5.5, 1.7, 0.3, 0.1, 0.5, 0.9, 0.2, 0.0]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 1},
+    "bots": {"github-actions[bot]": 15, "claude[bot]": 25, "chatgpt-codex-connector[bot]": 4, "coolify-nuc-humans[bot]": 3}
+  },
+  {
+    "date": "2026-05-31",
+    "collector_version": 1,
+    "opened": 0,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 7407, "files": 41, "bot_comments": 1, "ttm_hours": [7.0]},
+      "peter": {"merged": 3, "lines": 126, "files": 12, "bot_comments": 7, "ttm_hours": [10.1, 10.0, 9.9]}
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 4, "github-actions[bot]": 4}
+  },
+  {
+    "date": "2026-06-01",
+    "collector_version": 1,
+    "opened": 1,
+    "lanes": {
+      "peter": {
+        "merged": 5,
+        "lines": 1762,
+        "files": 93,
+        "reviews": 2,
+        "changes_requested": 0,
+        "bot_comments": 15,
+        "human_comments": 2,
+        "ttm_hours": [44.8, 46.3, 44.8, 46.0, 0.7]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 1, "github-actions[bot]": 5, "claude[bot]": 9}
+  },
+  {"date": "2026-06-02", "collector_version": 1, "opened": 10, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-06-03",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "automation": {"merged": 7, "lines": 6539, "files": 30, "bot_comments": 16, "ttm_hours": [6.3, 6.4, 6.2, 6.3, 6.2, 6.2, 4.4]},
+      "other": {"merged": 4, "lines": 9980, "files": 54, "bot_comments": 6, "human_comments": 8, "reviews": 2, "changes_requested": 0, "ttm_hours": [137.8, 26.8, 15.4, 10.4]}
+    },
+    "gate": {"review_comments": 7, "merges": 10, "reviews": 2, "approvals": 0, "changes_requested": 0},
+    "bots": {"github-actions[bot]": 12, "claude[bot]": 3, "dependabot[bot]": 6, "chatgpt-codex-connector[bot]": 1}
+  },
+  {
+    "date": "2026-06-04",
+    "collector_version": 1,
+    "opened": 20,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 20302, "files": 37, "bot_comments": 4, "ttm_hours": [34.7, 1.2]},
+      "other": {"merged": 2, "lines": 3144, "files": 31, "reviews": 2, "changes_requested": 0, "bot_comments": 6, "human_comments": 5, "ttm_hours": [28.9, 1.3]},
+      "peter": {
+        "merged": 15,
+        "lines": 5004,
+        "files": 156,
+        "bot_comments": 46,
+        "reviews": 15,
+        "changes_requested": 0,
+        "human_comments": 20,
+        "ttm_hours": [19.0, 1.0, 2.4, 2.9, 1.2, 3.3, 0.7, 1.0, 3.7, 0.7, 0.6, 0.5, 0.6, 2.0, 0.5]
+      }
+    },
+    "gate": {"review_comments": 5, "merges": 3, "reviews": 2, "approvals": 0, "changes_requested": 0},
+    "bots": {"dependabot[bot]": 1, "github-actions[bot]": 19, "claude[bot]": 26, "chatgpt-codex-connector[bot]": 9, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-06-05",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "peter": {"merged": 4, "lines": 3939, "files": 213, "reviews": 5, "changes_requested": 0, "bot_comments": 12, "human_comments": 5, "ttm_hours": [15.7, 16.3, 14.1, 0.7]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "github-actions[bot]": 4, "claude[bot]": 4}
+  },
+  {
+    "date": "2026-06-06",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 3679, "files": 80, "bot_comments": 3, "ttm_hours": [17.7, 1.8]},
+      "peter": {
+        "merged": 6,
+        "lines": 18212,
+        "files": 342,
+        "reviews": 5,
+        "changes_requested": 0,
+        "bot_comments": 16,
+        "human_comments": 10,
+        "ttm_hours": [53.9, 0.2, 0.0, 3.2, 6.1, 2.5]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "github-actions[bot]": 6, "claude[bot]": 8, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-06-07",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 5049, "files": 40, "bot_comments": 2, "ttm_hours": [2.5, 0.9]},
+      "other": {"closed": 1, "human_comments": 1},
+      "peter": {"merged": 2, "lines": 9637, "files": 54, "reviews": 3, "changes_requested": 0, "bot_comments": 6, "human_comments": 4, "closed": 1, "ttm_hours": [19.5, 0.7]}
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 2, "github-actions[bot]": 4, "claude[bot]": 2}
+  },
+  {
+    "date": "2026-06-08",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {
+      "automation": {"merged": 5, "lines": 10, "files": 5, "bot_comments": 10, "ttm_hours": [0.5, 0.6, 0.5, 0.4, 0.4]},
+      "other": {"merged": 1, "lines": 4, "files": 2, "bot_comments": 1, "human_comments": 1, "ttm_hours": [2.0]},
+      "peter": {"merged": 3, "lines": 9101, "files": 61, "reviews": 8, "changes_requested": 0, "bot_comments": 14, "human_comments": 9, "ttm_hours": [0.6, 0.6, 1.0]}
+    },
+    "gate": {"review_comments": 1, "merges": 6},
+    "bots": {"chatgpt-codex-connector[bot]": 5, "claude[bot]": 7, "github-actions[bot]": 8, "dependabot[bot]": 5}
+  },
+  {
+    "date": "2026-06-09",
+    "collector_version": 1,
+    "opened": 13,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 6116, "files": 35, "bot_comments": 2, "ttm_hours": [0.7]},
+      "other": {"closed": 1, "bot_comments": 7, "human_comments": 2},
+      "peter": {
+        "closed": 6,
+        "bot_comments": 53,
+        "human_comments": 13,
+        "merged": 13,
+        "lines": 12425,
+        "files": 434,
+        "reviews": 11,
+        "changes_requested": 0,
+        "ttm_hours": [323.3, 58.4, 17.9, 26.7, 0.1, 2.9, 1.7, 1.9, 0.3, 1.2, 1.3, 3.4, 0.2]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 0},
+    "bots": {"coolify-nuc-humans[bot]": 2, "chatgpt-codex-connector[bot]": 8, "github-actions[bot]": 23, "claude[bot]": 29}
+  },
+  {
+    "date": "2026-06-10",
+    "collector_version": 1,
+    "opened": 23,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 2352, "files": 47, "reviews": 1, "changes_requested": 0, "bot_comments": 2, "human_comments": 1, "ttm_hours": [0.7]},
+      "other": {"merged": 1, "lines": 1099, "files": 17, "reviews": 1, "changes_requested": 0, "bot_comments": 2, "human_comments": 4, "ttm_hours": [4.4]},
+      "peter": {
+        "merged": 14,
+        "lines": 28212,
+        "files": 259,
+        "reviews": 21,
+        "changes_requested": 0,
+        "bot_comments": 41,
+        "human_comments": 21,
+        "ttm_hours": [126.7, 1.3, 0.7, 0.9, 0.1, 0.4, 1.5, 1.8, 2.9, 0.2, 0.1, 0.0, 0.3, 0.5]
+      }
+    },
+    "gate": {"reviews": 1, "approvals": 0, "changes_requested": 0, "review_comments": 3, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 13, "claude[bot]": 19, "github-actions[bot]": 12, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-06-11",
+    "collector_version": 1,
+    "opened": 30,
+    "lanes": {
+      "other": {"closed": 1, "bot_comments": 1, "human_comments": 1},
+      "peter": {
+        "merged": 39,
+        "lines": 42023,
+        "files": 644,
+        "bot_comments": 102,
+        "reviews": 29,
+        "changes_requested": 0,
+        "human_comments": 37,
+        "closed": 1,
+        "ttm_hours": [
+          37.4,
+          11.1,
+          13.5,
+          14.8,
+          14.5,
+          10.9,
+          13.1,
+          10.7,
+          10.1,
+          0.2,
+          0.2,
+          2.5,
+          1.0,
+          0.9,
+          3.3,
+          0.4,
+          0.7,
+          0.4,
+          0.5,
+          0.0,
+          0.7,
+          0.4,
+          1.4,
+          3.0,
+          3.2,
+          0.9,
+          2.5,
+          2.3,
+          1.9,
+          1.7,
+          1.4,
+          1.5,
+          1.2,
+          1.1,
+          0.8,
+          0.8,
+          0.8,
+          1.8,
+          1.4
+        ]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"coolify-nuc-humans[bot]": 6, "github-actions[bot]": 36, "chatgpt-codex-connector[bot]": 12, "claude[bot]": 49}
+  },
+  {
+    "date": "2026-06-12",
+    "collector_version": 1,
+    "opened": 14,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 4825, "files": 63, "reviews": 1, "changes_requested": 0, "bot_comments": 4, "human_comments": 1, "ttm_hours": [2.4, 4.4]},
+      "peter": {
+        "merged": 7,
+        "lines": 7009,
+        "files": 97,
+        "bot_comments": 24,
+        "reviews": 11,
+        "changes_requested": 0,
+        "human_comments": 12,
+        "ttm_hours": [1.5, 0.3, 3.5, 0.8, 0.7, 0.0, 1.8]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 13, "github-actions[bot]": 8, "chatgpt-codex-connector[bot]": 6, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-06-13",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 4291, "files": 26, "bot_comments": 1, "ttm_hours": [0.5]},
+      "peter": {
+        "merged": 9,
+        "lines": 2890,
+        "files": 90,
+        "reviews": 12,
+        "changes_requested": 0,
+        "bot_comments": 28,
+        "human_comments": 12,
+        "ttm_hours": [13.2, 12.8, 14.0, 13.7, 11.4, 0.8, 0.9, 0.9, 0.7]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "claude[bot]": 15, "github-actions[bot]": 10}
+  },
+  {
+    "date": "2026-06-14",
+    "collector_version": 1,
+    "opened": 10,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 5389, "files": 48, "reviews": 3, "changes_requested": 0, "bot_comments": 8, "human_comments": 4, "ttm_hours": [3.4, 0.5, 0.5]},
+      "peter": {
+        "merged": 8,
+        "lines": 3452,
+        "files": 56,
+        "reviews": 8,
+        "changes_requested": 0,
+        "bot_comments": 22,
+        "human_comments": 8,
+        "ttm_hours": [0.6, 1.1, 0.6, 3.1, 0.2, 0.7, 1.2, 0.3]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 7, "claude[bot]": 11, "github-actions[bot]": 10, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-06-15",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "automation": {
+        "merged": 6,
+        "lines": 246,
+        "files": 18,
+        "reviews": 1,
+        "changes_requested": 0,
+        "bot_comments": 13,
+        "human_comments": 1,
+        "closed": 1,
+        "ttm_hours": [0.7, 2.2, 2.1, 4.8, 2.1, 2.1]
+      },
+      "peter": {
+        "merged": 8,
+        "lines": 24331,
+        "files": 151,
+        "reviews": 17,
+        "changes_requested": 0,
+        "bot_comments": 33,
+        "human_comments": 18,
+        "ttm_hours": [3.3, 2.1, 3.5, 0.3, 0.9, 5.0, 2.4, 0.8]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 5},
+    "bots": {"chatgpt-codex-connector[bot]": 13, "claude[bot]": 13, "github-actions[bot]": 14, "dependabot[bot]": 6}
+  },
+  {
+    "date": "2026-06-16",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {
+      "other": {"merged": 1, "lines": 247, "files": 24, "reviews": 1, "changes_requested": 0, "bot_comments": 3, "human_comments": 3, "ttm_hours": [1.1]},
+      "peter": {"merged": 3, "lines": 10138, "files": 69, "reviews": 4, "changes_requested": 0, "bot_comments": 11, "human_comments": 4, "ttm_hours": [16.7, 15.2, 0.5]}
+    },
+    "gate": {"reviews": 1, "approvals": 0, "changes_requested": 0, "review_comments": 3, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 3, "claude[bot]": 7, "github-actions[bot]": 4}
+  },
+  {
+    "date": "2026-06-17",
+    "collector_version": 1,
+    "opened": 1,
+    "lanes": {"other": {"merged": 1, "lines": 723, "files": 6, "bot_comments": 2, "human_comments": 1, "ttm_hours": [2.3]}},
+    "gate": {"review_comments": 1, "merges": 1},
+    "bots": {"claude[bot]": 1, "github-actions[bot]": 1}
+  },
+  {"date": "2026-06-19", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-06-22", "collector_version": 1, "opened": 7, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-06-23",
+    "collector_version": 1,
+    "opened": 8,
+    "lanes": {
+      "automation": {"merged": 6, "lines": 26, "files": 10, "bot_comments": 12, "ttm_hours": [21.1, 21.0, 21.5, 21.7, 21.6, 21.6]},
+      "other": {"merged": 2, "lines": 250, "files": 18, "bot_comments": 1, "human_comments": 3, "ttm_hours": [99.1, 3.0]},
+      "peter": {"merged": 5, "lines": 395, "files": 17, "bot_comments": 11, "human_comments": 2, "reviews": 1, "changes_requested": 0, "ttm_hours": [21.3, 1.5, 3.2, 0.3, 0.3]}
+    },
+    "gate": {"review_comments": 3, "merges": 8},
+    "bots": {"github-actions[bot]": 12, "chatgpt-codex-connector[bot]": 1, "claude[bot]": 5, "dependabot[bot]": 6}
+  },
+  {
+    "date": "2026-06-24",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {"other": {"closed": 1, "bot_comments": 1, "human_comments": 1}},
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-06-27",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 3203, "files": 48, "bot_comments": 2, "ttm_hours": [87.2]},
+      "other": {"merged": 4, "lines": 1123, "files": 24, "bot_comments": 6, "human_comments": 10, "reviews": 1, "changes_requested": 0, "ttm_hours": [71.1, 70.6, 70.7, 70.7]},
+      "peter": {"merged": 4, "lines": 464, "files": 60, "reviews": 7, "changes_requested": 0, "bot_comments": 14, "human_comments": 7, "ttm_hours": [88.1, 87.2, 86.3, 1.8]}
+    },
+    "gate": {"review_comments": 9, "merges": 4, "reviews": 1, "approvals": 0, "changes_requested": 0},
+    "bots": {"claude[bot]": 9, "github-actions[bot]": 9, "chatgpt-codex-connector[bot]": 4}
+  },
+  {"date": "2026-06-29", "collector_version": 1, "opened": 6, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-06-30",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 32, "files": 5, "bot_comments": 9, "closed": 1, "ttm_hours": [14.4, 14.3, 14.2, 14.0]},
+      "peter": {
+        "merged": 7,
+        "lines": 28708,
+        "files": 119,
+        "reviews": 8,
+        "changes_requested": 0,
+        "bot_comments": 23,
+        "human_comments": 11,
+        "ttm_hours": [63.2, 63.1, 0.2, 2.4, 0.1, 0.0, 0.0]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 4},
+    "bots": {"chatgpt-codex-connector[bot]": 7, "claude[bot]": 13, "github-actions[bot]": 7, "dependabot[bot]": 5}
+  },
+  {
+    "date": "2026-07-01",
+    "collector_version": 1,
+    "opened": 8,
+    "lanes": {
+      "other": {"merged": 4, "lines": 7821, "files": 29, "ttm_hours": [7.4, 7.9, 7.7, 7.3]},
+      "peter": {"merged": 4, "lines": 330, "files": 21, "reviews": 3, "changes_requested": 0, "bot_comments": 7, "human_comments": 3, "ttm_hours": [0.3, 0.1, 0.1, 0.0]}
+    },
+    "gate": {"review_comments": 0, "merges": 4},
+    "bots": {"claude[bot]": 6, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-07-02",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "other": {"merged": 1, "lines": 381, "files": 9, "human_comments": 1, "ttm_hours": [0.7]},
+      "peter": {"merged": 4, "lines": 940, "files": 30, "reviews": 6, "changes_requested": 0, "bot_comments": 14, "human_comments": 6, "ttm_hours": [0.7, 0.2, 0.2, 0.0]}
+    },
+    "gate": {"review_comments": 0, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 6, "github-actions[bot]": 1, "claude[bot]": 6, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-07-03",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {"peter": {"merged": 1, "lines": 64, "files": 4, "reviews": 1, "changes_requested": 0, "bot_comments": 3, "human_comments": 2, "ttm_hours": [2.4]}},
+    "gate": {},
+    "bots": {"claude[bot]": 2, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-07-04",
+    "collector_version": 1,
+    "opened": 0,
+    "lanes": {"other": {"merged": 1, "lines": 3, "files": 1, "ttm_hours": [11.2]}},
+    "gate": {"review_comments": 0, "merges": 1},
+    "bots": {}
+  },
+  {
+    "date": "2026-07-06",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {"automation": {"closed": 1, "bot_comments": 3}},
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"dependabot[bot]": 2, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-07-13",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "automation": {
+        "closed": 1,
+        "bot_comments": 11,
+        "human_comments": 1,
+        "merged": 5,
+        "lines": 385,
+        "files": 6,
+        "reviews": 5,
+        "changes_requested": 0,
+        "ttm_hours": [170.8, 170.8, 170.8, 170.7, 3.0]
+      },
+      "peter": {"merged": 1, "lines": 2, "files": 1, "bot_comments": 2, "ttm_hours": [171.0]}
+    },
+    "gate": {"review_comments": 1, "merges": 5, "reviews": 5, "approvals": 5, "changes_requested": 0},
+    "bots": {"claude[bot]": 1, "github-actions[bot]": 6, "dependabot[bot]": 6}
+  },
+  {
+    "date": "2026-07-14",
+    "collector_version": 1,
+    "opened": 14,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 5849, "files": 73, "bot_comments": 2, "ttm_hours": [1.0]},
+      "peter": {
+        "merged": 6,
+        "lines": 8537,
+        "files": 31,
+        "reviews": 6,
+        "changes_requested": 0,
+        "bot_comments": 17,
+        "human_comments": 6,
+        "ttm_hours": [20.2, 15.6, 17.8, 17.2, 1.5, 0.4]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "claude[bot]": 8, "github-actions[bot]": 7}
+  },
+  {
+    "date": "2026-07-15",
+    "collector_version": 1,
+    "opened": 10,
+    "lanes": {
+      "peter": {
+        "merged": 12,
+        "lines": 1100,
+        "files": 37,
+        "reviews": 13,
+        "changes_requested": 0,
+        "bot_comments": 34,
+        "human_comments": 13,
+        "ttm_hours": [8.8, 8.8, 8.8, 8.8, 8.8, 8.8, 8.8, 9.2, 8.8, 8.8, 8.8, 0.2]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 18, "github-actions[bot]": 11, "chatgpt-codex-connector[bot]": 5}
+  },
+  {"date": "2026-07-20", "collector_version": 1, "opened": 8, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-07-27", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-07-30",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 46, "files": 7, "bot_comments": 20, "human_comments": 13, "closed": 4, "ttm_hours": [235.3, 235.3, 235.2, 67.3]},
+      "peter": {"merged": 5, "lines": 82, "files": 19, "bot_comments": 10, "human_comments": 3, "closed": 1, "ttm_hours": [357.0, 235.3, 0.3, 0.1, 0.3]}
+    },
+    "gate": {"review_comments": 13, "merges": 4},
+    "bots": {"chatgpt-codex-connector[bot]": 3, "github-actions[bot]": 7, "claude[bot]": 4, "dependabot[bot]": 16}
+  },
+  {
+    "date": "2026-07-31",
+    "collector_version": 1,
+    "opened": 1,
+    "lanes": {"peter": {"merged": 2, "lines": 345, "files": 13, "reviews": 4, "changes_requested": 0, "bot_comments": 7, "human_comments": 4, "ttm_hours": [25.6, 28.7]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "github-actions[bot]": 2, "claude[bot]": 1}
+  },
+  {"date": "2026-08-01", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-08-02",
+    "collector_version": 1,
+    "opened": 19,
+    "lanes": {
+      "peter": {
+        "merged": 23,
+        "lines": 64771,
+        "files": 220,
+        "reviews": 23,
+        "changes_requested": 0,
+        "bot_comments": 68,
+        "human_comments": 38,
+        "ttm_hours": [440.9, 440.6, 440.8, 439.7, 439.6, 439.4, 439.1, 438.6, 33.9, 0.6, 0.5, 0.1, 0.5, 0.7, 0.7, 0.8, 0.8, 0.6, 0.6, 0.9, 0.6, 0.6, 0.7]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 26, "github-actions[bot]": 22, "chatgpt-codex-connector[bot]": 16, "coolify-nuc-humans[bot]": 4}
+  },
+  {
+    "date": "2026-08-03",
+    "collector_version": 1,
+    "opened": 15,
+    "lanes": {
+      "automation": {
+        "merged": 10,
+        "lines": 5323,
+        "files": 67,
+        "reviews": 8,
+        "changes_requested": 0,
+        "bot_comments": 32,
+        "human_comments": 9,
+        "closed": 1,
+        "ttm_hours": [10.0, 0.6, 0.5, 0.4, 0.4, 0.2, 0.5, 0.6, 0.4, 0.3]
+      },
+      "peter": {
+        "merged": 9,
+        "lines": 5282,
+        "files": 102,
+        "human_comments": 16,
+        "bot_comments": 27,
+        "reviews": 5,
+        "changes_requested": 0,
+        "ttm_hours": [8.4, 17.7, 9.6, 9.5, 17.9, 8.7, 8.7, 11.7, 0.4]
+      }
+    },
+    "gate": {"review_comments": 1, "merges": 9, "reviews": 1, "approvals": 0, "changes_requested": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 23, "github-actions[bot]": 18, "claude[bot]": 8, "dependabot[bot]": 10}
+  },
+  {
+    "date": "2026-08-04",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {"peter": {"merged": 1, "lines": 3049, "files": 41, "reviews": 115, "changes_requested": 0, "bot_comments": 124, "human_comments": 118, "ttm_hours": [42.4]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 123, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-08-05",
+    "collector_version": 1,
+    "opened": 15,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 4988, "files": 39, "bot_comments": 3, "ttm_hours": [0.4]},
+      "peter": {
+        "merged": 11,
+        "lines": 3325,
+        "files": 187,
+        "reviews": 38,
+        "changes_requested": 0,
+        "bot_comments": 60,
+        "human_comments": 43,
+        "ttm_hours": [23.5, 0.1, 2.0, 0.4, 0.5, 2.5, 2.1, 1.7, 4.0, 3.8, 1.1]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 42, "github-actions[bot]": 10, "claude[bot]": 11}
+  },
+  {
+    "date": "2026-08-07",
+    "collector_version": 1,
+    "opened": 32,
+    "lanes": {
+      "peter": {
+        "merged": 33,
+        "lines": 36303,
+        "files": 311,
+        "reviews": 121,
+        "changes_requested": 0,
+        "bot_comments": 192,
+        "human_comments": 125,
+        "closed": 2,
+        "ttm_hours": [
+          66.9,
+          45.9,
+          45.8,
+          45.5,
+          45.3,
+          0.1,
+          0.1,
+          1.5,
+          0.1,
+          0.1,
+          3.2,
+          0.3,
+          1.3,
+          1.3,
+          1.2,
+          2.5,
+          2.8,
+          0.9,
+          0.9,
+          0.7,
+          2.4,
+          0.7,
+          0.3,
+          0.7,
+          0.6,
+          0.3,
+          0.3,
+          0.3,
+          0.0,
+          0.7,
+          0.4,
+          0.1,
+          0.3
+        ]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 130, "claude[bot]": 36, "github-actions[bot]": 24, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-08-08",
+    "collector_version": 1,
+    "opened": 13,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 5170, "files": 92, "reviews": 4, "changes_requested": 0, "bot_comments": 7, "human_comments": 5, "ttm_hours": [10.1]},
+      "peter": {
+        "merged": 11,
+        "lines": 13235,
+        "files": 654,
+        "bot_comments": 36,
+        "human_comments": 16,
+        "reviews": 6,
+        "changes_requested": 0,
+        "ttm_hours": [0.3, 0.0, 0.3, 10.3, 6.9, 8.7, 2.0, 1.7, 2.0, 1.7, 1.5]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 19, "claude[bot]": 13, "github-actions[bot]": 10, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-08-09",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "peter": {
+        "merged": 7,
+        "lines": 34855,
+        "files": 413,
+        "reviews": 13,
+        "changes_requested": 0,
+        "bot_comments": 28,
+        "human_comments": 18,
+        "ttm_hours": [7.8, 7.3, 18.3, 10.2, 9.8, 9.6, 8.9]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 15, "github-actions[bot]": 7, "claude[bot]": 6}
+  },
+  {
+    "date": "2026-08-10",
+    "collector_version": 1,
+    "opened": 22,
+    "lanes": {
+      "automation": {"merged": 10, "lines": 4197, "files": 83, "bot_comments": 26, "ttm_hours": [0.6, 0.6, 0.5, 0.5, 1.2, 0.8, 2.1, 2.0, 0.7, 1.0]},
+      "peter": {
+        "merged": 13,
+        "lines": 23576,
+        "files": 688,
+        "reviews": 19,
+        "changes_requested": 0,
+        "bot_comments": 44,
+        "human_comments": 22,
+        "ttm_hours": [22.2, 16.6, 3.0, 3.4, 3.1, 3.2, 1.5, 4.5, 0.7, 0.8, 2.1, 0.7, 0.4]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 9},
+    "bots": {"chatgpt-codex-connector[bot]": 20, "claude[bot]": 18, "github-actions[bot]": 23, "dependabot[bot]": 9}
+  },
+  {
+    "date": "2026-08-11",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "peter": {
+        "merged": 6,
+        "lines": 38966,
+        "files": 930,
+        "reviews": 22,
+        "changes_requested": 0,
+        "bot_comments": 32,
+        "human_comments": 24,
+        "ttm_hours": [2.3, 11.9, 0.6, 2.4, 2.0, 0.3]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 19, "github-actions[bot]": 5, "claude[bot]": 8}
+  },
+  {
+    "date": "2026-08-12",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 5100, "files": 92, "reviews": 13, "changes_requested": 0, "bot_comments": 16, "human_comments": 13, "ttm_hours": [2.3]},
+      "peter": {"merged": 3, "lines": 25032, "files": 706, "human_comments": 13, "bot_comments": 14, "reviews": 9, "changes_requested": 0, "ttm_hours": [20.6, 16.3, 1.4]}
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 1, "github-actions[bot]": 4, "chatgpt-codex-connector[bot]": 25}
+  },
+  {
+    "date": "2026-08-13",
+    "collector_version": 1,
+    "opened": 12,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 6133, "files": 92, "reviews": 11, "changes_requested": 0, "bot_comments": 14, "human_comments": 11, "ttm_hours": [2.6]},
+      "peter": {
+        "closed": 2,
+        "reviews": 71,
+        "changes_requested": 0,
+        "bot_comments": 112,
+        "human_comments": 78,
+        "merged": 18,
+        "lines": 702557,
+        "files": 2193,
+        "ttm_hours": [22.8, 21.1, 23.5, 23.5, 23.7, 23.4, 8.2, 20.2, 1.8, 0.2, 0.2, 2.5, 0.1, 0.9, 4.6, 0.4, 2.3, 1.9]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 81, "claude[bot]": 27, "github-actions[bot]": 17, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-08-14",
+    "collector_version": 1,
+    "opened": 19,
+    "lanes": {
+      "peter": {
+        "merged": 11,
+        "lines": 9335,
+        "files": 1054,
+        "reviews": 12,
+        "changes_requested": 0,
+        "bot_comments": 29,
+        "human_comments": 12,
+        "ttm_hours": [0.3, 0.4, 0.2, 13.1, 8.5, 0.2, 0.1, 2.3, 1.8, 0.7, 0.4]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 12, "claude[bot]": 11, "github-actions[bot]": 6}
+  },
+  {
+    "date": "2026-08-15",
+    "collector_version": 1,
+    "opened": 13,
+    "lanes": {
+      "peter": {
+        "merged": 21,
+        "lines": 8823,
+        "files": 1411,
+        "bot_comments": 47,
+        "reviews": 7,
+        "changes_requested": 0,
+        "human_comments": 8,
+        "ttm_hours": [23.4, 24.2, 23.2, 22.6, 21.4, 21.0, 21.6, 19.2, 3.4, 0.4, 0.8, 0.7, 0.5, 0.3, 1.3, 0.7, 0.6, 0.2, 0.4, 0.7, 0.2]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 23, "github-actions[bot]": 15, "chatgpt-codex-connector[bot]": 8, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-08-16",
+    "collector_version": 1,
+    "opened": 19,
+    "lanes": {
+      "peter": {
+        "merged": 12,
+        "lines": 131099,
+        "files": 414,
+        "bot_comments": 56,
+        "closed": 1,
+        "reviews": 29,
+        "changes_requested": 0,
+        "human_comments": 31,
+        "ttm_hours": [0.1, 18.9, 13.0, 0.0, 1.6, 1.0, 0.6, 0.9, 0.4, 0.4, 1.0, 0.8]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 19, "chatgpt-codex-connector[bot]": 27, "github-actions[bot]": 9, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-08-17",
+    "collector_version": 1,
+    "opened": 16,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 919, "files": 53, "reviews": 2, "changes_requested": 0, "bot_comments": 11, "human_comments": 2, "ttm_hours": [24.6, 1.7, 1.3, 2.0]},
+      "peter": {
+        "merged": 15,
+        "lines": 6891,
+        "files": 1068,
+        "reviews": 45,
+        "changes_requested": 0,
+        "bot_comments": 64,
+        "human_comments": 48,
+        "closed": 1,
+        "ttm_hours": [12.8, 1.7, 1.1, 0.9, 1.3, 17.0, 10.7, 10.2, 16.8, 20.5, 2.3, 2.6, 0.6, 0.1, 0.5]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 2},
+    "bots": {"chatgpt-codex-connector[bot]": 42, "claude[bot]": 17, "github-actions[bot]": 13, "coolify-nuc-humans[bot]": 1, "dependabot[bot]": 2}
+  },
+  {
+    "date": "2026-08-18",
+    "collector_version": 1,
+    "opened": 22,
+    "lanes": {
+      "automation": {
+        "closed": 1,
+        "reviews": 7,
+        "changes_requested": 0,
+        "bot_comments": 16,
+        "human_comments": 8,
+        "merged": 3,
+        "lines": 8857,
+        "files": 166,
+        "ttm_hours": [7.4, 2.9, 0.1]
+      },
+      "peter": {
+        "merged": 18,
+        "lines": 19752,
+        "files": 1780,
+        "reviews": 69,
+        "changes_requested": 0,
+        "bot_comments": 127,
+        "human_comments": 74,
+        "closed": 1,
+        "ttm_hours": [127.2, 1.3, 1.0, 10.7, 0.1, 0.1, 0.1, 7.3, 8.3, 1.8, 1.7, 6.6, 0.1, 0.1, 1.1, 1.1, 2.2, 1.3]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 85, "claude[bot]": 44, "github-actions[bot]": 14}
+  },
+  {
+    "date": "2026-08-19",
+    "collector_version": 1,
+    "opened": 25,
+    "lanes": {
+      "peter": {
+        "merged": 24,
+        "lines": 14262,
+        "files": 1557,
+        "bot_comments": 140,
+        "reviews": 86,
+        "changes_requested": 0,
+        "human_comments": 95,
+        "ttm_hours": [0.9, 0.4, 10.7, 21.5, 12.3, 13.4, 13.6, 13.5, 15.7, 13.5, 13.6, 12.6, 12.6, 13.4, 15.4, 0.8, 1.1, 1.1, 2.0, 0.7, 0.6, 1.3, 1.1, 0.9]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 72, "github-actions[bot]": 23, "claude[bot]": 45}
+  },
+  {
+    "date": "2026-08-20",
+    "collector_version": 1,
+    "opened": 34,
+    "lanes": {
+      "other": {"closed": 2, "reviews": 1, "changes_requested": 0, "bot_comments": 1, "human_comments": 5},
+      "peter": {
+        "merged": 31,
+        "lines": 41206,
+        "files": 978,
+        "reviews": 56,
+        "changes_requested": 0,
+        "bot_comments": 126,
+        "human_comments": 57,
+        "ttm_hours": [2.7, 1.9, 0.7, 9.0, 9.0, 8.7, 8.6, 10.3, 8.1, 8.1, 8.0, 1.1, 1.1, 0.4, 0.1, 0.8, 0.6, 0.9, 3.3, 5.6, 2.9, 3.2, 2.3, 5.1, 4.4, 2.4, 2.7, 2.0, 2.9, 0.2, 0.4]
+      }
+    },
+    "gate": {"review_comments": 1, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 57, "claude[bot]": 37, "github-actions[bot]": 31, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-08-21",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "other": {"merged": 2, "lines": 2981, "files": 48, "reviews": 6, "changes_requested": 0, "bot_comments": 11, "human_comments": 14, "ttm_hours": [26.0, 28.6]},
+      "peter": {"merged": 2, "lines": 1665, "files": 56, "reviews": 4, "changes_requested": 0, "bot_comments": 12, "human_comments": 5, "closed": 1, "ttm_hours": [0.9, 0.8]}
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 11, "github-actions[bot]": 5, "claude[bot]": 7}
+  },
+  {
+    "date": "2026-08-22",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {
+      "other": {"merged": 3, "lines": 3116, "files": 83, "reviews": 4, "changes_requested": 0, "bot_comments": 10, "human_comments": 5, "ttm_hours": [12.5, 0.2, 0.8]},
+      "peter": {"merged": 2, "lines": 678, "files": 6, "reviews": 7, "changes_requested": 0, "bot_comments": 20, "human_comments": 8, "ttm_hours": [0.7, 0.9]}
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"claude[bot]": 5, "chatgpt-codex-connector[bot]": 20, "github-actions[bot]": 5}
+  },
+  {
+    "date": "2026-08-23",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 4621, "files": 84, "reviews": 13, "changes_requested": 0, "bot_comments": 20, "human_comments": 16, "ttm_hours": [5.6, 11.4, 0.9]},
+      "other": {"merged": 1, "lines": 1803, "files": 29, "reviews": 4, "changes_requested": 0, "bot_comments": 5, "human_comments": 6, "ttm_hours": [5.0]},
+      "peter": {
+        "merged": 18,
+        "lines": 11969,
+        "files": 327,
+        "reviews": 112,
+        "changes_requested": 0,
+        "bot_comments": 151,
+        "human_comments": 115,
+        "closed": 1,
+        "ttm_hours": [47.3, 45.9, 38.5, 59.2, 54.0, 31.2, 3.9, 0.1, 19.4, 2.1, 2.4, 0.2, 2.5, 1.0, 0.6, 1.7, 0.1, 0.3]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 123, "claude[bot]": 30, "github-actions[bot]": 23}
+  },
+  {
+    "date": "2026-08-24",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "automation": {
+        "merged": 10,
+        "lines": 5577,
+        "files": 161,
+        "reviews": 16,
+        "changes_requested": 0,
+        "bot_comments": 42,
+        "human_comments": 16,
+        "ttm_hours": [1.1, 2.7, 5.8, 9.1, 1.7, 1.4, 1.3, 0.9, 2.7, 0.6]
+      },
+      "other": {"merged": 1, "lines": 990, "files": 17, "reviews": 25, "changes_requested": 0, "bot_comments": 27, "human_comments": 29, "ttm_hours": [9.9]},
+      "peter": {
+        "merged": 8,
+        "lines": 3196,
+        "files": 131,
+        "reviews": 38,
+        "changes_requested": 0,
+        "bot_comments": 53,
+        "human_comments": 38,
+        "ttm_hours": [2.4, 1.3, 0.9, 0.2, 3.3, 0.8, 1.2, 1.0]
+      }
+    },
+    "gate": {"review_comments": 2, "merges": 4},
+    "bots": {"chatgpt-codex-connector[bot]": 84, "claude[bot]": 13, "github-actions[bot]": 19, "coolify-nuc-humans[bot]": 2, "dependabot[bot]": 4}
+  },
+  {
+    "date": "2026-08-25",
+    "collector_version": 1,
+    "opened": 23,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 3229, "files": 136, "reviews": 9, "changes_requested": 0, "bot_comments": 19, "human_comments": 10, "ttm_hours": [6.4, 1.9, 0.8, 0.4]},
+      "other": {"merged": 2, "lines": 519, "files": 11, "reviews": 1, "changes_requested": 0, "bot_comments": 5, "human_comments": 1, "ttm_hours": [2.6, 0.7]},
+      "peter": {
+        "merged": 13,
+        "lines": 15059,
+        "files": 378,
+        "reviews": 46,
+        "changes_requested": 0,
+        "bot_comments": 86,
+        "human_comments": 47,
+        "closed": 2,
+        "ttm_hours": [8.9, 0.6, 11.9, 1.0, 0.3, 0.2, 0.3, 0.2, 0.1, 0.9, 0.5, 0.6, 0.7]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 62, "claude[bot]": 23, "github-actions[bot]": 21, "coolify-nuc-humans[bot]": 4}
+  },
+  {
+    "date": "2026-08-26",
+    "collector_version": 1,
+    "opened": 12,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 3762, "files": 114, "reviews": 44, "changes_requested": 0, "bot_comments": 52, "human_comments": 50, "ttm_hours": [18.2, 6.1, 7.0, 0.1]},
+      "other": {"merged": 1, "lines": 44, "files": 4, "reviews": 1, "changes_requested": 0, "bot_comments": 3, "human_comments": 2, "ttm_hours": [0.4]},
+      "peter": {
+        "merged": 6,
+        "lines": 4779,
+        "files": 160,
+        "reviews": 39,
+        "changes_requested": 0,
+        "bot_comments": 52,
+        "human_comments": 40,
+        "ttm_hours": [17.1, 18.5, 0.9, 5.6, 6.0, 1.6]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 83, "claude[bot]": 13, "github-actions[bot]": 11}
+  },
+  {
+    "date": "2026-08-27",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 851, "files": 21, "reviews": 9, "changes_requested": 0, "bot_comments": 12, "human_comments": 11, "ttm_hours": [1.0]},
+      "peter": {
+        "merged": 7,
+        "lines": 1647,
+        "files": 88,
+        "bot_comments": 26,
+        "reviews": 13,
+        "changes_requested": 0,
+        "human_comments": 13,
+        "ttm_hours": [18.5, 18.0, 18.1, 18.1, 0.7, 4.0, 3.4]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 6, "github-actions[bot]": 8, "chatgpt-codex-connector[bot]": 24}
+  },
+  {
+    "date": "2026-08-28",
+    "collector_version": 1,
+    "opened": 16,
+    "lanes": {
+      "automation": {
+        "merged": 5,
+        "lines": 4167,
+        "files": 159,
+        "reviews": 29,
+        "changes_requested": 0,
+        "bot_comments": 37,
+        "human_comments": 36,
+        "ttm_hours": [28.2, 20.5, 4.4, 9.3, 1.4]
+      },
+      "peter": {
+        "merged": 11,
+        "lines": 3425,
+        "files": 162,
+        "reviews": 21,
+        "changes_requested": 0,
+        "bot_comments": 45,
+        "human_comments": 21,
+        "ttm_hours": [1.0, 0.1, 0.1, 0.1, 9.2, 9.2, 8.9, 2.9, 2.7, 2.7, 2.6]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 45, "claude[bot]": 20, "github-actions[bot]": 16, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-08-29",
+    "collector_version": 1,
+    "opened": 1,
+    "lanes": {"other": {"merged": 1, "lines": 3130, "files": 48, "reviews": 2, "changes_requested": 0, "bot_comments": 4, "human_comments": 2, "ttm_hours": [27.4]}},
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"claude[bot]": 3, "github-actions[bot]": 1}
+  },
+  {"date": "2026-08-30", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-08-31", "collector_version": 1, "opened": 9, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-09-01",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {"other": {"merged": 1, "lines": 255, "files": 14, "bot_comments": 2, "human_comments": 1, "ttm_hours": [3.6]}},
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"github-actions[bot]": 1, "claude[bot]": 1}
+  },
+  {
+    "date": "2026-09-02",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 8, "files": 4, "bot_comments": 8, "ttm_hours": [48.9, 48.9, 48.5, 48.5]},
+      "other": {"merged": 1, "lines": 431, "files": 20, "reviews": 1, "changes_requested": 0, "bot_comments": 3, "human_comments": 1, "ttm_hours": [1.0]}
+    },
+    "gate": {"review_comments": 0, "merges": 4},
+    "bots": {"dependabot[bot]": 4, "github-actions[bot]": 5, "claude[bot]": 2}
+  },
+  {
+    "date": "2026-09-03",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {"other": {"closed": 1, "reviews": 1, "changes_requested": 0, "bot_comments": 2, "human_comments": 3}},
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"github-actions[bot]": 2}
+  },
+  {
+    "date": "2026-09-04",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {"other": {"merged": 1, "lines": 601, "files": 19, "human_comments": 1, "bot_comments": 2, "ttm_hours": [25.3]}},
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"claude[bot]": 1, "github-actions[bot]": 1}
+  },
+  {"date": "2026-09-05", "collector_version": 1, "opened": 5, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-09-06", "collector_version": 1, "opened": 8, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-09-07", "collector_version": 1, "opened": 5, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-09-08", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-09-09",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "automation": {
+        "merged": 7,
+        "lines": 1012,
+        "files": 47,
+        "reviews": 19,
+        "changes_requested": 0,
+        "bot_comments": 40,
+        "human_comments": 22,
+        "ttm_hours": [290.8, 288.7, 53.5, 53.4, 54.4, 53.2, 0.6]
+      },
+      "peter": {"merged": 2, "lines": 9178, "files": 134, "reviews": 35, "changes_requested": 0, "bot_comments": 46, "human_comments": 37, "ttm_hours": [190.5, 0.9]}
+    },
+    "gate": {"review_comments": 1, "merges": 4},
+    "bots": {"chatgpt-codex-connector[bot]": 60, "coolify-nuc-humans[bot]": 4, "claude[bot]": 9, "github-actions[bot]": 9, "dependabot[bot]": 4}
+  },
+  {
+    "date": "2026-09-10",
+    "collector_version": 1,
+    "opened": 14,
+    "lanes": {
+      "automation": {
+        "closed": 1,
+        "reviews": 168,
+        "changes_requested": 0,
+        "bot_comments": 237,
+        "human_comments": 203,
+        "merged": 18,
+        "lines": 19684,
+        "files": 540,
+        "ttm_hours": [244.5, 231.9, 223.4, 220.4, 220.9, 230.7, 198.5, 207.5, 183.4, 148.9, 120.6, 0.2, 0.4, 0.4, 0.4, 0.3, 20.8, 16.8]
+      },
+      "peter": {
+        "merged": 6,
+        "lines": 1897,
+        "files": 49,
+        "reviews": 22,
+        "changes_requested": 0,
+        "bot_comments": 42,
+        "human_comments": 23,
+        "ttm_hours": [1.4, 0.2, 0.4, 19.5, 0.7, 0.2]
+      }
+    },
+    "gate": {"reviews": 2, "approvals": 0, "changes_requested": 0, "review_comments": 2, "merges": 3},
+    "bots": {"chatgpt-codex-connector[bot]": 207, "coolify-nuc-humans[bot]": 15, "claude[bot]": 31, "github-actions[bot]": 25, "dependabot[bot]": 1}
+  },
+  {
+    "date": "2026-09-11",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "automation": {
+        "merged": 4,
+        "lines": 5968,
+        "files": 147,
+        "reviews": 55,
+        "changes_requested": 0,
+        "bot_comments": 73,
+        "human_comments": 65,
+        "ttm_hours": [244.1, 198.5, 143.0, 127.3]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 58, "claude[bot]": 7, "coolify-nuc-humans[bot]": 4, "github-actions[bot]": 4}
+  },
+  {"date": "2026-09-12", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-09-13",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 371, "files": 11, "reviews": 3, "changes_requested": 0, "bot_comments": 6, "human_comments": 3, "ttm_hours": [3.5]},
+      "peter": {"merged": 1, "lines": 2, "files": 1, "bot_comments": 3, "ttm_hours": [0.2]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 5, "github-actions[bot]": 2, "claude[bot]": 2}
+  },
+  {
+    "date": "2026-09-14",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {
+      "automation": {
+        "merged": 22,
+        "lines": 22348,
+        "files": 724,
+        "reviews": 161,
+        "changes_requested": 0,
+        "bot_comments": 263,
+        "human_comments": 187,
+        "closed": 1,
+        "ttm_hours": [245.6, 233.3, 228.7, 223.1, 210.7, 201.4, 204.7, 203.8, 201.4, 197.6, 195.7, 165.1, 163.5, 133.0, 69.7, 43.3, 15.7, 0.8, 0.8, 0.8, 0.8, 0.7]
+      },
+      "peter": {
+        "merged": 8,
+        "lines": 17403,
+        "files": 406,
+        "reviews": 148,
+        "changes_requested": 0,
+        "bot_comments": 179,
+        "human_comments": 155,
+        "ttm_hours": [95.2, 92.2, 1.1, 0.9, 0.3, 0.7, 1.0, 0.1]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 5},
+    "bots": {"chatgpt-codex-connector[bot]": 365, "coolify-nuc-humans[bot]": 15, "claude[bot]": 31, "github-actions[bot]": 31}
+  },
+  {
+    "date": "2026-09-15",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 5346, "files": 93, "reviews": 47, "changes_requested": 0, "bot_comments": 65, "human_comments": 55, "ttm_hours": [94.9, 71.7, 1.2, 0.3]},
+      "peter": {"merged": 2, "lines": 20068, "files": 202, "reviews": 63, "changes_requested": 0, "bot_comments": 67, "human_comments": 65, "ttm_hours": [99.2, 4.0]}
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 11, "chatgpt-codex-connector[bot]": 115, "github-actions[bot]": 6}
+  },
+  {"date": "2026-09-16", "collector_version": 1, "opened": 10, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-09-17",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 2472, "files": 61, "reviews": 16, "changes_requested": 0, "bot_comments": 22, "human_comments": 19, "ttm_hours": [42.1, 16.9]},
+      "peter": {
+        "merged": 14,
+        "lines": 7641,
+        "files": 259,
+        "reviews": 45,
+        "changes_requested": 0,
+        "bot_comments": 85,
+        "human_comments": 52,
+        "ttm_hours": [65.7, 56.4, 30.5, 31.3, 29.1, 29.1, 26.5, 26.0, 26.7, 23.7, 19.0, 18.2, 0.8, 0.1]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 74, "coolify-nuc-humans[bot]": 2, "github-actions[bot]": 16, "claude[bot]": 15}
+  },
+  {
+    "date": "2026-09-18",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "peter": {
+        "merged": 5,
+        "lines": 4346,
+        "files": 160,
+        "reviews": 13,
+        "changes_requested": 0,
+        "bot_comments": 31,
+        "human_comments": 15,
+        "closed": 1,
+        "ttm_hours": [15.7, 13.9, 15.7, 15.5, 2.3]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 11, "chatgpt-codex-connector[bot]": 14, "github-actions[bot]": 6}
+  },
+  {"date": "2026-09-19", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-09-20",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "automation": {
+        "merged": 10,
+        "lines": 7211,
+        "files": 248,
+        "reviews": 36,
+        "changes_requested": 0,
+        "bot_comments": 80,
+        "human_comments": 43,
+        "ttm_hours": [64.5, 65.8, 65.4, 64.2, 63.0, 50.9, 39.9, 13.7, 0.2, 0.1]
+      },
+      "peter": {
+        "merged": 12,
+        "lines": 11178,
+        "files": 395,
+        "reviews": 66,
+        "changes_requested": 0,
+        "bot_comments": 111,
+        "human_comments": 84,
+        "ttm_hours": [71.6, 0.9, 0.0, 1.7, 4.9, 4.4, 2.7, 0.8, 1.3, 1.1, 1.0, 0.5]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 137, "claude[bot]": 29, "github-actions[bot]": 21, "coolify-nuc-humans[bot]": 4}
+  },
+  {
+    "date": "2026-09-21",
+    "collector_version": 1,
+    "opened": 18,
+    "lanes": {
+      "automation": {
+        "merged": 9,
+        "lines": 2746,
+        "files": 90,
+        "bot_comments": 38,
+        "reviews": 7,
+        "changes_requested": 0,
+        "human_comments": 8,
+        "ttm_hours": [0.5, 0.2, 0.4, 9.6, 1.0, 0.6, 0.1, 1.8, 1.7]
+      },
+      "peter": {
+        "closed": 1,
+        "reviews": 59,
+        "changes_requested": 0,
+        "bot_comments": 91,
+        "human_comments": 71,
+        "merged": 9,
+        "lines": 23905,
+        "files": 810,
+        "ttm_hours": [6.7, 2.1, 1.0, 0.6, 0.3, 0.3, 16.7, 7.8, 1.0]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 2},
+    "bots": {"chatgpt-codex-connector[bot]": 94, "claude[bot]": 14, "github-actions[bot]": 19, "coolify-nuc-humans[bot]": 2}
+  },
+  {
+    "date": "2026-09-22",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "automation": {
+        "merged": 7,
+        "lines": 6148,
+        "files": 233,
+        "bot_comments": 40,
+        "reviews": 14,
+        "changes_requested": 0,
+        "human_comments": 17,
+        "ttm_hours": [28.1, 14.3, 11.4, 1.5, 0.1, 1.0, 0.4]
+      },
+      "peter": {
+        "merged": 11,
+        "lines": 2870,
+        "files": 125,
+        "reviews": 24,
+        "changes_requested": 0,
+        "bot_comments": 54,
+        "human_comments": 25,
+        "ttm_hours": [29.4, 1.9, 7.4, 4.7, 2.8, 1.8, 0.8, 0.7, 1.0, 0.3, 0.8]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 1},
+    "bots": {"chatgpt-codex-connector[bot]": 59, "claude[bot]": 17, "github-actions[bot]": 18}
+  },
+  {
+    "date": "2026-09-23",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 1239, "files": 110, "reviews": 6, "changes_requested": 0, "bot_comments": 11, "human_comments": 7, "ttm_hours": [4.3, 4.5]},
+      "peter": {"merged": 2, "lines": 3684, "files": 35, "reviews": 17, "changes_requested": 0, "bot_comments": 22, "human_comments": 20, "ttm_hours": [46.8, 16.1]}
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 5, "chatgpt-codex-connector[bot]": 24, "github-actions[bot]": 4}
+  },
+  {
+    "date": "2026-09-24",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 1095, "files": 28, "reviews": 1, "changes_requested": 0, "bot_comments": 8, "human_comments": 3, "ttm_hours": [43.6, 9.1]},
+      "peter": {
+        "merged": 5,
+        "lines": 6689,
+        "files": 397,
+        "reviews": 8,
+        "changes_requested": 0,
+        "bot_comments": 30,
+        "human_comments": 8,
+        "ttm_hours": [47.2, 27.8, 7.4, 5.7, 0.8]
+      }
+    },
+    "gate": {},
+    "bots": {"claude[bot]": 8, "chatgpt-codex-connector[bot]": 23, "github-actions[bot]": 7}
+  },
+  {"date": "2026-09-25", "collector_version": 1, "opened": 3, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-09-26",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 1934, "files": 136, "bot_comments": 11, "human_comments": 5, "reviews": 2, "changes_requested": 0, "ttm_hours": [37.0, 6.9]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 6, "claude[bot]": 3, "github-actions[bot]": 2}
+  },
+  {
+    "date": "2026-09-27",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 1780, "files": 80, "reviews": 9, "changes_requested": 0, "bot_comments": 15, "human_comments": 11, "ttm_hours": [37.1, 7.1]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 10, "claude[bot]": 3, "github-actions[bot]": 2}
+  },
+  {
+    "date": "2026-09-28",
+    "collector_version": 1,
+    "opened": 17,
+    "lanes": {
+      "automation": {
+        "merged": 8,
+        "lines": 2349,
+        "files": 79,
+        "bot_comments": 21,
+        "human_comments": 11,
+        "reviews": 7,
+        "changes_requested": 0,
+        "ttm_hours": [31.3, 12.7, 1.2, 2.4, 2.2, 2.2, 4.6, 2.1]
+      },
+      "peter": {
+        "merged": 10,
+        "lines": 6182,
+        "files": 237,
+        "reviews": 35,
+        "changes_requested": 0,
+        "bot_comments": 69,
+        "human_comments": 37,
+        "ttm_hours": [68.0, 3.7, 8.7, 2.9, 0.2, 0.1, 0.7, 0.1, 0.1, 0.4]
+      }
+    },
+    "gate": {"review_comments": 1, "merges": 5},
+    "bots": {"claude[bot]": 14, "chatgpt-codex-connector[bot]": 57, "github-actions[bot]": 18, "coolify-nuc-humans[bot]": 1}
+  },
+  {"date": "2026-09-29", "collector_version": 1, "opened": 4, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-09-30",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "automation": {
+        "merged": 5,
+        "lines": 7165,
+        "files": 275,
+        "reviews": 11,
+        "changes_requested": 0,
+        "bot_comments": 26,
+        "human_comments": 18,
+        "ttm_hours": [43.2, 30.6, 19.1, 1.0, 0.9]
+      },
+      "peter": {
+        "merged": 6,
+        "lines": 2499,
+        "files": 82,
+        "reviews": 22,
+        "changes_requested": 0,
+        "bot_comments": 43,
+        "human_comments": 23,
+        "closed": 1,
+        "ttm_hours": [46.6, 29.8, 21.0, 0.7, 0.3, 2.6]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 41, "github-actions[bot]": 14, "claude[bot]": 13, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-10-01",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 2688, "files": 119, "reviews": 2, "changes_requested": 0, "bot_comments": 8, "human_comments": 5, "ttm_hours": [9.5, 1.3]},
+      "peter": {
+        "merged": 7,
+        "lines": 6240,
+        "files": 140,
+        "reviews": 36,
+        "changes_requested": 0,
+        "bot_comments": 54,
+        "human_comments": 38,
+        "ttm_hours": [149.1, 13.5, 13.4, 9.9, 7.0, 5.6, 0.5]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 41, "claude[bot]": 3, "github-actions[bot]": 18}
+  },
+  {
+    "date": "2026-10-02",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 7096, "files": 254, "reviews": 13, "changes_requested": 0, "bot_comments": 21, "human_comments": 16, "ttm_hours": [8.0, 3.8, 8.2]},
+      "peter": {"merged": 4, "lines": 608, "files": 54, "reviews": 6, "changes_requested": 0, "bot_comments": 18, "human_comments": 6, "ttm_hours": [11.4, 8.2, 8.2, 8.1]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 22, "github-actions[bot]": 17}
+  },
+  {
+    "date": "2026-10-03",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 14599, "files": 599, "reviews": 2, "changes_requested": 0, "bot_comments": 7, "human_comments": 6, "ttm_hours": [6.1, 2.2]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 4, "github-actions[bot]": 3}
+  },
+  {
+    "date": "2026-10-04",
+    "collector_version": 1,
+    "opened": 5,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 11722, "files": 558, "human_comments": 15, "bot_comments": 15, "reviews": 8, "changes_requested": 0, "ttm_hours": [11.8, 1.7, 1.7]},
+      "peter": {"merged": 1, "lines": 1388, "files": 264, "reviews": 13, "changes_requested": 0, "bot_comments": 16, "human_comments": 13, "ttm_hours": [3.5]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 23, "github-actions[bot]": 8}
+  },
+  {
+    "date": "2026-10-05",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 4234, "files": 189, "reviews": 3, "changes_requested": 0, "bot_comments": 6, "human_comments": 4, "closed": 1, "ttm_hours": [4.6]},
+      "peter": {"merged": 1, "lines": 183, "files": 13, "reviews": 3, "changes_requested": 0, "bot_comments": 6, "human_comments": 3, "ttm_hours": [11.3]}
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"github-actions[bot]": 4, "chatgpt-codex-connector[bot]": 7, "dependabot[bot]": 1}
+  },
+  {
+    "date": "2026-10-06",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "automation": {
+        "merged": 9,
+        "lines": 3802,
+        "files": 296,
+        "reviews": 20,
+        "changes_requested": 0,
+        "bot_comments": 43,
+        "human_comments": 27,
+        "closed": 1,
+        "ttm_hours": [93.0, 45.0, 17.5, 16.6, 16.6, 16.6, 16.5, 19.8, 12.1]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 4},
+    "bots": {"chatgpt-codex-connector[bot]": 25, "github-actions[bot]": 16, "coolify-nuc-humans[bot]": 1, "dependabot[bot]": 1}
+  },
+  {"date": "2026-10-07", "collector_version": 1, "opened": 5, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-10-08", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-10-09",
+    "collector_version": 1,
+    "opened": 1,
+    "lanes": {"peter": {"merged": 1, "lines": 423, "files": 1, "reviews": 41, "changes_requested": 0, "bot_comments": 42, "human_comments": 41, "ttm_hours": [51.3]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 41, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-10-10",
+    "collector_version": 1,
+    "opened": 4,
+    "lanes": {
+      "automation": {
+        "merged": 5,
+        "lines": 24999,
+        "files": 732,
+        "reviews": 7,
+        "changes_requested": 0,
+        "bot_comments": 20,
+        "human_comments": 15,
+        "ttm_hours": [66.2, 47.2, 23.5, 10.5, 5.0]
+      },
+      "peter": {"merged": 3, "lines": 376, "files": 11, "reviews": 12, "changes_requested": 0, "bot_comments": 21, "human_comments": 12, "ttm_hours": [73.9, 56.3, 56.1]}
+    },
+    "gate": {},
+    "bots": {"github-actions[bot]": 15, "chatgpt-codex-connector[bot]": 26}
+  },
+  {
+    "date": "2026-10-11",
+    "collector_version": 1,
+    "opened": 12,
+    "lanes": {"automation": {"merged": 1, "lines": 4985, "files": 168, "reviews": 1, "changes_requested": 0, "bot_comments": 3, "human_comments": 3, "ttm_hours": [15.1]}},
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 2, "github-actions[bot]": 1}
+  },
+  {
+    "date": "2026-10-12",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "automation": {"merged": 1, "lines": 4, "files": 1, "bot_comments": 4, "ttm_hours": [54.9]},
+      "peter": {"merged": 3, "lines": 1803, "files": 57, "bot_comments": 26, "reviews": 15, "changes_requested": 0, "human_comments": 15, "ttm_hours": [51.1, 29.9, 6.5]}
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 21, "github-actions[bot]": 8, "coolify-nuc-humans[bot]": 1}
+  },
+  {"date": "2026-10-13", "collector_version": 1, "opened": 7, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-10-14", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-10-15",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {
+      "automation": {"merged": 7, "lines": 563, "files": 30, "bot_comments": 9, "human_comments": 1, "ttm_hours": [39.2, 38.8, 38.8, 38.7, 38.7, 38.7, 35.2]},
+      "peter": {"merged": 2, "lines": 266, "files": 11, "bot_comments": 3, "ttm_hours": [2.8, 0.0]}
+    },
+    "gate": {"review_comments": 0, "merges": 6},
+    "bots": {"github-actions[bot]": 11, "chatgpt-codex-connector[bot]": 1}
+  },
+  {
+    "date": "2026-10-16",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {
+      "automation": {
+        "merged": 8,
+        "lines": 6056,
+        "files": 264,
+        "reviews": 10,
+        "changes_requested": 0,
+        "bot_comments": 31,
+        "human_comments": 20,
+        "ttm_hours": [224.3, 127.8, 114.9, 105.9, 85.5, 81.9, 32.0, 7.8]
+      },
+      "peter": {
+        "closed": 1,
+        "reviews": 38,
+        "changes_requested": 0,
+        "bot_comments": 75,
+        "human_comments": 42,
+        "merged": 12,
+        "lines": 9352,
+        "files": 189,
+        "ttm_hours": [115.0, 116.8, 114.8, 115.0, 116.8, 114.6, 114.7, 113.7, 0.4, 6.9, 6.5, 5.7]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 56, "github-actions[bot]": 50}
+  },
+  {
+    "date": "2026-10-17",
+    "collector_version": 1,
+    "opened": 21,
+    "lanes": {
+      "automation": {"merged": 2, "lines": 6225, "files": 316, "human_comments": 3, "bot_comments": 3, "ttm_hours": [11.4, 4.3]},
+      "peter": {
+        "merged": 18,
+        "lines": 25089,
+        "files": 1861,
+        "bot_comments": 62,
+        "reviews": 21,
+        "changes_requested": 0,
+        "human_comments": 26,
+        "ttm_hours": [23.8, 2.5, 2.0, 5.1, 2.5, 4.2, 4.6, 0.7, 2.2, 2.6, 0.7, 1.0, 1.2, 0.2, 1.0, 0.8, 0.1, 0.0]
+      }
+    },
+    "gate": {},
+    "bots": {"github-actions[bot]": 49, "chatgpt-codex-connector[bot]": 15, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-10-18",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "automation": {"merged": 4, "lines": 14011, "files": 515, "human_comments": 5, "bot_comments": 8, "reviews": 1, "changes_requested": 0, "ttm_hours": [7.0, 6.1, 1.4, 0.9]},
+      "peter": {"merged": 4, "lines": 2380, "files": 59, "reviews": 6, "changes_requested": 0, "bot_comments": 14, "human_comments": 6, "ttm_hours": [11.7, 9.3, 0.7, 1.2]}
+    },
+    "gate": {},
+    "bots": {"github-actions[bot]": 22}
+  },
+  {"date": "2026-10-19", "collector_version": 1, "opened": 9, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-10-20",
+    "collector_version": 1,
+    "opened": 7,
+    "lanes": {
+      "automation": {
+        "merged": 11,
+        "lines": 20637,
+        "files": 532,
+        "human_comments": 5,
+        "bot_comments": 16,
+        "reviews": 1,
+        "changes_requested": 0,
+        "ttm_hours": [46.0, 43.3, 17.1, 16.8, 16.8, 16.8, 28.3, 16.5, 19.6, 0.7, 0.5]
+      },
+      "peter": {
+        "merged": 6,
+        "lines": 4281,
+        "files": 105,
+        "reviews": 11,
+        "changes_requested": 0,
+        "bot_comments": 25,
+        "human_comments": 13,
+        "ttm_hours": [46.3, 47.0, 38.5, 36.9, 1.4, 0.3]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 6},
+    "bots": {"github-actions[bot]": 32, "chatgpt-codex-connector[bot]": 8, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-10-21",
+    "collector_version": 1,
+    "opened": 60,
+    "lanes": {
+      "automation": {
+        "merged": 30,
+        "lines": 29147,
+        "files": 1783,
+        "bot_comments": 131,
+        "human_comments": 62,
+        "reviews": 25,
+        "changes_requested": 0,
+        "ttm_hours": [12.0, 9.2, 8.8, 0.2, 0.8, 0.7, 0.6, 0.7, 1.3, 1.2, 0.4, 0.4, 0.4, 1.1, 1.3, 1.3, 0.4, 0.4, 1.0, 0.2, 0.3, 0.2, 0.2, 0.4, 1.9, 1.3, 0.5, 0.7, 0.6, 1.2]
+      },
+      "peter": {
+        "merged": 32,
+        "lines": 238688,
+        "files": 1640,
+        "reviews": 53,
+        "changes_requested": 0,
+        "bot_comments": 168,
+        "human_comments": 106,
+        "ttm_hours": [
+          12.7,
+          0.6,
+          0.4,
+          1.1,
+          0.3,
+          1.0,
+          0.4,
+          0.7,
+          1.1,
+          0.7,
+          0.4,
+          0.5,
+          2.0,
+          0.2,
+          0.5,
+          0.7,
+          0.2,
+          1.3,
+          1.9,
+          0.2,
+          1.9,
+          1.3,
+          4.2,
+          1.2,
+          1.2,
+          1.1,
+          1.2,
+          0.4,
+          2.8,
+          1.6,
+          1.5,
+          0.5
+        ]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 167, "github-actions[bot]": 126, "coolify-nuc-humans[bot]": 6}
+  },
+  {
+    "date": "2026-10-22",
+    "collector_version": 1,
+    "opened": 16,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 15806, "files": 333, "human_comments": 3, "bot_comments": 5, "ttm_hours": [19.0, 14.7, 6.8]},
+      "peter": {
+        "merged": 11,
+        "lines": 54113,
+        "files": 2767,
+        "bot_comments": 30,
+        "reviews": 5,
+        "changes_requested": 0,
+        "human_comments": 14,
+        "ttm_hours": [0.2, 11.8, 11.7, 11.4, 11.4, 11.4, 11.4, 11.4, 11.0, 10.6, 6.2]
+      }
+    },
+    "gate": {},
+    "bots": {"github-actions[bot]": 16, "chatgpt-codex-connector[bot]": 18, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-10-23",
+    "collector_version": 1,
+    "opened": 3,
+    "lanes": {"automation": {"merged": 1, "lines": 113, "files": 13, "human_comments": 2, "bot_comments": 2, "ttm_hours": [10.5]}},
+    "gate": {},
+    "bots": {"github-actions[bot]": 2}
+  },
+  {"date": "2026-10-24", "collector_version": 1, "opened": 2, "lanes": {}, "gate": {}, "bots": {}},
+  {"date": "2026-10-25", "collector_version": 1, "opened": 1, "lanes": {}, "gate": {}, "bots": {}},
+  {
+    "date": "2026-10-26",
+    "collector_version": 1,
+    "opened": 6,
+    "lanes": {"automation": {"merged": 6, "lines": 2741, "files": 187, "bot_comments": 7, "human_comments": 2, "ttm_hours": [84.0, 67.4, 5.9, 5.8, 5.8, 5.8]}},
+    "gate": {"review_comments": 0, "merges": 4},
+    "bots": {"github-actions[bot]": 7}
+  },
+  {
+    "date": "2026-10-27",
+    "collector_version": 1,
+    "opened": 8,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 6769, "files": 177, "human_comments": 6, "bot_comments": 6, "reviews": 2, "changes_requested": 0, "ttm_hours": [27.9, 15.9, 1.3]},
+      "peter": {
+        "merged": 5,
+        "lines": 3038,
+        "files": 267,
+        "reviews": 2,
+        "changes_requested": 0,
+        "bot_comments": 13,
+        "human_comments": 4,
+        "ttm_hours": [122.0, 119.5, 3.5, 0.5, 0.8]
+      }
+    },
+    "gate": {"review_comments": 1, "merges": 1},
+    "bots": {"github-actions[bot]": 13, "chatgpt-codex-connector[bot]": 6}
+  },
+  {
+    "date": "2026-10-28",
+    "collector_version": 1,
+    "opened": 9,
+    "lanes": {
+      "automation": {
+        "merged": 8,
+        "lines": 5600,
+        "files": 256,
+        "human_comments": 10,
+        "bot_comments": 15,
+        "reviews": 1,
+        "changes_requested": 0,
+        "ttm_hours": [141.8, 117.8, 94.0, 45.9, 19.8, 10.9, 6.0, 2.0]
+      },
+      "peter": {"merged": 4, "lines": 1593, "files": 33, "reviews": 6, "changes_requested": 0, "bot_comments": 17, "human_comments": 9, "ttm_hours": [25.8, 23.2, 6.0, 0.1]}
+    },
+    "gate": {},
+    "bots": {"github-actions[bot]": 24, "chatgpt-codex-connector[bot]": 8}
+  },
+  {
+    "date": "2026-10-29",
+    "collector_version": 1,
+    "opened": 26,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 686, "files": 22, "human_comments": 6, "bot_comments": 7, "ttm_hours": [71.0, 20.3, 16.7]},
+      "peter": {
+        "merged": 17,
+        "lines": 5832,
+        "files": 392,
+        "reviews": 35,
+        "changes_requested": 0,
+        "bot_comments": 84,
+        "human_comments": 55,
+        "ttm_hours": [25.0, 0.8, 0.9, 0.3, 0.2, 0.3, 21.8, 21.0, 1.1, 20.9, 0.7, 20.7, 0.5, 19.3, 20.3, 18.2, 0.4]
+      }
+    },
+    "gate": {},
+    "bots": {"github-actions[bot]": 44, "chatgpt-codex-connector[bot]": 47}
+  },
+  {
+    "date": "2026-10-30",
+    "collector_version": 1,
+    "opened": 12,
+    "lanes": {
+      "automation": {"merged": 3, "lines": 0, "files": 0, "human_comments": 9, "bot_comments": 11, "reviews": 2, "changes_requested": 0, "ttm_hours": [0.3, 10.6, 3.3]},
+      "peter": {
+        "merged": 14,
+        "lines": 0,
+        "files": 0,
+        "reviews": 27,
+        "changes_requested": 0,
+        "bot_comments": 69,
+        "human_comments": 45,
+        "ttm_hours": [22.2, 23.3, 22.2, 2.2, 11.9, 2.2, 2.3, 2.6, 12.1, 1.6, 0.7, 0.5, 7.6, 2.6]
+      }
+    },
+    "gate": {},
+    "bots": {"chatgpt-codex-connector[bot]": 31, "github-actions[bot]": 48, "coolify-nuc-humans[bot]": 1}
+  },
+  {
+    "date": "2026-10-31",
+    "collector_version": 1,
+    "opened": 1,
+    "lanes": {
+      "peter": {"merged": 4, "lines": 0, "files": 0, "bot_comments": 8, "human_comments": 3, "reviews": 1, "changes_requested": 0, "ttm_hours": [7.8, 7.6, 4.9, 4.9]}
+    },
+    "gate": {},
+    "bots": {"github-actions[bot]": 8}
+  }
+]

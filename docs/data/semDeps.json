@@ -1,0 +1,320 @@
+[
+  {
+    "section": "Agent",
+    "usesSections": ["AuditLog", "Auth", "Consent", "Feedback", "Governance", "Settings", "Teams", "Tickets", "Users"],
+    "usedBySections": [],
+    "crossSectionPoints": 28
+  },
+  {"section": "Analyzers", "usesSections": [], "usedBySections": [], "crossSectionPoints": 0},
+  {
+    "section": "AuditLog",
+    "usesSections": ["Users"],
+    "usedBySections": [
+      "Agent",
+      "Auth",
+      "Backdoor",
+      "Calendar",
+      "Campaigns",
+      "Camps",
+      "Cantina",
+      "CityPlanning",
+      "Consent",
+      "Containers",
+      "Debug",
+      "Development",
+      "Email",
+      "Events",
+      "Expenses",
+      "Feedback",
+      "Finance",
+      "Gate",
+      "GoogleIntegration",
+      "Governance",
+      "Issues",
+      "MailerLite",
+      "Monitor",
+      "Onboarding",
+      "Preapprovals",
+      "Rideshare",
+      "Settings",
+      "Shifts",
+      "Store",
+      "Surveys",
+      "Teams",
+      "Tickets",
+      "Users",
+      "Workgroups"
+    ],
+    "crossSectionPoints": 4
+  },
+  {
+    "section": "Auth",
+    "usesSections": ["AuditLog", "Email", "Users"],
+    "usedBySections": ["Agent", "Backdoor", "Development", "Gate", "Governance", "Issues", "Notifications", "Shifts", "Teams", "Tickets", "Users", "Web", "Workgroups"],
+    "crossSectionPoints": 12
+  },
+  {"section": "Backdoor", "usesSections": ["AuditLog", "Auth", "Budget", "Expenses", "Finance", "Users"], "usedBySections": [], "crossSectionPoints": 30},
+  {"section": "Base", "usesSections": ["Users"], "usedBySections": ["Debug"], "crossSectionPoints": 8},
+  {
+    "section": "Budget",
+    "usesSections": ["Camps", "Finance", "Teams", "Tickets", "Users"],
+    "usedBySections": ["Backdoor", "Expenses", "Finance", "Tickets"],
+    "crossSectionPoints": 18
+  },
+  {"section": "Calendar", "usesSections": ["AuditLog", "Teams", "Users"], "usedBySections": ["Scanner"], "crossSectionPoints": 14},
+  {"section": "Campaigns", "usesSections": ["AuditLog", "Email", "Teams", "Users"], "usedBySections": ["Email", "Tickets"], "crossSectionPoints": 12},
+  {
+    "section": "Camps",
+    "usesSections": ["AuditLog", "CityPlanning", "Email", "GoogleIntegration", "Settings", "Shifts", "Tickets", "Users"],
+    "usedBySections": ["Budget", "CityPlanning", "Containers", "Debug", "Development", "Events", "Notifications", "Search", "Store", "Tickets", "Users"],
+    "crossSectionPoints": 36
+  },
+  {"section": "Cantina", "usesSections": ["AuditLog", "Settings", "Shifts", "Users"], "usedBySections": ["Shifts"], "crossSectionPoints": 14},
+  {
+    "section": "CityPlanning",
+    "usesSections": ["AuditLog", "Camps", "Containers", "Teams", "Users"],
+    "usedBySections": ["Camps", "Containers"],
+    "crossSectionPoints": 20
+  },
+  {
+    "section": "Consent",
+    "usesSections": ["AuditLog", "Email", "Teams", "Users"],
+    "usedBySections": ["Agent", "Debug", "Development", "Governance", "Notifications", "Onboarding", "Scanner", "Surveys", "Teams", "Tickets", "Users", "Web"],
+    "crossSectionPoints": 48
+  },
+  {"section": "Containers", "usesSections": ["AuditLog", "Camps", "CityPlanning", "Users"], "usedBySections": ["CityPlanning"], "crossSectionPoints": 14},
+  {
+    "section": "Debug",
+    "usesSections": ["AuditLog", "Base", "Camps", "Consent", "Email", "Events", "Settings", "Shifts", "Teams", "Tickets", "Users"],
+    "usedBySections": [],
+    "crossSectionPoints": 36
+  },
+  {
+    "section": "Development",
+    "usesSections": ["AuditLog", "Auth", "Camps", "Consent", "Settings", "Teams", "Users"],
+    "usedBySections": [],
+    "crossSectionPoints": 64
+  },
+  {"section": "EarlyEntry", "usesSections": ["Users"], "usedBySections": ["Gate", "Scanner", "Tickets"], "crossSectionPoints": 2},
+  {
+    "section": "Email",
+    "usesSections": ["AuditLog", "Campaigns", "GoogleIntegration", "Settings", "Teams", "Tickets", "Users"],
+    "usedBySections": [
+      "Auth",
+      "Campaigns",
+      "Camps",
+      "Consent",
+      "Debug",
+      "Events",
+      "Expenses",
+      "Feedback",
+      "Finance",
+      "GoogleIntegration",
+      "Governance",
+      "Issues",
+      "MailerLite",
+      "Notifications",
+      "Onboarding",
+      "Preapprovals",
+      "Shifts",
+      "Surveys",
+      "Teams",
+      "Tickets",
+      "Users",
+      "Workgroups"
+    ],
+    "crossSectionPoints": 46
+  },
+  {
+    "section": "Events",
+    "usesSections": ["AuditLog", "Camps", "Email", "Settings", "Users"],
+    "usedBySections": ["Debug", "Scanner", "Search"],
+    "crossSectionPoints": 32
+  },
+  {
+    "section": "Expenses",
+    "usesSections": ["AuditLog", "Budget", "Email", "Finance", "Preapprovals", "Teams", "Users"],
+    "usedBySections": ["Backdoor", "Finance"],
+    "crossSectionPoints": 74
+  },
+  {"section": "Feedback", "usesSections": ["AuditLog", "Email", "Teams", "Users"], "usedBySections": ["Agent"], "crossSectionPoints": 14},
+  {
+    "section": "Finance",
+    "usesSections": ["AuditLog", "Budget", "Email", "Expenses", "Holded", "Users"],
+    "usedBySections": ["Backdoor", "Budget", "Expenses", "Holded", "Preapprovals", "Workgroups"],
+    "crossSectionPoints": 24
+  },
+  {
+    "section": "Gate",
+    "usesSections": ["AuditLog", "Auth", "EarlyEntry", "Settings", "Shifts", "Tickets", "Users"],
+    "usedBySections": [],
+    "crossSectionPoints": 24
+  },
+  {"section": "Gdpr", "usesSections": ["Users"], "usedBySections": ["Users"], "crossSectionPoints": 14},
+  {
+    "section": "GoogleIntegration",
+    "usesSections": ["AuditLog", "Email", "Notifications", "Teams", "Users"],
+    "usedBySections": ["Camps", "Email", "Governance", "Monitor", "Notifications", "Surveys", "Teams", "Users", "Workgroups"],
+    "crossSectionPoints": 84
+  },
+  {
+    "section": "Governance",
+    "usesSections": ["AuditLog", "Auth", "Consent", "Email", "GoogleIntegration", "Teams", "Users"],
+    "usedBySections": ["Agent", "Notifications", "Onboarding", "Surveys", "Tickets", "Users", "Workgroups"],
+    "crossSectionPoints": 50
+  },
+  {"section": "Grants", "usesSections": [], "usedBySections": [], "crossSectionPoints": 0},
+  {"section": "Guide", "usesSections": ["Teams"], "usedBySections": [], "crossSectionPoints": 2},
+  {"section": "Holded", "usesSections": ["Finance", "Users"], "usedBySections": ["Finance"], "crossSectionPoints": 20},
+  {"section": "Issues", "usesSections": ["AuditLog", "Auth", "Email", "Users"], "usedBySections": [], "crossSectionPoints": 12},
+  {"section": "LowIncome", "usesSections": [], "usedBySections": [], "crossSectionPoints": 0},
+  {"section": "MailerLite", "usesSections": ["AuditLog", "Email", "Tickets", "Users"], "usedBySections": [], "crossSectionPoints": 74},
+  {"section": "Monitor", "usesSections": ["AuditLog", "GoogleIntegration", "Settings", "Users"], "usedBySections": [], "crossSectionPoints": 10},
+  {
+    "section": "Notifications",
+    "usesSections": ["Auth", "Camps", "Consent", "Email", "GoogleIntegration", "Governance", "Teams", "Users"],
+    "usedBySections": ["GoogleIntegration", "Users", "Workgroups"],
+    "crossSectionPoints": 22
+  },
+  {
+    "section": "Onboarding",
+    "usesSections": ["AuditLog", "Consent", "Email", "Governance", "Settings", "Shifts", "Users"],
+    "usedBySections": [],
+    "crossSectionPoints": 40
+  },
+  {"section": "Preapprovals", "usesSections": ["AuditLog", "Email", "Finance", "Users"], "usedBySections": ["Expenses"], "crossSectionPoints": 16},
+  {"section": "Rideshare", "usesSections": ["AuditLog", "Settings", "Users"], "usedBySections": [], "crossSectionPoints": 12},
+  {"section": "Scanner", "usesSections": ["Calendar", "Consent", "EarlyEntry", "Events", "Settings", "Tickets"], "usedBySections": [], "crossSectionPoints": 12},
+  {"section": "Search", "usesSections": ["Camps", "Events", "Shifts", "Teams", "Users"], "usedBySections": [], "crossSectionPoints": 12},
+  {
+    "section": "Settings",
+    "usesSections": ["AuditLog", "Users"],
+    "usedBySections": [
+      "Agent",
+      "Camps",
+      "Cantina",
+      "Debug",
+      "Development",
+      "Email",
+      "Events",
+      "Gate",
+      "Monitor",
+      "Onboarding",
+      "Rideshare",
+      "Scanner",
+      "Shifts",
+      "Store",
+      "Teams",
+      "Tickets",
+      "Workgroups"
+    ],
+    "crossSectionPoints": 4
+  },
+  {
+    "section": "Shifts",
+    "usesSections": ["AuditLog", "Auth", "Cantina", "Email", "Settings", "Teams", "Tickets", "Users"],
+    "usedBySections": ["Camps", "Cantina", "Debug", "Gate", "Onboarding", "Search", "Teams", "Users"],
+    "crossSectionPoints": 78
+  },
+  {"section": "Store", "usesSections": ["AuditLog", "Camps", "Settings", "Stripe", "Teams", "Users"], "usedBySections": [], "crossSectionPoints": 32},
+  {"section": "Stripe", "usesSections": [], "usedBySections": ["Store", "Tickets"], "crossSectionPoints": 0},
+  {
+    "section": "Surveys",
+    "usesSections": ["AuditLog", "Consent", "Email", "GoogleIntegration", "Governance", "Teams", "Tickets", "Users"],
+    "usedBySections": [],
+    "crossSectionPoints": 40
+  },
+  {
+    "section": "Teams",
+    "usesSections": ["AuditLog", "Auth", "Consent", "Email", "GoogleIntegration", "Settings", "Shifts", "Tickets", "Users"],
+    "usedBySections": [
+      "Agent",
+      "Budget",
+      "Calendar",
+      "Campaigns",
+      "CityPlanning",
+      "Consent",
+      "Debug",
+      "Development",
+      "Email",
+      "Expenses",
+      "Feedback",
+      "GoogleIntegration",
+      "Governance",
+      "Guide",
+      "Notifications",
+      "Search",
+      "Shifts",
+      "Store",
+      "Surveys",
+      "Tickets",
+      "Users",
+      "Workgroups"
+    ],
+    "crossSectionPoints": 64
+  },
+  {"section": "TicketTailor", "usesSections": [], "usedBySections": [], "crossSectionPoints": 0},
+  {
+    "section": "Tickets",
+    "usesSections": ["AuditLog", "Auth", "Budget", "Campaigns", "Camps", "Consent", "EarlyEntry", "Email", "Governance", "Settings", "Stripe", "Teams", "Users"],
+    "usedBySections": ["Agent", "Budget", "Camps", "Debug", "Email", "Gate", "MailerLite", "Scanner", "Shifts", "Surveys", "Teams", "Users"],
+    "crossSectionPoints": 88
+  },
+  {"section": "Tour", "usesSections": [], "usedBySections": [], "crossSectionPoints": 0},
+  {
+    "section": "Users",
+    "usesSections": ["AuditLog", "Auth", "Camps", "Consent", "Email", "Gdpr", "GoogleIntegration", "Governance", "Notifications", "Shifts", "Teams", "Tickets"],
+    "usedBySections": [
+      "Agent",
+      "AuditLog",
+      "Auth",
+      "Backdoor",
+      "Base",
+      "Budget",
+      "Calendar",
+      "Campaigns",
+      "Camps",
+      "Cantina",
+      "CityPlanning",
+      "Consent",
+      "Containers",
+      "Debug",
+      "Development",
+      "EarlyEntry",
+      "Email",
+      "Events",
+      "Expenses",
+      "Feedback",
+      "Finance",
+      "Gate",
+      "Gdpr",
+      "GoogleIntegration",
+      "Governance",
+      "Holded",
+      "Issues",
+      "MailerLite",
+      "Monitor",
+      "Notifications",
+      "Onboarding",
+      "Preapprovals",
+      "Rideshare",
+      "Search",
+      "Settings",
+      "Shifts",
+      "Store",
+      "Surveys",
+      "Teams",
+      "Tickets",
+      "Web",
+      "Workgroups"
+    ],
+    "crossSectionPoints": 120
+  },
+  {"section": "Web", "usesSections": ["Auth", "Consent", "Users"], "usedBySections": [], "crossSectionPoints": 42},
+  {
+    "section": "Workgroups",
+    "usesSections": ["AuditLog", "Auth", "Email", "Finance", "GoogleIntegration", "Governance", "Notifications", "Settings", "Teams", "Users"],
+    "usedBySections": [],
+    "crossSectionPoints": 44
+  }
+]

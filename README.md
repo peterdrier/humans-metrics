@@ -4,7 +4,7 @@ Codebase timeline for [peterdrier/Humans](https://github.com/peterdrier/Humans):
 solution-wide and per-assembly stats, reforge structure metrics, and surface-score readings, rendered as a
 static page. Built to watch growth, slop and cleanup over an agent-driven project's life.
 
-Page: `docs/index.html` (GitHub Pages serves `docs/` from `main`).
+Page: `docs/index.html`, with `style.css`, `app.js` and `data/*.json` beside it (GitHub Pages serves `docs/` from `main`; open it over HTTP, since `file://` blocks the data fetch).
 
 ## Layout
 
@@ -19,7 +19,7 @@ Page: `docs/index.html` (GitHub Pages serves `docs/` from `main`).
 | `data/surface/<date>-<sha>-reforge<ver>.json` | Slim surface-score reading: totals, points by rule, points by section, service-interface edges. Full JSON stays in a local archive. |
 | `data/seed/reforge-history.csv` | The daily `reforge snapshot` rows carried over from the Humans repo, used until every day has its own snapshot. No reforge version was recorded for these. |
 | `collect/collect.py` | The collector. File-based metrics need only git and cloc; `--reforge` adds the snapshot and needs a building tree. |
-| `site/template.html` + `site/build.py` | The page and the builder that embeds the data. |
+| `site/{index.html,style.css,app.js}` + `site/build.py` | The page source, and the builder that copies it to `docs/` and writes `docs/data/<key>.json`. |
 | `.github/workflows/weekly.yml` | Monday job: collect missing days, rebuild, commit, deploy. |
 
 ## Every record carries its provenance
