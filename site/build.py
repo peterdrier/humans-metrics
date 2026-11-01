@@ -110,8 +110,16 @@ for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
      'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
      'generated': days[-1]['date']}
+def dump(v, ind=''):
+    # Diff-friendly JSON: a container stays on one line when short, else one child per line, so a new day is a new line.
+    flat = json.dumps(v, separators=(',', ':'))
+    if len(flat) <= 160 or not isinstance(v, (list, dict)) or not v: return flat
+    sub = ind + ' '
+    if isinstance(v, list): items = [dump(x, sub) for x in v]
+    else: items = [json.dumps(k) + ':' + dump(x, sub) for k, x in v.items()]
+    return ('[' if isinstance(v, list) else '{') + '\n' + ',\n'.join(sub + i for i in items) + '\n' + ind + (']' if isinstance(v, list) else '}')
 tmpl = open(os.path.join(ROOT, 'site', 'template.html')).read()
-out = tmpl.replace('__DATA__', json.dumps(D, separators=(',', ':')))
+out = tmpl.replace('__DATA__', dump(D))
 os.makedirs(os.path.join(ROOT, 'docs'), exist_ok=True)
 open(os.path.join(ROOT, 'docs', 'index.html'), 'w').write(out)
 print(f'docs/index.html: {len(out)//1024} KB, {len(stats)} days, {len(ref)} snapshot rows, {len(modules)} module checkpoints, {len(runs)} surface runs, {len(sec_days)} per-assembly days')
