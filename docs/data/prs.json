@@ -2955,11 +2955,50 @@
   {
     "date": "2026-10-31",
     "collector_version": 1,
-    "opened": 1,
+    "opened": 2,
     "lanes": {
       "peter": {"merged": 4, "lines": 0, "files": 0, "bot_comments": 8, "human_comments": 3, "reviews": 1, "changes_requested": 0, "ttm_hours": [7.8, 7.6, 4.9, 4.9]}
     },
     "gate": {},
     "bots": {"github-actions[bot]": 8}
+  },
+  {
+    "date": "2026-11-01",
+    "collector_version": 1,
+    "opened": 11,
+    "lanes": {
+      "automation": {
+        "merged": 2,
+        "lines": 8364,
+        "files": 437,
+        "reviews": 2,
+        "changes_requested": 0,
+        "bot_comments": 10,
+        "human_comments": 11,
+        "closed": 1,
+        "ttm_hours": [37.3, 27.0]
+      },
+      "other": {"closed": 1},
+      "peter": {
+        "merged": 5,
+        "lines": 4149,
+        "files": 110,
+        "reviews": 6,
+        "changes_requested": 0,
+        "bot_comments": 20,
+        "human_comments": 10,
+        "ttm_hours": [5.1, 4.5, 0.7, 0.1, 0.1]
+      }
+    },
+    "gate": {"review_comments": 0, "merges": 0},
+    "bots": {"chatgpt-codex-connector[bot]": 12, "coolify-nuc-humans[bot]": 1, "github-actions[bot]": 17}
+  },
+  {
+    "date": "2026-11-02",
+    "collector_version": 1,
+    "opened": 2,
+    "lanes": {"peter": {"merged": 1, "lines": 79, "files": 1, "reviews": 3, "changes_requested": 0, "bot_comments": 6, "human_comments": 4, "ttm_hours": [18.1]}},
+    "gate": {},
+    "bots": {"github-actions[bot]": 3, "chatgpt-codex-connector[bot]": 3}
   }
 ]
