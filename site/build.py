@@ -10,6 +10,7 @@ The data contract (what app.js reads into `D`; its KEYS list must match):
   runs              surface-score headline per archived run (data/surface/*.json)
   surface, byRule,  per-section and per-rule points of the latest surface-score run
   semDeps           service-interface edges of the latest surface-score run
+  files             runtime: stored uploads per day, total and by category (data/runtime/files/*.json)
 """
 import csv, glob, json, os, re, shutil, collections
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -107,8 +108,12 @@ for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
     runs.append({k: j[k] for k in ('date', 'commit', 'reforge_version', 'surface', 'internal', 'total')} | {'sha': j['commit'], 'version': j['reforge_version']})
     surface, by_rule, sem = j.get('groups', []), j.get('byRule', []), j.get('semDeps')
 
+# --- runtime: stored files (app data, not code), its own series
+files = [{k: j[k] for k in ('date', 'count', 'bytes', 'categories')}
+         for j in (json.load(open(p)) for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'runtime', 'files', '*.json'))))]
+
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
-     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem,
+     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem, 'files': files,
      'generated': days[-1]['date']}
 def dump(v, ind=''):
     # Diff-friendly JSON: a container stays on one line when short, else one child per line, so a new day is a new line.

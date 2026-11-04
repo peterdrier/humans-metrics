@@ -78,6 +78,7 @@ jobs:
           python3 collect/gitstats.py --repo ../Humans --out data
           python3 collect/prstats.py --repo ../Humans --out data
           python3 collect/actionstats.py --out data
+          python3 collect/filestats.py --out data || echo 'file stats unavailable; skipped'
           export PATH="$HOME/.dotnet/tools:$PATH"
           python3 collect/reforgehist.py --repo ../Humans --out data --forward
 

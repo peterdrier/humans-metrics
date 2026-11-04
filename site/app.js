@@ -1,5 +1,5 @@
 // Each dataset is docs/data/<key>.json, written by site/build.py.
-const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "runs", "latestRun", "surface", "byRule", "semDeps", "generated"];
+const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "runs", "latestRun", "surface", "byRule", "semDeps", "files", "generated"];
 const D = Object.fromEntries(await Promise.all(KEYS.map(async k => [k, await (await fetch(`data/${k}.json`, {cache: 'no-cache'})).json()])));
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const SPLIT = '2026-08-08';
@@ -95,7 +95,7 @@ function render(){
   line('d-density', ML, [{label:'Density', data:DS.map(d=>d&&d.density), slot:4}], {yfmt:pct});
   line('d-fanout', ML, [{label:'Avg fan-out', data:DS.map(d=>d&&d.avgFanOut), slot:0},{label:'Max fan-out', data:DS.map(d=>d&&d.maxFanOut), extra:DS.map(d=>d&&d.maxFanOutNode), slot:1}]);
   line('d-fanin', ML, [{label:'Max fan-in', data:DS.map(d=>d&&d.maxFanIn), extra:DS.map(d=>d&&d.maxFanInNode), slot:4}]);
-  renderLanes(); renderFlow(); renderCI(); renderAssembly();
+  renderLanes(); renderFlow(); renderCI(); renderAssembly(); renderFiles();
   line('m-gini', ML, [{label:'Gini', data:M.map(m=>gini(sizes(m).map(x=>x[1]))), slot:4}], {y:{max:1}});
 }
 
@@ -165,6 +165,21 @@ function renderCI(){
   line('a-wf', L, top.map((k,j)=>({label:k, data:idx.map(i=>win(i,7).reduce((a,p)=>a+((p.workflows[k]||{}).runs||0),0)), slot:j%5})), {log:true});
   line('a-build', L, [{label:'Build and Test, min', data:idx.map(i=>{const w=win(i,7).map(p=>p.workflows['Build and Test']).filter(Boolean); const n=w.reduce((a,x)=>a+x.runs,0); return n? w.reduce((a,x)=>a+x.duration_s,0)/n/60 : null;}), slot:0}]);
   line('a-rerun', L, [{label:'Re-runs / 7 days', data:idx.map(i=>win(i,7).reduce((a,p)=>a+p.reruns,0)), slot:1}]);
+}
+
+function renderFiles(){
+  const F=(D.files||[]).filter(p=>inRange(p.date)); if(!F.length) return;
+  document.getElementById('files').hidden=false;
+  const L=F.map(p=>p.date), last=F[F.length-1];
+  // Five palette slots: the four largest folders today, the rest as "other".
+  const cats=Object.keys(last.categories).sort((a,b)=>last.categories[b].bytes-last.categories[a].bytes);
+  const top=cats.length>5? cats.slice(0,4) : cats, rest=cats.filter(k=>!top.includes(k));
+  const get=(p,k,f)=>k==='other'? rest.reduce((a,r)=>a+((p.categories[r]||{})[f]||0),0) : ((p.categories[k]||{})[f]||0);
+  const keys=rest.length? [...top,'other'] : top;
+  const mb=v=>v==null?'':(v>=1024? (v/1024).toFixed(1)+' GB' : v.toFixed(v>=10?0:1)+' MB');
+  line('f-bytes', L, keys.map((k,j)=>({label:k, data:F.map(p=>get(p,k,'bytes')/1048576), slot:j})), {yfmt:mb});
+  line('f-count', L, keys.map((k,j)=>({label:k, data:F.map(p=>get(p,k,'count')), slot:j})));
+  line('f-total', L, [{label:'Total stored', data:F.map(p=>p.bytes/1048576), fill:true, slot:0}], {yfmt:mb});
 }
 
 let asPick=null;
