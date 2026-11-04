@@ -169,6 +169,16 @@
   <div class="note" id="as-failed"></div>
 </section>
 
+<section class="block" id="files" hidden>
+  <h2>Runtime: stored files</h2>
+  <p class="sub">App data, not code: uploads on the production server by folder, read from <code>/api/stats/files</code>. Each day counts the files present at its end by write time, so files deleted or replaced since are missing from earlier days.</p>
+  <div class="grid">
+    <div class="panel tall" style="grid-column:1/-1"><h3>Storage by category</h3><p class="why">Megabytes per upload folder.</p><div class="ph"><canvas id="f-bytes"></canvas></div><div class="legend" id="l-bytes"></div></div>
+    <div class="panel"><h3>Files by category</h3><p class="why">File count per upload folder.</p><div class="ph"><canvas id="f-count"></canvas></div><div class="legend" id="l-count"></div></div>
+    <div class="panel"><h3>Total storage</h3><p class="why">All uploads together.</p><div class="ph"><canvas id="f-total"></canvas></div></div>
+  </div>
+</section>
+
 <section class="block" id="surface">
   <h2>Reforge surface score</h2>
   <p class="sub">The newer measurement system. Three archived runs (2026-08-16, 2026-10-21, 2026-10-29). Totals per run are in the first panel; the per-section and per-rule views are the latest run.</p>
