@@ -120,8 +120,12 @@ def dump(v, ind=''):
     return ('[' if isinstance(v, list) else '{') + '\n' + ',\n'.join(sub + i for i in items) + '\n' + ind + (']' if isinstance(v, list) else '}')
 DOCS = os.path.join(ROOT, 'docs')
 os.makedirs(os.path.join(DOCS, 'data'), exist_ok=True)
-for f in ('index.html', 'style.css', 'app.js'):
+for f in ('style.css', 'app.js'):
     shutil.copyfile(os.path.join(ROOT, 'site', f), os.path.join(DOCS, f))
+import re
+html = open(os.path.join(ROOT, 'site', 'index.html')).read()
+html = re.sub(r'(<div class="eyebrow">Nobodies Humans · )[\d-]+ to [\d-]+', lambda m: m.group(1) + days[0]['date'] + ' to ' + max(D['generated'], reforge_days[-1]['date']), html)
+open(os.path.join(DOCS, 'index.html'), 'w').write(html)
 for k, v in D.items():
     open(os.path.join(DOCS, 'data', f'{k}.json'), 'w').write(dump(v) + '\n')
 size = sum(os.path.getsize(os.path.join(DOCS, 'data', f'{k}.json')) for k in D)
