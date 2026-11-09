@@ -76,7 +76,7 @@ function render(){
   bars('c-weekly', wk.map(r=>r.date), [{label:'Net lines, week of', data:wk.map(r=>r.v), extra:wk.map(r=>r.partial?'week to date':''), colors:wk.map(r=>r.v>=0?theme().s[0]:theme().bad)}]);
   // reforge
   const r=R.filter(x=>inRange(x.commit_date)), RL=r.map(x=>x.commit_date);
-  const one=(key,label,yfmt,extraKey,slot=2,log=false)=>line('r-'+key, RL, [{label, data:sm_(r.map(x=>x[key])), extra:extraKey? r.map(x=>String(x[extraKey]).split('/').pop()) : null, slot}], {yfmt, log});
+  const one=(key,label,yfmt,extraKey,slot=2,log=false)=>line('r-'+key, RL, [{label, data:sm_(r.map(x=>x[key])), extra:extraKey? r.map(x=>String(x[extraKey]).replace(/^src\/(Sections\/)?/,'')) : null, slot}], {yfmt, log});
   one('avg_reach','Avg reach'); one('p95_reach','p95 reach'); one('max_reach','Max reach',null,'max_reach_file',2,true);
   one('core_size_pct','Core size',pct); one('cycle_count','Cycles'); one('avg_fanout','Avg fan-out'); one('max_fanout','Max fan-out',null,'max_fanout_file');
   one('avg_cyclomatic','Avg cyclomatic'); one('p95_cyclomatic','p95 cyclomatic'); one('max_cyclomatic','Max cyclomatic',null,'max_cyclomatic_method');
