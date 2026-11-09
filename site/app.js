@@ -69,10 +69,11 @@ function render(){
   line('c-docratio', L, [{label:'MD lines per app line', data:sm_(s.map(r=>r.md/r.app)), slot:1}]);
   bars('c-churn', L, [{label:'Added', data:sm_(s.map(r=>r.plus)), colors:theme().good},{label:'Removed', data:sm_(s.map(r=>-r.minus)), colors:theme().bad}], {stacked:true, y:{beginAtZero:true, min:-60000, max:60000}});
   line('c-lpc', L, [{label:'App lines per class', data:sm_(s.map(r=>r.app/r.classes)), slot:1}]);
-  // weekly net growth
-  const wk=[]; for(let i=0;i<S.length;i++){ const j=S.findIndex(r=>r.date>=addDays(S[i].date,-7)); if(S[i].date>='2026-02-11') wk.push({date:S[i].date, v:(S[i].app+S[i].test)-(S[j].app+S[j].test)}); }
-  const wkf=wk.filter(r=>inRange(r.date));
-  bars('c-weekly', wkf.map(r=>r.date), [{label:'7-day net lines', data:wkf.map(r=>r.v), colors:wkf.map(r=>r.v>=0?theme().s[0]:theme().bad)}]);
+  // One bar per UTC week (Monday start): last level of the week minus last level of the week before. The repo starts empty, so week one counts from zero.
+  const wkEnd={}; S.forEach(r=>{wkEnd[weekOf(r.date)]=r.app+r.test;});
+  const wks=Object.keys(wkEnd).sort(), lastDay=S[S.length-1].date;
+  const wk=wks.map((w,i)=>({date:w, v:wkEnd[w]-(i?wkEnd[wks[i-1]]:0), partial:addDays(w,6)>lastDay})).filter(r=>inRange(r.date));
+  bars('c-weekly', wk.map(r=>r.date), [{label:'Net lines, week of', data:wk.map(r=>r.v), extra:wk.map(r=>r.partial?'week to date':''), colors:wk.map(r=>r.v>=0?theme().s[0]:theme().bad)}]);
   // reforge
   const r=R.filter(x=>inRange(x.commit_date)), RL=r.map(x=>x.commit_date);
   const one=(key,label,yfmt,extraKey,slot=2,log=false)=>line('r-'+key, RL, [{label, data:sm_(r.map(x=>x[key])), extra:extraKey? r.map(x=>String(x[extraKey]).split('/').pop()) : null, slot}], {yfmt, log});
@@ -219,6 +220,7 @@ function renderAssembly(){
   const f=D.secFailed||[]; document.getElementById('as-failed').textContent = f.length? `Days without a row: ${f.map(x=>`${x.date} (${x.build})`).join(', ')}` : 'Every attempted day produced rows.';
 }
 function addDays(d,n){const x=new Date(d+'T00:00:00Z'); x.setUTCDate(x.getUTCDate()+n); return x.toISOString().slice(0,10);}
+function weekOf(d){return addDays(d,-((new Date(d+'T00:00:00Z').getUTCDay()+6)%7));}
 function renderStatic(){
   const t=theme();
   const last=D.modules[D.modules.length-1];
@@ -263,8 +265,7 @@ function renderStatic(){
 }
 document.querySelectorAll('[data-range]').forEach(b=>b.addEventListener('click',()=>{range=b.dataset.range; document.querySelectorAll('[data-range]').forEach(x=>x.setAttribute('aria-pressed',x===b)); render(); try{localStorage.setItem('hct-range',range)}catch(e){}}));
 document.querySelectorAll('[data-scale]').forEach(b=>b.addEventListener('click',()=>{scale=b.dataset.scale; document.querySelectorAll('[data-scale]').forEach(x=>x.setAttribute('aria-pressed',x===b)); render();}));
-document.querySelectorAll('[data-smooth]').forEach(b=>b.addEventListener('click',()=>{smooth=+b.dataset.smooth; document.querySelectorAll('[data-scale]').forEach(b=>b.addEventListener('click',()=>{scale=b.dataset.scale; document.querySelectorAll('[data-scale]').forEach(x=>x.setAttribute('aria-pressed',x===b)); render();}));
-document.querySelectorAll('[data-smooth]').forEach(x=>x.setAttribute('aria-pressed',x===b)); render();}));
+document.querySelectorAll('[data-smooth]').forEach(b=>b.addEventListener('click',()=>{smooth=+b.dataset.smooth; document.querySelectorAll('[data-smooth]').forEach(x=>x.setAttribute('aria-pressed',x===b)); render();}));
 try{ const r=localStorage.getItem('hct-range'); if(r){range=r; document.querySelectorAll('[data-range]').forEach(x=>x.setAttribute('aria-pressed',x.dataset.range===r));} }catch(e){}
 renderStatic(); render();
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{renderStatic();render();});
