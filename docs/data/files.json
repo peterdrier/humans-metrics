@@ -1,0 +1,15 @@
+[
+  {
+    "date": "2026-11-08",
+    "count": 2662,
+    "bytes": 1241679793,
+    "categories": {
+      "camps": {"bytes": 155574150, "count": 86},
+      "containers": {"bytes": 78283869, "count": 56},
+      "expense-attachments": {"bytes": 837460691, "count": 1335},
+      "issues": {"bytes": 5419136, "count": 16},
+      "profile-pictures": {"bytes": 153560601, "count": 1150},
+      "surveys": {"bytes": 11381346, "count": 19}
+    }
+  }
+]

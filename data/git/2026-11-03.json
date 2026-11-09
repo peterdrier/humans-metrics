@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-03",
+ "commit": "6956f2105",
+ "collector_version": 1,
+ "lanes": {
+  "automation": {
+   "prs": 1,
+   "files": 2,
+   "added": 60,
+   "deleted": 6
+  },
+  "other": {
+   "prs": 1,
+   "files": 2,
+   "added": 20,
+   "deleted": 0
+  },
+  "peter": {
+   "prs": 17,
+   "files": 1390,
+   "added": 17782,
+   "deleted": 16076
+  }
+ },
+ "routines": {
+  "debt-sweep": 1
+ },
+ "models": {
+  "Claude": 18,
+  "Claude Opus 5.5": 1
+ },
+ "authors": 2,
+ "all_commits": 20,
+ "hours": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  2,
+  1,
+  3,
+  1,
+  2,
+  5,
+  1,
+  3,
+  1,
+  0,
+  0
+ ]
+}

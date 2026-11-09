@@ -3372,5 +3372,144 @@
       "Preview Database": {"runs": 19, "failure": 0, "duration_s": 791},
       "claude-review": {"runs": 44, "failure": 0, "duration_s": 945}
     }
+  },
+  {
+    "date": "2026-11-02",
+    "collector_version": 1,
+    "runs": 237,
+    "conclusions": {"success": 178, "cancelled": 11, "failure": 11, "skipped": 37},
+    "reruns": 0,
+    "events": {"workflow_run": 28, "pull_request": 79, "pull_request_target": 69, "push": 24, "issue_comment": 28, "dynamic": 6, "workflow_dispatch": 2, "schedule": 1},
+    "workflows": {
+      "Build and Test": {"runs": 36, "failure": 3, "duration_s": 24273},
+      "E2E Tests (QA)": {"runs": 10, "failure": 5, "duration_s": 1590},
+      "Flag PRs with merge conflicts": {"runs": 35, "failure": 0, "duration_s": 699},
+      "Integration tests": {"runs": 1, "failure": 1, "duration_s": 595},
+      "Label PRs with EF migrations": {"runs": 29, "failure": 0, "duration_s": 387},
+      "PR Surface Report": {"runs": 28, "failure": 2, "duration_s": 6182},
+      "PR Surface Report Comment": {"runs": 28, "failure": 0, "duration_s": 375},
+      "Preview Database": {"runs": 23, "failure": 0, "duration_s": 2851},
+      "claude-review": {"runs": 41, "failure": 0, "duration_s": 856},
+      "github_actions in /. - Update #1674751373": {"runs": 1, "failure": 0, "duration_s": 70},
+      "npm_and_yarn in /tests/e2e - Update #1674751370": {"runs": 1, "failure": 0, "duration_s": 53},
+      "nuget in / for CsvHelper - Update #1675198547": {"runs": 1, "failure": 0, "duration_s": 2017},
+      "nuget in / for CsvHelper - Update #1675413190": {"runs": 1, "failure": 0, "duration_s": 848},
+      "nuget in / for Ical.Net - Update #1675198632": {"runs": 1, "failure": 0, "duration_s": 984},
+      "nuget in /. - Update #1674751369": {"runs": 1, "failure": 0, "duration_s": 3312}
+    }
+  },
+  {
+    "date": "2026-11-03",
+    "collector_version": 1,
+    "runs": 485,
+    "conclusions": {"success": 382, "cancelled": 20, "skipped": 66, "failure": 17},
+    "reruns": 0,
+    "events": {"workflow_run": 61, "pull_request": 156, "pull_request_target": 146, "workflow_dispatch": 1, "issue_comment": 60, "push": 60, "schedule": 1},
+    "workflows": {
+      "Build and Test": {"runs": 81, "failure": 5, "duration_s": 38346},
+      "E2E Tests (QA)": {"runs": 20, "failure": 10, "duration_s": 4101},
+      "Flag PRs with merge conflicts": {"runs": 84, "failure": 1, "duration_s": 1738},
+      "Integration tests": {"runs": 1, "failure": 1, "duration_s": 590},
+      "Label PRs with EF migrations": {"runs": 64, "failure": 0, "duration_s": 666},
+      "PR Surface Report": {"runs": 61, "failure": 0, "duration_s": 14713},
+      "PR Surface Report Comment": {"runs": 61, "failure": 0, "duration_s": 687},
+      "Preview Database": {"runs": 35, "failure": 0, "duration_s": 670},
+      "claude-review": {"runs": 78, "failure": 0, "duration_s": 2334}
+    }
+  },
+  {
+    "date": "2026-11-04",
+    "collector_version": 1,
+    "runs": 620,
+    "conclusions": {"success": 457, "failure": 17, "skipped": 121, "cancelled": 25},
+    "reruns": 0,
+    "events": {"pull_request": 180, "push": 90, "workflow_run": 66, "issue_comment": 115, "pull_request_target": 168, "schedule": 1},
+    "workflows": {
+      "Build and Test": {"runs": 96, "failure": 3, "duration_s": 60487},
+      "E2E Tests (QA)": {"runs": 30, "failure": 12, "duration_s": 10130},
+      "Flag PRs with merge conflicts": {"runs": 102, "failure": 1, "duration_s": 15633},
+      "Integration tests": {"runs": 1, "failure": 1, "duration_s": 544},
+      "Label PRs with EF migrations": {"runs": 72, "failure": 0, "duration_s": 13625},
+      "PR Surface Report": {"runs": 66, "failure": 0, "duration_s": 28797},
+      "PR Surface Report Comment": {"runs": 66, "failure": 0, "duration_s": 4934},
+      "Preview Database": {"runs": 48, "failure": 0, "duration_s": 7007},
+      "claude-review": {"runs": 139, "failure": 0, "duration_s": 19732}
+    }
+  },
+  {
+    "date": "2026-11-05",
+    "collector_version": 1,
+    "runs": 809,
+    "conclusions": {"success": 610, "skipped": 129, "cancelled": 50, "failure": 20},
+    "reruns": 2,
+    "events": {"workflow_run": 102, "issue_comment": 112, "push": 91, "pull_request": 264, "pull_request_target": 239, "schedule": 1},
+    "workflows": {
+      "Build and Test": {"runs": 136, "failure": 9, "duration_s": 63012},
+      "E2E Tests (QA)": {"runs": 23, "failure": 8, "duration_s": 6232},
+      "Flag PRs with merge conflicts": {"runs": 137, "failure": 0, "duration_s": 2730},
+      "Integration tests": {"runs": 1, "failure": 1, "duration_s": 449},
+      "Label PRs with EF migrations": {"runs": 103, "failure": 0, "duration_s": 963},
+      "PR Surface Report": {"runs": 102, "failure": 2, "duration_s": 20146},
+      "PR Surface Report Comment": {"runs": 102, "failure": 0, "duration_s": 1071},
+      "Preview Database": {"runs": 60, "failure": 0, "duration_s": 641472},
+      "claude-review": {"runs": 145, "failure": 0, "duration_s": 3782}
+    }
+  },
+  {
+    "date": "2026-11-06",
+    "collector_version": 1,
+    "runs": 66,
+    "conclusions": {"failure": 4, "skipped": 18, "success": 40, "cancelled": 4},
+    "reruns": 0,
+    "events": {"schedule": 2, "issue_comment": 16, "pull_request_target": 20, "workflow_run": 8, "pull_request": 18, "push": 2},
+    "workflows": {
+      "Build and Test": {"runs": 9, "failure": 0, "duration_s": 4350},
+      "E2E Tests (QA)": {"runs": 1, "failure": 1, "duration_s": 40},
+      "Flag PRs with merge conflicts": {"runs": 10, "failure": 0, "duration_s": 127},
+      "Integration tests": {"runs": 1, "failure": 1, "duration_s": 622},
+      "Label PRs with EF migrations": {"runs": 9, "failure": 0, "duration_s": 79},
+      "PR Surface Report": {"runs": 8, "failure": 2, "duration_s": 1377},
+      "PR Surface Report Comment": {"runs": 8, "failure": 0, "duration_s": 61},
+      "Preview Database": {"runs": 2, "failure": 0, "duration_s": 22},
+      "claude-review": {"runs": 18, "failure": 0, "duration_s": 254}
+    }
+  },
+  {
+    "date": "2026-11-07",
+    "collector_version": 1,
+    "runs": 59,
+    "conclusions": {"success": 36, "skipped": 17, "cancelled": 4, "failure": 2},
+    "reruns": 0,
+    "events": {"workflow_run": 7, "issue_comment": 16, "pull_request": 17, "pull_request_target": 17, "schedule": 2},
+    "workflows": {
+      "Build and Test": {"runs": 7, "failure": 0, "duration_s": 2610},
+      "E2E Tests (QA)": {"runs": 1, "failure": 1, "duration_s": 41},
+      "Flag PRs with merge conflicts": {"runs": 7, "failure": 0, "duration_s": 52},
+      "Integration tests": {"runs": 1, "failure": 1, "duration_s": 589},
+      "Label PRs with EF migrations": {"runs": 7, "failure": 0, "duration_s": 53},
+      "PR Surface Report": {"runs": 7, "failure": 0, "duration_s": 1256},
+      "PR Surface Report Comment": {"runs": 7, "failure": 0, "duration_s": 62},
+      "Preview Database": {"runs": 3, "failure": 0, "duration_s": 43},
+      "claude-review": {"runs": 19, "failure": 0, "duration_s": 274}
+    }
+  },
+  {
+    "date": "2026-11-08",
+    "collector_version": 1,
+    "runs": 149,
+    "conclusions": {"success": 111, "skipped": 28, "cancelled": 8, "failure": 2},
+    "reruns": 0,
+    "events": {"workflow_run": 16, "pull_request": 45, "pull_request_target": 43, "issue_comment": 25, "push": 18, "schedule": 2},
+    "workflows": {
+      "Build and Test": {"runs": 25, "failure": 0, "duration_s": 10402},
+      "E2E Tests (QA)": {"runs": 1, "failure": 1, "duration_s": 41},
+      "Flag PRs with merge conflicts": {"runs": 28, "failure": 0, "duration_s": 580},
+      "Integration tests": {"runs": 1, "failure": 1, "duration_s": 479},
+      "Label PRs with EF migrations": {"runs": 19, "failure": 0, "duration_s": 154},
+      "PR Surface Report": {"runs": 16, "failure": 0, "duration_s": 2943},
+      "PR Surface Report Comment": {"runs": 16, "failure": 0, "duration_s": 138},
+      "Preview Database": {"runs": 13, "failure": 0, "duration_s": 277},
+      "claude-review": {"runs": 30, "failure": 0, "duration_s": 434}
+    }
   }
 ]

@@ -11,7 +11,7 @@
 </head><body>
 <div class="wrap">
 <header class="top">
-  <div class="eyebrow">Nobodies Humans · 2026-02-04 to 2026-11-03</div>
+  <div class="eyebrow">Nobodies Humans · 2026-02-04 to 2026-11-09</div>
   <h1>Humans Codebase Timeline</h1>
   <p class="lede">Daily development stats and reforge structure metrics, read as three stories: growth, slop, and cleanup. One metric per panel, one axis per chart. Line and type counts default to a log axis so early growth and late growth read at the same slope; the toggle switches to linear. Hover any point for the exact value and date.</p>
   <div class="events" id="events"></div>
@@ -167,6 +167,16 @@
     <div class="panel"><h3>Collection cost per day</h3><p class="why">Wall-clock seconds to measure one day, by step: build, tests, reforge snapshot, reforge surface-score, and the file-based stats collector. Grows with the tree, so this is the price of every column above. Log scale.</p><div class="ph"><canvas id="as-cost"></canvas></div><div class="legend" id="l-as-cost"></div></div>
   </div>
   <div class="note" id="as-failed"></div>
+</section>
+
+<section class="block" id="files" hidden>
+  <h2>Runtime: stored files</h2>
+  <p class="sub">App data, not code: uploads on the production server by folder, read from <code>/api/stats/files</code>. Each day counts the files present at its end by write time, so files deleted or replaced since are missing from earlier days.</p>
+  <div class="grid">
+    <div class="panel tall" style="grid-column:1/-1"><h3>Storage by category</h3><p class="why">Megabytes per upload folder.</p><div class="ph"><canvas id="f-bytes"></canvas></div><div class="legend" id="l-bytes"></div></div>
+    <div class="panel"><h3>Files by category</h3><p class="why">File count per upload folder.</p><div class="ph"><canvas id="f-count"></canvas></div><div class="legend" id="l-count"></div></div>
+    <div class="panel"><h3>Total storage</h3><p class="why">All uploads together.</p><div class="ph"><canvas id="f-total"></canvas></div></div>
+  </div>
 </section>
 
 <section class="block" id="surface">
