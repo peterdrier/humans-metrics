@@ -4,12 +4,11 @@
 The data contract (what app.js reads into `D`; its KEYS list must match):
   statsCols/stats   solution-wide daily rows (data/stats/*.json .solution)
   refCols/ref       reforge snapshot rows (data/reforge/*.json .snapshot, else data/seed/reforge-history.csv)
+  top               largest classes, most complex methods and riskiest classes of the latest reforge day that has them
   modules           per-day module sizes, test LOC, edges and a dependency summary
   git               per-day lane/routine/model counts (data/git/*.json)
   prs, actions      per-day PR flow / gate series, and workflow runs
-  runs              surface-score headline per archived run (data/surface/*.json)
-  surface, byRule,  per-section and per-rule points of the latest surface-score run
-  semDeps           service-interface edges of the latest surface-score run
+  semDeps           service-interface edges of the latest reforge day, per section: sections and call sites in each direction
   files             runtime: stored uploads per day, total and by category (data/runtime/files/*.json)
 """
 import csv, glob, json, os, re, shutil, collections
@@ -39,8 +38,10 @@ seed = os.path.join(ROOT, 'data', 'seed', 'reforge-history.csv')
 if os.path.exists(seed):
     for r in csv.DictReader(open(seed)):
         ref_by_date[r['commit_date'][:10]] = r
+SNAP_KEYS = {'avg_fanout': 'avgFanOut', 'max_fanout': 'maxFanOut', 'max_fanout_file': 'maxFanOutFile'}   # the rest are plain snake_case to camelCase
+def camel(c): return SNAP_KEYS.get(c) or re.sub(r'_(.)', lambda m: m.group(1).upper(), c)
 for d in reforge_days:
-    if d.get('snapshot'): ref_by_date[d['date']] = {'commit_date': d['date'], **d['snapshot']}
+    if d.get('snapshot'): ref_by_date[d['date']] = {'commit_date': d['date'], **{c: d['snapshot'].get(camel(c), '') for c in ref_cols[1:]}}
 num = re.compile(r'^-?\d+(\.\d+)?$')
 def val(v):
     if isinstance(v, (int, float)): return v
@@ -101,19 +102,25 @@ for d in reforge_days:
 sec_failed = [{'date': d['date'], 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'build': d.get('build'), 'err': (d.get('build_error') or d.get('snapshot_error') or d.get('surface_error') or '')[-300:]}
               for d in reforge_days if not d.get('rows')]
 
-# --- surface-score runs (slim per-run files under data/surface/)
-runs, surface, by_rule, sem = [], [], [], None
-for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'surface', '*.json'))):
-    j = json.load(open(p))
-    runs.append({k: j[k] for k in ('date', 'commit', 'reforge_version', 'surface', 'internal', 'total')} | {'sha': j['commit'], 'version': j['reforge_version']})
-    surface, by_rule, sem = j.get('groups', []), j.get('byRule', []), j.get('semDeps')
+# --- latest reforge day: semantic edges per section, and the top lists
+sem, top = None, None
+edged = next((d for d in reversed(reforge_days) if d.get('edges')), None)
+if edged:
+    agg = collections.defaultdict(lambda: dict(uses=0, usedBy=0, callsOut=0, callsIn=0))
+    sem_edges = [e for e in edged['edges'] if 'Base' not in (e['from'], e['to'])]   # every section calls Base (Users core, audit append); it would flatten the chart
+    for e in sem_edges:
+        agg[e['from']]['uses'] += 1; agg[e['from']]['callsOut'] += e.get('count', 0)
+        agg[e['to']]['usedBy'] += 1; agg[e['to']]['callsIn'] += e.get('count', 0)
+    sem = {'date': edged['date'], 'edges': len(sem_edges), 'sections': [{'section': k, **v} for k, v in sorted(agg.items())]}
+topd = next((d for d in reversed(reforge_days) if d.get('top')), None)
+if topd: top = {'date': topd['date'], 'version': topd.get('structure_version'), **topd['top']}
 
 # --- runtime: stored files (app data, not code), its own series
 files = [{k: j[k] for k in ('date', 'count', 'bytes', 'categories')}
          for j in (json.load(open(p)) for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'runtime', 'files', '*.json'))))]
 
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
-     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'runs': runs, 'latestRun': runs[-1] if runs else None, 'surface': surface, 'byRule': by_rule, 'semDeps': sem, 'files': files,
+     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'semDeps': sem, 'top': top, 'files': files,
      'generated': days[-1]['date']}
 def dump(v, ind=''):
     # Diff-friendly JSON: a container stays on one line when short, else one child per line, so a new day is a new line.
@@ -131,7 +138,9 @@ import re
 html = open(os.path.join(ROOT, 'site', 'index.html')).read()
 html = re.sub(r'(<div class="eyebrow">Nobodies Humans · )[\d-]+ to [\d-]+', lambda m: m.group(1) + days[0]['date'] + ' to ' + max(D['generated'], reforge_days[-1]['date']), html)
 open(os.path.join(DOCS, 'index.html'), 'w').write(html)
+for stale in set(os.path.splitext(f)[0] for f in os.listdir(os.path.join(DOCS, 'data'))) - set(D):
+    os.remove(os.path.join(DOCS, 'data', stale + '.json'))   # a dataset the page no longer reads
 for k, v in D.items():
     open(os.path.join(DOCS, 'data', f'{k}.json'), 'w').write(dump(v) + '\n')
 size = sum(os.path.getsize(os.path.join(DOCS, 'data', f'{k}.json')) for k in D)
-print(f'docs/data: {len(D)} files, {size//1024} KB, {len(stats)} days, {len(ref)} snapshot rows, {len(modules)} module checkpoints, {len(runs)} surface runs, {len(sec_days)} per-assembly days')
+print(f'docs/data: {len(D)} files, {size//1024} KB, {len(stats)} days, {len(ref)} snapshot rows, {len(modules)} module checkpoints, {len(sec_days)} per-assembly days')

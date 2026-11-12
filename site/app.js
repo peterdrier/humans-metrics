@@ -1,5 +1,5 @@
 // Each dataset is docs/data/<key>.json, written by site/build.py.
-const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "runs", "latestRun", "surface", "byRule", "semDeps", "files", "generated"];
+const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "semDeps", "top", "files", "generated"];
 const D = Object.fromEntries(await Promise.all(KEYS.map(async k => [k, await (await fetch(`data/${k}.json`, {cache: 'no-cache'})).json()])));
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const SPLIT = '2026-08-08';
@@ -96,7 +96,7 @@ function render(){
   line('d-density', ML, [{label:'Density', data:DS.map(d=>d&&d.density), slot:4}], {yfmt:pct});
   line('d-fanout', ML, [{label:'Avg fan-out', data:DS.map(d=>d&&d.avgFanOut), slot:0},{label:'Max fan-out', data:DS.map(d=>d&&d.maxFanOut), extra:DS.map(d=>d&&d.maxFanOutNode), slot:1}]);
   line('d-fanin', ML, [{label:'Max fan-in', data:DS.map(d=>d&&d.maxFanIn), extra:DS.map(d=>d&&d.maxFanInNode), slot:4}]);
-  renderLanes(); renderFlow(); renderCI(); renderAssembly(); renderFiles();
+  renderLanes(); renderFlow(); renderCI(); renderAssembly(); renderFiles(); renderRules();
   line('m-gini', ML, [{label:'Gini', data:M.map(m=>gini(sizes(m).map(x=>x[1]))), slot:4}], {y:{max:1}});
 }
 
@@ -165,8 +165,72 @@ function renderCI(){
   const top=Object.entries(wt).sort((a,b)=>b[1]-a[1]).slice(0,8).map(x=>x[0]);
   line('a-wf', L, top.map((k,j)=>({label:k, data:idx.map(i=>win(i,7).reduce((a,p)=>a+((p.workflows[k]||{}).runs||0),0)), slot:j%5})), {log:true});
   line('a-build', L, [{label:'Build and Test, min', data:idx.map(i=>{const w=win(i,7).map(p=>p.workflows['Build and Test']).filter(Boolean); const n=w.reduce((a,x)=>a+x.runs,0); return n? w.reduce((a,x)=>a+x.duration_s,0)/n/60 : null;}), slot:0}]);
+  streak('a-int','Integration tests'); streak('a-e2e','E2E Tests (QA)');
   line('a-rerun', L, [{label:'Re-runs / 7 days', data:idx.map(i=>win(i,7).reduce((a,p)=>a+p.reruns,0)), slot:1}]);
 }
+
+// One workflow by day, last 60 collected days: runs that did not fail and runs that failed, with the streak spelled out.
+function streak(id, wf){
+  const A=D.actions, t=theme(), rows=A.map(p=>({date:p.date, w:p.workflows[wf]})).filter(r=>r.w&&r.w.runs);
+  const why=document.getElementById(id+'-why'); if(!rows.length){ why.textContent='No runs collected.'; return; }
+  const win=rows.slice(-60), ok=r=>r.w.runs-(r.w.failure||0);
+  bars(id, win.map(r=>r.date), [{label:'Did not fail', data:win.map(ok), colors:t.good, stack:'a'},{label:'Failed', data:win.map(r=>r.w.failure||0), colors:t.bad, stack:'a'}], {stacked:true});
+  const last=rows[rows.length-1], green=[...rows].reverse().find(r=>ok(r)>0);
+  let n=0; for(let i=rows.length-1;i>=0&&ok(rows[i])===0;i--) n++;
+  const w14=rows.filter(r=>r.date>addDays(last.date,-14)), f14=w14.reduce((a,r)=>a+(r.w.failure||0),0), r14=w14.reduce((a,r)=>a+r.w.runs,0);
+  why.textContent=(n? `No passing run on the last ${n} day${n>1?'s':''} with runs, since ${rows[rows.length-n].date}. ` : `Last run day ${last.date} had a passing run. `)
+    + (n&&green? `Last day with a pass: ${green.date}. ` : n? 'No passing run on record. ' : '')
+    + `${f14} of ${r14} runs failed in the 14 days to ${last.date}.`;
+}
+
+// Decision panels: 30-day movers per section and per rule, and the top lists of the latest reforge day.
+function renderFocus(){
+  const Dd=D.secDays; if(!Dd||!Dd.length) return;
+  const last=Dd[Dd.length-1], base=Dd.find(d=>d.date>=addDays(last.date,-30));
+  const sign=v=>(v>0?'+':'')+fmt(v);
+  const cell=(v,lowerGood=true,unit='')=>v==null? '<td class="dim">new</td>' : `<td class="${v===0?'dim':((v<0)===lowerGood?'good':'bad')}">${sign(v)}${unit}</td>`;
+  const tbl=(id,head,rows)=>{document.getElementById(id).innerHTML='<table><thead><tr>'+head.map(h=>`<th>${h}</th>`).join('')+'</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.join('')+'</tr>').join('')+'</tbody></table>';};
+  const td=v=>`<td>${v}</td>`;
+  const mv=Object.entries(last.sections).filter(([n])=>n!=='(solution)').map(([n,v])=>{const b=base.sections[n]; const d=k=>b&&b[k]!=null&&v[k]!=null? v[k]-b[k] : null;
+    return {n, v, score:d('score'), loc:d('loc'), methods:d('methods'), cov:d('cov'), sort:b? v.score-b.score : v.score};});
+  const row=m=>[td(m.n), td(fmt(m.v.score)), cell(m.score), cell(m.loc), cell(m.methods), td(m.v.cov==null?'':m.v.cov+'%'), cell(m.cov,false,' pt')];
+  const head=['Section','Score','30d','Lines','Methods','Cov','30d'];
+  tbl('fo-up', head, [...mv].sort((a,b)=>b.sort-a.sort).filter(m=>m.sort>0).slice(0,10).map(row));
+  tbl('fo-down', head, [...mv].sort((a,b)=>a.sort-b.sort).filter(m=>m.sort<0).slice(0,10).map(row));
+  const sol=last.sections['(solution)'], sb=base.sections['(solution)'];
+  document.getElementById('fo-sub').textContent=`What moved between ${base.date} and ${last.date}, and what stands out on the latest day. These panels ignore the range filter. Solution over the same window: score ${sign(sol.score-sb.score)} to ${fmt(sol.score)}, production lines ${sign(sol.loc-sb.loc)}, methods ${sign(sol.methods-sb.methods)}, coverage ${sign(sol.cov-sb.cov)} pt to ${sol.cov}%.`;
+  const rules=Object.keys({...base.byRule,...last.byRule}).map(k=>({k, now:last.byRule[k]||0, d:(last.byRule[k]||0)-(base.byRule[k]||0)})).filter(r=>r.d).sort((a,b)=>Math.abs(b.d)-Math.abs(a.d)).slice(0,10);
+  tbl('fo-rules', ['Rule','Points','30d','Change'], rules.map(r=>[td(ruleName(r.k)), td(fmt(r.now)), cell(r.d), cell(r.now-r.d? Math.round(1000*r.d/(r.now-r.d))/10 : null, true, '%')]));
+  const T=D.top; if(!T) return;
+  document.getElementById('fo-methods-why').textContent=`Cyclomatic complexity on ${T.date}, the most complex method of each class, migrations left out.`;
+  tbl('fo-methods', ['Method','Section','Cyclomatic'], T.methods.map(m=>[td(m.name), td(m.section), td(m.cyclomatic)]));
+  const crow=c=>[td(c.name), td(c.section), td(fmt(c.lines)), td(c.methods), td(c.risk)];
+  tbl('fo-classes', ['Class','Section','Lines','Methods','Risk'], T.classes.map(crow));
+  tbl('fo-risk', ['Class','Section','Lines','Methods','Risk'], T.risk.map(crow));
+}
+const ruleName=k=>k.replace(/([A-Z])/g,' $1').toLowerCase();
+
+// Score by rule: the five largest rules on the latest day plus the rest, stacked over time, as points and as shares.
+function renderRules(){
+  const Dd=D.secDays; if(!Dd||!Dd.length) return;
+  const t=theme(), last=Dd[Dd.length-1], base=Dd.find(d=>d.date>=addDays(last.date,-30));
+  const days=Dd.filter(d=>inRange(d.date)&&d.byRule), L=days.map(d=>d.date);
+  const top=Object.entries(last.byRule).sort((a,b)=>b[1]-a[1]).slice(0,5).map(x=>x[0]);
+  const col=[...t.s, t.fg3], keys=[...top,'other'];
+  const val=(d,k)=>k==='other'? Object.entries(d.byRule).filter(([r])=>!top.includes(r)).reduce((a,[,v])=>a+Math.max(v,0),0) : (d.byRule[k]||0);
+  const area=(id,share)=>{
+    const ds=keys.map((k,i)=>({label:k==='other'?'other rules':ruleName(k), data:days.map(d=>{const v=val(d,k); return share? v/keys.reduce((a,x)=>a+val(d,x),0) : v;}), borderColor:col[i], backgroundColor:col[i], fill:true, borderWidth:1, pointRadius:0, pointHoverRadius:4, tension:0, spanGaps:true}));
+    if(charts[id]) charts[id].destroy();
+    const o=base_(t,share); o.scales.y.stacked=true; o.scales.y.type='linear'; if(share) o.scales.y.max=1;
+    charts[id]=new Chart(document.getElementById(id),{type:'line',data:{labels:L,datasets:ds},options:o,plugins:[splitBand]});
+    document.getElementById('l-'+id.slice(2)).innerHTML=keys.map((k,i)=>`<span><i style="background:${col[i]}"></i>${k==='other'?'other rules':ruleName(k)}</span>`).join('');
+  };
+  area('s-ruletime',false); area('s-ruleshare',true);
+  const ru=Object.entries(last.byRule).filter(x=>x[1]>0).sort((a,b)=>b[1]-a[1]);
+  bars('s-rules', ru.map(x=>ruleName(x[0])), [{label:'Points', data:ru.map(x=>x[1]), slot:0}], {horizontal:true});
+  charts['s-rules'].options.plugins.tooltip.callbacks.afterLabel=c=>{const k=ru[c.dataIndex][0], d=ru[c.dataIndex][1]-(base.byRule[k]||0); return ` ${d>0?'+':''}${fmt(d)} since ${base.date}`;}; charts['s-rules'].update();
+}
+const base_=(t,share)=>base(t, share? pct : null, {});
 
 function renderFiles(){
   const F=(D.files||[]).filter(p=>inRange(p.date)); if(!F.length) return;
@@ -233,17 +297,14 @@ function renderStatic(){
   if(lastDeps){ const outd={}, ind={}; lastDeps.nodes.forEach(n=>{outd[n]=0;ind[n]=0;}); lastDeps.edges.forEach(([a,b])=>{ if(['Base','Analyzers'].includes(b)) return; outd[a]++; ind[b]++; });
     const nodes=lastDeps.nodes.filter(n=>!['Base','Analyzers'].includes(n)).sort((a,b)=>(outd[b]+ind[b])-(outd[a]+ind[a]));
     bars('d-today', nodes, [{label:'Referenced by', data:nodes.map(n=>ind[n]), slot:0},{label:'References', data:nodes.map(n=>outd[n]), slot:1}], {horizontal:true}); }
-  if(D.semDeps){ const sd=D.semDeps.map(x=>({n:x.section, uses:x.usesSections.length, used:x.usedBySections.length})).sort((a,b)=>(b.uses+b.used)-(a.uses+a.used));
-    bars('d-sem', sd.map(x=>x.n), [{label:'Depended on by', data:sd.map(x=>x.used), slot:0},{label:'Depends on', data:sd.map(x=>x.uses), slot:1}], {horizontal:true}); }
-  const cross=D.surface.map(x=>({name:x.name, pts:x.cross||0})).filter(x=>x.pts>0).sort((a,b)=>b.pts-a.pts).slice(0,20);
-  bars('d-cross', cross.map(x=>x.name), [{label:'Cross-section points', data:cross.map(x=>x.pts), slot:1}], {horizontal:true});
-  if(D.runs){ bars('s-runs', D.runs.map(r=>r.date+' · '+r.version), [{label:'Surface', data:D.runs.map(r=>r.surface), slot:0},{label:'Internal', data:D.runs.map(r=>r.internal), slot:1}], {rawLabels:true}); charts['s-runs'].options.scales.x.ticks.autoSkip=false; charts['s-runs'].update(); }
+  if(D.semDeps){ const sd=[...D.semDeps.sections].sort((a,b)=>(b.uses+b.usedBy)-(a.uses+a.usedBy));
+    bars('d-sem', sd.map(x=>x.section), [{label:'Depended on by', data:sd.map(x=>x.usedBy), slot:0},{label:'Depends on', data:sd.map(x=>x.uses), slot:1}], {horizontal:true});
+    document.getElementById('d-sem-why').textContent=`Semantic edges on ${D.semDeps.date}: section A injects a service interface owned by section B. Blue is how many sections depend on this one, orange how many it depends on. ${sd.length} sections, ${D.semDeps.edges} edges, Base left out since every section calls it.`;
+    const cr=[...D.semDeps.sections].sort((a,b)=>(b.callsIn+b.callsOut)-(a.callsIn+a.callsOut)).slice(0,20);
+    bars('d-cross', cr.map(x=>x.section), [{label:'Calls into it', data:cr.map(x=>x.callsIn), slot:0},{label:'Calls it makes', data:cr.map(x=>x.callsOut), slot:1}], {horizontal:true}); }
   const tl=D.modules[D.modules.length-1].testLoc||{}; const tsz=sz.map(x=>[x[0], tl[x[0]]||0]);
   bars('m-tests', tsz.map(x=>x[0]), [{label:'Test lines', data:tsz.map(x=>x[1]), slot:3}], {horizontal:true});
-  const g=D.surface.slice(0,20);
-  bars('s-groups', g.map(x=>x.name), [{label:'Surface', data:g.map(x=>x.surface), stack:'a'},{label:'Internal', data:g.map(x=>x.internal), stack:'a', slot:1}], {horizontal:true, stacked:true});
-  const ru=D.byRule.slice(0,16);
-  bars('s-rules', ru.map(x=>x[0].replace(/([A-Z])/g,' $1').toLowerCase()), [{label:'Points', data:ru.map(x=>x[1]), slot:0}], {horizontal:true});
+  renderFocus();
   // tiles
   const a=S[S.length-1], b=S.find(r=>r.date>=addDays(a.date,-30)), r0=R[R.length-1], rb=R.find(x=>x.commit_date>=addDays(a.date,-30));
   const tile=(k,v,d,good)=>`<div class="tile"><div class="k">${k}</div><div class="v">${v}</div><div class="d ${d==null?'':(good?'up':'down')}">${d==null?'&nbsp;':d}</div></div>`;

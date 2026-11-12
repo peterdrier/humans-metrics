@@ -15,10 +15,10 @@ Page: `docs/index.html`, with `style.css`, `app.js` and `data/*.json` beside it 
 | `data/prs/<date>.json` | `collect/prstats.py` | PRs opened; per lane merged, closed, lines, time-to-merge; bot vs human comments; gate series (Peter on others' PRs). Raw per-PR facts cached in `data/prs/raw.jsonl`, cursor in `cursor.json`. |
 | `data/actions/<date>.json` | `collect/actionstats.py` | Workflow runs by conclusion, event, workflow; wall-clock duration; re-runs. |
 | `data/coverage/YYYY-MM-DD.json` | `collect/coverage.py` via the reforge driver: unit-test line coverage per assembly and class as covered/uncovered line ranges, computed once per Humans commit and reused by every rescore (`--retest` recomputes). |
-| `data/reforge/YYYY-MM-DD.json` | `collect/reforgehist.py`: build, unit tests with coverage, `reforge snapshot --by-assembly` rows (default config, exact tokens when a key is present) and a slim `surface-score` (totals, by rule, by section, edges). `token-cache.txt` beside them is the shared exact-token cache. |
-| `data/surface/<date>-<sha>-reforge<ver>.json` | Slim surface-score reading: totals, points by rule, points by section, service-interface edges. Full JSON stays in a local archive. |
+| `data/reforge/YYYY-MM-DD.json` | `collect/reforgehist.py`: build, unit tests with coverage, `reforge snapshot --by-assembly` rows (default config, exact tokens when a key is present) a slim `surface-score` (totals, by rule, edges), the solution-wide `reforge snapshot` row (reach, core, cycles, fan-out, class sizes) and the top ten classes and methods from `reforge health`. `token-cache.txt` beside them is the shared exact-token cache. |
+| `data/surface/<date>-<sha>-reforge<ver>.json` | Three archived manual surface-score readings on older reforge versions. Kept as records; the page no longer draws them, since `data/reforge/` carries the same figures per day on one version. |
 | `data/runtime/files/<date>.json` | `collect/filestats.py`: runtime data, not code. Uploads on the production server per UTC day, total and by folder (count, bytes), from Humans' public `/api/stats/files?asOfDate=`. Asks only for missing days through yesterday; a day counts files present at its end by write time, so later deletions are missing. |
-| `data/seed/reforge-history.csv` | The daily `reforge snapshot` rows carried over from the Humans repo, used until every day has its own snapshot. No reforge version was recorded for these. |
+| `data/seed/reforge-history.csv` | The daily `reforge snapshot` rows carried over from the Humans repo, used for days through 2026-10-29; later days carry their own `snapshot` in `data/reforge/`. No reforge version was recorded for the seed, and the installed reforge reproduces its 2026-10-29 row exactly. |
 | `collect/collect.py` | The collector. File-based metrics need only git and cloc; `--reforge` adds the snapshot and needs a building tree. |
 | `site/{index.html,style.css,app.js}` + `site/build.py` | The page source, and the builder that copies it to `docs/` and writes `docs/data/<key>.json`. |
 | `.github/workflows/weekly.yml` | Monday job: collect missing days, rebuild, commit, deploy. |
@@ -52,5 +52,5 @@ versus comment split per assembly; without it those columns are absent.
   `DbSet<` declarations instead and is the better table count.
 - Pre-split "assemblies" are the four or five layer projects. That is the point: the page shows the
   layered era as it was.
-- The surface-score readings are three manual runs with two reforge versions. A per-day surface series
-  waits on reforge grouping by assembly.
+- The top-ten lists come from `reforge health`, which reports one most-complex method per class, so two
+  heavy methods in the same class show as one row.
