@@ -21,56 +21,67 @@
   "Build and Test": {
    "runs": 57,
    "failure": 4,
+   "success": 51,
    "duration_s": 25408
   },
   "E2E Tests (QA)": {
    "runs": 20,
    "failure": 9,
+   "success": 2,
    "duration_s": 3420
   },
   "Label PRs with EF migrations": {
    "runs": 38,
    "failure": 0,
+   "success": 38,
    "duration_s": 346
   },
   "PR Surface Report": {
    "runs": 38,
    "failure": 0,
+   "success": 34,
    "duration_s": 5447
   },
   "PR Surface Report Comment": {
    "runs": 38,
    "failure": 0,
+   "success": 34,
    "duration_s": 374
   },
   "Preview Database": {
    "runs": 34,
    "failure": 0,
+   "success": 34,
    "duration_s": 1740
   },
   "claude-review": {
    "runs": 78,
    "failure": 0,
+   "success": 11,
    "duration_s": 1342
   },
   "github_actions in /. - Update #1595725684": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 53
   },
   "npm_and_yarn in /tests/e2e - Update #1595725669": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 58
   },
   "nuget in / for Google.Apis.CloudIdentity.v1 - Update #1595980261": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 1223
   },
   "nuget in /. - Update #1595725755": {
    "runs": 1,
    "failure": 0,
+   "success": 0,
    "duration_s": 3313
   }
  }

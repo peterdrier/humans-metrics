@@ -39,7 +39,7 @@
     <div class="panel"><h3>Ten most complex methods</h3><p class="why" id="fo-methods-why">Cyclomatic complexity, the most complex method of each class, migrations left out.</p><div class="tbl" id="fo-methods"></div></div>
     <div class="panel"><h3>Ten largest classes</h3><p class="why">Lines per class with its method count and reforge health risk (0 to 100), migrations left out.</p><div class="tbl" id="fo-classes"></div></div>
     <div class="panel"><h3>Ten riskiest classes</h3><p class="why">Reforge health score: size, complexity, coupling and cohesion together. Higher is a riskier refactor target.</p><div class="tbl" id="fo-risk"></div></div>
-    <div class="panel"><h3>Rules that moved the score</h3><p class="why">30-day change in points per surface-score rule, largest moves first.</p><div class="tbl" id="fo-rules"></div></div>
+    <div class="panel"><h3>Rules that moved the score</h3><p class="why" id="fo-rules-why">30-day change in points per surface-score rule, largest moves first.</p><div class="tbl" id="fo-rules"></div></div>
   </div>
 </section>
 
@@ -155,8 +155,8 @@
     <div class="panel"><h3>Failure rate</h3><p class="why">Failed plus cancelled over all runs, 7-day rolling. Mostly PR checks, so a nightly suite that is always red barely moves it; see the two by-day panels below.</p><div class="ph"><canvas id="a-fail"></canvas></div></div>
     <div class="panel"><h3>Compute hours per day</h3><p class="why">Sum of run durations, 7-day rolling. Log scale.</p><div class="ph"><canvas id="a-hours"></canvas></div></div>
     <div class="panel tall" style="grid-column:1/-1"><h3>Runs by workflow</h3><p class="why">Per 7-day window, top 8 workflows overall.</p><div class="ph"><canvas id="a-wf"></canvas></div><div class="legend" id="l-wf"></div></div>
-    <div class="panel"><h3>Integration tests, by day</h3><p class="why" id="a-int-why">Runs that did not fail (green) and failed (red) per day.</p><div class="ph"><canvas id="a-int"></canvas></div></div>
-    <div class="panel"><h3>E2E tests (QA), by day</h3><p class="why" id="a-e2e-why">Runs that did not fail (green) and failed (red) per day.</p><div class="ph"><canvas id="a-e2e"></canvas></div></div>
+    <div class="panel"><h3>Integration tests, by day</h3><p class="why" id="a-int-why">Runs that passed (green), failed (red) and were cancelled or skipped (grey) per day.</p><div class="ph"><canvas id="a-int"></canvas></div></div>
+    <div class="panel"><h3>E2E tests (QA), by day</h3><p class="why" id="a-e2e-why">Runs that passed (green), failed (red) and were cancelled or skipped (grey) per day.</p><div class="ph"><canvas id="a-e2e"></canvas></div></div>
     <div class="panel"><h3>Build and Test duration</h3><p class="why">Mean minutes per run of the main build workflow, 7-day rolling.</p><div class="ph"><canvas id="a-build"></canvas></div></div>
     <div class="panel"><h3>Re-runs</h3><p class="why">Runs with attempt greater than one, per 7 days.</p><div class="ph"><canvas id="a-rerun"></canvas></div></div>
   </div>

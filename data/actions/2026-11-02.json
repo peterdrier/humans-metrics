@@ -23,76 +23,91 @@
   "Build and Test": {
    "runs": 36,
    "failure": 3,
+   "success": 28,
    "duration_s": 24273
   },
   "E2E Tests (QA)": {
    "runs": 10,
    "failure": 5,
+   "success": 1,
    "duration_s": 1590
   },
   "Flag PRs with merge conflicts": {
    "runs": 35,
    "failure": 0,
+   "success": 35,
    "duration_s": 699
   },
   "Integration tests": {
    "runs": 1,
    "failure": 1,
+   "success": 0,
    "duration_s": 595
   },
   "Label PRs with EF migrations": {
    "runs": 29,
    "failure": 0,
+   "success": 29,
    "duration_s": 387
   },
   "PR Surface Report": {
    "runs": 28,
    "failure": 2,
+   "success": 25,
    "duration_s": 6182
   },
   "PR Surface Report Comment": {
    "runs": 28,
    "failure": 0,
+   "success": 25,
    "duration_s": 375
   },
   "Preview Database": {
    "runs": 23,
    "failure": 0,
+   "success": 23,
    "duration_s": 2851
   },
   "claude-review": {
    "runs": 41,
    "failure": 0,
+   "success": 7,
    "duration_s": 856
   },
   "github_actions in /. - Update #1674751373": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 70
   },
   "npm_and_yarn in /tests/e2e - Update #1674751370": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 53
   },
   "nuget in / for CsvHelper - Update #1675198547": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 2017
   },
   "nuget in / for CsvHelper - Update #1675413190": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 848
   },
   "nuget in / for Ical.Net - Update #1675198632": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 984
   },
   "nuget in /. - Update #1674751369": {
    "runs": 1,
    "failure": 0,
+   "success": 0,
    "duration_s": 3312
   }
  }

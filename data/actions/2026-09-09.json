@@ -21,41 +21,49 @@
   "Build and Test": {
    "runs": 54,
    "failure": 0,
+   "success": 44,
    "duration_s": 388684
   },
   "E2E Tests (QA)": {
    "runs": 10,
    "failure": 0,
+   "success": 4,
    "duration_s": 1787
   },
   "Label PRs with EF migrations": {
    "runs": 45,
    "failure": 0,
+   "success": 45,
    "duration_s": 384
   },
   "PR Surface Report": {
    "runs": 50,
    "failure": 1,
+   "success": 35,
    "duration_s": 5109
   },
   "PR Surface Report Comment": {
    "runs": 50,
    "failure": 0,
+   "success": 35,
    "duration_s": 390
   },
   "Preview Database": {
    "runs": 13,
    "failure": 7,
+   "success": 6,
    "duration_s": 556
   },
   "claude-review": {
    "runs": 56,
    "failure": 0,
+   "success": 10,
    "duration_s": 1540
   },
   "nuget in / for Google.Apis.Drive.v3 - Update #1567044490": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 1247
   }
  }

@@ -171,15 +171,15 @@ function renderCI(){
 
 // One workflow by day, last 60 collected days: runs that did not fail and runs that failed, with the streak spelled out.
 function streak(id, wf){
-  const A=D.actions, t=theme(), rows=A.map(p=>({date:p.date, w:p.workflows[wf]})).filter(r=>r.w&&r.w.runs);
+  const A=D.actions, t=theme(), rows=A.map(p=>({date:p.date, w:p.workflows[wf]})).filter(r=>r.w&&r.w.runs&&r.w.success!=null);   // older records cannot tell a pass from a cancelled run
   const why=document.getElementById(id+'-why'); if(!rows.length){ why.textContent='No runs collected.'; return; }
-  const win=rows.slice(-60), ok=r=>r.w.runs-(r.w.failure||0);
-  bars(id, win.map(r=>r.date), [{label:'Did not fail', data:win.map(ok), colors:t.good, stack:'a'},{label:'Failed', data:win.map(r=>r.w.failure||0), colors:t.bad, stack:'a'}], {stacked:true});
+  const win=rows.slice(-60), ok=r=>r.w.success, other=r=>r.w.runs-r.w.success-(r.w.failure||0);
+  bars(id, win.map(r=>r.date), [{label:'Passed', data:win.map(ok), colors:t.good, stack:'a'},{label:'Failed', data:win.map(r=>r.w.failure||0), colors:t.bad, stack:'a'},{label:'Cancelled or skipped', data:win.map(other), colors:t.fg3, stack:'a'}], {stacked:true});
   const last=rows[rows.length-1], green=[...rows].reverse().find(r=>ok(r)>0);
   let n=0; for(let i=rows.length-1;i>=0&&ok(rows[i])===0;i--) n++;
   const w14=rows.filter(r=>r.date>addDays(last.date,-14)), f14=w14.reduce((a,r)=>a+(r.w.failure||0),0), r14=w14.reduce((a,r)=>a+r.w.runs,0);
   why.textContent=(n? `No passing run on the last ${n} day${n>1?'s':''} with runs, since ${rows[rows.length-n].date}. ` : `Last run day ${last.date} had a passing run. `)
-    + (n&&green? `Last day with a pass: ${green.date}. ` : n? 'No passing run on record. ' : '')
+    + (n&&green? `Last day with a pass: ${green.date}. ` : n? `No passing run since pass counts begin on ${rows[0].date}. ` : '')
     + `${f14} of ${r14} runs failed in the 14 days to ${last.date}.`;
 }
 
@@ -199,7 +199,9 @@ function renderFocus(){
   tbl('fo-down', head, [...mv].sort((a,b)=>a.sort-b.sort).filter(m=>m.sort<0).slice(0,10).map(row));
   const sol=last.sections['(solution)'], sb=base.sections['(solution)'];
   document.getElementById('fo-sub').textContent=`What moved between ${base.date} and ${last.date}, and what stands out on the latest day. These panels ignore the range filter. Solution over the same window: score ${sign(sol.score-sb.score)} to ${fmt(sol.score)}, production lines ${sign(sol.loc-sb.loc)}, methods ${sign(sol.methods-sb.methods)}, coverage ${sign(sol.cov-sb.cov)} pt to ${sol.cov}%.`;
-  const rules=Object.keys({...base.byRule,...last.byRule}).map(k=>({k, now:last.byRule[k]||0, d:(last.byRule[k]||0)-(base.byRule[k]||0)})).filter(r=>r.d).sort((a,b)=>Math.abs(b.d)-Math.abs(a.d)).slice(0,10);
+  const [lastR,baseR]=ruleDays();
+  const rules=!lastR? [] : Object.keys({...baseR.byRule,...lastR.byRule}).map(k=>({k, now:lastR.byRule[k]||0, d:(lastR.byRule[k]||0)-(baseR.byRule[k]||0)})).filter(r=>r.d).sort((a,b)=>Math.abs(b.d)-Math.abs(a.d)).slice(0,10);
+  if(lastR) document.getElementById('fo-rules-why').textContent=`Change in points per surface-score rule between ${baseR.date} and ${lastR.date}, largest moves first.`;
   tbl('fo-rules', ['Rule','Points','30d','Change'], rules.map(r=>[td(ruleName(r.k)), td(fmt(r.now)), cell(r.d), cell(r.now-r.d? Math.round(1000*r.d/(r.now-r.d))/10 : null, true, '%')]));
   const T=D.top; if(!T) return;
   document.getElementById('fo-methods-why').textContent=`Cyclomatic complexity on ${T.date}, the most complex method of each class, migrations left out.`;
@@ -208,12 +210,14 @@ function renderFocus(){
   tbl('fo-classes', ['Class','Section','Lines','Methods','Risk'], T.classes.map(crow));
   tbl('fo-risk', ['Class','Section','Lines','Methods','Risk'], T.risk.map(crow));
 }
+// The latest day with rule totals (a day whose surface-score pass failed has rows but none) and the first such day inside its 30-day window.
+function ruleDays(){ const R=D.secDays.filter(d=>d.byRule), last=R[R.length-1]; return last? [last, R.find(d=>d.date>=addDays(last.date,-30))] : []; }
 const ruleName=k=>k.replace(/([A-Z])/g,' $1').toLowerCase();
 
 // Score by rule: the five largest rules on the latest day plus the rest, stacked over time, as points and as shares.
 function renderRules(){
   const Dd=D.secDays; if(!Dd||!Dd.length) return;
-  const t=theme(), last=Dd[Dd.length-1], base=Dd.find(d=>d.date>=addDays(last.date,-30));
+  const t=theme(), [last,base]=ruleDays(); if(!last) return;
   const days=Dd.filter(d=>inRange(d.date)&&d.byRule), L=days.map(d=>d.date);
   const top=Object.entries(last.byRule).sort((a,b)=>b[1]-a[1]).slice(0,5).map(x=>x[0]);
   const col=[...t.s, t.fg3], keys=[...top,'other'];
