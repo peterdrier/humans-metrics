@@ -30,6 +30,19 @@
 
 <div class="tiles" id="tiles"></div>
 
+<section class="block" id="focus">
+  <h2>Where to look now</h2>
+  <p class="sub" id="fo-sub">What moved in the last 30 days and what stands out today. These panels ignore the range filter.</p>
+  <div class="grid two">
+    <div class="panel"><h3>Sections growing in score</h3><p class="why">Largest 30-day rise in total reforge score. Lines, methods and coverage are 30-day changes: they show whether the rise is new code or more pieces.</p><div class="tbl" id="fo-up"></div></div>
+    <div class="panel"><h3>Sections shrinking in score</h3><p class="why">Largest 30-day fall. This is where cleanup landed.</p><div class="tbl" id="fo-down"></div></div>
+    <div class="panel"><h3>Ten most complex methods</h3><p class="why" id="fo-methods-why">Cyclomatic complexity, the most complex method of each class, migrations left out.</p><div class="tbl" id="fo-methods"></div></div>
+    <div class="panel"><h3>Ten largest classes</h3><p class="why">Lines per class with its method count and reforge health risk (0 to 100), migrations left out.</p><div class="tbl" id="fo-classes"></div></div>
+    <div class="panel"><h3>Ten riskiest classes</h3><p class="why">Reforge health score: size, complexity, coupling and cohesion together. Higher is a riskier refactor target.</p><div class="tbl" id="fo-risk"></div></div>
+    <div class="panel"><h3>Rules that moved the score</h3><p class="why">30-day change in points per surface-score rule, largest moves first.</p><div class="tbl" id="fo-rules"></div></div>
+  </div>
+</section>
+
 <section class="block" id="growth">
   <h2>Growth</h2>
   <p class="sub">What got written. App and test lines exclude EF migrations, which are tracked on their own so their weight stays visible.</p>
@@ -94,15 +107,15 @@
 
 <section class="block" id="deps">
   <h2>Dependencies between modules</h2>
-  <p class="sub">Assembly edges from ProjectReference entries in the csproj files, read from git at each checkpoint. An edge is "assembly A compiles against assembly B". References to Base and Analyzers are excluded from the counts since every section has them. Shown both as a raw count and as density, the share of all possible directed pairs that are wired. The compile graph is available for the whole history; the semantic graph (which service interfaces a section actually injects) only for the latest surface-score run.</p>
+  <p class="sub">Assembly edges from ProjectReference entries in the csproj files, read from git at each checkpoint. An edge is "assembly A compiles against assembly B". References to Base and Analyzers are excluded from the counts since every section has them. Shown both as a raw count and as density, the share of all possible directed pairs that are wired. The compile graph is available for the whole history; the semantic graph (which service interfaces a section actually injects) is drawn for the latest reforge day.</p>
   <div class="grid">
     <div class="panel"><h3>Modules and edges</h3><p class="why">Assemblies under src and the edges between them.</p><div class="ph"><canvas id="d-edges"></canvas></div><div class="legend" id="l-edges"></div></div>
     <div class="panel"><h3>Graph density</h3><p class="why">Edges divided by n(n-1). Five assemblies in a strict layer stack sit near 40%; 50 sections talking only through Contracts sit near 2%.</p><div class="ph"><canvas id="d-density"></canvas></div></div>
     <div class="panel"><h3>Fan-out per module</h3><p class="why">Average and maximum outgoing references. Hover the max for the module.</p><div class="ph"><canvas id="d-fanout"></canvas></div><div class="legend" id="l-fanout"></div></div>
     <div class="panel"><h3>Max fan-in</h3><p class="why">The most referenced non-Base assembly. Hover for its name.</p><div class="ph"><canvas id="d-fanin"></canvas></div></div>
     <div class="panel xtall"><h3>Who references whom, today</h3><p class="why">Out-degree (orange, references made) and in-degree (blue, referenced by) per assembly, Contracts projects separate.</p><div class="ph"><canvas id="d-today"></canvas></div><div class="legend" id="l-today"></div></div>
-    <div class="panel xtall"><h3>Service-interface edges, today</h3><p class="why">Semantic edges from the latest surface-score: section A injects a service interface owned by section B. Blue is how many sections depend on this one, orange how many it depends on. 51 sections, 244 edges.</p><div class="ph"><canvas id="d-sem"></canvas></div><div class="legend" id="l-sem"></div></div>
-    <div class="panel tall"><h3>Cross-section score by section</h3><p class="why">Reforge surface-score points from the crossSection rules, a semantic measure (interface calls across a boundary) rather than a compile edge. Latest reading.</p><div class="ph"><canvas id="d-cross"></canvas></div></div>
+    <div class="panel xtall"><h3>Service-interface edges, today</h3><p class="why" id="d-sem-why">Semantic edges from the latest reforge day: section A injects a service interface owned by section B. Blue is how many sections depend on this one, orange how many it depends on.</p><div class="ph"><canvas id="d-sem"></canvas></div><div class="legend" id="l-sem"></div></div>
+    <div class="panel tall"><h3>Cross-section call sites by section</h3><p class="why">Call sites across a section boundary on the latest reforge day, top 20, Base left out: calls into this section (blue) and calls it makes into others (orange).</p><div class="ph"><canvas id="d-cross"></canvas></div><div class="legend" id="l-cross"></div></div>
   </div>
   <div class="note">Which number to watch: the raw edge count tracks how much wiring exists, density tracks whether the wiring is growing faster than the module count. After a split the raw count rises by construction (more modules) while density should fall; density is the one that says whether boundaries are holding.</div>
 </section>
@@ -139,9 +152,11 @@
   <p class="sub">GitHub Actions runs on peterdrier/Humans by the day the run was created. Duration is wall clock from start to completion; billable minutes are not collected (one API call per run).</p>
   <div class="grid">
     <div class="panel"><h3>Runs per day</h3><p class="why">Completed runs by conclusion.</p><div class="ph"><canvas id="a-runs"></canvas></div><div class="legend" id="l-runs"></div></div>
-    <div class="panel"><h3>Failure rate</h3><p class="why">Failed plus cancelled over all runs, 7-day rolling.</p><div class="ph"><canvas id="a-fail"></canvas></div></div>
+    <div class="panel"><h3>Failure rate</h3><p class="why">Failed plus cancelled over all runs, 7-day rolling. Mostly PR checks, so a nightly suite that is always red barely moves it; see the two by-day panels below.</p><div class="ph"><canvas id="a-fail"></canvas></div></div>
     <div class="panel"><h3>Compute hours per day</h3><p class="why">Sum of run durations, 7-day rolling. Log scale.</p><div class="ph"><canvas id="a-hours"></canvas></div></div>
     <div class="panel tall" style="grid-column:1/-1"><h3>Runs by workflow</h3><p class="why">Per 7-day window, top 8 workflows overall.</p><div class="ph"><canvas id="a-wf"></canvas></div><div class="legend" id="l-wf"></div></div>
+    <div class="panel"><h3>Integration tests, by day</h3><p class="why" id="a-int-why">Runs that did not fail (green) and failed (red) per day.</p><div class="ph"><canvas id="a-int"></canvas></div></div>
+    <div class="panel"><h3>E2E tests (QA), by day</h3><p class="why" id="a-e2e-why">Runs that did not fail (green) and failed (red) per day.</p><div class="ph"><canvas id="a-e2e"></canvas></div></div>
     <div class="panel"><h3>Build and Test duration</h3><p class="why">Mean minutes per run of the main build workflow, 7-day rolling.</p><div class="ph"><canvas id="a-build"></canvas></div></div>
     <div class="panel"><h3>Re-runs</h3><p class="why">Runs with attempt greater than one, per 7 days.</p><div class="ph"><canvas id="a-rerun"></canvas></div></div>
   </div>
@@ -180,12 +195,12 @@
 </section>
 
 <section class="block" id="surface">
-  <h2>Reforge surface score</h2>
-  <p class="sub">The newer measurement system. Three archived runs (2026-08-16, 2026-10-21, 2026-10-29). Totals per run are in the first panel; the per-section and per-rule views are the latest run.</p>
+  <h2>Where the score comes from</h2>
+  <p class="sub">Reforge surface-score points by rule, from the same daily series as the per-assembly section (one reforge version, default config). The three archived manual runs this section used to show were scored with older versions and are no longer drawn.</p>
   <div class="grid">
-    <div class="panel"><h3>Score per run</h3><p class="why">Surface and internal points, one bar pair per archived reading. Different reforge versions, so compare with care.</p><div class="ph"><canvas id="s-runs"></canvas></div><div class="legend" id="l-runs"></div></div>
-    <div class="panel tall"><h3>Score by section</h3><p class="why">Surface (blue) and internal complexity (orange), top 20.</p><div class="ph"><canvas id="s-groups"></canvas></div><div class="legend" id="l-groups"></div></div>
-    <div class="panel tall"><h3>Score by rule</h3><p class="why">Where the points come from.</p><div class="ph"><canvas id="s-rules"></canvas></div></div>
+    <div class="panel tall" style="grid-column:1/-1"><h3>Score by rule over time</h3><p class="why">Points per rule, stacked: the five largest rules today, the rest as other. A band that widens while the lines above it fall is where the score is moving to.</p><div class="ph"><canvas id="s-ruletime"></canvas></div><div class="legend" id="l-ruletime"></div></div>
+    <div class="panel tall" style="grid-column:1/-1"><h3>Rule share of the score</h3><p class="why">The same five rules and other, as a share of the total.</p><div class="ph"><canvas id="s-ruleshare"></canvas></div><div class="legend" id="l-ruleshare"></div></div>
+    <div class="panel xtall"><h3>Score by rule, latest day</h3><p class="why">Every rule with points. Hover for the 30-day change.</p><div class="ph"><canvas id="s-rules"></canvas></div></div>
   </div>
 </section>
 
@@ -205,6 +220,6 @@
 </section>
 
 <details><summary>Data table (latest 30 days of development stats)</summary><div class="tbl" id="table"></div></details>
-<p class="note">Sources: docs/development-stats.md, docs/reforge-history.csv, docs/reforge/runs/*.json, per-module lines and ProjectReference edges from git at biweekly checkpoints.</p>
+<p class="note">Sources: data/stats, data/reforge (per-assembly rows, surface-score, snapshot and top lists), data/seed/reforge-history.csv for snapshots through 2026-10-29, data/git, data/prs, data/actions, and per-module lines and ProjectReference edges from git at weekly checkpoints.</p>
 </div>
 </body></html>

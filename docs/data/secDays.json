@@ -120333,7 +120333,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 151, "snapshot": 171, "surface": 165, "total": 706},
+    "seconds": {"build": 151, "snapshot": 171, "surface": 165, "total": 706, "structure": 106},
     "total": 64032,
     "edges": 403,
     "byRule": {
@@ -121887,7 +121887,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 164, "snapshot": 152, "surface": 146, "total": 470},
+    "seconds": {"build": 164, "snapshot": 152, "surface": 146, "total": 470, "structure": 105},
     "total": 64142,
     "edges": 403,
     "byRule": {
@@ -123441,7 +123441,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 107, "snapshot": 101, "surface": 103, "total": 508},
+    "seconds": {"build": 107, "snapshot": 101, "surface": 103, "total": 508, "structure": 106},
     "total": 64034,
     "edges": 401,
     "byRule": {
@@ -124995,7 +124995,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 72, "snapshot": 169, "surface": 162, "total": 617},
+    "seconds": {"build": 72, "snapshot": 169, "surface": 162, "total": 617, "structure": 106},
     "total": 63620,
     "edges": 371,
     "byRule": {
@@ -126549,7 +126549,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 110, "snapshot": 192, "surface": 162, "total": 682},
+    "seconds": {"build": 110, "snapshot": 192, "surface": 162, "total": 682, "structure": 104},
     "total": 63153,
     "edges": 323,
     "byRule": {
@@ -128102,7 +128102,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 112, "snapshot": 107, "surface": 106, "total": 519},
+    "seconds": {"build": 112, "snapshot": 107, "surface": 106, "total": 519, "structure": 104},
     "total": 64122,
     "edges": 326,
     "byRule": {
@@ -129684,7 +129684,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 60, "snapshot": 107, "surface": 108, "total": 462},
+    "seconds": {"build": 60, "snapshot": 107, "surface": 108, "total": 462, "structure": 105},
     "total": 64767,
     "edges": 325,
     "byRule": {
@@ -131237,7 +131237,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 54, "snapshot": 109, "surface": 107, "total": 456},
+    "seconds": {"build": 54, "snapshot": 109, "surface": 107, "total": 456, "structure": 104},
     "total": 65397,
     "edges": 325,
     "byRule": {
@@ -132790,7 +132790,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 53, "snapshot": 110, "surface": 110, "total": 459},
+    "seconds": {"build": 53, "snapshot": 110, "surface": 110, "total": 459, "structure": 110},
     "total": 65780,
     "edges": 325,
     "byRule": {
