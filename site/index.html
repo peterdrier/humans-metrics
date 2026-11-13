@@ -22,8 +22,8 @@
   <button data-range="all" aria-pressed="true">All</button>
   <button data-range="90">Last 90 days</button>
   <button data-range="split">Since section split (Aug 8)</button>
-  <span class="lbl" style="margin-left:12px">Smoothing</span>
-  <span class="seg"><button data-smooth="0" aria-pressed="true">Raw</button><button data-smooth="7">7-day</button></span>
+  <span class="lbl" style="margin-left:12px">Resolution</span>
+  <span class="seg"><button data-res="day" aria-pressed="true" title="One point per collected day. Charts with their own window (7 or 28 days) keep it.">Daily</button><button data-res="7d" title="Trailing 7 calendar days: counts are summed, levels averaged.">7-day</button><button data-res="week" title="One point per UTC week (Monday start): counts are summed, levels take the week's last value, rates are recomputed over the week. 28-day charts show their window ending each Sunday.">Weekly</button></span>
   <span class="lbl" style="margin-left:12px">Count axes</span>
   <span class="seg"><button data-scale="log" aria-pressed="true">Log</button><button data-scale="linear">Linear</button></span>
 </div>
@@ -64,7 +64,7 @@
     <div class="panel"><h3>Migration lines</h3><p class="why">Reached 487k (1.9x the app) before the August consolidation.</p><div class="ph"><canvas id="c-mig"></canvas></div></div>
     <div class="panel"><h3>Comment share of C#</h3><p class="why">Comment lines as a share of all C# lines.</p><div class="ph"><canvas id="c-cmt"></canvas></div></div>
     <div class="panel"><h3>Docs per code line</h3><p class="why">Markdown lines per app line. Above 1.0 means more prose than product.</p><div class="ph"><canvas id="c-docratio"></canvas></div></div>
-    <div class="panel tall" style="grid-column:1/-1"><h3>Daily churn</h3><p class="why">Lines added (up) and removed (down) per day, excluding migrations. Axis clipped at 60k. Two days exceed it: 08-16 (+125k, the migration consolidation) and 10-21 (+189k / -68k, file moves counted as add plus delete). Hover shows the raw figure.</p><div class="ph"><canvas id="c-churn"></canvas></div><div class="legend" id="l-churn"></div></div>
+    <div class="panel tall" style="grid-column:1/-1"><h3 data-per="Churn per {per}">Churn per day</h3><p class="why" id="c-churn-why">Lines added (up) and removed (down), from git numstat over non-merge commits, all files (migrations and docs included).</p><div class="ph"><canvas id="c-churn"></canvas></div><div class="legend" id="l-churn"></div></div>
     <div class="panel"><h3>Lines per class</h3><p class="why">Average app lines per declared class. Falling means smaller units.</p><div class="ph"><canvas id="c-lpc"></canvas></div></div>
     <div class="panel"><h3>Net growth per week</h3><p class="why">App plus test lines added net, one bar per UTC week (Monday start). The last bar is the week to date.</p><div class="ph"><canvas id="c-weekly"></canvas></div></div>
   </div>
@@ -151,7 +151,7 @@
   <h2>CI</h2>
   <p class="sub">GitHub Actions runs on peterdrier/Humans by the day the run was created. Duration is wall clock from start to completion; billable minutes are not collected (one API call per run).</p>
   <div class="grid">
-    <div class="panel"><h3>Runs per day</h3><p class="why">Completed runs by conclusion.</p><div class="ph"><canvas id="a-runs"></canvas></div><div class="legend" id="l-runs"></div></div>
+    <div class="panel"><h3 data-per="Runs per {per}">Runs per day</h3><p class="why">Completed runs by conclusion.</p><div class="ph"><canvas id="a-runs"></canvas></div><div class="legend" id="l-runs"></div></div>
     <div class="panel"><h3>Failure rate</h3><p class="why">Failed plus cancelled over all runs, 7-day rolling. Mostly PR checks, so a nightly suite that is always red barely moves it; see the two by-day panels below.</p><div class="ph"><canvas id="a-fail"></canvas></div></div>
     <div class="panel"><h3>Compute hours per day</h3><p class="why">Sum of run durations, 7-day rolling. Log scale.</p><div class="ph"><canvas id="a-hours"></canvas></div></div>
     <div class="panel tall" style="grid-column:1/-1"><h3>Runs by workflow</h3><p class="why">Per 7-day window, top 8 workflows overall.</p><div class="ph"><canvas id="a-wf"></canvas></div><div class="legend" id="l-wf"></div></div>
