@@ -1,12 +1,11 @@
 // Each dataset is docs/data/<key>.json, written by site/build.py.
-const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "semDeps", "top", "files", "reachTop", "topFiles", "generated"];
+const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "semDeps", "top", "files", "reachTop", "topFiles", "generated", "meta"];
 const D = Object.fromEntries(await Promise.all(KEYS.map(async k => [k, await (await fetch(`data/${k}.json`, {cache: 'no-cache'})).json()])));
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
-const SPLIT = '2026-08-08';
-const EVENTS = [
-  ['2026-02-04','First commit'],['2026-03-08','First real test project'],['2026-05-16','Biggest day, +40.7k'],
-  ['2026-05-20','Docs prune begins'],['2026-08-08','Section split (G5)'],['2026-08-16','Surface-score baseline'],['2026-08-17','Section doctor starts']
-];
+const SPLIT = D.meta.split || '';
+const EVENTS = D.meta.events || [];
+const splitBtn = document.querySelector('[data-range="split"]');
+if (SPLIT) splitBtn.textContent = D.meta.splitLabel; else splitBtn.remove();
 document.getElementById('events').innerHTML = EVENTS.map(([d,t])=>`<span><b>${d}</b> ${t}</span>`).join('');
 
 // ---- data shaping
@@ -145,7 +144,7 @@ function renderLanes(){
   const G=D.git; if(!G||!G.length) return;
   const LANES=['automation','peter','other'];
   const NAMES={automation:'Automation',peter:'Peter',other:'Others'};
-  const T=tl(G,'date','2026-03-03'), L=T.L;
+  const T=tl(G,'date',D.meta.gitFrom||''), L=T.L;
   const roll=(n,f)=>T.win(w=>{const c={}; w.forEach(g=>f(g,c)); return c;}, n);
   const L28=roll(28,(g,c)=>{for(const [k,v] of Object.entries(g.lanes)){c[k]=c[k]||{prs:0,lines:0}; c[k].prs+=v.prs; c[k].lines+=v.added+v.deleted;}});
   const used=LANES.filter(k=>L28.some(c=>c[k]));
@@ -171,7 +170,7 @@ function renderLanes(){
 
 function renderFlow(){
   const P=D.prs; if(!P||!P.length) return;
-  const T=tl(P,'date','2026-02-18'), L=T.L;
+  const T=tl(P,'date',D.meta.prsFrom||''), L=T.L;
   const sumL=(w,f)=>w.reduce((a,p)=>a+Object.values(p.lanes).reduce((b,l)=>b+(f(l)||0),0),0);
   const q=(arr,p)=>{if(!arr.length) return null; const a=[...arr].sort((x,y)=>x-y); return a[Math.min(a.length-1,Math.floor(p*(a.length-1)))];};
   line('p-flow', L, [{label:'Opened', data:T.flow(p=>p.opened,7), slot:1},{label:'Merged', data:T.win(w=>sumL(w,l=>l.merged),7), slot:0}]);

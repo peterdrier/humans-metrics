@@ -2,7 +2,7 @@
 """Git producer: one data/git/<date>.json per day with commits on origin/main.
 
 Units are the non-merge commits on main: with squash merges each one is a
-PR (merge commits are production promotions and carry no work of their own). Each merged commit is classified into a lane by collect/lanes.yml
+PR (merge commits are production promotions and carry no work of their own). Each merged commit is classified into a lane by the target's lanes file (collect/lanes.yml for Humans)
 (automation | peter | other); credit goes to the author, never the merger.
 
 Record: {date, commit, collector_version, lanes: {lane: {prs, files, added,
@@ -12,15 +12,16 @@ just first-parent), hours: [24 counts by committer hour, UTC]}.
 """
 import argparse, collections, datetime as dt, json, os, re, subprocess, sys
 import yaml
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import target as tgt
 
-HERE = os.path.dirname(os.path.abspath(__file__))
 VERSION = 1
 
 def git(repo, *args):
     return subprocess.run(['git', '-C', repo, *args], capture_output=True, text=True, check=True, env={**os.environ, 'TZ': 'UTC'}).stdout
 
-def load_rules():
-    r = yaml.safe_load(open(os.path.join(HERE, 'lanes.yml')))
+def load_rules(path):
+    r = yaml.safe_load(open(path))
     for rt in r['routines']:
         for k in ('branch', 'subject', 'author'):
             if k in rt: rt[k] = re.compile(rt[k], re.I)
@@ -65,13 +66,15 @@ def main():
     ap.add_argument('--repo', required=True); ap.add_argument('--out', required=True)
     ap.add_argument('--ref', default='origin/main')
     ap.add_argument('--from', dest='d_from'); ap.add_argument('--to', dest='d_to')
+    tgt.add_arg(ap)
     a = ap.parse_args()
+    t = tgt.load(a.target)
     outdir = os.path.join(a.out, 'git'); os.makedirs(outdir, exist_ok=True)
     d_to = a.d_to or git(a.repo, 'log', '-1', '--format=%cd', '--date=format-local:%Y-%m-%d', a.ref).strip()
     if not a.d_from:
         have = sorted(f[:-5] for f in os.listdir(outdir) if f.endswith('.json'))
-        a.d_from = (dt.date.fromisoformat(have[-1]) + dt.timedelta(days=1)).isoformat() if have else '2026-02-04'
-    rules = load_rules()
+        a.d_from = (dt.date.fromisoformat(have[-1]) + dt.timedelta(days=1)).isoformat() if have else t['start']
+    rules = load_rules(t['lanes'])
     days = collections.defaultdict(list)
     for c in merged_commits(a.repo, a.ref, a.d_from, d_to):
         days[c['date']].append(c)

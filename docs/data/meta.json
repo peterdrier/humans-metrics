@@ -1,0 +1,15 @@
+{
+  "split": "2026-08-08",
+  "splitLabel": "Since section split (Aug 8)",
+  "events": [
+    ["2026-02-04", "First commit"],
+    ["2026-03-08", "First real test project"],
+    ["2026-05-16", "Biggest day, +40.7k"],
+    ["2026-05-20", "Docs prune begins"],
+    ["2026-08-08", "Section split (G5)"],
+    ["2026-08-16", "Surface-score baseline"],
+    ["2026-08-17", "Section doctor starts"]
+  ],
+  "gitFrom": "2026-03-03",
+  "prsFrom": "2026-02-18"
+}

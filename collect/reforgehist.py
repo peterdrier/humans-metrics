@@ -44,6 +44,9 @@ import argparse, collections, datetime as dt, glob, json, os, re, shutil, subpro
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from collect import day_commits, git
 import coverage as covmod
+import target as tgt
+
+T = tgt.load()   # replaced from --target in main()
 
 VERSION = 1
 
@@ -57,7 +60,7 @@ def solution_in(tree):
     return s[0] if s else None
 
 def section_of(path):
-    m = re.match(r'src/(?:Sections/)?(?:Humans|Profiles)\.([^/]+)/', path)
+    m = re.match(T['section_re'], path)
     return m.group(1).replace('.Contracts', '') if m else ''
 
 def structure(rec, reforge, sln, tree, env):
@@ -140,7 +143,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
             cov = os.path.join(tree, 'coverage.cobertura.xml'); covmod.materialize(doc, cov)
         elif tests:
             covf = os.path.join(tree, 'coverage.cobertura.xml')
-            inner = f'dotnet test {sln} --no-build -c Release -v quiet --blame-hang-timeout 5m --filter FullyQualifiedName!~Humans.Integration.Tests'
+            inner = f'dotnet test {sln} --no-build -c Release -v quiet --blame-hang-timeout 5m' + (f" --filter {T['test_filter']}" if T.get('test_filter') else '')
             p, s = run(['dotnet-coverage', 'collect', '-f', 'cobertura', '-o', covf, inner], tree, env)
             tot = collections.Counter()
             for l in p.stdout.splitlines():   # one Passed!/Failed! line per test assembly
@@ -148,7 +151,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
             rec['tests'] = dict(exit=p.returncode, seconds=s, **tot)
             if os.path.exists(covf):
                 doc = dict(date=date, commit=commit, tool='dotnet-coverage', format=2, tests=rec['tests'],
-                           assemblies=covmod.reduce(covf, keep=lambda n: n.startswith(('Humans', 'Profiles')) and '.Tests' not in n))
+                           assemblies=covmod.reduce(covf, keep=lambda n: n.startswith(tuple(T['coverage_prefixes'])) and '.Tests' not in n))
                 rec['tests']['covered'], rec['tests']['lines'] = covmod.totals(doc)
                 json.dump(doc, open(covj, 'w'), separators=(',', ':'))
                 cov = os.path.join(tree, 'coverage.reduced.xml'); covmod.materialize(doc, cov)   # score the same reduced report a rescore will reuse
@@ -162,7 +165,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
         keep_top_files(rec, rec['rows'], reforge)
         sol = next((r for r in rec['rows'] if r.get('section') == '(solution)'), rec['rows'][0] if rec['rows'] else {})
         rec['reforge_version'] = sol.get('reforgeVersion'); rec['config_hash'] = sol.get('configHash')
-        p, s = run([reforge, 'surface-score', '--solution', sln, '--format', 'json'], tree, env); rec['seconds']['surface'] = s
+        p, s = run([reforge, 'surface-score', '--solution', sln, '--format', 'json', *T.get('surface_args', [])], tree, env); rec['seconds']['surface'] = s
         if p.returncode: rec['surface_error'] = p.stderr[-2000:]; return rec
         j = json.loads(p.stdout)
         rec['surface'] = dict(total=j.get('total'), surface=j.get('surfaceTotal'), internal=j.get('implementationShapeTotal'), testTotal=j.get('testTotal'),
@@ -176,14 +179,17 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--repo', required=True); ap.add_argument('--out', required=True)
-    ap.add_argument('--ref', default='origin/main'); ap.add_argument('--from', dest='d_from', default='2026-02-04'); ap.add_argument('--to', dest='d_to')
+    ap.add_argument('--ref', default='origin/main'); ap.add_argument('--from', dest='d_from'); ap.add_argument('--to', dest='d_to')
     ap.add_argument('--days', nargs='*', help='explicit days instead of a range')
     ap.add_argument('--forward', action='store_true', help='oldest first (default newest first)')
     ap.add_argument('--redo', action='store_true', help='recollect days that already have a record')
     ap.add_argument('--no-tests', action='store_true'); ap.add_argument('--retest', action='store_true', help='rerun tests even when data/coverage has the day'); ap.add_argument('--reforge', default='reforge')
     ap.add_argument('--fill', action='store_true', help='add the structure step (snapshot row, top lists) to existing records in the range that lack it; no build')
     ap.add_argument('--fill-top-files', action='store_true', help='add top_files to existing records in the range that lack it; no build, rows untouched')
+    tgt.add_arg(ap)
     a = ap.parse_args()
+    global T
+    T = tgt.load(a.target); a.d_from = a.d_from or T['start']
     outdir = os.path.join(a.out, 'reforge'); os.makedirs(outdir, exist_ok=True)
     d_to = a.d_to or (dt.date.today() - dt.timedelta(days=1)).isoformat()
     days = day_commits(a.repo, a.ref, a.d_from, d_to)
