@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-08",
+  "version": "0.33.0",
+  "classes": [
+    {"name": "TeamService", "section": "Teams", "lines": 1832, "methods": 81, "risk": 92},
+    {"name": "WorkgroupService", "section": "Workgroups", "lines": 1797, "methods": 91, "risk": 76},
+    {"name": "Service", "section": "Finance", "lines": 1636, "methods": 68, "risk": 88},
+    {"name": "ExpenseReportService", "section": "Expenses", "lines": 1507, "methods": 58, "risk": 76},
+    {"name": "SepaBankBooking", "section": "Finance", "lines": 1382, "methods": 44, "risk": 64},
+    {"name": "CampController", "section": "Camps", "lines": 1351, "methods": 47, "risk": 50},
+    {"name": "BudgetRepository", "section": "Budget", "lines": 1264, "methods": 38, "risk": 50},
+    {"name": "ShiftSignupService", "section": "Shifts", "lines": 1232, "methods": 40, "risk": 83},
+    {"name": "SurveyService", "section": "Surveys", "lines": 1178, "methods": 48, "risk": 87},
+    {"name": "UserRepository", "section": "Users", "lines": 1164, "methods": 62, "risk": 49}
+  ],
+  "risk": [
+    {"name": "TeamService", "section": "Teams", "lines": 1832, "methods": 81, "risk": 92},
+    {"name": "Service", "section": "Finance", "lines": 1636, "methods": 68, "risk": 88},
+    {"name": "SurveyService", "section": "Surveys", "lines": 1178, "methods": 48, "risk": 87},
+    {"name": "ShiftSignupService", "section": "Shifts", "lines": 1232, "methods": 40, "risk": 83},
+    {"name": "ShiftManagementService", "section": "Shifts", "lines": 920, "methods": 60, "risk": 81},
+    {"name": "ExpenseReportService", "section": "Expenses", "lines": 1507, "methods": 58, "risk": 76},
+    {"name": "WorkgroupService", "section": "Workgroups", "lines": 1797, "methods": 91, "risk": 76},
+    {"name": "AssemblyVoteService", "section": "Governance", "lines": 1047, "methods": 41, "risk": 71},
+    {"name": "CachingUserService", "section": "Users", "lines": 655, "methods": 48, "risk": 71},
+    {"name": "CachingCampService", "section": "Camps", "lines": 801, "methods": 66, "risk": 69}
+  ],
+  "methods": [
+    {"name": "SepaBankBooking.BookOneTransferAsync", "section": "Finance", "cyclomatic": 81, "classLines": 1382},
+    {"name": "DevelopmentDashboardSeeder.SeedAsync", "section": "Development", "cyclomatic": 48, "classLines": 460},
+    {"name": "ProfileEditViewModelBuilder.Build", "section": "Users", "cyclomatic": 41, "classLines": 88},
+    {"name": "ProfileCardViewComponent.InvokeAsync", "section": "Users", "cyclomatic": 37, "classLines": 143},
+    {"name": "SurveyService.AdvanceWizardAsync", "section": "Surveys", "cyclomatic": 36, "classLines": 1178},
+    {"name": "TeamPageService.GetTeamDetailAsync", "section": "Teams", "cyclomatic": 35, "classLines": 428},
+    {"name": "AnthropicClient.StreamAsync", "section": "Agent", "cyclomatic": 35, "classLines": 326},
+    {"name": "OrderAuthorizationHandler.HandleAsync", "section": "Store", "cyclomatic": 35, "classLines": 176},
+    {"name": "AgentService.RunTurnAsync", "section": "Agent", "cyclomatic": 34, "classLines": 644},
+    {"name": "SurveyChangeDescription.DescribeSurveyChanges", "section": "Surveys", "cyclomatic": 34, "classLines": 89}
+  ]
+}

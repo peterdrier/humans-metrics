@@ -53,6 +53,15 @@ Same command with `--redo`. Coverage and exact tokens are reused from
 passes. `--retest` forces the tests to run again (only when the test runner or
 the coverage tool changes).
 
+## Adding the structure step to older records
+
+`--fill` adds the solution-wide snapshot row and the top lists to records in the
+range that lack them. It needs no build, tests or API key, about two minutes a day:
+
+```bash
+python3 collect/reforgehist.py --repo ../Humans --out data --from 2026-10-30 --to 2026-11-08 --fill
+```
+
 ## A day that does not build
 
 The record is a stub with `build: failed` and the tail of the build output; the

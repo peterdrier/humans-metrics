@@ -18,6 +18,11 @@ Per day, in order; a step that fails marks the record and stops the day:
   4. surface    reforge surface-score --format json, kept slim: solution totals,
                 byRule and the section edges, the only figures the by-assembly
                 rows lack (this pass goes away once snapshot emits them)
+  5. structure  reforge snapshot (the solution-wide row: reach, core, cycles,
+                fan-out, class sizes) and reforge health reduced to the ten
+                largest classes, ten most complex methods and ten riskiest
+                classes, migrations left out. Neither needs a build, so
+                --fill adds them to records that predate this step
 
 The whole history scores under reforge's default config: any
 reforge.surface-score.json in the tree is removed before the run, so
@@ -26,7 +31,8 @@ the installed SDK builds every tree (recorded as sdk_override).
 
 Record: {date, commit, collector_version, reforge_version, config_hash, build,
 tests: {exit, seconds, passed, failed, skipped, covered, lines}, rows: [by-assembly rows], surface: {total,
-surface, internal, byRule, groups}, edges: [{from, to, count}], seconds: {...}}
+surface, internal, byRule, groups}, edges: [{from, to, count}], snapshot: {solution-wide row},
+top: {classes, methods, risk}, structure_version, seconds: {...}}
 """
 import argparse, collections, datetime as dt, glob, json, os, re, shutil, subprocess, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -43,6 +49,39 @@ def run(cmd, cwd, env=None, timeout=7200):
 def solution_in(tree):
     s = glob.glob(os.path.join(tree, '*.slnx')) or glob.glob(os.path.join(tree, '*.sln'))
     return s[0] if s else None
+
+def section_of(path):
+    m = re.match(r'src/(?:Sections/)?(?:Humans|Profiles)\.([^/]+)/', path)
+    return m.group(1).replace('.Contracts', '') if m else ''
+
+def structure(rec, reforge, sln, tree, env):
+    """Step 5. Fills rec['snapshot'] and rec['top']; a failure is recorded and leaves the rest of the record alone."""
+    p, s = run([reforge, 'snapshot', '--solution', sln, '--format', 'json'], tree, env); rec['seconds']['structure'] = s
+    if p.returncode: rec['structure_error'] = p.stderr[-2000:]; return
+    rec['snapshot'] = json.loads(p.stdout)
+    p, s = run([reforge, 'health', '--solution', sln, '--top', '100000', '--format', 'json'], tree, env); rec['seconds']['structure'] += s
+    if p.returncode: rec['structure_error'] = p.stderr[-2000:]; return
+    types = [t for t in json.loads(p.stdout).get('results', []) if '/Migrations/' not in t['file']]
+    cls = lambda t: dict(name=t['name'], section=section_of(t['file']), lines=t['lines'], methods=t['methodCount'], risk=t['score'])
+    rec['top'] = dict(
+        classes=[cls(t) for t in sorted(types, key=lambda t: -t['lines'])[:10]],
+        risk=[cls(t) for t in sorted(types, key=lambda t: -t['score'])[:10]],
+        methods=[dict(name=f"{t['name']}.{t['maxComplexityMethod']}", section=section_of(t['file']), cyclomatic=t['maxCyclomaticComplexity'], classLines=t['lines'])
+                 for t in sorted(types, key=lambda t: -t['maxCyclomaticComplexity'])[:10]])
+    v = subprocess.run([reforge, '--version'], capture_output=True, text=True).stdout.strip()
+    rec['structure_version'] = v.split('+')[0]
+    rec.pop('structure_error', None)
+
+def fill_day(repo, rec, reforge):
+    """--fill: add step 5 to an existing record without rebuilding or rescoring it."""
+    tree = f"/tmp/rf-{rec['date']}"
+    if os.path.exists(tree): git(repo, 'worktree', 'remove', '--force', tree)
+    git(repo, 'worktree', 'add', '--detach', tree, rec['commit'])
+    try:
+        sln = solution_in(tree)
+        if sln: structure(rec, reforge, sln, tree, {**os.environ, 'DOTNET_CLI_TELEMETRY_OPTOUT': '1', 'DOTNET_NOLOGO': '1'})
+    finally:
+        git(repo, 'worktree', 'remove', '--force', tree)
 
 def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
     tree = f'/tmp/rf-{date}'
@@ -97,6 +136,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
         rec['surface'] = dict(total=j.get('total'), surface=j.get('surfaceTotal'), internal=j.get('implementationShapeTotal'), testTotal=j.get('testTotal'),
                               byRule=j.get('byRule'))   # per-section figures live in the by-assembly rows; this pass only adds totals, byRule and edges
         rec['edges'] = j.get('edges')
+        structure(rec, reforge, sln, tree, env)
         return rec
     finally:
         git(repo, 'worktree', 'remove', '--force', tree)
@@ -109,6 +149,7 @@ def main():
     ap.add_argument('--forward', action='store_true', help='oldest first (default newest first)')
     ap.add_argument('--redo', action='store_true', help='recollect days that already have a record')
     ap.add_argument('--no-tests', action='store_true'); ap.add_argument('--retest', action='store_true', help='rerun tests even when data/coverage has the day'); ap.add_argument('--reforge', default='reforge')
+    ap.add_argument('--fill', action='store_true', help='add the structure step (snapshot row, top lists) to existing records in the range that lack it; no build')
     a = ap.parse_args()
     outdir = os.path.join(a.out, 'reforge'); os.makedirs(outdir, exist_ok=True)
     d_to = a.d_to or (dt.date.today() - dt.timedelta(days=1)).isoformat()
@@ -118,6 +159,14 @@ def main():
     key = bool(os.environ.get('ANTHROPIC_API_KEY'))
     for d in order:
         path = os.path.join(outdir, f'{d}.json')
+        if a.fill:
+            if not os.path.exists(path): continue
+            rec = json.load(open(path))
+            if rec.get('build') != 'ok' or (rec.get('top') and not a.redo): continue
+            fill_day(a.repo, rec, a.reforge)
+            json.dump(rec, open(path, 'w'), separators=(',', ':'))
+            print(f"{d} {rec['commit'][:9]} fill snapshot={'snapshot' in rec} top={'top' in rec} {rec['seconds'].get('structure')}s {rec.get('structure_error', '')[-200:]}", file=sys.stderr, flush=True)
+            continue
         if os.path.exists(path) and not a.redo: continue
         t = time.time()
         rec = collect_day(a.repo, days[d], d, outdir, a.reforge, not a.no_tests, key, a.retest)

@@ -20,36 +20,43 @@
   "Build and Test": {
    "runs": 19,
    "failure": 1,
+   "success": 16,
    "duration_s": 8103
   },
   "E2E Tests (QA)": {
    "runs": 6,
    "failure": 3,
+   "success": 0,
    "duration_s": 1323
   },
   "Label PRs with EF migrations": {
    "runs": 13,
    "failure": 0,
+   "success": 13,
    "duration_s": 136
   },
   "PR Surface Report": {
    "runs": 13,
    "failure": 0,
+   "success": 12,
    "duration_s": 1949
   },
   "PR Surface Report Comment": {
    "runs": 13,
    "failure": 0,
+   "success": 12,
    "duration_s": 140
   },
   "Preview Database": {
    "runs": 9,
    "failure": 0,
+   "success": 9,
    "duration_s": 97
   },
   "claude-review": {
    "runs": 26,
    "failure": 0,
+   "success": 4,
    "duration_s": 820
   }
  }

@@ -21,51 +21,61 @@
   "Build and Test": {
    "runs": 62,
    "failure": 7,
+   "success": 42,
    "duration_s": 24548
   },
   "E2E Tests (QA)": {
    "runs": 19,
    "failure": 13,
+   "success": 1,
    "duration_s": 4606
   },
   "Label PRs with EF migrations": {
    "runs": 47,
    "failure": 0,
+   "success": 47,
    "duration_s": 460
   },
   "PR Surface Report": {
    "runs": 43,
    "failure": 0,
+   "success": 42,
    "duration_s": 6432
   },
   "PR Surface Report Comment": {
    "runs": 43,
    "failure": 0,
+   "success": 42,
    "duration_s": 474
   },
   "Preview Database": {
    "runs": 34,
    "failure": 0,
+   "success": 34,
    "duration_s": 1578
   },
   "claude-review": {
    "runs": 86,
    "failure": 0,
+   "success": 13,
    "duration_s": 2109
   },
   "github_actions in /. - Update #1585949771": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 72
   },
   "npm_and_yarn in /tests/e2e - Update #1585949792": {
    "runs": 1,
    "failure": 0,
+   "success": 1,
    "duration_s": 59
   },
   "nuget in /. - Update #1585949775": {
    "runs": 1,
    "failure": 0,
+   "success": 0,
    "duration_s": 3318
   }
  }

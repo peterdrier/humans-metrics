@@ -7,7 +7,10 @@ minutes need one call per run and are not collected.
 
 Record: {date, collector_version, runs, conclusions: {success, failure,
 cancelled, ...}, reruns, events: {pull_request, push, schedule, ...},
-workflows: {name: {runs, failure, duration_s}}}
+workflows: {name: {runs, failure, success, duration_s}}}
+
+`success` per workflow is recorded from 2026-08-01 on; earlier records have only `failure`, which cannot tell a
+pass from a cancelled or skipped run.
 """
 import argparse, collections, datetime as dt, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -35,7 +38,7 @@ def main():
             day = w['created_at'][:10]; rec = days[day]
             rec['runs'] += 1; rec['conclusions'][w['conclusion'] or 'none'] += 1; rec['reruns'] += w['run_attempt'] > 1
             rec['events'][w['event']] += 1
-            wf = rec['workflows'][w['name']]; wf['runs'] += 1; wf['failure'] += w['conclusion'] == 'failure'
+            wf = rec['workflows'][w['name']]; wf['runs'] += 1; wf['failure'] += w['conclusion'] == 'failure'; wf['success'] += w['conclusion'] == 'success'
             if w.get('run_started_at'): wf['duration_s'] += int((iso(w['updated_at']) - iso(w['run_started_at'])).total_seconds())
         print(f'  {d}..{e}: {sum(days[x]["runs"] for x in days if d.isoformat() <= x <= e.isoformat())} runs', file=sys.stderr)
         d = e + dt.timedelta(days=1)
