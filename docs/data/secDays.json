@@ -132790,7 +132790,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 53, "snapshot": 110, "surface": 110, "total": 459, "structure": 110},
+    "seconds": {"build": 53, "snapshot": 110, "surface": 110, "total": 459, "structure": 110, "top_files": 84},
     "total": 65780,
     "edges": 325,
     "byRule": {

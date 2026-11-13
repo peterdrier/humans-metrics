@@ -62,6 +62,17 @@ range that lack them. It needs no build, tests or API key, about two minutes a d
 python3 collect/reforgehist.py --repo ../Humans --out data --from 2026-10-30 --to 2026-11-08 --fill
 ```
 
+## Adding top files to older records
+
+`--fill-top-files` adds `top_files` (each section's five files of highest reach,
+reforge 0.34+) to records that lack it, from a no-score by-assembly pass. The
+stored rows are not rescored; `top_files_version` names the reforge that ranked
+them. About 90 s a day:
+
+```bash
+python3 collect/reforgehist.py --repo ../Humans --out data --from 2026-02-04 --to 2026-11-08 --fill-top-files
+```
+
 ## A day that does not build
 
 The record is a stub with `build: failed` and the tail of the build output; the

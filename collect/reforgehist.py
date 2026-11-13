@@ -18,6 +18,8 @@ Per day, in order; a step that fails marks the record and stops the day:
   4. surface    reforge surface-score --format json, kept slim: solution totals,
                 byRule and the section edges, the only figures the by-assembly
                 rows lack (this pass goes away once snapshot emits them)
+     The rows carry each section's five files of highest reach (topFiles,
+                reforge 0.34+), lifted into top_files: {section: [...]}
   5. structure  reforge snapshot (the solution-wide row: reach, core, cycles,
                 fan-out, class sizes) and reforge health reduced to the ten
                 largest classes, ten most complex methods and ten riskiest
@@ -32,7 +34,11 @@ the installed SDK builds every tree (recorded as sdk_override).
 Record: {date, commit, collector_version, reforge_version, config_hash, build,
 tests: {exit, seconds, passed, failed, skipped, covered, lines}, rows: [by-assembly rows], surface: {total,
 surface, internal, byRule, groups}, edges: [{from, to, count}], snapshot: {solution-wide row},
-top: {classes, methods, risk}, structure_version, seconds: {...}}
+top: {classes, methods, risk}, structure_version, top_files: {section: [{file, reach,
+fanOut}]}, top_files_version, seconds: {...}}
+
+--fill-top-files adds top_files to records that lack it, from a no-score
+by-assembly pass (no build, no rescore of the rows already stored).
 """
 import argparse, collections, datetime as dt, glob, json, os, re, shutil, subprocess, sys, time
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -71,6 +77,29 @@ def structure(rec, reforge, sln, tree, env):
     v = subprocess.run([reforge, '--version'], capture_output=True, text=True).stdout.strip()
     rec['structure_version'] = v.split('+')[0]
     rec.pop('structure_error', None)
+
+def keep_top_files(rec, rows, reforge):
+    tf = {r['section']: r['topFiles'] for r in rows if r.get('topFiles')}
+    if not tf: return
+    rec['top_files'] = tf
+    rec['top_files_version'] = subprocess.run([reforge, '--version'], capture_output=True, text=True).stdout.strip().split('+')[0]
+
+def fill_top_files(repo, rec, reforge):
+    """--fill-top-files: rank files with the installed reforge, leaving the scored rows alone."""
+    tree = f"/tmp/rf-{rec['date']}"
+    if os.path.exists(tree): git(repo, 'worktree', 'remove', '--force', tree)
+    git(repo, 'worktree', 'add', '--detach', tree, rec['commit'])
+    try:
+        sln = solution_in(tree)
+        if not sln: return
+        env = {**os.environ, 'DOTNET_CLI_TELEMETRY_OPTOUT': '1', 'DOTNET_NOLOGO': '1'}
+        p, s = run([reforge, 'snapshot', '--solution', sln, '--by-assembly', '--no-score', '--format', 'json'], tree, env)
+        rec['seconds']['top_files'] = s
+        if p.returncode: rec['top_files_error'] = p.stderr[-2000:]; return
+        keep_top_files(rec, json.loads(p.stdout), reforge)
+        rec.pop('top_files_error', None)
+    finally:
+        git(repo, 'worktree', 'remove', '--force', tree)
 
 def fill_day(repo, rec, reforge):
     """--fill: add step 5 to an existing record without rebuilding or rescoring it."""
@@ -128,6 +157,7 @@ def collect_day(repo, commit, date, outdir, reforge, tests, key, retest=False):
         p, s = run(cmd, tree, env); rec['seconds']['snapshot'] = s
         if p.returncode: rec['snapshot_error'] = p.stderr[-2000:]; return rec
         rec['rows'] = json.loads(p.stdout)
+        keep_top_files(rec, rec['rows'], reforge)
         sol = next((r for r in rec['rows'] if r.get('section') == '(solution)'), rec['rows'][0] if rec['rows'] else {})
         rec['reforge_version'] = sol.get('reforgeVersion'); rec['config_hash'] = sol.get('configHash')
         p, s = run([reforge, 'surface-score', '--solution', sln, '--format', 'json'], tree, env); rec['seconds']['surface'] = s
@@ -150,6 +180,7 @@ def main():
     ap.add_argument('--redo', action='store_true', help='recollect days that already have a record')
     ap.add_argument('--no-tests', action='store_true'); ap.add_argument('--retest', action='store_true', help='rerun tests even when data/coverage has the day'); ap.add_argument('--reforge', default='reforge')
     ap.add_argument('--fill', action='store_true', help='add the structure step (snapshot row, top lists) to existing records in the range that lack it; no build')
+    ap.add_argument('--fill-top-files', action='store_true', help='add top_files to existing records in the range that lack it; no build, rows untouched')
     a = ap.parse_args()
     outdir = os.path.join(a.out, 'reforge'); os.makedirs(outdir, exist_ok=True)
     d_to = a.d_to or (dt.date.today() - dt.timedelta(days=1)).isoformat()
@@ -159,6 +190,14 @@ def main():
     key = bool(os.environ.get('ANTHROPIC_API_KEY'))
     for d in order:
         path = os.path.join(outdir, f'{d}.json')
+        if a.fill_top_files:
+            if not os.path.exists(path): continue
+            rec = json.load(open(path))
+            if rec.get('build') != 'ok' or (rec.get('top_files') and not a.redo): continue
+            fill_top_files(a.repo, rec, a.reforge)
+            json.dump(rec, open(path, 'w'), separators=(',', ':'))
+            print(f"{d} {rec['commit'][:9]} top_files={len(rec.get('top_files', {}))} {rec['seconds'].get('top_files')}s {rec.get('top_files_error', '')[-200:]}", file=sys.stderr, flush=True)
+            continue
         if a.fill:
             if not os.path.exists(path): continue
             rec = json.load(open(path))

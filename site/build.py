@@ -4,6 +4,8 @@
 The data contract (what app.js reads into `D`; its KEYS list must match):
   statsCols/stats   solution-wide daily rows (data/stats/*.json .solution)
   refCols/ref       reforge snapshot rows (data/reforge/*.json .snapshot, else data/seed/reforge-history.csv)
+  reachTop          per day, the file of highest reach once composition roots (Section.cs, Program.cs) are dropped
+  topFiles          that file per section on the latest day that has top_files
   top               largest classes, most complex methods and riskiest classes of the latest reforge day that has them
   modules           per-day module sizes, test LOC, edges and a dependency summary
   git               per-day lane/routine/model counts (data/git/*.json)
@@ -112,6 +114,25 @@ if edged:
         agg[e['from']]['uses'] += 1; agg[e['from']]['callsOut'] += e.get('count', 0)
         agg[e['to']]['usedBy'] += 1; agg[e['to']]['callsIn'] += e.get('count', 0)
     sem = {'date': edged['date'], 'edges': len(sem_edges), 'sections': [{'section': k, **v} for k, v in sorted(agg.items())]}
+# --- reach without composition roots: a section's Section.cs (and the Shell's Program.cs) names every type it
+#     registers, so its reach is the whole section and says nothing about coupling; drop them, keep the rest.
+#     A file naming a single other file only repeats that file's reach (Users' AddHumansIdentity shim calls Section.cs).
+def wiring(f): return os.path.basename(f['file']) in ('Section.cs', 'Program.cs') or f['fanOut'] <= 1
+def real_tops(d):
+    out = {}
+    for sec, fs in (d.get('top_files') or {}).items():
+        if sec == '(solution)': continue
+        f = next((f for f in fs if not wiring(f)), None)
+        if f: out[sec] = f
+    return out
+reach_top, top_files = [], None
+for d in reforge_days:
+    rt = real_tops(d)
+    if not rt: continue
+    sec, f = max(rt.items(), key=lambda kv: (kv[1]['reach'], kv[1]['fanOut']))
+    reach_top.append([d['date'], f['reach'], f['file'], f['fanOut']])
+    top_files = {'date': d['date'], 'version': d.get('top_files_version'),
+                 'sections': sorted(({'section': k, **v} for k, v in rt.items()), key=lambda x: (-x['reach'], -x['fanOut']))}
 topd = next((d for d in reversed(reforge_days) if d.get('top')), None)
 if topd: top = {'date': topd['date'], 'version': topd.get('structure_version'), **topd['top']}
 
@@ -120,7 +141,7 @@ files = [{k: j[k] for k in ('date', 'count', 'bytes', 'categories')}
          for j in (json.load(open(p)) for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'runtime', 'files', '*.json'))))]
 
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
-     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'semDeps': sem, 'top': top, 'files': files,
+     'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'semDeps': sem, 'top': top, 'files': files, 'reachTop': reach_top, 'topFiles': top_files,
      'generated': days[-1]['date']}
 def dump(v, ind=''):
     # Diff-friendly JSON: a container stays on one line when short, else one child per line, so a new day is a new line.

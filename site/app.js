@@ -1,5 +1,5 @@
 // Each dataset is docs/data/<key>.json, written by site/build.py.
-const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "semDeps", "top", "files", "generated"];
+const KEYS = ["statsCols", "stats", "refCols", "ref", "modules", "git", "prs", "actions", "secDays", "statsSeconds", "secFailed", "semDeps", "top", "files", "reachTop", "topFiles", "generated"];
 const D = Object.fromEntries(await Promise.all(KEYS.map(async k => [k, await (await fetch(`data/${k}.json`, {cache: 'no-cache'})).json()])));
 const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const SPLIT = '2026-08-08';
@@ -102,6 +102,8 @@ function render(){
   const TR=tl(R,'commit_date'), RR=TR.row();
   const one=(key,label,yfmt,extraKey,slot=2,log=false)=>line('r-'+key, TR.L, [{label, data:TR.level(x=>x[key]), extra:extraKey? RR.map(x=>x? String(x[extraKey]).replace(/^src\/(Sections\/)?/,'') : '') : null, slot}], {yfmt, log});
   one('avg_reach','Avg reach'); one('p95_reach','p95 reach'); one('max_reach','Max reach',null,'max_reach_file',2,true);
+  const TT=tl((D.reachTop||[]).map(([date,reach,file])=>({date,reach,file})));
+  line('r-reach_real', TT.L, [{label:'Max reach, wiring left out', data:TT.level(x=>x.reach), extra:TT.row().map(x=>x? x.file.replace(/^src\/(Sections\/)?/,'') : ''), slot:2}], {});
   one('core_size_pct','Core size',pct); one('cycle_count','Cycles'); one('avg_fanout','Avg fan-out'); one('max_fanout','Max fan-out',null,'max_fanout_file');
   one('avg_cyclomatic','Avg cyclomatic'); one('p95_cyclomatic','p95 cyclomatic'); one('max_cyclomatic','Max cyclomatic',null,'max_cyclomatic_method');
   one('avg_class_loc','Avg class LOC',null,null,2,true); one('p95_class_loc','p95 class LOC',null,null,2,true); one('max_class_loc','Max class LOC',null,'max_class_loc_name',2,true);
@@ -235,6 +237,9 @@ function renderFocus(){
   const rules=!lastR? [] : Object.keys({...baseR.byRule,...lastR.byRule}).map(k=>({k, now:lastR.byRule[k]||0, d:(lastR.byRule[k]||0)-(baseR.byRule[k]||0)})).filter(r=>r.d).sort((a,b)=>Math.abs(b.d)-Math.abs(a.d)).slice(0,10);
   if(lastR) document.getElementById('fo-rules-why').textContent=`Change in points per surface-score rule between ${baseR.date} and ${lastR.date}, largest moves first.`;
   tbl('fo-rules', ['Rule','Points','30d','Change'], rules.map(r=>[td(ruleName(r.k)), td(fmt(r.now)), cell(r.d), cell(r.now-r.d? Math.round(1000*r.d/(r.now-r.d))/10 : null, true, '%')]));
+  const F=D.topFiles;
+  if(F){ document.getElementById('fo-reach-why').textContent=`Each section's file of highest reach on ${F.date}, its Section.cs left out. Reach is the files it depends on, directly or through others; fan-out the files it names directly.`;
+    tbl('fo-reach', ['File','Section','Reach','Fan-out'], F.sections.slice(0,10).map(f=>[td(f.file.split('/').pop()), td(f.section), td(f.reach), td(f.fanOut)])); }
   const T=D.top; if(!T) return;
   document.getElementById('fo-methods-why').textContent=`Cyclomatic complexity on ${T.date}, the most complex method of each class, migrations left out.`;
   tbl('fo-methods', ['Method','Section','Cyclomatic'], T.methods.map(m=>[td(m.name), td(m.section), td(m.cyclomatic)]));

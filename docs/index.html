@@ -37,6 +37,7 @@
     <div class="panel"><h3>Sections growing in score</h3><p class="why">Largest 30-day rise in total reforge score. Lines, methods and coverage are 30-day changes: they show whether the rise is new code or more pieces.</p><div class="tbl" id="fo-up"></div></div>
     <div class="panel"><h3>Sections shrinking in score</h3><p class="why">Largest 30-day fall. This is where cleanup landed.</p><div class="tbl" id="fo-down"></div></div>
     <div class="panel"><h3>Ten most complex methods</h3><p class="why" id="fo-methods-why">Cyclomatic complexity, the most complex method of each class, migrations left out.</p><div class="tbl" id="fo-methods"></div></div>
+    <div class="panel"><h3>Most entangled file per section</h3><p class="why" id="fo-reach-why">Each section's file of highest reach, its Section.cs left out.</p><div class="tbl" id="fo-reach"></div></div>
     <div class="panel"><h3>Ten largest classes</h3><p class="why">Lines per class with its method count and reforge health risk (0 to 100), migrations left out.</p><div class="tbl" id="fo-classes"></div></div>
     <div class="panel"><h3>Ten riskiest classes</h3><p class="why">Reforge health score: size, complexity, coupling and cohesion together. Higher is a riskier refactor target.</p><div class="tbl" id="fo-risk"></div></div>
     <div class="panel"><h3>Rules that moved the score</h3><p class="why" id="fo-rules-why">30-day change in points per surface-score rule, largest moves first.</p><div class="tbl" id="fo-rules"></div></div>
@@ -76,7 +77,8 @@
   <div class="grid">
     <div class="panel"><h3>Average reach</h3><p class="why">Mean files reachable from a file.</p><div class="ph"><canvas id="r-avg_reach"></canvas></div></div>
     <div class="panel"><h3>p95 reach</h3><p class="why">The tail that matters for a refactor.</p><div class="ph"><canvas id="r-p95_reach"></canvas></div></div>
-    <div class="panel"><h3>Max reach</h3><p class="why">The single most coupled file. Hover for its path.</p><div class="ph"><canvas id="r-max_reach"></canvas></div></div>
+    <div class="panel"><h3>Max reach</h3><p class="why">The file with the most dependencies, direct or indirect. Lately always a section's Section.cs, which wires the section up. Hover for its path.</p><div class="ph"><canvas id="r-max_reach"></canvas></div></div>
+    <div class="panel"><h3>Max reach, wiring left out</h3><p class="why">The same, with each section's Section.cs and the Shell's Program.cs dropped (they name every type they register, so their reach is the whole section), and files that only forward to one other file. Hover for the file.</p><div class="ph"><canvas id="r-reach_real"></canvas></div></div>
     <div class="panel"><h3>Core size (share of files)</h3><p class="why">Collapsed from 19% to 0.3% as the layered app became sections.</p><div class="ph"><canvas id="r-core_size_pct"></canvas></div></div>
     <div class="panel"><h3>Dependency cycles</h3><p class="why">Cycle count across the solution.</p><div class="ph"><canvas id="r-cycle_count"></canvas></div></div>
     <div class="panel"><h3>Average fan-out</h3><p class="why">Mean outgoing dependencies per file.</p><div class="ph"><canvas id="r-avg_fanout"></canvas></div></div>
