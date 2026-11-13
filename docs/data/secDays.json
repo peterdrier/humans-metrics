@@ -9,7 +9,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 6, "snapshot": 15, "surface": 11, "total": 37, "top_files": 0},
+    "seconds": {"build": 6, "snapshot": 15, "surface": 11, "total": 37, "top_files": 9},
     "total": 2217,
     "edges": 6,
     "byRule": {
@@ -191,7 +191,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 19, "surface": 19, "total": 56, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 19, "surface": 19, "total": 56, "top_files": 14},
     "total": 4928,
     "edges": 6,
     "byRule": {
@@ -377,7 +377,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 59, "snapshot": 24, "surface": 21, "total": 113, "top_files": 0},
+    "seconds": {"build": 59, "snapshot": 24, "surface": 21, "total": 113, "top_files": 15},
     "total": 5389,
     "edges": 6,
     "byRule": {
@@ -564,7 +564,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 5, "snapshot": 21, "surface": 20, "total": 53, "top_files": 0},
+    "seconds": {"build": 5, "snapshot": 21, "surface": 20, "total": 53, "top_files": 16},
     "total": 5892,
     "edges": 6,
     "byRule": {
@@ -752,7 +752,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 5, "snapshot": 21, "surface": 20, "total": 54, "top_files": 0},
+    "seconds": {"build": 5, "snapshot": 21, "surface": 20, "total": 54, "top_files": 18},
     "total": 6291,
     "edges": 6,
     "byRule": {
@@ -940,7 +940,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 5, "snapshot": 22, "surface": 20, "total": 55, "top_files": 0},
+    "seconds": {"build": 5, "snapshot": 22, "surface": 20, "total": 55, "top_files": 18},
     "total": 6647,
     "edges": 6,
     "byRule": {
@@ -1128,7 +1128,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 9, "snapshot": 22, "surface": 20, "total": 60, "top_files": 0},
+    "seconds": {"build": 9, "snapshot": 22, "surface": 20, "total": 60, "top_files": 18},
     "total": 7384,
     "edges": 6,
     "byRule": {
@@ -1316,7 +1316,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 6, "snapshot": 25, "surface": 21, "total": 60, "top_files": 0},
+    "seconds": {"build": 6, "snapshot": 25, "surface": 21, "total": 60, "top_files": 18},
     "total": 6969,
     "edges": 6,
     "byRule": {
@@ -1500,7 +1500,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 23, "snapshot": 20, "surface": 20, "total": 63, "top_files": 0},
+    "seconds": {"build": 23, "snapshot": 20, "surface": 20, "total": 63, "top_files": 18},
     "total": 7096,
     "edges": 6,
     "byRule": {
@@ -1684,7 +1684,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 18, "snapshot": 24, "surface": 22, "total": 73, "top_files": 0},
+    "seconds": {"build": 18, "snapshot": 24, "surface": 22, "total": 73, "top_files": 17},
     "total": 7098,
     "edges": 6,
     "byRule": {
@@ -1868,7 +1868,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 26, "surface": 26, "total": 70, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 26, "surface": 26, "total": 70, "top_files": 18},
     "total": 7620,
     "edges": 6,
     "byRule": {
@@ -2053,7 +2053,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 13, "snapshot": 27, "surface": 26, "total": 79, "top_files": 0},
+    "seconds": {"build": 13, "snapshot": 27, "surface": 26, "total": 79, "top_files": 18},
     "total": 7589,
     "edges": 6,
     "byRule": {
@@ -2238,7 +2238,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 68, "snapshot": 29, "surface": 27, "total": 137, "top_files": 0},
+    "seconds": {"build": 68, "snapshot": 29, "surface": 27, "total": 137, "top_files": 18},
     "total": 7743,
     "edges": 6,
     "byRule": {
@@ -2423,7 +2423,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 7, "snapshot": 25, "surface": 26, "total": 68, "top_files": 0},
+    "seconds": {"build": 7, "snapshot": 25, "surface": 26, "total": 68, "top_files": 21},
     "total": 8835,
     "edges": 6,
     "byRule": {
@@ -2608,7 +2608,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 7, "snapshot": 27, "surface": 26, "total": 70, "top_files": 0},
+    "seconds": {"build": 7, "snapshot": 27, "surface": 26, "total": 70, "top_files": 21},
     "total": 9019,
     "edges": 6,
     "byRule": {
@@ -2793,7 +2793,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 7, "snapshot": 27, "surface": 25, "total": 69, "top_files": 0},
+    "seconds": {"build": 7, "snapshot": 27, "surface": 25, "total": 69, "top_files": 21},
     "total": 9057,
     "edges": 6,
     "byRule": {
@@ -2978,7 +2978,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 10, "snapshot": 28, "surface": 26, "total": 75, "top_files": 0},
+    "seconds": {"build": 10, "snapshot": 28, "surface": 26, "total": 75, "top_files": 22},
     "total": 9240,
     "edges": 6,
     "byRule": {
@@ -3163,7 +3163,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 13, "snapshot": 26, "surface": 26, "total": 78, "top_files": 0},
+    "seconds": {"build": 13, "snapshot": 26, "surface": 26, "total": 78, "top_files": 21},
     "total": 9409,
     "edges": 6,
     "byRule": {
@@ -3349,7 +3349,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 66, "snapshot": 30, "surface": 26, "total": 135, "top_files": 0},
+    "seconds": {"build": 66, "snapshot": 30, "surface": 26, "total": 135, "top_files": 22},
     "total": 9402,
     "edges": 6,
     "byRule": {
@@ -3535,7 +3535,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 16, "snapshot": 26, "surface": 25, "total": 79, "top_files": 0},
+    "seconds": {"build": 16, "snapshot": 26, "surface": 25, "total": 79, "top_files": 22},
     "total": 9414,
     "edges": 6,
     "byRule": {
@@ -3721,7 +3721,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 11, "snapshot": 26, "surface": 27, "total": 75, "top_files": 0},
+    "seconds": {"build": 11, "snapshot": 26, "surface": 27, "total": 75, "top_files": 22},
     "total": 9556,
     "edges": 6,
     "byRule": {
@@ -3906,7 +3906,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 64, "snapshot": 32, "surface": 26, "total": 136, "top_files": 0},
+    "seconds": {"build": 64, "snapshot": 32, "surface": 26, "total": 136, "top_files": 21},
     "total": 9562,
     "edges": 6,
     "byRule": {
@@ -4091,7 +4091,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 24, "surface": 25, "total": 65, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 24, "surface": 25, "total": 65, "top_files": 22},
     "total": 10177,
     "edges": 6,
     "byRule": {
@@ -4277,7 +4277,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 6, "snapshot": 24, "surface": 24, "total": 62, "top_files": 0},
+    "seconds": {"build": 6, "snapshot": 24, "surface": 24, "total": 62, "top_files": 21},
     "total": 10177,
     "edges": 6,
     "byRule": {
@@ -4463,7 +4463,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 24, "surface": 24, "total": 64, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 24, "surface": 24, "total": 64, "top_files": 21},
     "total": 10177,
     "edges": 6,
     "byRule": {
@@ -4649,7 +4649,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 25, "surface": 25, "total": 68, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 25, "surface": 25, "total": 68, "top_files": 21},
     "total": 10246,
     "edges": 6,
     "byRule": {
@@ -4835,7 +4835,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 13, "snapshot": 26, "surface": 25, "total": 76, "top_files": 0},
+    "seconds": {"build": 13, "snapshot": 26, "surface": 25, "total": 76, "top_files": 23},
     "total": 11007,
     "edges": 6,
     "byRule": {
@@ -5022,7 +5022,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 59, "snapshot": 30, "surface": 25, "total": 127, "top_files": 0},
+    "seconds": {"build": 59, "snapshot": 30, "surface": 25, "total": 127, "top_files": 23},
     "total": 11189,
     "edges": 6,
     "byRule": {
@@ -5209,7 +5209,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 32, "surface": 31, "total": 83, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 32, "surface": 31, "total": 83, "top_files": 24},
     "total": 11792,
     "edges": 6,
     "byRule": {
@@ -5396,7 +5396,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 32, "surface": 33, "total": 85, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 32, "surface": 33, "total": 85, "top_files": 24},
     "total": 12207,
     "edges": 6,
     "byRule": {
@@ -5583,7 +5583,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 8, "snapshot": 31, "surface": 31, "total": 81, "top_files": 0},
+    "seconds": {"build": 8, "snapshot": 31, "surface": 31, "total": 81, "top_files": 24},
     "total": 12204,
     "edges": 6,
     "byRule": {
@@ -5770,7 +5770,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 9, "snapshot": 36, "surface": 34, "total": 92, "top_files": 0},
+    "seconds": {"build": 9, "snapshot": 36, "surface": 34, "total": 92, "top_files": 25},
     "total": 15070,
     "edges": 6,
     "byRule": {
@@ -5957,7 +5957,7 @@
     "config": "abba4685",
     "build": "ok",
     "tests": 0,
-    "seconds": {"build": 12, "snapshot": 40, "surface": 38, "total": 116, "top_files": 0},
+    "seconds": {"build": 12, "snapshot": 40, "surface": 38, "total": 116, "top_files": 24},
     "total": 16217,
     "edges": 6,
     "byRule": {

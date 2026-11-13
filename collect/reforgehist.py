@@ -92,6 +92,8 @@ def fill_top_files(repo, rec, reforge):
     try:
         sln = solution_in(tree)
         if not sln: return
+        gj = os.path.join(tree, 'global.json')
+        if os.path.exists(gj): os.remove(gj)   # as in collect_day: early trees pin an SDK patch the container lacks
         env = {**os.environ, 'DOTNET_CLI_TELEMETRY_OPTOUT': '1', 'DOTNET_NOLOGO': '1'}
         p, s = run([reforge, 'snapshot', '--solution', sln, '--by-assembly', '--no-score', '--format', 'json'], tree, env)
         rec['seconds']['top_files'] = s
