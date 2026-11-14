@@ -15,19 +15,22 @@ pass from a cancelled or skipped run.
 import argparse, collections, datetime as dt, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from prstats import paged, iso
+import target as tgt
 
 VERSION = 1
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--out', required=True); ap.add_argument('--gh', default='peterdrier/Humans')
+    ap.add_argument('--out', required=True); ap.add_argument('--gh', help="owner/repo (default: the target's gh)")
     ap.add_argument('--from', dest='d_from'); ap.add_argument('--to', dest='d_to')
+    tgt.add_arg(ap)
     a = ap.parse_args()
+    t = tgt.load(a.target); a.gh = a.gh or t['gh']
     outdir = os.path.join(a.out, 'actions'); os.makedirs(outdir, exist_ok=True)
     d_to = dt.date.fromisoformat(a.d_to) if a.d_to else dt.date.today() - dt.timedelta(days=1)
     if not a.d_from:
         have = sorted(f[:-5] for f in os.listdir(outdir) if f.endswith('.json'))
-        a.d_from = (dt.date.fromisoformat(have[-1]) + dt.timedelta(days=1)).isoformat() if have else '2026-02-04'
+        a.d_from = (dt.date.fromisoformat(have[-1]) + dt.timedelta(days=1)).isoformat() if have else t['start']
     start = dt.date.fromisoformat(a.d_from)
     days = collections.defaultdict(lambda: dict(runs=0, conclusions=collections.Counter(), reruns=0, events=collections.Counter(),
                                                 workflows=collections.defaultdict(lambda: collections.Counter())))

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Render the site into docs/: copy site/{index.html,style.css,app.js} and write one docs/data/<key>.json per dataset.
 
+Usage: build.py [--target targets/humans.yml] [--data data] [--docs docs]. A private target passes its own data and docs dirs.
+The page fetches its data, so open it over HTTP (python3 -m http.server -d docs), not file://.
+
 The data contract (what app.js reads into `D`; its KEYS list must match):
   statsCols/stats   solution-wide daily rows (data/stats/*.json .solution)
   refCols/ref       reforge snapshot rows (data/reforge/*.json .snapshot, else data/seed/reforge-history.csv)
@@ -12,12 +15,18 @@ The data contract (what app.js reads into `D`; its KEYS list must match):
   prs, actions      per-day PR flow / gate series, and workflow runs
   semDeps           service-interface edges of the latest reforge day, per section: sections and call sites in each direction
   files             runtime: stored uploads per day, total and by category (data/runtime/files/*.json)
+  meta              the target's timeline marks (split date, events, series start dates)
 """
-import csv, glob, json, os, re, shutil, collections
+import argparse, csv, glob, json, os, re, shutil, sys, collections
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-days = [json.load(open(p)) for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'stats', '*.json')))]
+sys.path.insert(0, os.path.join(ROOT, 'collect'))
+import target as tgt
+ap = argparse.ArgumentParser(); tgt.add_arg(ap)
+ap.add_argument('--data', default=os.path.join(ROOT, 'data')); ap.add_argument('--docs', default=os.path.join(ROOT, 'docs'))
+A = ap.parse_args(); T = tgt.load(A.target); DATA = A.data
+days = [json.load(open(p)) for p in sorted(glob.glob(os.path.join(DATA, 'stats', '*.json')))]
 if not days: raise SystemExit('no data/stats/*.json')
-reforge_days = [json.load(open(p)) for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'reforge', '*.json')))]
+reforge_days = [json.load(open(p)) for p in sorted(glob.glob(os.path.join(DATA, 'reforge', '*.json')))]
 
 # --- solution-wide stats, in the column names the page expects
 stats_cols = ['Date','App Lines','Test Lines','CS Lines','CS Code','CS Comment','CSHTML Lines','RESX Lines','JS Lines','MD Lines','Migration Lines','Files','Classes','Interfaces','Controllers','Views','Resx Keys','Day +Lines','Day -Lines']
@@ -29,14 +38,14 @@ for d in days:
     delta = total - prev if prev is not None else 0
     prev = total
     stats.append([d['date'], s.get('app_lines',0), s.get('test_lines',0), s.get('app_cs_lines',0), s.get('app_cs_code',0), s.get('app_cs_comment',0),
-                  s.get('app_cshtml_lines',0), s.get('app_resx_lines',0), s.get('app_js_lines',0), s.get('md_lines',0), s.get('migration_lines',0),
+                  s.get('app_cshtml_lines',0) + s.get('app_razor_lines',0), s.get('app_resx_lines',0), s.get('app_js_lines',0), s.get('md_lines',0), s.get('migration_lines',0),
                   s.get('app_files',0)+s.get('test_files',0), s.get('app_classes',0), s.get('app_interfaces',0), s.get('app_controllers',0), s.get('app_views',0),
                   s.get('app_resx_keys',0), max(delta,0), max(-delta,0)])
 
 # --- reforge snapshot rows: per-day snapshot when collected, otherwise the seeded history CSV
 ref_cols = ['commit_date','loc_prod','loc_test','files_prod','classes','interfaces','avg_reach','p95_reach','max_reach','max_reach_file','core_size_pct','core_file_count','cycle_count','avg_fanout','max_fanout','max_fanout_file','avg_cyclomatic','p95_cyclomatic','max_cyclomatic','max_cyclomatic_method','avg_class_loc','p95_class_loc','max_class_loc','max_class_loc_name']
 ref_by_date = {}
-seed = os.path.join(ROOT, 'data', 'seed', 'reforge-history.csv')
+seed = os.path.join(DATA, 'seed', 'reforge-history.csv')
 if os.path.exists(seed):
     for r in csv.DictReader(open(seed)):
         ref_by_date[r['commit_date'][:10]] = r
@@ -50,8 +59,8 @@ def val(v):
     v = str(v); return float(v) if num.match(v) else v
 ref = [[val(r.get(c, '')) if c != 'commit_date' else r['commit_date'][:10] for c in ref_cols] for _, r in sorted(ref_by_date.items())]
 
-# --- modules: fold .Contracts into its section, strip the Humans./Profiles. prefix; biweekly plus the last day keeps the page light
-def short(n): return re.sub(r'^(Humans|Profiles)\.', '', n)
+# --- modules: fold .Contracts into its section, strip the target's name prefix (Humans./Profiles.); biweekly plus the last day keeps the page light
+def short(n): return re.sub(T['short_re'], '', n)
 modules = []
 pick = days[::7] + ([days[-1]] if days[-1] not in days[::7] else [])
 for d in pick:
@@ -73,13 +82,13 @@ for d in pick:
 
 # --- git producer (data/git/*.json): lanes per day
 gitd = []
-for p_ in sorted(glob.glob(os.path.join(ROOT, 'data', 'git', '*.json'))):
+for p_ in sorted(glob.glob(os.path.join(DATA, 'git', '*.json'))):
     j = json.load(open(p_))
     gitd.append({k: j[k] for k in ('date', 'lanes', 'routines', 'models', 'authors', 'all_commits')})
 
 # --- PR producer (data/prs/<date>.json) and Actions producer (data/actions/<date>.json)
-prs = [json.load(open(p_)) for p_ in sorted(glob.glob(os.path.join(ROOT, 'data', 'prs', '20*.json')))]
-acts = [json.load(open(p_)) for p_ in sorted(glob.glob(os.path.join(ROOT, 'data', 'actions', '*.json')))]
+prs = [json.load(open(p_)) for p_ in sorted(glob.glob(os.path.join(DATA, 'prs', '20*.json')))]
+acts = [json.load(open(p_)) for p_ in sorted(glob.glob(os.path.join(DATA, 'actions', '*.json')))]
 
 # --- reforge 0.31 day records (collect/reforgehist.py): per-section rows, totals, edges
 SEC_KEYS = {'loc': 'locProd', 'files': 'files', 'classes': 'classes', 'ifaces': 'interfaces', 'methods': 'methods',
@@ -138,11 +147,13 @@ if topd: top = {'date': topd['date'], 'version': topd.get('structure_version'), 
 
 # --- runtime: stored files (app data, not code), its own series
 files = [{k: j[k] for k in ('date', 'count', 'bytes', 'categories')}
-         for j in (json.load(open(p)) for p in sorted(glob.glob(os.path.join(ROOT, 'data', 'runtime', 'files', '*.json'))))]
+         for j in (json.load(open(p)) for p in sorted(glob.glob(os.path.join(DATA, 'runtime', 'files', '*.json'))))]
 
 D = {'statsCols': stats_cols, 'stats': stats, 'refCols': ref_cols, 'ref': ref, 'modules': modules,
      'git': gitd, 'prs': prs, 'actions': acts, 'secDays': sec_days, 'statsSeconds': [[x['date'], x.get('seconds')] for x in days], 'secFailed': sec_failed, 'semDeps': sem, 'top': top, 'files': files, 'reachTop': reach_top, 'topFiles': top_files,
-     'generated': days[-1]['date']}
+     'generated': days[-1]['date'],
+     'meta': {'split': T['page'].get('split'), 'splitLabel': T['page'].get('split_label'), 'events': T['page'].get('events', []),
+              'gitFrom': T['page'].get('git_from'), 'prsFrom': T['page'].get('prs_from')}}
 def dump(v, ind=''):
     # Diff-friendly JSON: a container stays on one line when short, else one child per line, so a new day is a new line.
     flat = json.dumps(v, separators=(', ', ': '))
@@ -151,13 +162,15 @@ def dump(v, ind=''):
     if isinstance(v, list): items = [dump(x, sub) for x in v]
     else: items = [json.dumps(k) + ': ' + dump(x, sub) for k, x in v.items()]
     return ('[' if isinstance(v, list) else '{') + '\n' + ',\n'.join(sub + i for i in items) + '\n' + ind + (']' if isinstance(v, list) else '}')
-DOCS = os.path.join(ROOT, 'docs')
+DOCS = A.docs
 os.makedirs(os.path.join(DOCS, 'data'), exist_ok=True)
 for f in ('style.css', 'app.js'):
     shutil.copyfile(os.path.join(ROOT, 'site', f), os.path.join(DOCS, f))
-import re
 html = open(os.path.join(ROOT, 'site', 'index.html')).read()
-html = re.sub(r'(<div class="eyebrow">Nobodies Humans · )[\d-]+ to [\d-]+', lambda m: m.group(1) + days[0]['date'] + ' to ' + max(D['generated'], reforge_days[-1]['date']), html)
+last = max(D['generated'], reforge_days[-1]['date']) if reforge_days else D['generated']
+html = re.sub(r'<div class="eyebrow">[^<]* · [\d-]+ to [\d-]+', lambda m: f'<div class="eyebrow">{T["eyebrow"]} · {days[0]["date"]} to {last}', html)
+html = re.sub(r'<title>[^<]*</title>', f'<title>{T["title"]}</title>', html, count=1)
+html = re.sub(r'<h1>[^<]*</h1>', f'<h1>{T["title"]}</h1>', html, count=1)
 open(os.path.join(DOCS, 'index.html'), 'w').write(html)
 for stale in set(os.path.splitext(f)[0] for f in os.listdir(os.path.join(DOCS, 'data'))) - set(D):
     os.remove(os.path.join(DOCS, 'data', stale + '.json'))   # a dataset the page no longer reads

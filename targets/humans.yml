@@ -1,0 +1,28 @@
+# What a run measures and how the target's paths map to assemblies and sections.
+# Every script takes --target (default: this file). A private target keeps its
+# file, its lanes file and its data in its own private repo.
+name: Humans
+title: Humans Codebase Timeline
+eyebrow: Nobodies Humans
+gh: peterdrier/Humans
+start: '2026-02-04'
+code_ext: [.cs, .cshtml, .resx, .js]
+section_re: 'src/(?:Sections/)?(?:Humans|Profiles)\.([^/]+)/'   # file path -> section, for the top lists
+short_re: '^(Humans|Profiles)\.'                                 # stripped from assembly names on the page
+coverage_prefixes: [Humans, Profiles]                            # assemblies kept from the coverage report (tests dropped)
+test_filter: 'FullyQualifiedName!~Humans.Integration.Tests'      # dotnet test --filter; empty runs every test
+surface_args: []                                                 # extra reforge surface-score flags, e.g. [--allow-degraded]
+lanes: ../collect/lanes.yml                                      # relative to this file
+page:   # timeline marks on the page
+  split: '2026-08-08'
+  split_label: Since section split (Aug 8)
+  git_from: '2026-03-03'
+  prs_from: '2026-02-18'
+  events:
+    - ['2026-02-04', 'First commit']
+    - ['2026-03-08', 'First real test project']
+    - ['2026-05-16', 'Biggest day, +40.7k']
+    - ['2026-05-20', 'Docs prune begins']
+    - ['2026-08-08', 'Section split (G5)']
+    - ['2026-08-16', 'Surface-score baseline']
+    - ['2026-08-17', 'Section doctor starts']

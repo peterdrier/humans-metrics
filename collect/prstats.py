@@ -2,7 +2,7 @@
 """PR producer: GitHub REST facts per PR, cached in data/prs/raw.jsonl, then one
 data/prs/<date>.json per day keyed by the day the PR merged (or closed).
 
-Credit goes to the author (lane from collect/lanes.yml, by branch name,
+Credit goes to the author (lane from the target's lanes file, by branch name,
 author and the squash commit's trailers). Peter's reviews, approvals, review
 comments and merges on PRs he did not author are the separate "gate" series.
 
@@ -18,6 +18,7 @@ review_comments, merges}, bots: {login: comments}}
 import argparse, collections, datetime as dt, json, os, re, subprocess, sys, time, urllib.request, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from gitstats import classify, load_rules, git
+import target as tgt
 
 VERSION = 1
 API = 'https://api.github.com'
@@ -56,16 +57,18 @@ def iso(s): return dt.datetime.fromisoformat(s.replace('Z', '+00:00')) if s else
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--repo', required=True, help='local Humans clone (trailers, numstat)')
-    ap.add_argument('--out', required=True); ap.add_argument('--gh', default='peterdrier/Humans')
+    ap.add_argument('--out', required=True); ap.add_argument('--gh', help="owner/repo (default: the target's gh)")
+    tgt.add_arg(ap)
     ap.add_argument('--full', action='store_true', help='ignore the cache cursor')
     a = ap.parse_args()
+    t = tgt.load(a.target); a.gh = a.gh or t['gh']
     outdir = os.path.join(a.out, 'prs'); os.makedirs(outdir, exist_ok=True)
     rawp = os.path.join(outdir, 'raw.jsonl'); curp = os.path.join(outdir, 'cursor.json')
     raw = {}
     if os.path.exists(rawp):
         for line in open(rawp): r = json.loads(line); raw[r['number']] = r
     cur = json.load(open(curp)) if os.path.exists(curp) and not a.full else {}
-    rules = load_rules(); peter = rules['peter']
+    rules = load_rules(t['lanes']); peter = rules['peter']
     pr_updated, c_since = cur.get('pr_updated'), cur.get('comments')
 
     # --- PRs updated since cursor

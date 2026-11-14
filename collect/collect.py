@@ -15,7 +15,9 @@ nothing else, so a series can be redone a week at a time (say, with a newer refo
 Every file names the commit and tool version it was measured with. File-based metrics (lines, files, edges,
 resx keys, cloc comment split) need no build; only the reforge producer does.
 """
-import argparse, csv, datetime as dt, json, os, re, shutil, subprocess, sys, tempfile, time, collections
+import argparse, csv, datetime as dt, glob, json, os, re, shutil, subprocess, sys, tempfile, time, collections
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import target as tgt
 
 COLLECTOR_VERSION = 1
 
@@ -56,20 +58,27 @@ def line_counts(repo, items):
         res[path] = (body.count(b'\n'), body)
     return res
 
-def assembly_of(path):
-    parts = path.split('/')
-    if parts[0] == 'src':
-        name = parts[2] if len(parts) > 2 and parts[1] == 'Sections' else parts[1]
-    elif parts[0] == 'tests':
-        name = parts[1]
-    else:
-        return None
-    if '.' not in name: return None
-    return name
+def project_dirs(files):
+    """Each .csproj's directory is an assembly, named by that directory; deepest first so nested projects win."""
+    return sorted({os.path.dirname(p) for p, _, _ in files if p.endswith('.csproj')}, key=len, reverse=True)
 
-def collect_day(repo, commit, cloc):
+def assembly_of(path, dirs):
+    d = next((d for d in dirs if path.startswith(d + '/')), None)
+    if d: name = os.path.basename(d)
+    else:   # a folder without its own .csproj under src/ or tests/ (shared source linked into others) still counts
+        parts = path.split('/')
+        if parts[0] == 'src': name = parts[2] if len(parts) > 2 and parts[1] == 'Sections' else parts[1]
+        elif parts[0] == 'tests': name = parts[1]
+        else: return None
+    return name if '.' in name else None
+
+def is_test(path, name):
+    return path.startswith('tests/') or name.endswith('.Tests')
+
+def collect_day(repo, commit, cloc, code_ext=CODE_EXT):
     files = tree(repo, commit)
-    code = [(p, b) for p, b, _ in files if p.endswith(CODE_EXT) and (p.startswith('src/') or p.startswith('tests/'))]
+    dirs = project_dirs(files)
+    code = [(p, b) for p, b, _ in files if p.endswith(tuple(code_ext)) and assembly_of(p, dirs)]
     md = [(p, b) for p, b, _ in files if p.endswith('.md') and not p.startswith(('node_modules/', 'bin/', 'obj/'))]
     counts = line_counts(repo, code + md)
     A = collections.defaultdict(lambda: collections.Counter())
@@ -77,13 +86,12 @@ def collect_day(repo, commit, cloc):
     csproj = [(p, b) for p, b, _ in files if p.endswith('.csproj')]
     for p, _ in code:
         n, body = counts[p]
-        asm = assembly_of(p)
-        if not asm: continue
-        is_test = p.startswith('tests/')
+        asm = assembly_of(p, dirs)
+        test = is_test(p, asm)
         is_mig = '/Migrations/' in p
         ext = p.rsplit('.', 1)[1]
         a = A[asm]
-        a['is_test'] = int(is_test)
+        a['is_test'] = int(test)
         if is_mig:
             a['migration_lines'] += n; sol['migration_lines'] += n; continue
         a['files'] += 1
@@ -96,7 +104,7 @@ def collect_day(repo, commit, cloc):
             if p.endswith('Controller.cs'): a['controllers'] += 1
             if '/Entities/' in p: a['entities'] += 1
             a['dbsets'] += text.count('DbSet<')
-        if ext == 'cshtml': a['views'] += 1
+        if ext in ('cshtml', 'razor'): a['views'] += 1
         if ext == 'resx' and not NEUTRAL_RESX.search(p):
             a['resx_keys'] += body.count(b'<data ')
     for p, _ in md:
@@ -104,14 +112,14 @@ def collect_day(repo, commit, cloc):
     # project reference edges
     edges = []
     cs = line_counts(repo, csproj)
-    name_of = {p: assembly_of(p) for p, _ in csproj}
+    name_of = {p: assembly_of(p, dirs) for p, _ in csproj}
     for p, _ in csproj:
         src = name_of[p]
         if not src: continue
         for ref in re.findall(r'<ProjectReference\s+Include="([^"]+)"', cs[p][1].decode('utf8', 'replace')):
             tgt = os.path.basename(ref.replace('\\', '/')).removesuffix('.csproj')
             edges.append((src, tgt))
-        A[src]['is_test'] = int(p.startswith('tests/'))
+        A[src]['is_test'] = int(is_test(p, src))
     fan_out = collections.Counter(s for s, t in edges if not t.endswith(('.Base', '.Analyzers')) and 'Humans.Base' != t and 'Analyzers' not in t)
     fan_in = collections.Counter(t for s, t in edges if 'Base' not in t and 'Analyzers' not in t)
     for asm in A:
@@ -123,7 +131,7 @@ def collect_day(repo, commit, cloc):
             try:
                 for asm in list(A):
                     if A[asm]['is_test']: continue
-                    d = os.path.join(wt, 'src', 'Sections', asm) if os.path.isdir(os.path.join(wt, 'src', 'Sections', asm)) else os.path.join(wt, 'src', asm)
+                    d = os.path.join(wt, next(x for x in dirs if os.path.basename(x) == asm))
                     if not os.path.isdir(d): continue
                     r = subprocess.run([cloc, '--json', '--quiet', '--include-ext=cs', '--exclude-dir=Migrations,bin,obj', d], capture_output=True, text=True)
                     try:
@@ -136,7 +144,8 @@ def collect_day(repo, commit, cloc):
     # solution totals
     for asm, a in A.items():
         pref = 'test_' if a['is_test'] else 'app_'
-        for k in ('lines', 'files', 'cs_lines', 'cshtml_lines', 'resx_lines', 'js_lines', 'classes', 'interfaces', 'controllers', 'views', 'entities', 'dbsets', 'resx_keys', 'cs_code', 'cs_comment'):
+        extra = [f'{e[1:]}_lines' for e in code_ext if e not in CODE_EXT]   # a target's own file types, e.g. .razor
+        for k in ('lines', 'files', 'cs_lines', 'cshtml_lines', 'resx_lines', 'js_lines', 'classes', 'interfaces', 'controllers', 'views', 'entities', 'dbsets', 'resx_keys', 'cs_code', 'cs_comment', *extra):
             sol[pref + k] += a.get(k, 0)
     sol['assemblies'] = sum(1 for a in A.values() if not a['is_test'])
     sol['test_projects'] = sum(1 for a in A.values() if a['is_test'])
@@ -151,7 +160,8 @@ def snapshot(repo, commit, solution):
         subprocess.run(['git', '-C', repo, 'worktree', 'add', '--detach', '-q', wt, commit], check=True, capture_output=True)
         try:
             out = os.path.join(wt, 'snap.csv')
-            r = subprocess.run(['reforge', 'snapshot', '--solution', os.path.join(wt, solution), '--append', out], cwd=wt, capture_output=True, text=True)
+            sln = os.path.join(wt, solution) if solution else next(iter(sorted(glob.glob(os.path.join(wt, '*.slnx'))) or sorted(glob.glob(os.path.join(wt, '*.sln')))), '')
+            r = subprocess.run(['reforge', 'snapshot', '--solution', sln, '--append', out], cwd=wt, capture_output=True, text=True)
             if r.returncode != 0 or not os.path.exists(out): return ver, None
             rows = list(csv.DictReader(open(out)))
             return ver, (rows[-1] if rows else None)
@@ -165,13 +175,15 @@ def write(path, rec):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--repo', required=True); ap.add_argument('--out', required=True)
-    ap.add_argument('--ref', default='origin/main'); ap.add_argument('--solution', default='Humans.slnx')
+    ap.add_argument('--ref', default='origin/main'); ap.add_argument('--solution', help='default: the .slnx/.sln at the repo root')
+    tgt.add_arg(ap)
     ap.add_argument('--from', dest='d_from'); ap.add_argument('--to', dest='d_to')
     ap.add_argument('--reforge', action='store_true', help='also run reforge snapshot (needs a building tree)')
     ap.add_argument('--no-cloc', action='store_true')
     ap.add_argument('--reforge-only', action='store_true', help='only the reforge producer (implies --reforge)')
     a = ap.parse_args()
     if a.reforge_only: a.reforge = True
+    t = tgt.load(a.target)
     stats_dir = os.path.join(a.out, 'stats'); os.makedirs(stats_dir, exist_ok=True)
     reforge_dir = os.path.join(a.out, 'reforge'); os.makedirs(reforge_dir, exist_ok=True)
     d_to = a.d_to or dt.date.today().isoformat()
@@ -179,7 +191,7 @@ def main():
     have = sorted(f[:-5] for f in os.listdir(probe) if f.endswith('.json'))
     if a.d_from: d_from = a.d_from
     elif have: d_from = (dt.date.fromisoformat(have[-1]) + dt.timedelta(days=1)).isoformat()
-    else: d_from = '2026-02-04'
+    else: d_from = t['start']
     if dt.date.fromisoformat(d_from) > dt.date.fromisoformat(d_to):
         print(f'nothing to do: last day {have[-1] if have else None}'); return
     cloc = None if a.no_cloc else shutil.which('cloc')
@@ -190,7 +202,7 @@ def main():
         note = ''
         if not a.reforge_only:
             t0 = time.time()
-            sol, A, E = collect_day(a.repo, sha, cloc)
+            sol, A, E = collect_day(a.repo, sha, cloc, t['code_ext'])
             rec = {'date': d, 'commit': sha[:9], 'collector_version': COLLECTOR_VERSION, 'seconds': round(time.time() - t0),
                    'solution': dict(sol), 'assemblies': {k: dict(v) for k, v in sorted(A.items())}, 'edges': sorted(E)}
             write(os.path.join(stats_dir, f'{d}.json'), rec)

@@ -19,6 +19,7 @@ Page: `docs/index.html`, with `style.css`, `app.js` and `data/*.json` beside it 
 | `data/surface/<date>-<sha>-reforge<ver>.json` | Three archived manual surface-score readings on older reforge versions. Kept as records; the page no longer draws them, since `data/reforge/` carries the same figures per day on one version. |
 | `data/runtime/files/<date>.json` | `collect/filestats.py`: runtime data, not code. Uploads on the production server per UTC day, total and by folder (count, bytes), from Humans' public `/api/stats/files?asOfDate=`. Asks only for missing days through yesterday; a day counts files present at its end by write time, so later deletions are missing. |
 | `data/seed/reforge-history.csv` | The daily `reforge snapshot` rows carried over from the Humans repo, used for days through 2026-10-29; later days carry their own `snapshot` in `data/reforge/`. No reforge version was recorded for the seed, and the installed reforge reproduces its 2026-10-29 row exactly. |
+| `targets/humans.yml` | What is measured: repo, paths, patterns, lanes file, timeline marks. See Other targets. |
 | `collect/collect.py` | The collector. File-based metrics need only git and cloc; `--reforge` adds the snapshot and needs a building tree. |
 | `site/{index.html,style.css,app.js}` + `site/build.py` | The page source, and the builder that copies it to `docs/` and writes `docs/data/<key>.json`. |
 | `.github/workflows/weekly.yml` | Monday job: collect missing days, rebuild, commit, deploy. |
@@ -45,6 +46,24 @@ python3 site/build.py
 
 Day boundaries use the author date of the last commit on `origin/main` that day. `cloc` gives the C# code
 versus comment split per assembly; without it those columns are absent.
+
+## Other targets
+
+Humans is the default target, `targets/humans.yml`: repo, start day, file types, section and coverage
+patterns, test filter, lanes file and the page's timeline marks. Assemblies are the directories holding a
+`.csproj`. Another repo gets its own target file, lanes file and data, kept in its own (private) repo,
+and passes them to every script:
+
+```bash
+T=../burn-camp-metrics
+python3 collect/collect.py     --target $T/target.yml --repo ../Burn.Camp --out $T/data
+python3 collect/gitstats.py    --target $T/target.yml --repo ../Burn.Camp --out $T/data
+python3 collect/prstats.py     --target $T/target.yml --repo ../Burn.Camp --out $T/data
+python3 collect/actionstats.py --target $T/target.yml --out $T/data
+python3 collect/reforgehist.py --target $T/target.yml --repo ../Burn.Camp --out $T/data
+python3 site/build.py          --target $T/target.yml --data $T/data --docs $T/docs
+python3 -m http.server -d $T/docs   # then open http://localhost:8000
+```
 
 ## Known gaps
 
