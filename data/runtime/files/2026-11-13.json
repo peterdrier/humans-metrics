@@ -1,0 +1,33 @@
+{
+ "bytes": 1242161105,
+ "categories": {
+  "camps": {
+   "bytes": 155574150,
+   "count": 86
+  },
+  "containers": {
+   "bytes": 78283869,
+   "count": 56
+  },
+  "expense-attachments": {
+   "bytes": 837862890,
+   "count": 1343
+  },
+  "issues": {
+   "bytes": 5419136,
+   "count": 16
+  },
+  "profile-pictures": {
+   "bytes": 153639714,
+   "count": 1151
+  },
+  "surveys": {
+   "bytes": 11381346,
+   "count": 19
+  }
+ },
+ "collected_on": "2026-11-16",
+ "collector_version": 1,
+ "count": 2671,
+ "date": "2026-11-13"
+}

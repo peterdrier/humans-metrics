@@ -1,0 +1,102 @@
+{
+ "date": "2026-11-09",
+ "collector_version": 1,
+ "runs": 232,
+ "conclusions": {
+  "success": 156,
+  "skipped": 33,
+  "cancelled": 9,
+  "startup_failure": 29,
+  "failure": 5
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 26,
+  "pull_request": 78,
+  "pull_request_target": 70,
+  "issue_comment": 30,
+  "push": 22,
+  "dynamic": 4,
+  "schedule": 2
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 37,
+   "failure": 2,
+   "success": 31,
+   "duration_s": 17147
+  },
+  "E2E Tests (QA)": {
+   "runs": 1,
+   "failure": 1,
+   "success": 0,
+   "duration_s": 41
+  },
+  "Flag PRs with merge conflicts": {
+   "runs": 38,
+   "failure": 0,
+   "success": 27,
+   "duration_s": 750
+  },
+  "Integration tests": {
+   "runs": 1,
+   "failure": 1,
+   "success": 0,
+   "duration_s": 434
+  },
+  "Label PRs with EF migrations": {
+   "runs": 27,
+   "failure": 0,
+   "success": 17,
+   "duration_s": 151
+  },
+  "PR Surface Report": {
+   "runs": 25,
+   "failure": 0,
+   "success": 22,
+   "duration_s": 5656
+  },
+  "PR Surface Report Comment": {
+   "runs": 26,
+   "failure": 0,
+   "success": 23,
+   "duration_s": 250
+  },
+  "Preview Database": {
+   "runs": 27,
+   "failure": 1,
+   "success": 26,
+   "duration_s": 354
+  },
+  "claude-review": {
+   "runs": 46,
+   "failure": 0,
+   "success": 7,
+   "duration_s": 663
+  },
+  "github_actions in /. - Update #1690777362": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 52
+  },
+  "npm_and_yarn in /tests/e2e - Update #1690777365": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 64
+  },
+  "nuget in / for Google.Apis.CloudIdentity.v1 - Update #1690867560": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 1458
+  },
+  "nuget in /. - Update #1690777360": {
+   "runs": 1,
+   "failure": 0,
+   "success": 0,
+   "duration_s": 3308
+  }
+ }
+}

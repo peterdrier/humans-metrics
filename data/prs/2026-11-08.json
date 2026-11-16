@@ -10,9 +10,9 @@
    "human_comments": 8,
    "bot_comments": 10,
    "ttm_hours": [
+    53.3,
     37.7,
-    13.9,
-    53.3
+    13.9
    ]
   },
   "peter": {
@@ -24,18 +24,18 @@
    "bot_comments": 27,
    "human_comments": 12,
    "ttm_hours": [
-    4.2,
-    4.2,
     64.1,
     63.5,
+    30.2,
     16.5,
-    30.2
+    4.2,
+    4.2
    ]
   }
  },
  "gate": {},
  "bots": {
-  "chatgpt-codex-connector[bot]": 11,
-  "github-actions[bot]": 26
+  "github-actions[bot]": 26,
+  "chatgpt-codex-connector[bot]": 11
  }
 }
