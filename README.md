@@ -51,7 +51,8 @@ versus comment split per assembly; without it those columns are absent.
 
 Humans is the default target, `targets/humans.yml`: repo, start day, file types, section and coverage
 patterns, test filter, lanes file and the page's timeline marks. Assemblies are the directories holding a
-`.csproj`. Another repo gets its own target file, lanes file and data, kept in its own (private) repo,
+`.csproj`. A renamed section goes in the target's `renames` (old name: new name); data stays as
+collected and `site/build.py` folds the old series into the new name. Another repo gets its own target file, lanes file and data, kept in its own (private) repo,
 and passes them to every script:
 
 ```bash

@@ -30808,7 +30808,7 @@
         "covLines": 40,
         "cov": 100
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11133,
         "files": 79,
         "classes": 119,
@@ -32220,7 +32220,7 @@
         "covLines": 40,
         "cov": 100
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11134,
         "files": 79,
         "classes": 119,
@@ -33690,7 +33690,7 @@
         "covLines": 40,
         "cov": 100
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11362,
         "files": 88,
         "classes": 124,
@@ -35158,7 +35158,7 @@
         "covLines": 40,
         "cov": 100
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11637,
         "files": 91,
         "classes": 127,
@@ -36597,7 +36597,7 @@
         "covLines": 40,
         "cov": 100
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11747,
         "files": 93,
         "classes": 129,
@@ -37978,7 +37978,7 @@
         "covLines": 40,
         "cov": 100
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11385,
         "files": 92,
         "classes": 126,
@@ -39388,7 +39388,7 @@
         "covLines": 40,
         "cov": 100
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11544,
         "files": 97,
         "classes": 131,
@@ -40769,7 +40769,7 @@
         "covLines": 68,
         "cov": 59
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12049,
         "files": 107,
         "classes": 140,
@@ -42150,7 +42150,7 @@
         "covLines": 68,
         "cov": 59
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12302,
         "files": 110,
         "classes": 146,
@@ -43531,7 +43531,7 @@
         "covLines": 68,
         "cov": 59
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12302,
         "files": 110,
         "classes": 146,
@@ -44912,7 +44912,7 @@
         "covLines": 68,
         "cov": 59
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -46293,7 +46293,7 @@
         "covLines": 68,
         "cov": 59
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -47703,7 +47703,7 @@
         "covLines": 68,
         "cov": 59
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -49113,7 +49113,7 @@
         "covLines": 68,
         "cov": 59
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -50523,7 +50523,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -51933,7 +51933,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -53343,7 +53343,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -54753,7 +54753,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -56163,7 +56163,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -57573,7 +57573,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -58983,7 +58983,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -60393,7 +60393,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -61803,7 +61803,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -63242,7 +63242,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -64681,7 +64681,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -66120,7 +66120,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12389,
         "files": 110,
         "classes": 146,
@@ -67559,7 +67559,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12226,
         "files": 110,
         "classes": 145,
@@ -68998,7 +68998,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12872,
         "files": 115,
         "classes": 148,
@@ -70466,7 +70466,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12979,
         "files": 115,
         "classes": 148,
@@ -71934,7 +71934,7 @@
         "covLines": 80,
         "cov": 65
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12984,
         "files": 115,
         "classes": 148,
@@ -73402,7 +73402,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13135,
         "files": 116,
         "classes": 150,
@@ -74870,7 +74870,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13272,
         "files": 121,
         "classes": 155,
@@ -76338,7 +76338,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13272,
         "files": 121,
         "classes": 155,
@@ -77806,7 +77806,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13272,
         "files": 121,
         "classes": 155,
@@ -79274,7 +79274,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13271,
         "files": 121,
         "classes": 155,
@@ -80742,7 +80742,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13271,
         "files": 121,
         "classes": 155,
@@ -82210,7 +82210,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13270,
         "files": 121,
         "classes": 155,
@@ -83678,7 +83678,7 @@
         "covLines": 94,
         "cov": 68
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13250,
         "files": 122,
         "classes": 156,
@@ -85146,7 +85146,7 @@
         "covLines": 96,
         "cov": 67
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13261,
         "files": 122,
         "classes": 156,
@@ -86614,7 +86614,7 @@
         "covLines": 96,
         "cov": 67
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13178,
         "files": 122,
         "classes": 156,
@@ -88082,7 +88082,7 @@
         "covLines": 96,
         "cov": 67
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13178,
         "files": 122,
         "classes": 156,
@@ -89550,7 +89550,7 @@
         "covLines": 96,
         "cov": 67
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13178,
         "files": 122,
         "classes": 156,
@@ -91018,7 +91018,7 @@
         "covLines": 102,
         "cov": 69
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13140,
         "files": 122,
         "classes": 153,
@@ -92486,7 +92486,7 @@
         "covLines": 102,
         "cov": 69
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13153,
         "files": 122,
         "classes": 153,
@@ -93954,7 +93954,7 @@
         "covLines": 102,
         "cov": 69
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13168,
         "files": 122,
         "classes": 153,
@@ -95422,7 +95422,7 @@
         "covLines": 102,
         "cov": 69
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13190,
         "files": 122,
         "classes": 153,
@@ -96890,7 +96890,7 @@
         "covLines": 102,
         "cov": 69
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13190,
         "files": 122,
         "classes": 153,
@@ -98358,7 +98358,7 @@
         "covLines": 100,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13209,
         "files": 123,
         "classes": 153,
@@ -99826,7 +99826,7 @@
         "covLines": 100,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13210,
         "files": 124,
         "classes": 155,
@@ -101294,7 +101294,7 @@
         "covLines": 100,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13239,
         "files": 124,
         "classes": 155,
@@ -102762,7 +102762,7 @@
         "covLines": 100,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13239,
         "files": 124,
         "classes": 155,
@@ -104230,7 +104230,7 @@
         "covLines": 100,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12622,
         "files": 125,
         "classes": 160,
@@ -105697,7 +105697,7 @@
         "covLines": 100,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12732,
         "files": 126,
         "classes": 157,
@@ -107193,7 +107193,7 @@
         "covLines": 101,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12729,
         "files": 126,
         "classes": 157,
@@ -108689,7 +108689,7 @@
         "covLines": 101,
         "cov": 85
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 12729,
         "files": 126,
         "classes": 157,
@@ -110185,7 +110185,7 @@
         "covLines": 233,
         "cov": 82
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 13906,
         "files": 145,
         "classes": 180,
@@ -111739,7 +111739,7 @@
         "covLines": 233,
         "cov": 82
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11824,
         "files": 145,
         "classes": 180,
@@ -113293,7 +113293,7 @@
         "covLines": 233,
         "cov": 82
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11824,
         "files": 145,
         "classes": 180,
@@ -114847,7 +114847,7 @@
         "covLines": 233,
         "cov": 82
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11780,
         "files": 145,
         "classes": 179,
@@ -116401,7 +116401,7 @@
         "covLines": 233,
         "cov": 82
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11785,
         "files": 145,
         "classes": 179,
@@ -117955,7 +117955,7 @@
         "covLines": 232,
         "cov": 88
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11785,
         "files": 145,
         "classes": 179,
@@ -119509,7 +119509,7 @@
         "covLines": 232,
         "cov": 88
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11762,
         "files": 139,
         "classes": 173,
@@ -121063,7 +121063,7 @@
         "covLines": 232,
         "cov": 88
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11793,
         "files": 140,
         "classes": 174,
@@ -122617,7 +122617,7 @@
         "covLines": 232,
         "cov": 88
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11793,
         "files": 140,
         "classes": 174,
@@ -124171,7 +124171,7 @@
         "covLines": 232,
         "cov": 88
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11696,
         "files": 140,
         "classes": 174,
@@ -125725,7 +125725,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11686,
         "files": 140,
         "classes": 174,
@@ -127278,7 +127278,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11649,
         "files": 140,
         "classes": 172,
@@ -128831,7 +128831,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11726,
         "files": 140,
         "classes": 172,
@@ -130384,7 +130384,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11753,
         "files": 144,
         "classes": 177,
@@ -131937,7 +131937,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11753,
         "files": 144,
         "classes": 177,
@@ -133490,7 +133490,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11753,
         "files": 144,
         "classes": 177,
@@ -135045,7 +135045,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11888,
         "files": 151,
         "classes": 185,
@@ -136600,7 +136600,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11888,
         "files": 151,
         "classes": 185,
@@ -138155,7 +138155,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11888,
         "files": 151,
         "classes": 185,
@@ -139710,7 +139710,7 @@
         "covLines": 229,
         "cov": 87
       },
-      "GoogleIntegration": {
+      "Google": {
         "loc": 11969,
         "files": 151,
         "classes": 185,

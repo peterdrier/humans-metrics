@@ -60,7 +60,10 @@ def val(v):
 ref = [[val(r.get(c, '')) if c != 'commit_date' else r['commit_date'][:10] for c in ref_cols] for _, r in sorted(ref_by_date.items())]
 
 # --- modules: fold .Contracts into its section, strip the target's name prefix (Humans./Profiles.); biweekly plus the last day keeps the page light
-def short(n): return re.sub(T['short_re'], '', n)
+# A renamed section keeps one series: the target's `renames` (old -> current name) applies to every section key the page sees.
+REN = T.get('renames') or {}
+def canon(n): head, dot, rest = n.partition('.'); return REN.get(head, head) + dot + rest   # keeps .Tests/.Contracts
+def short(n): return canon(re.sub(T['short_re'], '', n))
 modules = []
 pick = days[::7] + ([days[-1]] if days[-1] not in days[::7] else [])
 for d in pick:
@@ -104,7 +107,7 @@ for d in reforge_days:
     if not d.get('rows'): continue
     secs = {}
     for r in d['rows']:
-        secs[r['section']] = {k: r.get(v) for k, v in SEC_KEYS.items()}
+        secs[canon(r['section'])] = {k: r.get(v) for k, v in SEC_KEYS.items()}
     sol_row = next((r for r in d['rows'] if r.get('section') == '(solution)'), {})
     sec_days.append({'date': d['date'], 'testSeconds': (d.get('tests') or {}).get('seconds'), 'tokSrc': sol_row.get('tokensProdSource'), 'sdk': d.get('sdk_override', False), 'commit': d['commit'][:9], 'version': d.get('reforge_version'), 'config': d.get('config_hash'),
                      'build': d.get('build'), 'tests': (d.get('tests') or {}).get('exit'), 'seconds': d.get('seconds'),
@@ -119,6 +122,7 @@ edged = next((d for d in reversed(reforge_days) if d.get('edges')), None)
 if edged:
     agg = collections.defaultdict(lambda: dict(uses=0, usedBy=0, callsOut=0, callsIn=0))
     sem_edges = [e for e in edged['edges'] if 'Base' not in (e['from'], e['to'])]   # every section calls Base (Users core, audit append); it would flatten the chart
+    sem_edges = [{**e, 'from': canon(e['from']), 'to': canon(e['to'])} for e in sem_edges]
     for e in sem_edges:
         agg[e['from']]['uses'] += 1; agg[e['from']]['callsOut'] += e.get('count', 0)
         agg[e['to']]['usedBy'] += 1; agg[e['to']]['callsIn'] += e.get('count', 0)
@@ -132,7 +136,7 @@ def real_tops(d):
     for sec, fs in (d.get('top_files') or {}).items():
         if sec == '(solution)': continue
         f = next((f for f in fs if not wiring(f)), None)
-        if f: out[sec] = f
+        if f: out[canon(sec)] = f
     return out
 reach_top, top_files = [], None
 for d in reforge_days:

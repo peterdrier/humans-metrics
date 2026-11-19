@@ -12,6 +12,8 @@ short_re: '^(Humans|Profiles)\.'                                 # stripped from
 coverage_prefixes: [Humans, Profiles]                            # assemblies kept from the coverage report (tests dropped)
 test_filter: 'FullyQualifiedName!~Humans.Integration.Tests'      # dotnet test --filter; empty runs every test
 surface_args: []                                                 # extra reforge surface-score flags, e.g. [--allow-degraded]
+renames:   # old section name -> current; the page folds the old series into the new name
+  GoogleIntegration: Google
 lanes: ../collect/lanes.yml                                      # relative to this file
 page:   # timeline marks on the page
   split: '2026-08-08'
