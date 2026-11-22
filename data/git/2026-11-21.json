@@ -1,0 +1,52 @@
+{
+ "date": "2026-11-21",
+ "commit": "d1f9211c5",
+ "collector_version": 1,
+ "lanes": {
+  "other": {
+   "prs": 52,
+   "files": 437,
+   "added": 15990,
+   "deleted": 1142
+  },
+  "peter": {
+   "prs": 55,
+   "files": 1818,
+   "added": 45014,
+   "deleted": 16658
+  }
+ },
+ "routines": {},
+ "models": {
+  "Claude Opus 5.5": 58,
+  "Claude": 49
+ },
+ "authors": 2,
+ "all_commits": 134,
+ "hours": [
+  9,
+  9,
+  9,
+  15,
+  10,
+  0,
+  1,
+  0,
+  0,
+  0,
+  0,
+  0,
+  4,
+  11,
+  5,
+  4,
+  4,
+  3,
+  8,
+  4,
+  4,
+  3,
+  3,
+  1
+ ]
+}

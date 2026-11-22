@@ -1,0 +1,26 @@
+{
+ "date": "2026-11-17",
+ "collector_version": 1,
+ "runs": 2,
+ "conclusions": {
+  "success": 2
+ },
+ "reruns": 0,
+ "events": {
+  "schedule": 2
+ },
+ "workflows": {
+  "E2E Tests (QA)": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 65
+  },
+  "Integration tests": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 373
+  }
+ }
+}

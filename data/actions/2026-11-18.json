@@ -1,0 +1,99 @@
+{
+ "date": "2026-11-18",
+ "collector_version": 1,
+ "runs": 26,
+ "conclusions": {
+  "success": 22,
+  "skipped": 4
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 2,
+  "pull_request": 8,
+  "pull_request_target": 4,
+  "issue_comment": 4,
+  "dynamic": 4,
+  "push": 2,
+  "schedule": 2
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 3,
+   "failure": 0,
+   "success": 3,
+   "duration_s": 1764
+  },
+  "E2E Tests (QA)": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 47
+  },
+  "Flag PRs with merge conflicts": {
+   "runs": 3,
+   "failure": 0,
+   "success": 3,
+   "duration_s": 134
+  },
+  "Integration tests": {
+   "runs": 3,
+   "failure": 0,
+   "success": 3,
+   "duration_s": 1128
+  },
+  "Label PRs with EF migrations": {
+   "runs": 2,
+   "failure": 0,
+   "success": 2,
+   "duration_s": 18
+  },
+  "PR Surface Report": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 267
+  },
+  "PR Surface Report Comment": {
+   "runs": 2,
+   "failure": 0,
+   "success": 2,
+   "duration_s": 20
+  },
+  "Preview Database": {
+   "runs": 3,
+   "failure": 0,
+   "success": 3,
+   "duration_s": 30
+  },
+  "claude-review": {
+   "runs": 4,
+   "failure": 0,
+   "success": 0,
+   "duration_s": 6
+  },
+  "nuget in / for AngleSharp - Update #1714758446": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 1057
+  },
+  "nuget in / for Anthropic - Update #1714758490": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 1053
+  },
+  "nuget in / for Google.Apis.Admin.Directory.directory_v1 - Update #1714758521": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 416
+  },
+  "nuget in / for coverlet.collector - Update #1714758509": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 966
+  }
+ }
+}

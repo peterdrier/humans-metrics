@@ -18,11 +18,11 @@
    "merged": 2,
    "lines": 962,
    "files": 39,
-   "bot_comments": 8,
    "human_comments": 2,
+   "bot_comments": 8,
    "ttm_hours": [
-    4.8,
-    11.9
+    11.9,
+    4.8
    ]
   }
  },
