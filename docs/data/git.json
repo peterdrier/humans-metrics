@@ -1813,5 +1813,13 @@
     "models": {"Claude Opus 5.5": 58, "Claude": 49},
     "authors": 2,
     "all_commits": 134
+  },
+  {
+    "date": "2026-11-22",
+    "lanes": {"automation": {"prs": 4, "files": 34, "added": 1829, "deleted": 191}, "peter": {"prs": 9, "files": 196, "added": 3666, "deleted": 1986}},
+    "routines": {"section-doctor": 4},
+    "models": {"Claude": 12},
+    "authors": 1,
+    "all_commits": 13
   }
 ]

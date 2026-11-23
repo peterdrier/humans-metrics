@@ -1,40 +1,40 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "version": "0.34.0",
   "classes": [
     {"name": "Service", "section": "Finance", "lines": 3316, "methods": 113, "risk": 80},
-    {"name": "TicketCheckoutService", "section": "Tickets", "lines": 2910, "methods": 116, "risk": 90},
-    {"name": "TeamService", "section": "Teams", "lines": 2470, "methods": 97, "risk": 91},
+    {"name": "TicketCheckoutService", "section": "Tickets", "lines": 2912, "methods": 116, "risk": 90},
+    {"name": "TeamService", "section": "Teams", "lines": 2446, "methods": 96, "risk": 91},
     {"name": "WorkgroupService", "section": "Workgroups", "lines": 2198, "methods": 101, "risk": 61},
     {"name": "CampService", "section": "Camps", "lines": 1836, "methods": 67, "risk": 59},
     {"name": "AssemblyVoteService", "section": "Governance", "lines": 1785, "methods": 59, "risk": 66},
-    {"name": "ShiftManagementService", "section": "Shifts", "lines": 1770, "methods": 65, "risk": 81},
+    {"name": "ShiftManagementService", "section": "Shifts", "lines": 1731, "methods": 63, "risk": 81},
     {"name": "Service", "section": "Store", "lines": 1494, "methods": 55, "risk": 70},
     {"name": "ExpenseReportService", "section": "Expenses", "lines": 1491, "methods": 65, "risk": 63},
     {"name": "BudgetRepository", "section": "Budget", "lines": 1263, "methods": 38, "risk": 48}
   ],
   "risk": [
-    {"name": "TeamService", "section": "Teams", "lines": 2470, "methods": 97, "risk": 91},
-    {"name": "TicketCheckoutService", "section": "Tickets", "lines": 2910, "methods": 116, "risk": 90},
-    {"name": "ShiftManagementService", "section": "Shifts", "lines": 1770, "methods": 65, "risk": 81},
+    {"name": "TeamService", "section": "Teams", "lines": 2446, "methods": 96, "risk": 91},
+    {"name": "TicketCheckoutService", "section": "Tickets", "lines": 2912, "methods": 116, "risk": 90},
+    {"name": "ShiftManagementService", "section": "Shifts", "lines": 1731, "methods": 63, "risk": 81},
     {"name": "Service", "section": "Finance", "lines": 3316, "methods": 113, "risk": 80},
-    {"name": "UserService", "section": "Users", "lines": 1036, "methods": 41, "risk": 74},
+    {"name": "UserService", "section": "Users", "lines": 1026, "methods": 40, "risk": 74},
     {"name": "EventService", "section": "Events", "lines": 884, "methods": 67, "risk": 71},
-    {"name": "CachingUserService", "section": "Users", "lines": 666, "methods": 48, "risk": 71},
+    {"name": "CachingUserService", "section": "Users", "lines": 654, "methods": 47, "risk": 71},
     {"name": "Service", "section": "Store", "lines": 1494, "methods": 55, "risk": 70},
     {"name": "CachingCampService", "section": "Camps", "lines": 812, "methods": 67, "risk": 69},
-    {"name": "ShiftSignupService", "section": "Shifts", "lines": 1198, "methods": 57, "risk": 68}
+    {"name": "ShiftSignupService", "section": "Shifts", "lines": 1188, "methods": 56, "risk": 69}
   ],
   "methods": [
     {"name": "Service.BookOneTransferAsync", "section": "Finance", "cyclomatic": 83, "classLines": 3316},
-    {"name": "TicketCheckoutService.StartCheckoutAsync", "section": "Tickets", "cyclomatic": 80, "classLines": 2910},
-    {"name": "DevelopmentDashboardSeeder.SeedAsync", "section": "Development", "cyclomatic": 48, "classLines": 461},
+    {"name": "TicketCheckoutService.StartCheckoutAsync", "section": "Tickets", "cyclomatic": 80, "classLines": 2912},
     {"name": "AnthropicClient.StreamAsync", "section": "Agent", "cyclomatic": 38, "classLines": 356},
     {"name": "SurveyDefinitionValidation.ValidateQuestionConfiguration", "section": "Surveys", "cyclomatic": 37, "classLines": 283},
     {"name": "SurveyResponseService.AdvanceWizardAsync", "section": "Surveys", "cyclomatic": 36, "classLines": 681},
     {"name": "Service.RecordAdminPaymentAsync", "section": "Store", "cyclomatic": 35, "classLines": 1494},
     {"name": "TeamPageService.GetTeamDetailAsync", "section": "Teams", "cyclomatic": 35, "classLines": 446},
     {"name": "ProfileCardViewComponent.InvokeAsync", "section": "Users", "cyclomatic": 35, "classLines": 135},
-    {"name": "EventBulkImportValidator.ValidateRows", "section": "Events", "cyclomatic": 35, "classLines": 113}
+    {"name": "EventBulkImportValidator.ValidateRows", "section": "Events", "cyclomatic": 35, "classLines": 113},
+    {"name": "AgentService.RunTurnAsync", "section": "Agent", "cyclomatic": 34, "classLines": 775}
   ]
 }

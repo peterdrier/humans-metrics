@@ -218,5 +218,6 @@
   ["2026-11-18", 122, "src/Sections/Humans.Finance/Controllers/FinanceController.cs", 26],
   ["2026-11-19", 121, "src/Sections/Humans.Workgroups/Services/CachingWorkgroupService.cs", 11],
   ["2026-11-20", 109, "src/Sections/Humans.Workgroups/Services/CachingWorkgroupService.cs", 11],
-  ["2026-11-21", 96, "src/Sections/Humans.Expenses/Services/ExpenseReviewService.cs", 24]
+  ["2026-11-21", 96, "src/Sections/Humans.Expenses/Services/ExpenseReviewService.cs", 24],
+  ["2026-11-22", 96, "src/Sections/Humans.Expenses/Services/ExpenseReviewService.cs", 24]
 ]

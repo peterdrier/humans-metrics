@@ -1,9 +1,10 @@
 {
-  "date": "2026-11-21",
+  "date": "2026-11-22",
   "version": "0.34.0",
   "sections": [
     {"section": "Expenses", "file": "src/Sections/Humans.Expenses/Services/ExpenseReviewService.cs", "reach": 96, "fanOut": 24},
     {"section": "Teams", "file": "src/Sections/Humans.Teams/Services/CachingTeamService.cs", "reach": 84, "fanOut": 26},
+    {"section": "Development", "file": "src/Sections/Humans.Development/Controllers/DevLoginController.cs", "reach": 71, "fanOut": 9},
     {"section": "Campaigns", "file": "src/Sections/Humans.Campaigns/Controllers/CampaignController.cs", "reach": 68, "fanOut": 10},
     {"section": "CityPlanning", "file": "src/Sections/Humans.CityPlanning/Controllers/CityPlanningController.cs", "reach": 67, "fanOut": 13},
     {"section": "Shifts", "file": "src/Sections/Humans.Shifts/Controllers/ShiftAdminController.cs", "reach": 65, "fanOut": 24},
@@ -46,14 +47,13 @@
     {"section": "EarlyEntry", "file": "src/Sections/Humans.EarlyEntry/Controllers/EarlyEntryRosterController.cs", "reach": 19, "fanOut": 6},
     {"section": "Onboarding", "file": "src/Sections/Humans.Onboarding/Controllers/OnboardingWidgetController.cs", "reach": 18, "fanOut": 10},
     {"section": "Cantina", "file": "src/Sections/Humans.Cantina/Services/CantinaRosterService.cs", "reach": 18, "fanOut": 8},
-    {"section": "Development", "file": "src/Sections/Humans.Development/Controllers/DevSeedController.cs", "reach": 17, "fanOut": 5},
     {"section": "Analyzers", "file": "src/Humans.Analyzers/SectionRulesAnalyzer.cs", "reach": 13, "fanOut": 9},
     {"section": "Permissions", "file": "src/Sections/Humans.Permissions/Services/PermissionService.cs", "reach": 11, "fanOut": 8},
     {"section": "Stripe", "file": "src/Sections/Humans.Stripe/Controllers/StripeController.cs", "reach": 7, "fanOut": 2},
-    {"section": "HiEvents", "file": "src/Sections/Humans.HiEvents/Controllers/HiEventsWebhookController.cs", "reach": 6, "fanOut": 4},
     {"section": "Backdoor", "file": "src/Sections/Humans.Backdoor/Services/BackdoorApiKeyService.cs", "reach": 5, "fanOut": 5},
     {"section": "Debug", "file": "src/Sections/Humans.Debug/Controllers/DebugController.cs", "reach": 5, "fanOut": 5},
-    {"section": "Pretix", "file": "src/Sections/Humans.Pretix/Controllers/PretixWebhookController.cs", "reach": 4, "fanOut": 3},
-    {"section": "TicketTailor", "file": "src/Sections/Humans.TicketTailor/Services/TicketTailorService.cs", "reach": 3, "fanOut": 3}
+    {"section": "HiEvents", "file": "src/Sections/Humans.HiEvents/Controllers/HiEventsWebhookController.cs", "reach": 4, "fanOut": 3},
+    {"section": "TicketTailor", "file": "src/Sections/Humans.TicketTailor/Services/TicketTailorService.cs", "reach": 3, "fanOut": 3},
+    {"section": "Pretix", "file": "src/Sections/Humans.Pretix/Controllers/PretixWebhookController.cs", "reach": 3, "fanOut": 2}
   ]
 }

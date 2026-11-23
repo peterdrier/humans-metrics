@@ -1,0 +1,95 @@
+{
+ "date": "2026-11-22",
+ "collector_version": 1,
+ "runs": 447,
+ "conclusions": {
+  "success": 325,
+  "skipped": 89,
+  "failure": 5,
+  "cancelled": 28
+ },
+ "reruns": 0,
+ "events": {
+  "workflow_run": 47,
+  "pull_request": 174,
+  "pull_request_target": 120,
+  "issue_comment": 75,
+  "push": 26,
+  "dynamic": 3,
+  "schedule": 2
+ },
+ "workflows": {
+  "Build and Test": {
+   "runs": 59,
+   "failure": 2,
+   "success": 46,
+   "duration_s": 26654
+  },
+  "E2E Tests (QA)": {
+   "runs": 1,
+   "failure": 1,
+   "success": 0,
+   "duration_s": 61
+  },
+  "Flag PRs with merge conflicts": {
+   "runs": 61,
+   "failure": 0,
+   "success": 59,
+   "duration_s": 1445
+  },
+  "Integration tests": {
+   "runs": 44,
+   "failure": 1,
+   "success": 35,
+   "duration_s": 14331
+  },
+  "Label PRs with EF migrations": {
+   "runs": 48,
+   "failure": 0,
+   "success": 48,
+   "duration_s": 513
+  },
+  "PR Surface Report": {
+   "runs": 47,
+   "failure": 1,
+   "success": 38,
+   "duration_s": 10199
+  },
+  "PR Surface Report Comment": {
+   "runs": 47,
+   "failure": 0,
+   "success": 38,
+   "duration_s": 552
+  },
+  "Preview Database": {
+   "runs": 38,
+   "failure": 0,
+   "success": 37,
+   "duration_s": 2890
+  },
+  "claude-review": {
+   "runs": 99,
+   "failure": 0,
+   "success": 21,
+   "duration_s": 2029
+  },
+  "github_actions in /. - Update #1721544012": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 52
+  },
+  "npm_and_yarn in /tests/e2e - Update #1721544013": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 50
+  },
+  "nuget in /. - Update #1721544006": {
+   "runs": 1,
+   "failure": 0,
+   "success": 1,
+   "duration_s": 1930
+  }
+ }
+}
