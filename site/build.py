@@ -37,7 +37,7 @@ for d in days:
     total = s.get('app_lines', 0) + s.get('test_lines', 0)
     delta = total - prev if prev is not None else 0
     prev = total
-    stats.append([d['date'], s.get('app_lines',0), s.get('test_lines',0), s.get('app_cs_lines',0), s.get('app_cs_code',0), s.get('app_cs_comment',0),
+    stats.append([d['date'], s.get('app_lines',0), s.get('test_lines',0), s.get('app_cs_lines',0), s.get('app_cs_code'), s.get('app_cs_comment'),
                   s.get('app_cshtml_lines',0) + s.get('app_razor_lines',0), s.get('app_resx_lines',0), s.get('app_js_lines',0), s.get('md_lines',0), s.get('migration_lines',0),
                   s.get('app_files',0)+s.get('test_files',0), s.get('app_classes',0), s.get('app_interfaces',0), s.get('app_controllers',0), s.get('app_views',0),
                   s.get('app_resx_keys',0), max(delta,0), max(-delta,0)])

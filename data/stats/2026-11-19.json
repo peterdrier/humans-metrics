@@ -3,6 +3,8 @@
 "Humans.Agent":{
 "classes":92,
 "controllers":2,
+"cs_code":3799,
+"cs_comment":419,
 "cs_lines":4818,
 "cshtml_lines":961,
 "dbsets":3,
@@ -31,6 +33,8 @@
 },
 "Humans.Analyzers":{
 "classes":35,
+"cs_code":3083,
+"cs_comment":508,
 "cs_lines":4198,
 "dbsets":1,
 "fan_in":0,
@@ -54,6 +58,8 @@
 "Humans.AuditLog":{
 "classes":22,
 "controllers":1,
+"cs_code":1025,
+"cs_comment":112,
 "cs_lines":1343,
 "cshtml_lines":388,
 "dbsets":1,
@@ -82,6 +88,8 @@
 "Humans.Auth":{
 "classes":33,
 "controllers":1,
+"cs_code":1669,
+"cs_comment":120,
 "cs_lines":2140,
 "cshtml_lines":243,
 "dbsets":1,
@@ -110,6 +118,8 @@
 "Humans.Backdoor":{
 "classes":31,
 "controllers":8,
+"cs_code":1915,
+"cs_comment":178,
 "cs_lines":2377,
 "cshtml_lines":125,
 "dbsets":1,
@@ -135,6 +145,8 @@
 },
 "Humans.Base":{
 "classes":212,
+"cs_code":5821,
+"cs_comment":2610,
 "cs_lines":9707,
 "cshtml_lines":1642,
 "dbsets":0,
@@ -162,6 +174,8 @@
 "Humans.Budget":{
 "classes":63,
 "controllers":2,
+"cs_code":4073,
+"cs_comment":171,
 "cs_lines":4948,
 "cshtml_lines":2077,
 "dbsets":6,
@@ -190,6 +204,8 @@
 "Humans.Calendar":{
 "classes":47,
 "controllers":2,
+"cs_code":2718,
+"cs_comment":228,
 "cs_lines":3376,
 "cshtml_lines":1202,
 "dbsets":3,
@@ -218,6 +234,8 @@
 "Humans.Campaigns":{
 "classes":46,
 "controllers":1,
+"cs_code":1806,
+"cs_comment":82,
 "cs_lines":2232,
 "cshtml_lines":422,
 "dbsets":3,
@@ -246,6 +264,8 @@
 "Humans.Camps":{
 "classes":123,
 "controllers":4,
+"cs_code":7762,
+"cs_comment":574,
 "cs_lines":9662,
 "cshtml_lines":2615,
 "dbsets":9,
@@ -262,6 +282,8 @@
 },
 "Humans.Camps.Contracts":{
 "classes":17,
+"cs_code":360,
+"cs_comment":72,
 "cs_lines":524,
 "dbsets":0,
 "fan_in":29,
@@ -285,6 +307,8 @@
 "Humans.Cantina":{
 "classes":28,
 "controllers":2,
+"cs_code":1354,
+"cs_comment":155,
 "cs_lines":1749,
 "cshtml_lines":558,
 "dbsets":1,
@@ -313,6 +337,8 @@
 "Humans.CityPlanning":{
 "classes":38,
 "controllers":2,
+"cs_code":1947,
+"cs_comment":128,
 "cs_lines":2427,
 "cshtml_lines":1018,
 "dbsets":3,
@@ -330,6 +356,8 @@
 },
 "Humans.CityPlanning.Contracts":{
 "classes":2,
+"cs_code":48,
+"cs_comment":24,
 "cs_lines":84,
 "dbsets":0,
 "fan_in":9,
@@ -353,6 +381,8 @@
 "Humans.Consent":{
 "classes":93,
 "controllers":5,
+"cs_code":4553,
+"cs_comment":274,
 "cs_lines":5701,
 "cshtml_lines":1209,
 "dbsets":5,
@@ -381,6 +411,8 @@
 "Humans.Containers":{
 "classes":32,
 "controllers":1,
+"cs_code":1184,
+"cs_comment":42,
 "cs_lines":1435,
 "cshtml_lines":302,
 "dbsets":3,
@@ -409,6 +441,8 @@
 "Humans.Debug":{
 "classes":42,
 "controllers":5,
+"cs_code":1051,
+"cs_comment":71,
 "cs_lines":1292,
 "cshtml_lines":3445,
 "dbsets":0,
@@ -434,6 +468,8 @@
 "Humans.Development":{
 "classes":16,
 "controllers":2,
+"cs_code":1235,
+"cs_comment":125,
 "cs_lines":1562,
 "cshtml_lines":102,
 "dbsets":0,
@@ -459,6 +495,8 @@
 "Humans.EarlyEntry":{
 "classes":8,
 "controllers":1,
+"cs_code":131,
+"cs_comment":14,
 "cs_lines":171,
 "cshtml_lines":40,
 "dbsets":0,
@@ -484,6 +522,8 @@
 "Humans.Email":{
 "classes":64,
 "controllers":7,
+"cs_code":2947,
+"cs_comment":223,
 "cs_lines":3705,
 "cshtml_lines":963,
 "dbsets":3,
@@ -500,6 +540,8 @@
 },
 "Humans.Email.Contracts":{
 "classes":6,
+"cs_code":116,
+"cs_comment":75,
 "cs_lines":234,
 "dbsets":0,
 "fan_in":44,
@@ -523,6 +565,8 @@
 "Humans.Events":{
 "classes":126,
 "controllers":6,
+"cs_code":6089,
+"cs_comment":363,
 "cs_lines":7501,
 "cshtml_lines":2212,
 "dbsets":7,
@@ -551,6 +595,8 @@
 "Humans.Expenses":{
 "classes":72,
 "controllers":1,
+"cs_code":4953,
+"cs_comment":556,
 "cs_lines":6260,
 "cshtml_lines":1832,
 "dbsets":4,
@@ -579,6 +625,8 @@
 "Humans.Finance":{
 "classes":125,
 "controllers":2,
+"cs_code":6305,
+"cs_comment":841,
 "cs_lines":8124,
 "cshtml_lines":2591,
 "dbsets":9,
@@ -595,6 +643,8 @@
 },
 "Humans.Finance.Contracts":{
 "classes":25,
+"cs_code":334,
+"cs_comment":183,
 "cs_lines":602,
 "dbsets":0,
 "fan_in":20,
@@ -618,6 +668,8 @@
 "Humans.Gate":{
 "classes":38,
 "controllers":2,
+"cs_code":1490,
+"cs_comment":237,
 "cs_lines":2051,
 "cshtml_lines":579,
 "dbsets":3,
@@ -645,6 +697,8 @@
 "Humans.Gdpr":{
 "classes":11,
 "controllers":3,
+"cs_code":422,
+"cs_comment":28,
 "cs_lines":509,
 "cshtml_lines":84,
 "dbsets":0,
@@ -672,6 +726,8 @@
 "Humans.Google":{
 "classes":193,
 "controllers":4,
+"cs_code":11331,
+"cs_comment":820,
 "cs_lines":13954,
 "cshtml_lines":2373,
 "dbsets":5,
@@ -700,6 +756,8 @@
 "Humans.Governance":{
 "classes":139,
 "controllers":5,
+"cs_code":6813,
+"cs_comment":1237,
 "cs_lines":9459,
 "cshtml_lines":2687,
 "dbsets":12,
@@ -716,6 +774,8 @@
 },
 "Humans.Governance.Contracts":{
 "classes":1,
+"cs_code":37,
+"cs_comment":13,
 "cs_lines":63,
 "dbsets":0,
 "fan_in":19,
@@ -739,6 +799,8 @@
 "Humans.Grants":{
 "classes":48,
 "controllers":1,
+"cs_code":1629,
+"cs_comment":132,
 "cs_lines":2056,
 "cshtml_lines":373,
 "dbsets":3,
@@ -767,6 +829,8 @@
 "Humans.Guide":{
 "classes":19,
 "controllers":1,
+"cs_code":852,
+"cs_comment":72,
 "cs_lines":1072,
 "cshtml_lines":95,
 "dbsets":0,
@@ -794,6 +858,8 @@
 "Humans.Holded":{
 "classes":89,
 "controllers":1,
+"cs_code":4262,
+"cs_comment":560,
 "cs_lines":5421,
 "cshtml_lines":610,
 "dbsets":7,
@@ -831,6 +897,8 @@
 "Humans.Issues":{
 "classes":52,
 "controllers":1,
+"cs_code":2365,
+"cs_comment":196,
 "cs_lines":2988,
 "cshtml_lines":699,
 "dbsets":2,
@@ -859,6 +927,8 @@
 "Humans.LowIncome":{
 "classes":2,
 "controllers":1,
+"cs_code":86,
+"cs_comment":6,
 "cs_lines":104,
 "cshtml_lines":55,
 "dbsets":0,
@@ -884,6 +954,8 @@
 "Humans.MailerLite":{
 "classes":59,
 "controllers":1,
+"cs_code":2285,
+"cs_comment":190,
 "cs_lines":2827,
 "cshtml_lines":874,
 "dbsets":1,
@@ -910,6 +982,8 @@
 "Humans.Monitor":{
 "classes":5,
 "controllers":1,
+"cs_code":484,
+"cs_comment":39,
 "cs_lines":604,
 "dbsets":0,
 "fan_in":2,
@@ -933,6 +1007,8 @@
 "Humans.Notifications":{
 "classes":27,
 "controllers":1,
+"cs_code":1501,
+"cs_comment":75,
 "cs_lines":1880,
 "cshtml_lines":468,
 "dbsets":2,
@@ -949,6 +1025,8 @@
 },
 "Humans.Notifications.Contracts":{
 "classes":6,
+"cs_code":135,
+"cs_comment":51,
 "cs_lines":217,
 "dbsets":0,
 "fan_in":37,
@@ -972,6 +1050,8 @@
 "Humans.Onboarding":{
 "classes":23,
 "controllers":3,
+"cs_code":785,
+"cs_comment":71,
 "cs_lines":1009,
 "cshtml_lines":393,
 "dbsets":0,
@@ -987,6 +1067,8 @@
 },
 "Humans.Onboarding.Contracts":{
 "classes":1,
+"cs_code":10,
+"cs_comment":14,
 "cs_lines":28,
 "dbsets":0,
 "fan_in":11,
@@ -1010,6 +1092,8 @@
 "Humans.Pleo":{
 "classes":58,
 "controllers":1,
+"cs_code":1551,
+"cs_comment":106,
 "cs_lines":1904,
 "cshtml_lines":573,
 "dbsets":7,
@@ -1036,6 +1120,8 @@
 "Humans.Preapprovals":{
 "classes":56,
 "controllers":2,
+"cs_code":2406,
+"cs_comment":181,
 "cs_lines":3002,
 "cshtml_lines":671,
 "dbsets":4,
@@ -1064,6 +1150,8 @@
 "Humans.Rideshare":{
 "classes":57,
 "controllers":3,
+"cs_code":2452,
+"cs_comment":189,
 "cs_lines":3125,
 "cshtml_lines":877,
 "dbsets":4,
@@ -1093,6 +1181,8 @@
 "Humans.Scanner":{
 "classes":4,
 "controllers":1,
+"cs_code":145,
+"cs_comment":20,
 "cs_lines":192,
 "cshtml_lines":292,
 "dbsets":0,
@@ -1121,6 +1211,8 @@
 "Humans.Search":{
 "classes":7,
 "controllers":1,
+"cs_code":259,
+"cs_comment":26,
 "cs_lines":325,
 "cshtml_lines":188,
 "dbsets":0,
@@ -1148,6 +1240,8 @@
 "Humans.Settings":{
 "classes":29,
 "controllers":2,
+"cs_code":1089,
+"cs_comment":177,
 "cs_lines":1503,
 "cshtml_lines":296,
 "dbsets":2,
@@ -1176,6 +1270,8 @@
 "Humans.Shifts":{
 "classes":246,
 "controllers":6,
+"cs_code":12378,
+"cs_comment":798,
 "cs_lines":15517,
 "cshtml_lines":7091,
 "dbsets":9,
@@ -1193,6 +1289,8 @@
 },
 "Humans.Shifts.Contracts":{
 "classes":18,
+"cs_code":288,
+"cs_comment":116,
 "cs_lines":489,
 "dbsets":0,
 "fan_in":45,
@@ -1216,6 +1314,8 @@
 "Humans.Store":{
 "classes":96,
 "controllers":3,
+"cs_code":4427,
+"cs_comment":427,
 "cs_lines":5576,
 "cshtml_lines":1422,
 "dbsets":6,
@@ -1244,6 +1344,8 @@
 "Humans.Stripe":{
 "classes":47,
 "controllers":1,
+"cs_code":1771,
+"cs_comment":174,
 "cs_lines":2216,
 "cshtml_lines":449,
 "dbsets":5,
@@ -1270,6 +1372,8 @@
 "Humans.Surveys":{
 "classes":181,
 "controllers":2,
+"cs_code":7334,
+"cs_comment":733,
 "cs_lines":9207,
 "cshtml_lines":2631,
 "dbsets":6,
@@ -1298,6 +1402,8 @@
 "Humans.Teams":{
 "classes":134,
 "controllers":3,
+"cs_code":8833,
+"cs_comment":330,
 "cs_lines":10725,
 "cshtml_lines":2834,
 "dbsets":7,
@@ -1314,6 +1420,8 @@
 },
 "Humans.Teams.Contracts":{
 "classes":15,
+"cs_code":269,
+"cs_comment":67,
 "cs_lines":400,
 "dbsets":0,
 "fan_in":50,
@@ -1358,6 +1466,8 @@
 },
 "Humans.TicketTailor":{
 "classes":18,
+"cs_code":774,
+"cs_comment":40,
 "cs_lines":950,
 "dbsets":0,
 "fan_in":2,
@@ -1381,6 +1491,8 @@
 "Humans.Tickets":{
 "classes":139,
 "controllers":7,
+"cs_code":7016,
+"cs_comment":439,
 "cs_lines":8696,
 "cshtml_lines":2249,
 "dbsets":5,
@@ -1397,6 +1509,8 @@
 },
 "Humans.Tickets.Contracts":{
 "classes":13,
+"cs_code":218,
+"cs_comment":61,
 "cs_lines":329,
 "dbsets":0,
 "fan_in":35,
@@ -1420,6 +1534,8 @@
 "Humans.Tour":{
 "classes":3,
 "controllers":1,
+"cs_code":43,
+"cs_comment":5,
 "cs_lines":56,
 "cshtml_lines":398,
 "dbsets":0,
@@ -1446,6 +1562,8 @@
 "Humans.Users":{
 "classes":140,
 "controllers":8,
+"cs_code":10567,
+"cs_comment":954,
 "cs_lines":13463,
 "cshtml_lines":4070,
 "dbsets":6,
@@ -1462,6 +1580,8 @@
 },
 "Humans.Users.Contracts":{
 "classes":17,
+"cs_code":253,
+"cs_comment":136,
 "cs_lines":466,
 "dbsets":0,
 "fan_in":32,
@@ -1486,6 +1606,8 @@
 "Humans.Web":{
 "classes":100,
 "controllers":7,
+"cs_code":4225,
+"cs_comment":956,
 "cs_lines":5965,
 "cshtml_lines":1896,
 "dbsets":1,
@@ -1513,6 +1635,8 @@
 "Humans.Workgroups":{
 "classes":86,
 "controllers":2,
+"cs_code":5186,
+"cs_comment":361,
 "cs_lines":6582,
 "cshtml_lines":1615,
 "dbsets":7,
@@ -4544,12 +4668,12 @@
 "Humans.Workgroups"
 ]
 ],
-"seconds":1,
+"seconds":15,
 "solution":{
 "app_classes":3575,
 "app_controllers":130,
-"app_cs_code":0,
-"app_cs_comment":0,
+"app_cs_code":172249,
+"app_cs_comment":18185,
 "app_cs_lines":221102,
 "app_cshtml_lines":60789,
 "app_dbsets":167,

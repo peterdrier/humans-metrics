@@ -147,6 +147,8 @@ def collect_day(repo, commit, cloc, code_ext=CODE_EXT):
         extra = [f'{e[1:]}_lines' for e in code_ext if e not in CODE_EXT]   # a target's own file types, e.g. .razor
         for k in ('lines', 'files', 'cs_lines', 'cshtml_lines', 'resx_lines', 'js_lines', 'classes', 'interfaces', 'controllers', 'views', 'entities', 'dbsets', 'resx_keys', 'cs_code', 'cs_comment', *extra):
             sol[pref + k] += a.get(k, 0)
+    if not cloc:   # no split measured: leave the keys out so the page shows a gap, not 0%
+        for k in [k for k in sol if k.endswith(('_cs_code', '_cs_comment'))]: del sol[k]
     sol['assemblies'] = sum(1 for a in A.values() if not a['is_test'])
     sol['test_projects'] = sum(1 for a in A.values() if a['is_test'])
     sol['edges'] = sum(1 for s, t in edges if 'Base' not in t and 'Analyzers' not in t)
@@ -195,6 +197,8 @@ def main():
     if dt.date.fromisoformat(d_from) > dt.date.fromisoformat(d_to):
         print(f'nothing to do: last day {have[-1] if have else None}'); return
     cloc = None if a.no_cloc else shutil.which('cloc')
+    if not cloc and not a.no_cloc and not a.reforge_only:
+        raise SystemExit('cloc not found: install it, or pass --no-cloc to collect without the comment split')
     days = day_commits(a.repo, a.ref, d_from, d_to)
     if not days: print(f'no commits on {a.ref} between {d_from} and {d_to}'); return
     num = re.compile(r'-?\d+(\.\d+)?')

@@ -87,7 +87,7 @@ function render(){
   line('c-resx', L, [{label:'Resx keys', data:lv(r=>r.keys)}]);
   line('c-md', L, [{label:'Markdown lines', data:lv(r=>r.md), slot:1, fill:true}], {log:true});
   line('c-mig', L, [{label:'Migration lines', data:lv(r=>r.mig), slot:1, fill:true}], {log:true});
-  line('c-cmt', L, [{label:'Comment share', data:lv(r=>r.cscmt/r.cs), slot:1}], {yfmt:pct});
+  line('c-cmt', L, [{label:'Comment share', data:lv(r=>r.cscmt==null? null : r.cscmt/r.cs), slot:1}], {yfmt:pct});
   line('c-docratio', L, [{label:'MD lines per app line', data:lv(r=>r.md/r.app), slot:1}]);
   renderChurn();
   line('c-lpc', L, [{label:'App lines per class', data:lv(r=>r.app/r.classes), slot:1}]);
